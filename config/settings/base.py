@@ -10,24 +10,38 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
+import json
+from django.core.exceptions import ImproperlyConfigured
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
+try:
+    with open(BASE_DIR / 'config' / "settings" /'secret.json', "r") as secret_file:
+        secret = json.load(secret_file)
+except:
+    secret = {}
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
+def get_value(key: str):
+    try:
+        value = os.environ[key]
+    except KeyError:
+        try:
+            value = secret[key]
+        except KeyError:
+            if key == "SECRET_KEY":
+                return None
+        else:
+            return value
+    else:
+        return value
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "afzal_saiyed"
 
-# SECURITY WARNING: don't run with debug turned on in production!
+SECRET_KEY = get_value("SECRET_KEY'") or "afzal_saiyed"
 
-
-
-
-# Application definition
 
 BASE_APPS = [
     'django.contrib.admin',
