@@ -1,0 +1,5 @@
+-r base.txt
+
+black==21.7b0
+isort==5.9.3
+django-debug-toolbar==3.2.1

@@ -3,7 +3,16 @@ from .base import *
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+INSTALLED_APPS.append("debug_toolbar")
+
+MIDDLEWARE = ['debug_toolbar.middleware.DebugToolbarMiddleware'] + MIDDLEWARE
+
+INTERNAL_IPS = [
+
+    '127.0.0.1',
+
+]
+ALLOWED_HOSTS = ['*']
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
