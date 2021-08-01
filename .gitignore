@@ -1,6 +1,5 @@
 __pycache__/
-**/__pycache__
-/db.sqlite3
-/venv
-/.env
-/config/settings/secret.json
+db.sqlite3
+venv
+.env
+config/settings/secret.json
