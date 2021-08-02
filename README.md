@@ -20,6 +20,35 @@
 ![Desktop - login (1) (1)](https://user-images.githubusercontent.com/65633542/127782646-d38a2e0b-1e70-4848-a83f-4a3658f4e19e.png)
 
 # How to run it?
+1. Clone the repository:
+```
+$ git clone https://github.com/gmrzone/cartdrop-api.git
+```
+
+2. Go to the cloned directory:
+```
+$ cd cartdrop-api
+```
+
+3. create a virtual environment and activate it:
+```
+$ virtualenv venv && source venv/bin/activate
+```
+
+4. Install dependencies:
+```
+$ pip install -r requirements/local.txt
+```
+
+5. Set envirinment variables for Project (Linux)
+```
+$ export DJANGO_SETTINGS_MODULE=config.settings.local
+```
+
+6. Runserver:
+```
+$ python manage.py runserver
+```
 
 ## Run using Docker and docker Compose
 
@@ -31,12 +60,12 @@ $ git clone https://github.com/gmrzone/cartdrop-api.git
 2. Go to the cloned directory:
 ```
 $ cd cartdrop-api
+```
 
 3. Build the application:
 ```
 $ docker-compose build
 ```
-
 4. Start database:
 ```
 $ docker-compose up -d db
