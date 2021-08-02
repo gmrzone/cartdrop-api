@@ -1,21 +1,19 @@
-version: 3.8
+version: "3.8"
 services:
     db:
         volumes: 
-            - ./dockerfiles/postgres.dev.sh:/docker-entrypoint-initdb.d/init_sql_dev.sh
-        env_file: .dockerfiles/.dev.env
+            - ./dockerfiles/postgres_init.dev.sh:/docker-entrypoint-initdb.d/init_sql_dev.sh
+        env_file: dockerfiles/.dev.env
         restart: unless-stopped
 
-    backend:
+    django:
         build: 
             dockerfile: ./Dockerfile
-        restart: unless-stopped
-        env_file: .dockerfiles/.dev.env
+        env_file: dockerfiles/.dev.env
         volumes: 
             - .:/cartdrop
         ports: 
             - 8000:8000
-        container_name: cartdrop_backend
         command: bash -c 'while !</dev/tcp/db/5432; do sleep 5; done; python manage.py runserver 0.0.0.0:8000'
 
         

@@ -1,16 +1,18 @@
-version: 3.8:
-    services:
-        db:
-            volumes: 
-                - ./data/db:/var/lib/postgres/data
-            image: postgres:13.3
-            container_name: cartdrop_db
+version: "3.8"
+services:
+    db:
+        volumes: 
+            - ./data/db:/var/lib/postgresql/data
+        image: postgres
+        container_name: cartdrop_db
 
-        backend:
-            build: 
-                context: .
-            container_name: cartdrop_backend
-            depends_on:
-                - db
+    django:
+        build: 
+            context: .
+        container_name: cartdrop_backend
+        depends_on:
+            - db
+
+
 
                 
