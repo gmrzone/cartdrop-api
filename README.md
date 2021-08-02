@@ -19,5 +19,41 @@
 
 ![Desktop - login (1) (1)](https://user-images.githubusercontent.com/65633542/127782646-d38a2e0b-1e70-4848-a83f-4a3658f4e19e.png)
 
+# How to run it?
+
+## Run using Docker and docker Compose
+
+1. Clone the repository:
+```
+$ git clone https://github.com/gmrzone/cartdrop-api.git
+```
+
+2. Go to the cloned directory:
+```
+$ cd cartdrop-api
+
+3. Build the application:
+```
+$ docker-compose build
+```
+
+4. Start database:
+```
+$ docker-compose up -d db
+```
+
+5. Migrate database and add data to database:
+```
+$ docker-compose run --rm django /bin/sh scripts/start_script.dev.sh
+```
+
+6. Run the application:
+```
+$ docker-compose up
+```
+
+The application should now be available on http://127.0.0.1:8000/
+
+
 
 

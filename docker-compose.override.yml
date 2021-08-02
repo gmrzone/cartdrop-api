@@ -10,6 +10,7 @@ services:
         ports: 
             - 8000:8000
         command: bash -c 'while !</dev/tcp/db/5432; do sleep 5; done; python manage.py runserver 0.0.0.0:8000'
+
     db:
         volumes: 
             - ./scripts/postgres_init.dev.sh:/docker-entrypoint-initdb.d/init_sql_dev.sh
