@@ -2,5 +2,5 @@ __pycache__/
 db.sqlite3
 venv
 dockerfiles/.prod.env
-dockerfiles/postgres_init.prod.sh
+scripts/postgres_init.prod.sh
 config/settings/secret.json
