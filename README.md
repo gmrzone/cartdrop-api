@@ -11,12 +11,11 @@
   <h3>Currently the project is in very early stage of development. Here are some of the pages design screenshot from figma</h3>
 </div>
 
-![Desktop - 1 (1) (1)](https://user-images.githubusercontent.com/65633542/127990069-c83408dd-9810-4817-86b8-e8faa92f3274.png)
-
+![Desktop - 1 (1)](https://user-images.githubusercontent.com/65633542/128006696-d9e0371a-b24d-4a3c-a821-51ad0336e5b2.png)
+ 
 <hr>
 
-![Desktop-Product-detail (1) (1)](https://user-images.githubusercontent.com/65633542/127990218-c1603ded-4cd8-4468-b4f4-4244eb36cfe3.png)
-
+![Desktop-Product-detail (1)](https://user-images.githubusercontent.com/65633542/128006621-d3f01ab3-9086-41ef-8a98-b042a1f8ab22.png)
 
 <hr>
 
@@ -25,6 +24,7 @@
 
 
 # How to run it?
+
 1. Clone the repository:
 ```
 $ git clone https://github.com/gmrzone/cartdrop-api.git
