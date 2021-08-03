@@ -8,14 +8,15 @@
 <br/>
 
 <div align="center">
-  <h3>Currently the project is in very early stage of development. Here are some of the screenshot of design from figma</h3>
+  <h3>Currently the project is in very early stage of development. Here are some of the pages design screenshot from figma</h3>
 </div>
 
-![Desktop - 1_cropped (1)](https://user-images.githubusercontent.com/65633542/127782631-6cb4f93f-146e-416f-866d-3f08f1aa0076.png)
+![Desktop - 1 (1) (1)](https://user-images.githubusercontent.com/65633542/127990069-c83408dd-9810-4817-86b8-e8faa92f3274.png)
 
 <hr>
 
-![Desktop-Product-detail_cropped (1)](https://user-images.githubusercontent.com/65633542/127782666-58b5db34-9621-409c-8c67-0c9c7cd692b2.png)
+![Desktop-Product-detail (1) (1)](https://user-images.githubusercontent.com/65633542/127990218-c1603ded-4cd8-4468-b4f4-4244eb36cfe3.png)
+
 
 <hr>
 
