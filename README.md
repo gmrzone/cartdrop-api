@@ -17,7 +17,11 @@
 
 ![Desktop-Product-detail_cropped (1)](https://user-images.githubusercontent.com/65633542/127782666-58b5db34-9621-409c-8c67-0c9c7cd692b2.png)
 
-![Desktop - login (1) (1)](https://user-images.githubusercontent.com/65633542/127782646-d38a2e0b-1e70-4848-a83f-4a3658f4e19e.png)
+<hr>
+
+![Desktop - login (1)](https://user-images.githubusercontent.com/65633542/127986291-0d429eb8-8aa8-47f0-a7c6-afc71de2d444.png)
+
+
 
 # How to run it?
 1. Clone the repository:
