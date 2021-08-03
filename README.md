@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <h2>A high performanence Ecommerce created using Django, DRF, Postgresql, Redis</h2>
+  <h2>A high performanence Ecommerce created using Django, DRF, Postgresql, Redis on backend and Nextjs, Typescript and tailwind on frontend</h2>
 </div>
 <br/>
 
