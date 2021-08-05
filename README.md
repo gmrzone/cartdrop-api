@@ -30,7 +30,8 @@
 
 ![iPhone SE - 1 (1)](https://user-images.githubusercontent.com/65633542/128364071-427a1c89-04c7-404a-af5b-c3f974fe632f.png)
 
-![iPhone SE - login (1)](https://user-images.githubusercontent.com/65633542/128400611-75040aee-78f5-4540-9787-115974fc1e6a.png)
+![iPhone SE - login (2)](https://user-images.githubusercontent.com/65633542/128407158-c443ed69-d470-46da-9139-b6070dc32867.png)
+
 
 
 
