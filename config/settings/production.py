@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['cartdrop.afzalsaiyed.info', 'www.cartdrop.afzalsaiyed.info']
+ALLOWED_HOSTS = ["cartdrop.afzalsaiyed.info", "www.cartdrop.afzalsaiyed.info"]
 
 DATABASES = {
     "default": {
