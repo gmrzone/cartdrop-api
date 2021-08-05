@@ -51,7 +51,10 @@ BASE_APPS = [
     "django.contrib.staticfiles",
 ]
 
-EXTERNAL_APPS = []
+EXTERNAL_APPS = [
+    "corsheaders",
+    'rest_framework',
+]
 
 INTERNAL_APPS = [
     "cartdrop.accounts.apps.AccountsConfig",
@@ -59,6 +62,7 @@ INTERNAL_APPS = [
 INSTALLED_APPS = BASE_APPS + EXTERNAL_APPS + INTERNAL_APPS
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -131,3 +135,12 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}

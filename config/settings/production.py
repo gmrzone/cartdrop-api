@@ -30,3 +30,10 @@ ADMINS = (
 # SECURE_HSTS_SECONDS = 31536000 # 1 year
 # SECURE_HSTS_PRELOAD = True
 # SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+    "https://cartdrop.afzalsaiyed.info",
+    "https://cartdrop.info"
+]
