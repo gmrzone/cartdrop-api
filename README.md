@@ -26,6 +26,11 @@
 ![Desktop - login (1)](https://user-images.githubusercontent.com/65633542/128323803-9fe4dffd-1cde-4d4a-a59b-59649f089175.png)
 
 
+![iPad mini - 1](https://user-images.githubusercontent.com/65633542/128363878-aa4323c6-ef2d-4a35-9979-e2b8209c1c67.png)
+
+![iPhone SE - 1 (1)](https://user-images.githubusercontent.com/65633542/128364071-427a1c89-04c7-404a-af5b-c3f974fe632f.png)
+
+
 
 
 # How to run it?
