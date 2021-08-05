@@ -151,3 +151,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+AUTH_USER_MODEL = "accounts.CartDropUser"
