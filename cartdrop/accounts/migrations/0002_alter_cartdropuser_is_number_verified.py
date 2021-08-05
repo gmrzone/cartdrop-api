@@ -6,13 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0001_initial'),
+        ("accounts", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='cartdropuser',
-            name='is_number_verified',
-            field=models.BooleanField(default=False, help_text='Designates whether the user has verified their number', verbose_name='number verified'),
+            model_name="cartdropuser",
+            name="is_number_verified",
+            field=models.BooleanField(
+                default=False,
+                help_text="Designates whether the user has verified their number",
+                verbose_name="number verified",
+            ),
         ),
     ]
