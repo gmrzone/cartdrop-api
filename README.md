@@ -3,12 +3,12 @@
 </div>
 
 <div align="center">
-  <h2>A high performanence Ecommerce created using Django, DRF, Postgresql, Redis on backend and Nextjs, Typescript and tailwind on frontend</h2>
+  <h2>A high-performance Ecommerce created using Django, DRF, Postgresql, Redis on backend and Nextjs, Typescript, and tailwindcss on frontend</h2>
 </div>
 <br/>
 
 <div align="center">
-  <h3>Currently the project is in very early stage of development. Here are some of the pages design screenshot from figma</h3>
+  <h3>Currently, the project is in a very early stage of development. Here are some of the pages design screenshots from Figma</h3>
 </div>
 
 <div align="center">
