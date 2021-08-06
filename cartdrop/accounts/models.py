@@ -24,6 +24,7 @@ class CartDropUser(AbstractBaseUser, PermissionsMixin):
         unique=True,
         db_index=True,
         blank=True,
+        null=True,
         error_messages={
             "unique": _(
                 "This number is already registered with us please try logging in"
