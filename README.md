@@ -92,7 +92,7 @@ $ docker-compose up -d db
 ```
 $ docker-compose run --rm django /bin/sh scripts/start_script.dev.sh
 ```
-This will create a suer account with username=admin and password=cartdropadmin
+This will create a super account with username=admin and password=cartdropadmin
 
 6. Run the application:
 ```
