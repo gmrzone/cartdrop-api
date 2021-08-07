@@ -6,11 +6,10 @@ from .models import ProductCategory, ProductSubcategory
 
 class ProductCategorySerializer(ModelSerializer):
 
-    photo = ImageField(required=True, allow_empty_file=False)
-
+    
     class Meta:
         model = ProductCategory
-        fields = ("name", "slug", "uuid", "photo", "created")
+        fields = ("name", "slug", "uuid", "category_images", "created")
         extra_kwargs = {
             "created": {"read_only": True},
             "uuid": {"read_only": True},

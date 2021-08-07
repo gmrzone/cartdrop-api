@@ -21,7 +21,7 @@ class Timestamps(models.Model):
 
 class Slugable(models.Model):
 
-    slug = models.SlugField(max_length=100, db_index=True)
+    slug = models.SlugField(max_length=100, db_index=True, blank=True)
 
     class Meta:
         abstract = True

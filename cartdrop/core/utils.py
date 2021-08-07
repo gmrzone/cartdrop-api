@@ -2,7 +2,7 @@ import os
 
 
 def category_images(instance, filename):
-    path = os.path.join("Category Media", instance.slug, filename)
+    path = os.path.join("Category Media", instance.category.slug, filename)
     return path
 
 
