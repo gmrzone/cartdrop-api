@@ -10,6 +10,5 @@ app_name = "core"
 
 urlpatterns = [
     path("categories/", CategoryList.as_view(), name="category_list"),
-    path("category/create/", CreateCategory.as_view(), name="category_create"),
-
+    
 ]
