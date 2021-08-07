@@ -1,0 +1,119 @@
+[
+{
+    "model": "core.productcategory",
+    "pk": 2,
+    "fields": {
+        "created": "2021-08-07T14:49:13.580Z",
+        "updated": "2021-08-07T14:49:13.580Z",
+        "slug": "mobiles",
+        "uuid": "309cb533-5052-4153-8e0a-e98fecff7ea4",
+        "name": "Mobiles"
+    }
+},
+{
+    "model": "core.productcategory",
+    "pk": 3,
+    "fields": {
+        "created": "2021-08-07T14:53:17.854Z",
+        "updated": "2021-08-07T14:53:17.854Z",
+        "slug": "electronics",
+        "uuid": "5ca7c042-d999-456f-9db9-2f5cddb6b23f",
+        "name": "Electronics"
+    }
+},
+{
+    "model": "core.productcategory",
+    "pk": 4,
+    "fields": {
+        "created": "2021-08-07T14:54:52.367Z",
+        "updated": "2021-08-07T14:54:52.367Z",
+        "slug": "accessories",
+        "uuid": "1a456117-bcab-45c0-bd5d-6c79e2d2fb8e",
+        "name": "Accessories"
+    }
+},
+{
+    "model": "core.productcategory",
+    "pk": 5,
+    "fields": {
+        "created": "2021-08-07T14:55:07.173Z",
+        "updated": "2021-08-07T14:55:07.173Z",
+        "slug": "fashion",
+        "uuid": "de7c101c-dea9-4ef2-ac0c-9b81820754ed",
+        "name": "Fashion"
+    }
+},
+{
+    "model": "core.productcategory",
+    "pk": 6,
+    "fields": {
+        "created": "2021-08-07T14:55:19.761Z",
+        "updated": "2021-08-07T14:55:19.761Z",
+        "slug": "appliances",
+        "uuid": "742f31e7-a929-4988-912f-2772b950ca12",
+        "name": "Appliances"
+    }
+},
+{
+    "model": "core.productcategory",
+    "pk": 7,
+    "fields": {
+        "created": "2021-08-07T14:55:47.292Z",
+        "updated": "2021-08-07T14:55:47.292Z",
+        "slug": "groceries",
+        "uuid": "c2c8a48c-207a-4f25-834e-c13ed83cdb23",
+        "name": "Groceries"
+    }
+},
+{
+    "model": "core.productcategory",
+    "pk": 8,
+    "fields": {
+        "created": "2021-08-07T14:55:57.429Z",
+        "updated": "2021-08-07T14:55:57.429Z",
+        "slug": "books",
+        "uuid": "96e93704-8482-4d51-96d5-2a0ca884fe29",
+        "name": "Books"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 3,
+    "fields": {
+        "category": 2,
+        "image": "Category Media/mobiles/mobile_2-nobg.png"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 4,
+    "fields": {
+        "category": 2,
+        "image": "Category Media/mobiles/mobile_1-bg_removed.png"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 5,
+    "fields": {
+        "category": 2,
+        "image": "Category Media/mobiles/mobile_4-nobg.png"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 6,
+    "fields": {
+        "category": 3,
+        "image": "Category Media/electronics/laptop_1_nobg.png"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 7,
+    "fields": {
+        "category": 3,
+        "image": "Category Media/electronics/laptop_3-nobg.png"
+    }
+}
+]
