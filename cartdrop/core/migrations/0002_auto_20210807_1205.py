@@ -6,25 +6,25 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0001_initial'),
+        ("core", "0001_initial"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='productsubcategory',
-            name='category',
+            model_name="productsubcategory",
+            name="category",
         ),
         migrations.RemoveField(
-            model_name='productsubcategory',
-            name='slugable_ptr',
+            model_name="productsubcategory",
+            name="slugable_ptr",
         ),
         migrations.DeleteModel(
-            name='ProductCategory',
+            name="ProductCategory",
         ),
         migrations.DeleteModel(
-            name='ProductSubcategory',
+            name="ProductSubcategory",
         ),
         migrations.DeleteModel(
-            name='Slugable',
+            name="Slugable",
         ),
     ]

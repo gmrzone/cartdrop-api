@@ -48,7 +48,11 @@ class CartDropUser(AbstractBaseUser, PermissionsMixin):
         ),
     )
     type = models.CharField(
-        _("user type"), max_length=100, db_index=True, default=UserTypes.CUSTOMER, choices=UserTypes.choices
+        _("user type"),
+        max_length=100,
+        db_index=True,
+        default=UserTypes.CUSTOMER,
+        choices=UserTypes.choices,
     )
     first_name = models.CharField(_("first name"), max_length=25, blank=True)
     last_name = models.CharField(_("last name"), max_length=25, blank=True)

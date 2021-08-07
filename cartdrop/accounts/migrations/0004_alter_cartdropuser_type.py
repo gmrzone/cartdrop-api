@@ -6,13 +6,19 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0003_alter_cartdropuser_number'),
+        ("accounts", "0003_alter_cartdropuser_number"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='cartdropuser',
-            name='type',
-            field=models.CharField(choices=[('CUSTOMER', 'Customer'), ('SELLER', 'Seller')], db_index=True, default='CUSTOMER', max_length=100, verbose_name='user type'),
+            model_name="cartdropuser",
+            name="type",
+            field=models.CharField(
+                choices=[("CUSTOMER", "Customer"), ("SELLER", "Seller")],
+                db_index=True,
+                default="CUSTOMER",
+                max_length=100,
+                verbose_name="user type",
+            ),
         ),
     ]
