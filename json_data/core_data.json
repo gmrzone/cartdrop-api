@@ -115,5 +115,53 @@
         "category": 3,
         "image": "Category Media/electronics/laptop_3-nobg.png"
     }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 8,
+    "fields": {
+        "category": 4,
+        "image": "Category Media/accessories/accessories_1-nobg.png"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 9,
+    "fields": {
+        "category": 5,
+        "image": "Category Media/fashion/fashion_nobg.png.png"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 10,
+    "fields": {
+        "category": 6,
+        "image": "Category Media/appliances/appliances_nobg.png"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 11,
+    "fields": {
+        "category": 7,
+        "image": "Category Media/groceries/groceries_nogb.png"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 12,
+    "fields": {
+        "category": 8,
+        "image": "Category Media/books/books_2-nobg.png"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 13,
+    "fields": {
+        "category": 2,
+        "image": "Category Media/mobiles/mobile_3-nobg_adj.png"
+    }
 }
 ]
