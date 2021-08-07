@@ -152,3 +152,9 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = "accounts.CartDropUser"
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}

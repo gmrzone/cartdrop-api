@@ -12,8 +12,6 @@ class CategoryImageSerializer(ModelSerializer):
         model = CategoryImage
         fields = ('image',)
 
-    # def get_image(self, obj):
-    #     return obj.image.url
 
 
 class ProductCategorySerializer(ModelSerializer):
