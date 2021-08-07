@@ -12,13 +12,12 @@ class ProductCategory(Timestamps, Slugable, UUIDField, models.Model):
     def __str__(self):
         return self.name
 
+
 class CategoryImage(models.Model):
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE, related_name="category_images")
     image =  models.ImageField(upload_to=category_images)
 
     
-
-
 class ProductSubcategory(Timestamps, Slugable, UUIDField, models.Model):
     category = models.ForeignKey(
         ProductCategory,
