@@ -1,3 +1,2 @@
-
 web: gunicorn config.wsgi --log-file -
-release: ./heroku_init.sh
+release: python manage.py migrate && ython manage.py generatedatabase --createadmin
