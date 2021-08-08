@@ -593,5 +593,53 @@
     "fields": {
         "name": "Home Theatres"
     }
+},
+{
+    "model": "products.fashionsize",
+    "pk": 1,
+    "fields": {
+        "name": "SMALL",
+        "code": "S"
+    }
+},
+{
+    "model": "products.fashionsize",
+    "pk": 2,
+    "fields": {
+        "name": "EXTRA SMALL",
+        "code": "XS"
+    }
+},
+{
+    "model": "products.fashionsize",
+    "pk": 3,
+    "fields": {
+        "name": "MEDIUM",
+        "code": "M"
+    }
+},
+{
+    "model": "products.fashionsize",
+    "pk": 4,
+    "fields": {
+        "name": "LARGE",
+        "code": "L"
+    }
+},
+{
+    "model": "products.fashionsize",
+    "pk": 5,
+    "fields": {
+        "name": "EXTRA LARGE",
+        "code": "XL"
+    }
+},
+{
+    "model": "products.fashionsize",
+    "pk": 6,
+    "fields": {
+        "name": "DOUBLE EXTRA LARGE",
+        "code": "XXL"
+    }
 }
 ]
