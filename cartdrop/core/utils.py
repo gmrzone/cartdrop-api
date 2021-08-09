@@ -11,3 +11,7 @@ def subcategory_images(instance, filename):
         "Subcategory Media", instance.category.slug, instance.slug, filename
     )
     return path
+
+def product_images(instance, filename):
+    path = os.path.join("Product Image", instance.category.slug, instance.slug, filename)
+    return path
