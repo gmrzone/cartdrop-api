@@ -2,22 +2,21 @@ from rest_framework import serializers
 from rest_framework.fields import ImageField, SerializerMethodField
 from rest_framework.serializers import ModelSerializer, Serializer
 
-from .models import ProductCategory, ProductSubcategory, CategoryImage
-
+from .models import CategoryImage, ProductCategory, ProductSubcategory
 
 
 class CategoryImageSerializer(ModelSerializer):
     image = ImageField(required=True, allow_empty_file=False)
+
     class Meta:
         model = CategoryImage
-        fields = ('image',)
-
+        fields = ("image",)
 
 
 class ProductCategorySerializer(ModelSerializer):
 
     category_images = CategoryImageSerializer(many=True)
-    
+
     class Meta:
         model = ProductCategory
         fields = ("name", "slug", "uuid", "category_images", "created")
@@ -26,7 +25,6 @@ class ProductCategorySerializer(ModelSerializer):
             "uuid": {"read_only": True},
             "slug": {"read_only": True},
         }
-
 
 
 class ProductSubcategorySerializer(ModelSerializer):

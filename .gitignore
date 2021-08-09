@@ -5,3 +5,4 @@ dockerfiles/.prod.env
 scripts/postgres_init.prod.sh
 config/settings/secret.json
 .vscode
+afzal

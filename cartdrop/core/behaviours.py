@@ -6,7 +6,7 @@ from django.utils.text import slugify
 
 
 class Timestamps(models.Model):
-    created = models.DateTimeField(editable=False)
+    created = models.DateTimeField(editable=False, db_index=True)
     updated = models.DateTimeField(editable=False)
 
     class Meta:
@@ -34,7 +34,7 @@ class Slugable(models.Model):
 
 class UUIDField(models.Model):
 
-    uuid = models.UUIDField(unique=True, editable=False, default=uuid4)
+    uuid = models.UUIDField(unique=True, editable=False, default=uuid4, db_index=True)
 
     class Meta:
         abstract = True

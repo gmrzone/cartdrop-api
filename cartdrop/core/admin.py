@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import ProductCategory, ProductSubcategory, CategoryImage, Product
+from .models import CategoryImage, Product, ProductCategory, ProductSubcategory
 
 # Register your models here.
 
@@ -9,10 +9,12 @@ from .models import ProductCategory, ProductSubcategory, CategoryImage, Product
 class ProductCategoryAdmin(admin.ModelAdmin):
     list_display = ("name", "slug")
 
+
 @admin.register(CategoryImage)
 class CategoryImageAdmin(admin.ModelAdmin):
-    list_display = ('category',)
-    list_filter = ('category',)
+    list_display = ("category",)
+    list_filter = ("category",)
+
 
 @admin.register(ProductSubcategory)
 class ProductSubcategoryAdmin(admin.ModelAdmin):
@@ -21,8 +23,7 @@ class ProductSubcategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'slug', 'price', 'active')
-    list_filter = ('active',)
-    list_editable = ('price',)
-    search_fields = ('name', )
-    
+    list_display = ("name", "slug", "price", "active")
+    list_filter = ("active",)
+    list_editable = ("price",)
+    search_fields = ("name",)
