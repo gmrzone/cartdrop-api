@@ -59,6 +59,7 @@ EXTERNAL_APPS = [
 INTERNAL_APPS = [
     "cartdrop.accounts.apps.AccountsConfig",
     "cartdrop.core.apps.CoreConfig",
+    "cartdrop.products.apps.ProductsConfig"
 ]
 INSTALLED_APPS = BASE_APPS + EXTERNAL_APPS + INTERNAL_APPS
 

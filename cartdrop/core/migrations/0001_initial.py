@@ -109,7 +109,7 @@ class Migration(migrations.Migration):
             name='ProductImages',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to=cartdrop.core.utils.product_images)),
+                ('image', models.ImageField(upload_to=cartdrop.products.utils.product_images)),
                 ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='images', to='core.product')),
             ],
         ),

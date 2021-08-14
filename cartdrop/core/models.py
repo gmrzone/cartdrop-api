@@ -4,7 +4,7 @@ from django.db import models
 from django.db.models.base import Model
 
 from .behaviours import Slugable, Timestamps, UUIDField
-from .utils import (brand_photo_location, category_images, product_images,
+from .utils import (brand_photo_location, category_images,
                     review_image_location, subcategory_images)
 
 # Create your models here.
@@ -39,32 +39,10 @@ class Brand(UUIDField, Slugable, models.Model):
     photo = models.ImageField(upload_to=brand_photo_location)
 
 
-class Product(Timestamps, Slugable, UUIDField, models.Model):
-    brand = models.ForeignKey(
-        Brand, on_delete=models.CASCADE, related_name="product_list"
-    )
-    seller = models.ForeignKey(
-        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="products"
-    )
-    name = models.CharField(max_length=100)
-    subcategory = models.ForeignKey(
-        ProductCategory, on_delete=models.CASCADE, related_name="items"
-    )
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    active = models.BooleanField(default=True)
-    description = models.TextField(max_length=100, blank=True)
-
-
-class ProductImages(models.Model):
-    product = models.ForeignKey(
-        Product, on_delete=models.CASCADE, related_name="images"
-    )
-    image = models.ImageField(upload_to=product_images)
-
 
 class ProductReview(UUIDField, Timestamps, models.Model):
     product = models.ForeignKey(
-        Product, on_delete=models.CASCADE, related_name="reviews"
+        "products.Product", on_delete=models.CASCADE, related_name="reviews"
     )
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
