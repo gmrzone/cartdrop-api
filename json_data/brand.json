@@ -1,0 +1,192 @@
+[
+{
+    "model": "core.brand",
+    "pk": 1,
+    "fields": {
+        "slug": "samsung",
+        "uuid": "6a034235-14ed-4ebb-90b8-1abd85974371",
+        "name": "Samsung",
+        "photo": "Brand images/samsung/samsung.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 2,
+    "fields": {
+        "slug": "apple",
+        "uuid": "fb086bad-03d6-4f0d-a3a1-aab95a174cd6",
+        "name": "Apple",
+        "photo": "Brand images/apple/apple.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 3,
+    "fields": {
+        "slug": "lg",
+        "uuid": "3299fe2c-3ffe-4ac5-866d-493675b1af33",
+        "name": "LG",
+        "photo": "Brand images/lg/LG.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 4,
+    "fields": {
+        "slug": "huawei",
+        "uuid": "020e95bc-2411-4118-9a46-6b17fefa7cd2",
+        "name": "Huawei",
+        "photo": "Brand images/huawei/Huawei.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 5,
+    "fields": {
+        "slug": "lenovo",
+        "uuid": "ea391d7a-3bc9-41e9-8a0a-515c6ea72bab",
+        "name": "Lenovo",
+        "photo": "Brand images/lenovo/lenovo.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 6,
+    "fields": {
+        "slug": "hp",
+        "uuid": "7dcee671-35bf-47fb-ad2a-c19ecab38826",
+        "name": "HP",
+        "photo": "Brand images/hp/HP.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 7,
+    "fields": {
+        "slug": "msi",
+        "uuid": "8b5e7770-0882-459d-9b21-6ecf6c56460a",
+        "name": "MSI",
+        "photo": "Brand images/msi/MSI.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 8,
+    "fields": {
+        "slug": "bose",
+        "uuid": "22cf02f5-d77f-46e0-acf1-6a5bb131474b",
+        "name": "Bose",
+        "photo": "Brand images/bose/Bose.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 9,
+    "fields": {
+        "slug": "jbl",
+        "uuid": "c3e5c8ee-afef-48ad-8495-2fc5316c24d0",
+        "name": "JBL",
+        "photo": "Brand images/jbl/JBL.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 10,
+    "fields": {
+        "slug": "bosch",
+        "uuid": "b802aa12-0bac-4752-9345-a9b08fa17975",
+        "name": "BOSCH",
+        "photo": "Brand images/bosch/Bosch.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 11,
+    "fields": {
+        "slug": "whirlpool",
+        "uuid": "0ba0628c-020c-44b6-bbbe-22188ca9c0ab",
+        "name": "Whirlpool",
+        "photo": "Brand images/whirlpool/whirlpool.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 12,
+    "fields": {
+        "slug": "carrier",
+        "uuid": "3e7eac1c-d176-4eb3-aae2-3cf31d365b55",
+        "name": "Carrier",
+        "photo": "Brand images/carrier/carrier.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 13,
+    "fields": {
+        "slug": "asian-paint",
+        "uuid": "58dbddc9-e72f-4974-b309-367a0c75de32",
+        "name": "Asian Paint",
+        "photo": "Brand images/asian-paint/asian-paints.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 14,
+    "fields": {
+        "slug": "auric",
+        "uuid": "629078f5-d0c3-4c81-a9d9-b665162bab09",
+        "name": "Auric",
+        "photo": "Brand images/auric/auric.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 15,
+    "fields": {
+        "slug": "real-active",
+        "uuid": "385a8aef-14cb-4f97-b222-73171ed04162",
+        "name": "Real Active",
+        "photo": "Brand images/real-active/real_active.jpeg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 16,
+    "fields": {
+        "slug": "tropicana",
+        "uuid": "71d62203-e43a-4f03-b293-75bf7d6cb3c7",
+        "name": "Tropicana",
+        "photo": "Brand images/tropicana/Tropicana.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 17,
+    "fields": {
+        "slug": "cadbury",
+        "uuid": "53416714-6ab5-4b48-b18e-19753d8b9bdb",
+        "name": "Cadbury",
+        "photo": "Brand images/cadbury/cadbury.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 18,
+    "fields": {
+        "slug": "oreally",
+        "uuid": "a320e63c-9ae7-43ed-a6ff-4ca970255caf",
+        "name": "O'really",
+        "photo": "Brand images/oreally/oreally.png"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 19,
+    "fields": {
+        "slug": "packt",
+        "uuid": "94c76260-32c9-4d73-bda4-27dfeac6b95f",
+        "name": "Packt",
+        "photo": "Brand images/packt/packt.png"
+    }
+}
+]

@@ -38,6 +38,9 @@ class Brand(UUIDField, Slugable, models.Model):
     name = models.CharField(max_length=100)
     photo = models.ImageField(upload_to=brand_photo_location)
 
+    def __str__(self):
+        return self.name
+
 
 class ProductReview(UUIDField, Timestamps, models.Model):
     product = models.ForeignKey(

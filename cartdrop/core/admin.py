@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import CategoryImage, ProductCategory, ProductSubcategory
+from .models import CategoryImage, ProductCategory, ProductSubcategory, Brand
 
 # Register your models here.
 
@@ -19,3 +19,8 @@ class CategoryImageAdmin(admin.ModelAdmin):
 @admin.register(ProductSubcategory)
 class ProductSubcategoryAdmin(admin.ModelAdmin):
     list_display = ("name", "slug")
+
+@admin.register(Brand)
+class BrandAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('__str__',)
