@@ -1,11 +1,12 @@
 from string import ascii_uppercase
 
 from django.conf import settings
+from django.core import validators
 from django.db import models
 from django.db.models.deletion import SET_NULL
 from django.utils.crypto import get_random_string
 from django.utils.text import slugify
-
+from django.core.validators import MaxValueValidator
 from cartdrop.core.behaviours import Slugable, Timestamps, UUIDField
 
 from .utils import product_images
@@ -32,6 +33,28 @@ class OperatingSystem(Slugable ,models.Model):
 class ScreenType(models.Model):
     name = models.CharField(max_length=100)
 
+# Dryer Type for washing Machine
+
+class DryerType(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+# AC type eg eplit, window etc
+class ACType(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+class ProductSeries(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
 class ProductMobileFeatures(models.Model):
     display_size = models.CharField(max_length=100)
     display_type = models.ForeignKey(DisplayType, on_delete=models.CASCADE)
@@ -42,12 +65,16 @@ class ProductMobileFeatures(models.Model):
     battery_capicity = models.CharField(max_length=6)
     os = models.ForeignKey(OperatingSystem, on_delete=SET_NULL, null=True, blank=True)
     variant = models.ForeignKey(MobileVariants, on_delete=models.SET_NULL, null=True, blank=True)
+    ram = models.CharField(max_length=100)
 
 
 class ProductLaptopFeatures(models.Model):
     display_size = models.CharField(max_length=100)
     display_type = models.ForeignKey(DisplayType, on_delete=models.CASCADE)
+    series = models.ForeignKey(ProductSeries, on_delete=models.CASCADE)
     os = models.ForeignKey(OperatingSystem, on_delete=models.CASCADE)
+    processor = models.CharField(max_length=100)
+    ram = models.CharField(max_length=100)
     resolution = models.CharField(max_length=100)
     battery_backup = models.CharField(max_length=100)
     touchscreen = models.BooleanField(default=True)
@@ -56,14 +83,30 @@ class ProductLaptopFeatures(models.Model):
 
 class ProductTelivisionFeatures(models.Model):
     display_size = models.CharField(max_length=100)
+    series = models.ForeignKey(ProductSeries, on_delete=models.SET_NULL, null=True, blank=True)
     screen_type = models.ForeignKey(ScreenType, on_delete=models.CASCADE)
     is_3d = models.BooleanField(default=False)
     is_curved = models.BooleanField(default=False)
     has_wify = models.BooleanField(default=True)
     usb_count = models.PositiveIntegerField(default=0)
 
-    
 
+class ProductWashingMachineFeatures(models.Model):
+    energy_rating = models.PositiveIntegerField(default=3, validators=[MaxValueValidator(5)])
+    washing_capicity = models.PositiveIntegerField(default=0)
+    washing_method = models.CharField(max_length=100)
+    has_inbuilt_heater = models.BooleanField(default=False)
+    dryer_type = models.ForeignKey(DryerType, on_delete=models.SET_NULL, null=True, blank=True)
+
+
+class ProductAirConditionerFeature(models.Model):
+    type = models.ForeignKey(ACType, on_delete=models.SET_NULL, null=True, blank=True)
+    compressor = models.CharField(max_length=100)
+    cooling_capacity = models.PositiveIntegerField(default=0)
+    series = models.ForeignKey(ProductSeries, on_delete=models.SET_NULL, null=True, blank=True)
+    cooling_coverage_area = models.CharField(max_length=100, blank=True)
+    
+    
 class ProductSpecification(models.Model):
     in_box = models.CharField(max_length=1000)
     launched_date = models.DateField(auto_now=True)
@@ -73,6 +116,8 @@ class ProductSpecification(models.Model):
     mobile = models.OneToOneField(ProductMobileFeatures, on_delete=models.SET_NULL, null=True, blank=True)
     laptop = models.OneToOneField(ProductLaptopFeatures, on_delete=models.SET_NULL, null=True, blank=True)
     tv = models.OneToOneField(ProductTelivisionFeatures, on_delete=models.SET_NULL, null=True, blank=True)
+    washing_machine = models.OneToOneField(ProductWashingMachineFeatures, on_delete=models.SET_NULL, null=True, blank=True)
+    ac = models.OneToOneField(ProductAirConditionerFeature, on_delete=models.SET_NULL, null=True, blank=True)
 
 
 class Product(Timestamps, UUIDField, models.Model):
