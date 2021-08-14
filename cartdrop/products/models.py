@@ -31,7 +31,7 @@ class DisplayType(models.Model):
 
 
 # Mobile Variant like 6gb/64gb, 8gb/128gb etc
-class MobileVariants(models.Model):
+class MobileVariant(models.Model):
     name = models.CharField(max_length=200, db_index=True)
 
     def __str__(self):
@@ -55,8 +55,6 @@ class ScreenType(models.Model):
 
 
 # Dryer Type for washing Machine
-
-
 class DryerType(models.Model):
     name = models.CharField(max_length=100)
 
@@ -103,7 +101,7 @@ class ProductMobileFeatures(models.Model):
     battery_capicity = models.CharField(max_length=6)
     os = models.ForeignKey(OperatingSystem, on_delete=SET_NULL, null=True, blank=True)
     variant = models.ForeignKey(
-        MobileVariants, on_delete=models.SET_NULL, null=True, blank=True
+        MobileVariant, on_delete=models.SET_NULL, null=True, blank=True
     )
     ram = models.CharField(max_length=100)
 
