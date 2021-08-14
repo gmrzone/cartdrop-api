@@ -54,6 +54,8 @@ class ProductReview(UUIDField, Timestamps, models.Model):
         default=5, validators=[MinValueValidator(1), MaxValueValidator(5)]
     )
     is_certified_buyer = models.BooleanField(default=False)
+    like = models.PositiveIntegerField(default=0)
+    dislike = models.PositiveIntegerField(default=0)
     active = models.BooleanField(default=True)
 
 
