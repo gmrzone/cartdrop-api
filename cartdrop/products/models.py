@@ -2,38 +2,60 @@ from string import ascii_uppercase
 
 from django.conf import settings
 from django.core import validators
+from django.core.validators import MaxValueValidator
 from django.db import models
 from django.db.models.deletion import SET_NULL
 from django.utils.crypto import get_random_string
 from django.utils.text import slugify
-from django.core.validators import MaxValueValidator
+
 from cartdrop.core.behaviours import Slugable, Timestamps, UUIDField
 
 from .utils import product_images
 
 # Create your models here.
 
-class ProductColor(Slugable ,models.Model):
+
+class ProductColor(Slugable, models.Model):
     name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
 
 # Display type for mobile like HD, HD+, Super AMOLED etc
 class DisplayType(models.Model):
     name = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.name
+
+
 # Mobile Variant like 6gb/64gb, 8gb/128gb etc
 class MobileVariants(models.Model):
     name = models.CharField(max_length=200, db_index=True)
 
+    def __str__(self):
+        return self.name
+
 
 # Operating System like Android, Windows Mac OS for mobiles and laptops and other products that has operating system
-class OperatingSystem(Slugable ,models.Model):
+class OperatingSystem(Slugable, models.Model):
     name = models.CharField(max_length=100, db_index=True)
+
+    def __str__(self):
+        return self.name
+
 
 # Screen Type eg LCD LED
 class ScreenType(models.Model):
     name = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name
+
+
 # Dryer Type for washing Machine
+
 
 class DryerType(models.Model):
     name = models.CharField(max_length=100)
@@ -41,12 +63,14 @@ class DryerType(models.Model):
     def __str__(self):
         return self.name
 
+
 # AC type eg eplit, window etc
 class ACType(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
+
 
 class ProductSeries(models.Model):
     name = models.CharField(max_length=100)
@@ -64,7 +88,9 @@ class ProductMobileFeatures(models.Model):
     smart_phone = models.BooleanField(default=True)
     battery_capicity = models.CharField(max_length=6)
     os = models.ForeignKey(OperatingSystem, on_delete=SET_NULL, null=True, blank=True)
-    variant = models.ForeignKey(MobileVariants, on_delete=models.SET_NULL, null=True, blank=True)
+    variant = models.ForeignKey(
+        MobileVariants, on_delete=models.SET_NULL, null=True, blank=True
+    )
     ram = models.CharField(max_length=100)
 
 
@@ -83,7 +109,9 @@ class ProductLaptopFeatures(models.Model):
 
 class ProductTelivisionFeatures(models.Model):
     display_size = models.CharField(max_length=100)
-    series = models.ForeignKey(ProductSeries, on_delete=models.SET_NULL, null=True, blank=True)
+    series = models.ForeignKey(
+        ProductSeries, on_delete=models.SET_NULL, null=True, blank=True
+    )
     screen_type = models.ForeignKey(ScreenType, on_delete=models.CASCADE)
     is_3d = models.BooleanField(default=False)
     is_curved = models.BooleanField(default=False)
@@ -92,39 +120,63 @@ class ProductTelivisionFeatures(models.Model):
 
 
 class ProductWashingMachineFeatures(models.Model):
-    energy_rating = models.PositiveIntegerField(default=3, validators=[MaxValueValidator(5)])
+    energy_rating = models.PositiveIntegerField(
+        default=3, validators=[MaxValueValidator(5)]
+    )
     washing_capicity = models.PositiveIntegerField(default=0)
     washing_method = models.CharField(max_length=100)
     has_inbuilt_heater = models.BooleanField(default=False)
-    dryer_type = models.ForeignKey(DryerType, on_delete=models.SET_NULL, null=True, blank=True)
+    dryer_type = models.ForeignKey(
+        DryerType, on_delete=models.SET_NULL, null=True, blank=True
+    )
 
 
 class ProductAirConditionerFeature(models.Model):
     type = models.ForeignKey(ACType, on_delete=models.SET_NULL, null=True, blank=True)
     compressor = models.CharField(max_length=100)
     cooling_capacity = models.PositiveIntegerField(default=0)
-    series = models.ForeignKey(ProductSeries, on_delete=models.SET_NULL, null=True, blank=True)
+    series = models.ForeignKey(
+        ProductSeries, on_delete=models.SET_NULL, null=True, blank=True
+    )
     cooling_coverage_area = models.CharField(max_length=100, blank=True)
-    
-    
+
+
 class ProductSpecification(models.Model):
     in_box = models.CharField(max_length=1000)
     launched_date = models.DateField(auto_now=True)
     model_no = models.CharField(max_length=100, blank=True, null=True, unique=True)
     model_name = models.CharField(max_length=100, blank=True, null=True)
     color = models.ForeignKey(ProductColor, on_delete=models.SET_NULL, null=True)
-    mobile = models.OneToOneField(ProductMobileFeatures, on_delete=models.SET_NULL, null=True, blank=True)
-    laptop = models.OneToOneField(ProductLaptopFeatures, on_delete=models.SET_NULL, null=True, blank=True)
-    tv = models.OneToOneField(ProductTelivisionFeatures, on_delete=models.SET_NULL, null=True, blank=True)
-    washing_machine = models.OneToOneField(ProductWashingMachineFeatures, on_delete=models.SET_NULL, null=True, blank=True)
-    ac = models.OneToOneField(ProductAirConditionerFeature, on_delete=models.SET_NULL, null=True, blank=True)
+    mobile = models.OneToOneField(
+        ProductMobileFeatures, on_delete=models.SET_NULL, null=True, blank=True
+    )
+    laptop = models.OneToOneField(
+        ProductLaptopFeatures, on_delete=models.SET_NULL, null=True, blank=True
+    )
+    tv = models.OneToOneField(
+        ProductTelivisionFeatures, on_delete=models.SET_NULL, null=True, blank=True
+    )
+    washing_machine = models.OneToOneField(
+        ProductWashingMachineFeatures, on_delete=models.SET_NULL, null=True, blank=True
+    )
+    ac = models.OneToOneField(
+        ProductAirConditionerFeature, on_delete=models.SET_NULL, null=True, blank=True
+    )
+
+    def __str__(self) -> str:
+        return self.product.name
 
 
 class Product(Timestamps, UUIDField, models.Model):
     brand = models.ForeignKey(
         "core.Brand", on_delete=models.CASCADE, related_name="product_list"
     )
-    PID = models.CharField(max_length=50, db_index=True, blank=True, help_text="A Unique Product Identification Number")
+    PID = models.CharField(
+        max_length=50,
+        db_index=True,
+        blank=True,
+        help_text="A Unique Product Identification Number",
+    )
     product_code = models.CharField(max_length=3, unique=True, default="NCD")
     slug = models.SlugField(max_length=100, db_index=True, blank=True)
     seller = models.ForeignKey(
@@ -141,7 +193,13 @@ class Product(Timestamps, UUIDField, models.Model):
     available_stock = models.PositiveIntegerField(default=0)
     overall_rating = models.DecimalField(max_digits=1, decimal_places=1)
     color = models.ForeignKey(ProductColor, on_delete=SET_NULL, null=True)
-    specification = models.OneToOneField(ProductSpecification, null=True, blank=True, on_delete=models.SET_NULL)
+    specification = models.OneToOneField(
+        ProductSpecification,
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="product",
+    )
     replacement_days = models.PositiveIntegerField(default=0)
     warranty = models.CharField(max_length=100, blank=True, null=True)
     weight = models.CharField(max_length=100, default=0)
@@ -154,10 +212,17 @@ class Product(Timestamps, UUIDField, models.Model):
             )
         return super().save(*args, **kwargs)
 
+    def __str__(self):
+        return self.name
+
 
 class ProductHighlight(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     name = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name
+
 
 class ProductImages(models.Model):
     product = models.ForeignKey(
@@ -165,3 +230,6 @@ class ProductImages(models.Model):
     )
     color = models.ForeignKey(ProductColor, on_delete=models.SET_NULL, null=True)
     image = models.ImageField(upload_to=product_images)
+
+    def __str__(self):
+        return self.product.name
