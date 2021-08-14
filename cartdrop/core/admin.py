@@ -19,6 +19,3 @@ class CategoryImageAdmin(admin.ModelAdmin):
 @admin.register(ProductSubcategory)
 class ProductSubcategoryAdmin(admin.ModelAdmin):
     list_display = ("name", "slug")
-
-
-

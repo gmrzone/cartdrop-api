@@ -39,7 +39,6 @@ class Brand(UUIDField, Slugable, models.Model):
     photo = models.ImageField(upload_to=brand_photo_location)
 
 
-
 class ProductReview(UUIDField, Timestamps, models.Model):
     product = models.ForeignKey(
         "products.Product", on_delete=models.CASCADE, related_name="reviews"
