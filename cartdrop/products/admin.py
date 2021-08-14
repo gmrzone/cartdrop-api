@@ -1,12 +1,16 @@
 from django.contrib import admin
 
-from .models import Product, ProductColor, DisplayType, MobileVariant, OperatingSystem, ScreenType, DryerType, ACType, ProductSeries, RefrigeratorType, SpeakerType, ProductMobileFeatures
+from .models import (ACType, DisplayType, DryerType, MobileVariant,
+                     OperatingSystem, Product, ProductColor,
+                     ProductMobileFeatures, ProductSeries, RefrigeratorType,
+                     ScreenType, SpeakerType)
 
 # Register your models here.
-    
+
+
 @admin.register(ProductColor)
 class ProductColorAdmin(admin.ModelAdmin):
-    list_display = ('__str__',)
+    list_display = ("__str__",)
     search_fields = ("name",)
 
 
@@ -20,59 +24,72 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(DisplayType)
 class DisplayTypeAdmin(admin.ModelAdmin):
-    list_display = ('__str__',)
+    list_display = ("__str__",)
     search_fields = ("name",)
+
 
 @admin.register(MobileVariant)
 class MobileVariantAdmin(admin.ModelAdmin):
 
-    list_display = ('__str__',)
+    list_display = ("__str__",)
     search_fields = ("name",)
+
 
 @admin.register(OperatingSystem)
 class OperatingSystemAdmin(admin.ModelAdmin):
-    list_display = ('__str__',)
+    list_display = ("__str__",)
     search_fields = ("name",)
 
 
 @admin.register(ScreenType)
 class SereenTypeAdmin(admin.ModelAdmin):
 
-    list_display = ('__str__',)
+    list_display = ("__str__",)
     search_fields = ("name",)
 
 
 @admin.register(DryerType)
 class DryerTypeAdmin(admin.ModelAdmin):
 
-    list_display = ('__str__',)
+    list_display = ("__str__",)
     search_fields = ("name",)
+
 
 @admin.register(ACType)
 class ACTypeAdmin(admin.ModelAdmin):
-    list_display = ('__str__',)
+    list_display = ("__str__",)
     search_fields = ("name",)
 
-    
+
 @admin.register(ProductSeries)
 class ProductSeries(admin.ModelAdmin):
-    list_display = ('__str__',)
+    list_display = ("__str__",)
     search_fields = ("name",)
+
 
 @admin.register(RefrigeratorType)
 class RefrigratorTypeAdmin(admin.ModelAdmin):
-    list_display = ('__str__',)
+    list_display = ("__str__",)
     search_fields = ("name",)
+
 
 @admin.register(SpeakerType)
 class SpeakerTypeAdmin(admin.ModelAdmin):
-    list_display = ('__str__',)
+    list_display = ("__str__",)
     search_fields = ("name",)
+
 
 @admin.register(ProductMobileFeatures)
 class MobileFeaturesAdmin(admin.ModelAdmin):
-    list_display = ('os', 'variant', 'display_size', 'display_type', 'resolution', 'sim_type', 'battery_capicity')
-    list_filter = ('touchscreen', 'smart_phone', 'os')
-    search_fields = ('sim_type', 'variant')
-    list_select_related = ('variant',)
-    
+    list_display = (
+        "os",
+        "variant",
+        "display_size",
+        "display_type",
+        "resolution",
+        "sim_type",
+        "battery_capicity",
+    )
+    list_filter = ("touchscreen", "smart_phone", "os")
+    search_fields = ("sim_type", "variant")
+    list_select_related = ("variant",)

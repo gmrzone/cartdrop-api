@@ -84,12 +84,14 @@ class RefrigeratorType(models.Model):
     def __str__(self):
         return self.name
 
+
 # Speaker type example Speaker, Home Theatre, Blootooth Speaker
 class SpeakerType(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
+
 
 class ProductMobileFeatures(models.Model):
     display_size = models.CharField(max_length=100)
@@ -152,13 +154,17 @@ class ProductAirConditionerFeature(models.Model):
     )
     cooling_coverage_area = models.CharField(max_length=100, blank=True)
 
+
 class ProductRefrigeratorFeature(models.Model):
 
     capacity = models.CharField(max_length=100)
-    star_rating = models.PositiveIntegerField(default=3, validators=[MaxValueValidator(5)])
+    star_rating = models.PositiveIntegerField(
+        default=3, validators=[MaxValueValidator(5)]
+    )
     compressor_type = models.CharField(max_length=100)
     type = models.ForeignKey(RefrigeratorType, on_delete=models.CASCADE)
     stabilizer_required = models.BooleanField(default=False)
+
 
 class ProductSpeakersFeatures(models.Model):
     power_output = models.CharField(max_length=20)
@@ -188,17 +194,23 @@ class ProductSpecification(models.Model):
     ac = models.OneToOneField(
         ProductAirConditionerFeature, on_delete=models.SET_NULL, null=True, blank=True
     )
-    refrigerator = models.OneToOneField(ProductRefrigeratorFeature, on_delete=models.SET_NULL, null=True, blank=True)
-    speaker = models.OneToOneField(ProductSpeakersFeatures, on_delete=models.SET_NULL, null=True, blank=True)
+    refrigerator = models.OneToOneField(
+        ProductRefrigeratorFeature, on_delete=models.SET_NULL, null=True, blank=True
+    )
+    speaker = models.OneToOneField(
+        ProductSpeakersFeatures, on_delete=models.SET_NULL, null=True, blank=True
+    )
 
     def __str__(self) -> str:
         return self.product.name
+
 
 class ProductWarranty(models.Model):
     type = models.CharField(max_length=100)
     summary = models.CharField(max_length=200)
     covered = models.TextField(max_length=500, blank=True)
     not_covered = models.TextField(max_length=500, blank=True)
+
 
 class Product(Timestamps, UUIDField, models.Model):
     brand = models.ForeignKey(
@@ -234,7 +246,9 @@ class Product(Timestamps, UUIDField, models.Model):
         related_name="product",
     )
     replacement_days = models.PositiveIntegerField(default=0)
-    warranty = models.ForeignKey(ProductWarranty, on_delete=models.SET_NULL, null=True, blank=True)
+    warranty = models.ForeignKey(
+        ProductWarranty, on_delete=models.SET_NULL, null=True, blank=True
+    )
     weight = models.CharField(max_length=100, default=0)
 
     def save(self, *args, **kwargs):
