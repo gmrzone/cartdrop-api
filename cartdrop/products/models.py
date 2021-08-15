@@ -164,7 +164,7 @@ class ProductRefrigeratorFeature(models.Model):
 class ProductSpeakersFeatures(models.Model):
     power_output = models.CharField(max_length=20)
     frequency_response = models.CharField(max_length=100)
-    has_blootooth = models.BooleanField(default=False)
+    has_bluetooth = models.BooleanField(default=False)
     type = models.ForeignKey(SpeakerType, on_delete=models.CASCADE)
 
 
