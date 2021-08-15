@@ -80,7 +80,6 @@ class SpeakerTypeAdmin(admin.ModelAdmin):
 class MobileFeaturesAdmin(admin.ModelAdmin):
     list_display = (
         "os",
-        "variant",
         "display_size",
         "display_type",
         "resolution",

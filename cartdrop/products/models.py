@@ -101,10 +101,8 @@ class ProductMobileFeatures(models.Model):
     smart_phone = models.BooleanField(default=True)
     battery_capicity = models.CharField(max_length=6)
     os = models.ForeignKey(OperatingSystem, on_delete=SET_NULL, null=True, blank=True)
-    variant = models.ForeignKey(
-        MobileVariant, on_delete=models.SET_NULL, null=True, blank=True
-    )
     ram = models.CharField(max_length=100)
+    series = models.ForeignKey(ProductSeries, on_delete=models.CASCADE, null=True)
 
 
 class ProductLaptopFeatures(models.Model):
@@ -156,7 +154,7 @@ class ProductAirConditionerFeature(models.Model):
 class ProductRefrigeratorFeature(models.Model):
 
     capacity = models.CharField(max_length=100)
-    star_rating = models.PositiveIntegerField(
+    energy_rating = models.PositiveIntegerField(
         default=3, validators=[MaxValueValidator(5)]
     )
     compressor_type = models.CharField(max_length=100)
@@ -276,6 +274,9 @@ class ProductVariation(UUIDField, models.Model):
     color = models.ForeignKey(ProductColor, on_delete=models.SET_NULL, null=True)
     active = models.BooleanField(default=True)
     available_stock = models.PositiveIntegerField(default=0)
+    variant = models.ForeignKey(
+        MobileVariant, on_delete=models.SET_NULL, null=True, blank=True
+    )
 
 
 class ProductHighlight(models.Model):
