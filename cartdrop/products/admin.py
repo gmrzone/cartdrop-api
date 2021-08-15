@@ -22,8 +22,8 @@ class ProductColorAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ("name", "slug")
-    search_fields = ("name",)
+    list_display = ("name", "slug", "brand")
+    search_fields = ("name", "brand")
 
 
 @admin.register(DisplayType)

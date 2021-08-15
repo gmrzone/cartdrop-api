@@ -3,7 +3,6 @@ from string import ascii_uppercase
 from django.conf import settings
 from django.core.validators import MaxValueValidator
 from django.db import models
-from django.db.models.base import Model
 from django.db.models.deletion import SET_NULL
 from django.utils.crypto import get_random_string
 from django.utils.text import slugify
@@ -15,7 +14,7 @@ from .utils import product_images
 # Create your models here.
 
 
-class ProductColor(Slugable, models.Model):
+class ProductColor(Slugable):
     name = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
@@ -46,7 +45,7 @@ class MobileVariant(models.Model):
 
 
 # Operating System like Android, Windows Mac OS for mobiles and laptops and other products that has operating system
-class OperatingSystem(Slugable, models.Model):
+class OperatingSystem(Slugable):
     name = models.CharField(max_length=100, db_index=True)
 
     def __str__(self):
@@ -207,22 +206,16 @@ class ProductWarranty(models.Model):
     not_covered = models.TextField(max_length=500, blank=True)
 
 
-class Product(Timestamps, UUIDField, models.Model):
+class Product(Timestamps, UUIDField):
     brand = models.ForeignKey(
         "core.Brand", on_delete=models.CASCADE, related_name="product_list"
     )
-    PID = models.CharField(
-        max_length=50,
-        db_index=True,
-        blank=True,
-        help_text="A Unique Product Identification Number",
-    )
     product_code = models.CharField(max_length=3, unique=True, default="NCD")
+    name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, db_index=True, blank=True)
     seller = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="products"
     )
-    name = models.CharField(max_length=100)
     subcategory = models.ForeignKey(
         "core.ProductSubcategory", on_delete=models.CASCADE, related_name="items"
     )
@@ -240,31 +233,15 @@ class Product(Timestamps, UUIDField, models.Model):
         ProductWarranty, on_delete=models.SET_NULL, null=True, blank=True
     )
     weight = models.CharField(max_length=100, default=0)
-    available_colors = models.ManyToManyField(
-        ProductColor, blank=True, related_name="all_products"
-    )
 
     def save(self, *args, **kwargs):
         if not self.pk:
             self.slug = slugify(self.name)
-            self.PID = self.product_code + get_random_string(
-                length=15, allowed_chars=ascii_uppercase
-            )
         return super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name
 
-
-class ProductImages(models.Model):
-    product = models.ForeignKey(
-        Product, on_delete=models.CASCADE, related_name="images"
-    )
-    color = models.ForeignKey(ProductColor, on_delete=models.SET_NULL, null=True)
-    image = models.ImageField(upload_to=product_images)
-
-    def __str__(self):
-        return self.product.name
 
 # Size ofr clothing like SM, XL, XXL,
 class FashionSize(models.Model):
@@ -274,7 +251,13 @@ class FashionSize(models.Model):
         return self.size
 
 
-class ProductVariation(UUIDField, models.Model):
+class ProductVariation(UUIDField):
+    PID = models.CharField(
+        max_length=50,
+        db_index=True,
+        blank=True,
+        help_text="A Unique Product Identification Number",
+    )
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     retail_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
@@ -286,6 +269,22 @@ class ProductVariation(UUIDField, models.Model):
     )
     size = models.ForeignKey(FashionSize, on_delete=models.SET_NULL, null=True, blank=True)
 
+    def save(self, *args, **kwargs):
+        if not self.pk:
+            self.PID = self.product.product_code + get_random_string(
+                length=15, allowed_chars=ascii_uppercase
+            )
+        return super().save(*args, **kwargs)
+
+
+class ProductImages(models.Model):
+    product_variation = models.ForeignKey(
+        ProductVariation, on_delete=models.CASCADE, related_name="images", null=True
+    )
+    image = models.ImageField(upload_to=product_images)
+
+    def __str__(self):
+        return self.product.name
 
 class ProductHighlight(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)

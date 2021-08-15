@@ -1,7 +1,6 @@
 from django.conf import settings
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
-from django.db.models.base import Model
 
 from .behaviours import Slugable, Timestamps, UUIDField
 from .utils import (brand_photo_location, category_images,
@@ -10,7 +9,7 @@ from .utils import (brand_photo_location, category_images,
 # Create your models here.
 
 
-class ProductCategory(Timestamps, Slugable, UUIDField, models.Model):
+class ProductCategory(Timestamps, Slugable, UUIDField):
     name = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
@@ -24,7 +23,7 @@ class CategoryImage(models.Model):
     image = models.ImageField(upload_to=category_images)
 
 
-class ProductSubcategory(Timestamps, Slugable, UUIDField, models.Model):
+class ProductSubcategory(Timestamps, Slugable, UUIDField):
     category = models.ForeignKey(
         ProductCategory,
         on_delete=models.CASCADE,
@@ -43,7 +42,7 @@ class SubcategoryImage(models.Model):
     image = models.ImageField(upload_to=subcategory_images)
 
 
-class Brand(UUIDField, Slugable, models.Model):
+class Brand(UUIDField, Slugable):
     name = models.CharField(max_length=100)
     photo = models.ImageField(upload_to=brand_photo_location)
 
@@ -51,7 +50,7 @@ class Brand(UUIDField, Slugable, models.Model):
         return self.name
 
 
-class ProductReview(UUIDField, Timestamps, models.Model):
+class ProductReview(UUIDField, Timestamps):
     product = models.ForeignKey(
         "products.Product", on_delete=models.CASCADE, related_name="reviews"
     )

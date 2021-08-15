@@ -139,7 +139,7 @@ class SellerUser(CartDropUser):
         return super().save(*args, **kwargs)
 
 
-class UserAddress(UUIDField, Timestamps, models.Model):
+class UserAddress(UUIDField, Timestamps):
     class StateChoises(models.TextChoices):
         KA = "KA", "Karnataka"
         AP = "AP", "Andhra Pradesh"
