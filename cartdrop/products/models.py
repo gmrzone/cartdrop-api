@@ -266,6 +266,13 @@ class ProductImages(models.Model):
     def __str__(self):
         return self.product.name
 
+# Size ofr clothing like SM, XL, XXL,
+class FashionSize(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.size
+
 
 class ProductVariation(UUIDField, models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
@@ -277,6 +284,7 @@ class ProductVariation(UUIDField, models.Model):
     variant = models.ForeignKey(
         MobileVariant, on_delete=models.SET_NULL, null=True, blank=True
     )
+    size = models.ForeignKey(FashionSize, on_delete=models.SET_NULL, null=True, blank=True)
 
 
 class ProductHighlight(models.Model):

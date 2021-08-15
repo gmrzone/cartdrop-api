@@ -11,7 +11,7 @@ from .utils import (brand_photo_location, category_images,
 
 
 class ProductCategory(Timestamps, Slugable, UUIDField, models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
         return self.name
@@ -30,7 +30,7 @@ class ProductSubcategory(Timestamps, Slugable, UUIDField, models.Model):
         on_delete=models.CASCADE,
         related_name="subcategories",
     )
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
         return self.name

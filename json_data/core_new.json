@@ -250,18 +250,6 @@
 },
 {
     "model": "core.productsubcategory",
-    "pk": 8,
-    "fields": {
-        "created": "2021-08-14T20:15:25.774Z",
-        "updated": "2021-08-14T20:15:25.774Z",
-        "slug": "clothing",
-        "uuid": "a94872f8-a66b-4686-8835-a1e750d0912c",
-        "category": 5,
-        "name": "Clothing"
-    }
-},
-{
-    "model": "core.productsubcategory",
     "pk": 9,
     "fields": {
         "created": "2021-08-14T20:16:32.371Z",
@@ -381,6 +369,30 @@
     }
 },
 {
+    "model": "core.productsubcategory",
+    "pk": 20,
+    "fields": {
+        "created": "2021-08-15T19:05:16.613Z",
+        "updated": "2021-08-15T19:05:21.782Z",
+        "slug": "mens-t-shirts",
+        "uuid": "1db57d86-7656-482b-82f2-aaac495c42d4",
+        "category": 5,
+        "name": "Men's T-Shirts"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 21,
+    "fields": {
+        "created": "2021-08-15T19:05:36.907Z",
+        "updated": "2021-08-15T19:05:36.907Z",
+        "slug": "womens-t-shirts",
+        "uuid": "032feb59-0c55-44f7-9a4a-fd0d77889e53",
+        "category": 5,
+        "name": "Women's T-Shirts"
+    }
+},
+{
     "model": "core.subcategoryimage",
     "pk": 1,
     "fields": {
@@ -474,14 +486,6 @@
     "fields": {
         "subcategory": 9,
         "image": "Subcategory Media/fashion/backpack/bag_2-nobg.png"
-    }
-},
-{
-    "model": "core.subcategoryimage",
-    "pk": 13,
-    "fields": {
-        "subcategory": 8,
-        "image": "Subcategory Media/fashion/clothing/shirt_1_crop.jpg"
     }
 },
 {
