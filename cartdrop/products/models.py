@@ -267,7 +267,9 @@ class ProductVariation(UUIDField):
     variant = models.ForeignKey(
         MobileVariant, on_delete=models.SET_NULL, null=True, blank=True
     )
-    size = models.ForeignKey(FashionSize, on_delete=models.SET_NULL, null=True, blank=True)
+    size = models.ForeignKey(
+        FashionSize, on_delete=models.SET_NULL, null=True, blank=True
+    )
 
     def save(self, *args, **kwargs):
         if not self.pk:
@@ -285,6 +287,7 @@ class ProductImages(models.Model):
 
     def __str__(self):
         return self.product.name
+
 
 class ProductHighlight(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
