@@ -8,7 +8,10 @@ def category_images(instance, filename):
 
 def subcategory_images(instance, filename):
     path = os.path.join(
-        "Subcategory Media", instance.subcategory.category.slug, instance.subcategory.slug, filename
+        "Subcategory Media",
+        instance.subcategory.category.slug,
+        instance.subcategory.slug,
+        filename,
     )
     return path
 

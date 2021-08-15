@@ -88,11 +88,13 @@ class CartDropUserAdmin(UserAdmin):
         ),
     )
 
+
 class UserAddressAdmin(admin.ModelAdmin):
-    list_display = ('user', 'city', 'state', 'pincode', "is_primary")
-    list_filter = ('is_primary',)
-    search_fields = ('address_1', "address_2", "city", "state", "pincode")
-    list_select_related = ('user',)
+    list_display = ("user", "city", "state", "pincode", "is_primary")
+    list_filter = ("is_primary",)
+    search_fields = ("address_1", "address_2", "city", "state", "pincode")
+    list_select_related = ("user",)
+
 
 admin.site.register(CartDropUser, CartDropUserAdmin)
 admin.site.register(UserAddress, UserAddressAdmin)

@@ -5,9 +5,11 @@ from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
+from cartdrop.core.behaviours import Timestamps, UUIDField
+
 from .managers import CartDropUserManager
 from .utils import user_photo_location
-from cartdrop.core.behaviours import Timestamps, UUIDField
+from .validators import pincode_validator
 
 # Create your models here.
 
@@ -138,7 +140,6 @@ class SellerUser(CartDropUser):
 
 
 class UserAddress(UUIDField, Timestamps, models.Model):
-
     class StateChoises(models.TextChoices):
         KA = "KA", "Karnataka"
         AP = "AP", "Andhra Pradesh"
@@ -169,12 +170,14 @@ class UserAddress(UUIDField, Timestamps, models.Model):
         UT = "UT", "Uttarakhand"
         WB = "WB", "West Bengal"
 
-
-    user = models.ForeignKey(CartDropUser, on_delete=models.CASCADE, related_name="addresses")
+    user = models.ForeignKey(
+        CartDropUser, on_delete=models.CASCADE, related_name="addresses"
+    )
     address_1 = models.CharField(max_length=500)
     address_2 = models.CharField(max_length=500, blank=True)
     city = models.CharField(max_length=100)
-    state = models.CharField(max_length=100, choices=StateChoises.choices, default=StateChoises.MH)
-    pincode = models.CharField(max_length=6, null=True)
+    state = models.CharField(
+        max_length=100, choices=StateChoises.choices, default=StateChoises.MH
+    )
+    pincode = models.CharField(max_length=6, null=True, validators=[pincode_validator])
     is_primary = models.BooleanField(default=False)
-

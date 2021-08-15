@@ -6,18 +6,20 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0012_alter_productcolor_name'),
+        ("products", "0012_alter_productcolor_name"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='productspecification',
-            name='available_colors',
-            field=models.ManyToManyField(blank=True, related_name='all_products', to='products.ProductColor'),
+            model_name="productspecification",
+            name="available_colors",
+            field=models.ManyToManyField(
+                blank=True, related_name="all_products", to="products.ProductColor"
+            ),
         ),
         migrations.AlterField(
-            model_name='screentype',
-            name='name',
+            model_name="screentype",
+            name="name",
             field=models.CharField(max_length=100, unique=True),
         ),
     ]

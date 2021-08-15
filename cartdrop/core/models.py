@@ -35,11 +35,13 @@ class ProductSubcategory(Timestamps, Slugable, UUIDField, models.Model):
     def __str__(self):
         return self.name
 
+
 class SubcategoryImage(models.Model):
     subcategory = models.ForeignKey(
         ProductSubcategory, on_delete=models.CASCADE, related_name="subcategory_images"
     )
     image = models.ImageField(upload_to=subcategory_images)
+
 
 class Brand(UUIDField, Slugable, models.Model):
     name = models.CharField(max_length=100)

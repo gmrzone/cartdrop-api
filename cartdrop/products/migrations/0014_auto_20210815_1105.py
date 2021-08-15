@@ -6,21 +6,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0013_auto_20210815_0901'),
+        ("products", "0013_auto_20210815_0901"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='product',
-            name='color',
+            model_name="product",
+            name="color",
         ),
         migrations.RemoveField(
-            model_name='productspecification',
-            name='available_colors',
+            model_name="productspecification",
+            name="available_colors",
         ),
         migrations.AddField(
-            model_name='product',
-            name='available_colors',
-            field=models.ManyToManyField(blank=True, related_name='all_products', to='products.ProductColor'),
+            model_name="product",
+            name="available_colors",
+            field=models.ManyToManyField(
+                blank=True, related_name="all_products", to="products.ProductColor"
+            ),
         ),
     ]

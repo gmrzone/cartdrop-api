@@ -28,6 +28,7 @@ class ScreenType(models.Model):
     def __str__(self):
         return self.name
 
+
 # Display type for mobile like HD, HD+, Super AMOLED etc
 class DisplayType(models.Model):
     name = models.CharField(max_length=200)
@@ -58,6 +59,7 @@ class WashingMethod(models.Model):
 
     def __str__(self):
         return self.name
+
 
 # AC type eg split, window etc
 class ACType(models.Model):
@@ -135,7 +137,9 @@ class ProductWashingMachineFeatures(models.Model):
         default=3, validators=[MaxValueValidator(5)]
     )
     washing_capicity = models.PositiveIntegerField(default=0)
-    washing_method = models.ForeignKey(WashingMethod, on_delete=models.SET_NULL, null=True, blank=True)
+    washing_method = models.ForeignKey(
+        WashingMethod, on_delete=models.SET_NULL, null=True, blank=True
+    )
     has_inbuilt_heater = models.BooleanField(default=False)
 
 
@@ -238,7 +242,9 @@ class Product(Timestamps, UUIDField, models.Model):
         ProductWarranty, on_delete=models.SET_NULL, null=True, blank=True
     )
     weight = models.CharField(max_length=100, default=0)
-    available_colors = models.ManyToManyField(ProductColor, blank=True, related_name="all_products")
+    available_colors = models.ManyToManyField(
+        ProductColor, blank=True, related_name="all_products"
+    )
 
     def save(self, *args, **kwargs):
         if not self.pk:
@@ -251,6 +257,7 @@ class Product(Timestamps, UUIDField, models.Model):
     def __str__(self):
         return self.name
 
+
 class ProductImages(models.Model):
     product = models.ForeignKey(
         Product, on_delete=models.CASCADE, related_name="images"
@@ -261,7 +268,8 @@ class ProductImages(models.Model):
     def __str__(self):
         return self.product.name
 
-class ProductVariation(UUIDField ,models.Model):
+
+class ProductVariation(UUIDField, models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     retail_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
@@ -270,13 +278,9 @@ class ProductVariation(UUIDField ,models.Model):
     available_stock = models.PositiveIntegerField(default=0)
 
 
-
 class ProductHighlight(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     name = models.CharField(max_length=500)
 
     def __str__(self):
         return self.name
-
-
-
