@@ -7,6 +7,7 @@ from django.utils.translation import gettext_lazy as _
 
 from .managers import CartDropUserManager
 from .utils import user_photo_location
+from cartdrop.core.behaviours import Timestamps, UUIDField
 
 # Create your models here.
 
@@ -134,3 +135,46 @@ class SellerUser(CartDropUser):
         if not self.pk:
             self.type = self.UserTypes.SELLER
         return super().save(*args, **kwargs)
+
+
+class UserAddress(UUIDField, Timestamps, models.Model):
+
+    class StateChoises(models.TextChoices):
+        KA = "KA", "Karnataka"
+        AP = "AP", "Andhra Pradesh"
+        KL = "KL", "Kerala"
+        TN = "TN", "Tamil Nadu"
+        MH = "MH", "Maharashtra"
+        UP = "UP", "Uttar Pradesh"
+        GA = "GA", "Goa"
+        GJ = "GJ", "Gujarat"
+        RJ = "RJ", "Rajasthan"
+        HP = "HP", "Himachal Pradesh"
+        TG = "TG", "Telangana"
+        AR = "AR", "Arunachal Pradesh"
+        AS = "AS", "Assam"
+        BR = "BR", "Bihar"
+        CT = "CT", "Chhattisgarh"
+        HR = "HR", "Haryana"
+        JH = "JH", "Jharkhand"
+        MP = "MP", "Madhya Pradesh"
+        MN = "MN", "Manipur"
+        ML = "ML", "Meghalaya"
+        MZ = "MZ", "Mizoram"
+        NL = "NL", "Nagaland"
+        OR = "OR", "Odisha"
+        PB = "PB", "Punjab"
+        SK = "SK", "Sikkim"
+        TR = "TR", "Tripura"
+        UT = "UT", "Uttarakhand"
+        WB = "WB", "West Bengal"
+
+
+    user = models.ForeignKey(CartDropUser, on_delete=models.CASCADE, related_name="addresses")
+    address_1 = models.CharField(max_length=500)
+    address_2 = models.CharField(max_length=500, blank=True)
+    city = models.CharField(max_length=100)
+    state = models.CharField(max_length=100, choices=StateChoises.choices, default=StateChoises.MH)
+    pincode = models.CharField(max_length=6, null=True)
+    is_primary = models.BooleanField(default=False)
+

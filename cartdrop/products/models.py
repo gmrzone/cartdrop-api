@@ -172,8 +172,6 @@ class ProductSpecification(models.Model):
     launched_date = models.DateField(auto_now=True)
     model_no = models.CharField(max_length=100, blank=True, null=True, unique=True)
     model_name = models.CharField(max_length=100, blank=True, null=True)
-    color = models.ForeignKey(ProductColor, on_delete=models.SET_NULL, null=True)
-    available_colors = models.ManyToManyField(ProductColor, blank=True, related_name="all_products")
     mobile = models.OneToOneField(
         ProductMobileFeatures, on_delete=models.SET_NULL, null=True, blank=True
     )
@@ -226,13 +224,8 @@ class Product(Timestamps, UUIDField, models.Model):
     subcategory = models.ForeignKey(
         "core.ProductSubcategory", on_delete=models.CASCADE, related_name="items"
     )
-    retail_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    active = models.BooleanField(default=True)
     description = models.TextField(max_length=100, blank=True, null=True)
-    available_stock = models.PositiveIntegerField(default=0)
     overall_rating = models.DecimalField(max_digits=1, decimal_places=1)
-    color = models.ForeignKey(ProductColor, on_delete=SET_NULL, null=True)
     specification = models.OneToOneField(
         ProductSpecification,
         null=True,
@@ -245,6 +238,7 @@ class Product(Timestamps, UUIDField, models.Model):
         ProductWarranty, on_delete=models.SET_NULL, null=True, blank=True
     )
     weight = models.CharField(max_length=100, default=0)
+    available_colors = models.ManyToManyField(ProductColor, blank=True, related_name="all_products")
 
     def save(self, *args, **kwargs):
         if not self.pk:
@@ -257,15 +251,6 @@ class Product(Timestamps, UUIDField, models.Model):
     def __str__(self):
         return self.name
 
-
-class ProductHighlight(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    name = models.CharField(max_length=500)
-
-    def __str__(self):
-        return self.name
-
-
 class ProductImages(models.Model):
     product = models.ForeignKey(
         Product, on_delete=models.CASCADE, related_name="images"
@@ -275,3 +260,23 @@ class ProductImages(models.Model):
 
     def __str__(self):
         return self.product.name
+
+class ProductVariation(UUIDField ,models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    retail_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    color = models.ForeignKey(ProductColor, on_delete=models.SET_NULL, null=True)
+    active = models.BooleanField(default=True)
+    available_stock = models.PositiveIntegerField(default=0)
+
+
+
+class ProductHighlight(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    name = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name
+
+
+

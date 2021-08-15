@@ -23,9 +23,7 @@ class ProductColorAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ("name", "slug", "price", "active")
-    list_filter = ("active",)
-    list_editable = ("price",)
+    list_display = ("name", "slug")
     search_fields = ("name",)
 
 
