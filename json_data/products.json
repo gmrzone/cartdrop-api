@@ -1,0 +1,597 @@
+[
+{
+    "model": "products.productcolor",
+    "pk": 2,
+    "fields": {
+        "slug": "red",
+        "name": "RED"
+    }
+},
+{
+    "model": "products.productcolor",
+    "pk": 3,
+    "fields": {
+        "slug": "yellow",
+        "name": "Yellow"
+    }
+},
+{
+    "model": "products.productcolor",
+    "pk": 4,
+    "fields": {
+        "slug": "green",
+        "name": "GREEN"
+    }
+},
+{
+    "model": "products.productcolor",
+    "pk": 5,
+    "fields": {
+        "slug": "blue",
+        "name": "BLUE"
+    }
+},
+{
+    "model": "products.productcolor",
+    "pk": 6,
+    "fields": {
+        "slug": "navy-blue",
+        "name": "NAVY BLUE"
+    }
+},
+{
+    "model": "products.productcolor",
+    "pk": 7,
+    "fields": {
+        "slug": "black",
+        "name": "BLACK"
+    }
+},
+{
+    "model": "products.productcolor",
+    "pk": 8,
+    "fields": {
+        "slug": "white",
+        "name": "WHITE"
+    }
+},
+{
+    "model": "products.productcolor",
+    "pk": 9,
+    "fields": {
+        "slug": "purple",
+        "name": "PURPLE"
+    }
+},
+{
+    "model": "products.productcolor",
+    "pk": 10,
+    "fields": {
+        "slug": "brown",
+        "name": "BROWN"
+    }
+},
+{
+    "model": "products.productcolor",
+    "pk": 11,
+    "fields": {
+        "slug": "grey",
+        "name": "GREY"
+    }
+},
+{
+    "model": "products.productcolor",
+    "pk": 12,
+    "fields": {
+        "slug": "gold",
+        "name": "GOLD"
+    }
+},
+{
+    "model": "products.productcolor",
+    "pk": 13,
+    "fields": {
+        "slug": "space-grey",
+        "name": "SPACE GREY"
+    }
+},
+{
+    "model": "products.screentype",
+    "pk": 1,
+    "fields": {
+        "name": "LCD"
+    }
+},
+{
+    "model": "products.screentype",
+    "pk": 2,
+    "fields": {
+        "name": "LED"
+    }
+},
+{
+    "model": "products.screentype",
+    "pk": 8,
+    "fields": {
+        "name": "OLED"
+    }
+},
+{
+    "model": "products.screentype",
+    "pk": 9,
+    "fields": {
+        "name": "QLED"
+    }
+},
+{
+    "model": "products.displaytype",
+    "pk": 1,
+    "fields": {
+        "name": "Full HD+ Super AMOLED Display"
+    }
+},
+{
+    "model": "products.displaytype",
+    "pk": 2,
+    "fields": {
+        "name": "Dynamic AMOLED Infinity-O Display"
+    }
+},
+{
+    "model": "products.displaytype",
+    "pk": 3,
+    "fields": {
+        "name": "Retina HD Display"
+    }
+},
+{
+    "model": "products.displaytype",
+    "pk": 4,
+    "fields": {
+        "name": "All-screen LCD Multi-touch Display with IPS Technology"
+    }
+},
+{
+    "model": "products.displaytype",
+    "pk": 5,
+    "fields": {
+        "name": "Super Retina XDR Display"
+    }
+},
+{
+    "model": "products.displaytype",
+    "pk": 6,
+    "fields": {
+        "name": "OLED"
+    }
+},
+{
+    "model": "products.displaytype",
+    "pk": 7,
+    "fields": {
+        "name": "LED"
+    }
+},
+{
+    "model": "products.displaytype",
+    "pk": 8,
+    "fields": {
+        "name": "LCD"
+    }
+},
+{
+    "model": "products.displaytype",
+    "pk": 9,
+    "fields": {
+        "name": "HD"
+    }
+},
+{
+    "model": "products.displaytype",
+    "pk": 10,
+    "fields": {
+        "name": "HD+"
+    }
+},
+{
+    "model": "products.displaytype",
+    "pk": 11,
+    "fields": {
+        "name": "Super HD"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 1,
+    "fields": {
+        "name": "6GB / 64GB"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 2,
+    "fields": {
+        "name": "4GB / 64GB"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 3,
+    "fields": {
+        "name": "8GB / 64GB"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 4,
+    "fields": {
+        "name": "3GB / 64GB"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 5,
+    "fields": {
+        "name": "12GB / 64GB"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 6,
+    "fields": {
+        "name": "4GB / 128gb"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 7,
+    "fields": {
+        "name": "4GB / 256GB"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 8,
+    "fields": {
+        "name": "6GB / 128gb"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 9,
+    "fields": {
+        "name": "6GB / 256GB"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 10,
+    "fields": {
+        "name": "8GB / 128GB"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 11,
+    "fields": {
+        "name": "8GB / 256GB"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 12,
+    "fields": {
+        "name": "12GB / 128GB"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 13,
+    "fields": {
+        "name": "12GB / 256GB"
+    }
+},
+{
+    "model": "products.mobilevariant",
+    "pk": 14,
+    "fields": {
+        "name": "3GB / 128GB"
+    }
+},
+{
+    "model": "products.operatingsystem",
+    "pk": 1,
+    "fields": {
+        "slug": "windows-10-home",
+        "name": "Windows 10 Home"
+    }
+},
+{
+    "model": "products.operatingsystem",
+    "pk": 2,
+    "fields": {
+        "slug": "windows-10-pro",
+        "name": "Windows 10 Professional"
+    }
+},
+{
+    "model": "products.operatingsystem",
+    "pk": 3,
+    "fields": {
+        "slug": "ios-14",
+        "name": "IOS 14"
+    }
+},
+{
+    "model": "products.operatingsystem",
+    "pk": 4,
+    "fields": {
+        "slug": "ios-13",
+        "name": "IOS 13"
+    }
+},
+{
+    "model": "products.operatingsystem",
+    "pk": 5,
+    "fields": {
+        "slug": "ios-12",
+        "name": "IOS 12"
+    }
+},
+{
+    "model": "products.operatingsystem",
+    "pk": 6,
+    "fields": {
+        "slug": "android-11",
+        "name": "Android 11"
+    }
+},
+{
+    "model": "products.operatingsystem",
+    "pk": 7,
+    "fields": {
+        "slug": "android-android-q-10",
+        "name": "Android Android Q 10"
+    }
+},
+{
+    "model": "products.operatingsystem",
+    "pk": 8,
+    "fields": {
+        "slug": "android-10",
+        "name": "Android 10"
+    }
+},
+{
+    "model": "products.operatingsystem",
+    "pk": 9,
+    "fields": {
+        "slug": "android-9",
+        "name": "Android 9"
+    }
+},
+{
+    "model": "products.washingmethod",
+    "pk": 1,
+    "fields": {
+        "name": "3 Smart Motion"
+    }
+},
+{
+    "model": "products.washingmethod",
+    "pk": 2,
+    "fields": {
+        "name": "Pulsator"
+    }
+},
+{
+    "model": "products.washingmethod",
+    "pk": 3,
+    "fields": {
+        "name": "Agipellar Wash"
+    }
+},
+{
+    "model": "products.washingmethod",
+    "pk": 4,
+    "fields": {
+        "name": "Tumble Wash"
+    }
+},
+{
+    "model": "products.actype",
+    "pk": 1,
+    "fields": {
+        "name": "Split"
+    }
+},
+{
+    "model": "products.actype",
+    "pk": 2,
+    "fields": {
+        "name": "Window"
+    }
+},
+{
+    "model": "products.actype",
+    "pk": 3,
+    "fields": {
+        "name": "Portable"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 1,
+    "fields": {
+        "name": "Samsung Galaxy S"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 2,
+    "fields": {
+        "name": "Samsung Galaxy A"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 3,
+    "fields": {
+        "name": "Samsung Galaxy Note"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 4,
+    "fields": {
+        "name": "Samsung Galaxy J"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 5,
+    "fields": {
+        "name": "Macbook Pro"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 6,
+    "fields": {
+        "name": "Mackbook Air"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 7,
+    "fields": {
+        "name": "Thinkpad T Series"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 8,
+    "fields": {
+        "name": "Thinkpad Series"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 9,
+    "fields": {
+        "name": "Lenovo V Series"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 10,
+    "fields": {
+        "name": "Samsung Galaxy Books"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 11,
+    "fields": {
+        "name": "Microsoft Surface"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 12,
+    "fields": {
+        "name": "HP Pavilion"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 13,
+    "fields": {
+        "name": "HP Envy"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 14,
+    "fields": {
+        "name": "HP Spectre"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 15,
+    "fields": {
+        "name": "HP ProBook"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 16,
+    "fields": {
+        "name": "HP EliteBook"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 17,
+    "fields": {
+        "name": "HP Omen"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 18,
+    "fields": {
+        "name": "HP Chromebook"
+    }
+},
+{
+    "model": "products.productseries",
+    "pk": 19,
+    "fields": {
+        "name": "HP Stream"
+    }
+},
+{
+    "model": "products.refrigeratortype",
+    "pk": 1,
+    "fields": {
+        "name": "Double Door"
+    }
+},
+{
+    "model": "products.refrigeratortype",
+    "pk": 2,
+    "fields": {
+        "name": "Triple Door"
+    }
+},
+{
+    "model": "products.refrigeratortype",
+    "pk": 3,
+    "fields": {
+        "name": "Single Door"
+    }
+},
+{
+    "model": "products.speakertype",
+    "pk": 1,
+    "fields": {
+        "name": "Speakers"
+    }
+},
+{
+    "model": "products.speakertype",
+    "pk": 2,
+    "fields": {
+        "name": "Bluetooth Speakers"
+    }
+},
+{
+    "model": "products.speakertype",
+    "pk": 3,
+    "fields": {
+        "name": "Home Theatres"
+    }
+}
+]

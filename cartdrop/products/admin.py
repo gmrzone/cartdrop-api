@@ -1,13 +1,20 @@
 from django.contrib import admin
 
-from .models import (ACType, DisplayType, DryerType, MobileVariant,
+from .models import (ACType, DisplayType, MobileVariant,
                      OperatingSystem, Product, ProductColor,
                      ProductMobileFeatures, ProductSeries, RefrigeratorType,
-                     ScreenType, SpeakerType)
+                     ScreenType, SpeakerType, WashingMethod)
 
 # Register your models here.
 
 
+
+@admin.register(WashingMethod)
+class WashingMethodAdmin(admin.ModelAdmin):
+    list_display = ("__str__",)
+    search_fields = ("name",)
+
+    
 @admin.register(ProductColor)
 class ProductColorAdmin(admin.ModelAdmin):
     list_display = ("__str__",)
@@ -43,13 +50,6 @@ class OperatingSystemAdmin(admin.ModelAdmin):
 
 @admin.register(ScreenType)
 class SereenTypeAdmin(admin.ModelAdmin):
-
-    list_display = ("__str__",)
-    search_fields = ("name",)
-
-
-@admin.register(DryerType)
-class DryerTypeAdmin(admin.ModelAdmin):
 
     list_display = ("__str__",)
     search_fields = ("name",)

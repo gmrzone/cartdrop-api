@@ -16,11 +16,17 @@ from .utils import product_images
 
 
 class ProductColor(Slugable, models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
         return self.name
 
+
+class ScreenType(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
 
 # Display type for mobile like HD, HD+, Super AMOLED etc
 class DisplayType(models.Model):
@@ -46,23 +52,14 @@ class OperatingSystem(Slugable, models.Model):
         return self.name
 
 
-# Screen Type eg LCD LED
-class ScreenType(models.Model):
+# Washing Methods Types
+class WashingMethod(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
 
-
-# Dryer Type for washing Machine
-class DryerType(models.Model):
-    name = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.name
-
-
-# AC type eg eplit, window etc
+# AC type eg split, window etc
 class ACType(models.Model):
     name = models.CharField(max_length=100)
 
@@ -138,11 +135,8 @@ class ProductWashingMachineFeatures(models.Model):
         default=3, validators=[MaxValueValidator(5)]
     )
     washing_capicity = models.PositiveIntegerField(default=0)
-    washing_method = models.CharField(max_length=100)
+    washing_method = models.ForeignKey(WashingMethod, on_delete=models.SET_NULL, null=True, blank=True)
     has_inbuilt_heater = models.BooleanField(default=False)
-    dryer_type = models.ForeignKey(
-        DryerType, on_delete=models.SET_NULL, null=True, blank=True
-    )
 
 
 class ProductAirConditionerFeature(models.Model):
@@ -179,6 +173,7 @@ class ProductSpecification(models.Model):
     model_no = models.CharField(max_length=100, blank=True, null=True, unique=True)
     model_name = models.CharField(max_length=100, blank=True, null=True)
     color = models.ForeignKey(ProductColor, on_delete=models.SET_NULL, null=True)
+    available_colors = models.ManyToManyField(ProductColor, blank=True, related_name="all_products")
     mobile = models.OneToOneField(
         ProductMobileFeatures, on_delete=models.SET_NULL, null=True, blank=True
     )
