@@ -1,20 +1,23 @@
 from django.contrib import admin
 
-from .models import (ACType, DisplayType, MobileVariant, OperatingSystem,
-                     Product, ProductAirConditionerFeature, ProductColor,
+from .models import (ACType, DisplayType, FashionSize, MobileVariant,
+                     OperatingSystem, Product, ProductAirConditionerFeature,
+                     ProductColor, ProductHighlight, ProductImages,
                      ProductLaptopFeatures, ProductMobileFeatures,
                      ProductRefrigeratorFeature, ProductSeries,
-                     ProductSpeakersFeatures, ProductTelivisionFeatures,
-                     ProductWashingMachineFeatures, RefrigeratorType,
-                     ScreenType, SpeakerType, WashingMethod, ProductSpecification,
-                     ProductWarranty, FashionSize, ProductVariation, ProductImages, ProductHighlight, SimType)
+                     ProductSpeakersFeatures, ProductSpecification,
+                     ProductTelivisionFeatures, ProductVariation,
+                     ProductWarranty, ProductWashingMachineFeatures,
+                     RefrigeratorType, ScreenType, SimType, SpeakerType,
+                     WashingMethod)
 
 # Register your models here.
 
 
 @admin.register(SimType)
 class SimeTypeAdmin(admin.ModelAdmin):
-    list_display = ('name',)
+    list_display = ("name",)
+
 
 @admin.register(WashingMethod)
 class WashingMethodAdmin(admin.ModelAdmin):
@@ -32,7 +35,7 @@ class ProductColorAdmin(admin.ModelAdmin):
 class ProductAdmin(admin.ModelAdmin):
     list_display = ("name", "subcategory", "brand", "seller")
     search_fields = ("name", "brand", "subcategory")
-    list_select_related = ('brand', 'subcategory')
+    list_select_related = ("brand", "subcategory")
 
 
 @admin.register(DisplayType)
@@ -152,47 +155,44 @@ class SpeakerFeatureAdmin(admin.ModelAdmin):
 
 @admin.register(ProductSpecification)
 class ProductSpecificationAdmin(admin.ModelAdmin):
-    list_display = ('model_no', "model_name", 'in_box', "launched_date")
-    list_filter = ('launched_date',)
-    search_fields = ("model_no", 'model_name')
+    list_display = ("model_no", "model_name", "in_box", "launched_date")
+    list_filter = ("launched_date",)
+    search_fields = ("model_no", "model_name")
 
 
 @admin.register(ProductWarranty)
 class ProductWarrentyAdmin(admin.ModelAdmin):
     list_display = ("summary",)
-    search_fields = ('summary',)
+    search_fields = ("summary",)
 
 
 @admin.register(FashionSize)
 class FashionSizeAdmin(admin.ModelAdmin):
 
-    list_display = ('name', 'code')
-    search_fields = ('name', 'code')
-    list_editable = ('code',)
+    list_display = ("name", "code")
+    search_fields = ("name", "code")
+    list_editable = ("code",)
 
 
 @admin.register(ProductVariation)
 class ProductVariationAdmin(admin.ModelAdmin):
-    list_display = ('__str__', 'product', 'retail_price', "price")
-    list_filter = ('size', 'color', 'active')
-    search_fields = ('product',)
-    list_select_related = ('product',)
+    list_display = ("__str__", "product", "retail_price", "price")
+    list_filter = ("size", "color", "active")
+    search_fields = ("product",)
+    list_select_related = ("product",)
 
 
 @admin.register(ProductImages)
 class ProductImageAdmin(admin.ModelAdmin):
-    list_display = ('image', "primary",)
-    search_fields = ('product_variation',)
-
-
+    list_display = (
+        "image",
+        "primary",
+    )
+    # search_fields = ('product_variation',)
 
 
 @admin.register(ProductHighlight)
 class ProductHighlightsAdmin(admin.ModelAdmin):
-    list_display = ('product', 'name')
-    search_fields = ('name',)
-    list_select_related = ('product',)
-
-
-
-    
+    list_display = ("product", "name")
+    search_fields = ("name",)
+    list_select_related = ("product",)

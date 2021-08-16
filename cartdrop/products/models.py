@@ -90,6 +90,7 @@ class SpeakerType(models.Model):
     def __str__(self):
         return self.name
 
+
 class SimType(models.Model):
     name = models.CharField(max_length=100, unique=True)
 
@@ -101,7 +102,9 @@ class ProductMobileFeatures(models.Model):
     display_size = models.CharField(max_length=100)
     display_type = models.ForeignKey(DisplayType, on_delete=models.CASCADE)
     resolution = models.CharField(max_length=100)
-    sim_type = models.ForeignKey(SimType, on_delete=models.SET_NULL, null=True, blank=True)
+    sim_type = models.ForeignKey(
+        SimType, on_delete=models.SET_NULL, null=True, blank=True
+    )
     touchscreen = models.BooleanField(default=True)
     smart_phone = models.BooleanField(default=True)
     battery_capicity = models.CharField(max_length=20)
@@ -110,7 +113,16 @@ class ProductMobileFeatures(models.Model):
     series = models.ForeignKey(ProductSeries, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
-        s = ", ".join([self.series.name, self.display_size, self.resolution, self.os.name, self.ram, self.sim_type.name])
+        s = ", ".join(
+            [
+                self.series.name,
+                self.display_size,
+                self.resolution,
+                self.os.name,
+                self.ram,
+                self.sim_type.name,
+            ]
+        )
         return s
 
 
@@ -183,7 +195,12 @@ class ProductSpecification(models.Model):
     launched_date = models.DateField(auto_now=True)
     model_no = models.CharField(max_length=100, blank=True, null=True, unique=True)
     model_name = models.CharField(max_length=100, blank=True, null=True)
-    product = models.OneToOneField('products.Product', on_delete=models.SET_NULL, null=True, related_name="product_specification")
+    product = models.OneToOneField(
+        "products.Product",
+        on_delete=models.SET_NULL,
+        null=True,
+        related_name="product_specification",
+    )
     mobile = models.OneToOneField(
         ProductMobileFeatures, on_delete=models.SET_NULL, null=True, blank=True
     )
@@ -233,7 +250,9 @@ class Product(Timestamps, UUIDField):
         "core.ProductSubcategory", on_delete=models.CASCADE, related_name="items"
     )
     description = models.TextField(max_length=100, blank=True, null=True)
-    overall_rating = models.DecimalField(max_digits=1, decimal_places=1, blank=True, default=0.0)
+    overall_rating = models.DecimalField(
+        max_digits=1, decimal_places=1, blank=True, default=0.0
+    )
     replacement_days = models.PositiveIntegerField(default=0)
     warranty = models.ForeignKey(
         ProductWarranty, on_delete=models.SET_NULL, null=True, blank=True
@@ -277,7 +296,9 @@ class ProductVariation(UUIDField):
     size = models.ForeignKey(
         FashionSize, on_delete=models.SET_NULL, null=True, blank=True
     )
-
+    images = models.ManyToManyField(
+        "products.ProductImages", related_name="for_variations", blank=True
+    )
 
     def save(self, *args, **kwargs):
         if not self.pk:
@@ -285,7 +306,6 @@ class ProductVariation(UUIDField):
                 length=15, allowed_chars=ascii_uppercase
             )
         return super().save(*args, **kwargs)
-
 
     def __str__(self):
         variant = self.variant.name
@@ -296,16 +316,12 @@ class ProductVariation(UUIDField):
 
 
 class ProductImages(models.Model):
-    product_variation = models.ManyToManyField(
-        ProductVariation, related_name="images"
-    )
-    image = models.ImageField(upload_to=product_images)
+    image_summary = models.CharField(max_length=100, null=True)
+    image = models.ImageField(upload_to="test")
     primary = models.BooleanField(default=False)
 
-    def save(self, *args, **kwargs):
-        return super().save(*args, **kwargs)
     # def __str__(self):
-    #     return str(self.product_variation.all() .first())
+    #     return self.image_summary
 
 
 class ProductHighlight(models.Model):
