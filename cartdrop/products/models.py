@@ -90,18 +90,28 @@ class SpeakerType(models.Model):
     def __str__(self):
         return self.name
 
+class SimType(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
+
 
 class ProductMobileFeatures(models.Model):
     display_size = models.CharField(max_length=100)
     display_type = models.ForeignKey(DisplayType, on_delete=models.CASCADE)
     resolution = models.CharField(max_length=100)
-    sim_type = models.CharField(max_length=100)
+    sim_type = models.ForeignKey(SimType, on_delete=models.SET_NULL, null=True, blank=True)
     touchscreen = models.BooleanField(default=True)
     smart_phone = models.BooleanField(default=True)
-    battery_capicity = models.CharField(max_length=6)
+    battery_capicity = models.CharField(max_length=20)
     os = models.ForeignKey(OperatingSystem, on_delete=SET_NULL, null=True, blank=True)
     ram = models.CharField(max_length=100)
     series = models.ForeignKey(ProductSeries, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        s = ", ".join([self.series.name, self.display_size, self.resolution, self.os.name, self.ram, self.sim_type.name])
+        return s
 
 
 class ProductLaptopFeatures(models.Model):
@@ -173,6 +183,7 @@ class ProductSpecification(models.Model):
     launched_date = models.DateField(auto_now=True)
     model_no = models.CharField(max_length=100, blank=True, null=True, unique=True)
     model_name = models.CharField(max_length=100, blank=True, null=True)
+    product = models.OneToOneField('products.Product', on_delete=models.SET_NULL, null=True, related_name="product_specification")
     mobile = models.OneToOneField(
         ProductMobileFeatures, on_delete=models.SET_NULL, null=True, blank=True
     )
@@ -200,10 +211,12 @@ class ProductSpecification(models.Model):
 
 
 class ProductWarranty(models.Model):
-    type = models.CharField(max_length=100)
     summary = models.CharField(max_length=200)
     covered = models.TextField(max_length=500, blank=True)
     not_covered = models.TextField(max_length=500, blank=True)
+
+    def __str__(self):
+        return self.summary
 
 
 class Product(Timestamps, UUIDField):
@@ -220,14 +233,7 @@ class Product(Timestamps, UUIDField):
         "core.ProductSubcategory", on_delete=models.CASCADE, related_name="items"
     )
     description = models.TextField(max_length=100, blank=True, null=True)
-    overall_rating = models.DecimalField(max_digits=1, decimal_places=1, blank=True)
-    specification = models.OneToOneField(
-        ProductSpecification,
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-        related_name="product",
-    )
+    overall_rating = models.DecimalField(max_digits=1, decimal_places=1, blank=True, default=0.0)
     replacement_days = models.PositiveIntegerField(default=0)
     warranty = models.ForeignKey(
         ProductWarranty, on_delete=models.SET_NULL, null=True, blank=True
@@ -246,9 +252,10 @@ class Product(Timestamps, UUIDField):
 # Size ofr clothing like SM, XL, XXL,
 class FashionSize(models.Model):
     name = models.CharField(max_length=100)
+    code = models.CharField(max_length=100, null=True)
 
     def __str__(self):
-        return self.size
+        return self.code
 
 
 class ProductVariation(UUIDField):
@@ -281,21 +288,24 @@ class ProductVariation(UUIDField):
 
 
     def __str__(self):
-        variant = self.variant
+        variant = self.variant.name
         size = self.size
-        color = self.color
-        s = ",".join([i for i in [variant, size, color] if i])
-        return f"{self.product.name} {(s) if s else ''}"
+        color = self.color.name
+        s = f"({', '.join([i for i in [color, variant, size] if i])})"
+        return f"{self.product.name} {s if s else ''}"
 
 
 class ProductImages(models.Model):
-    product_variation = models.ForeignKey(
-        ProductVariation, on_delete=models.CASCADE, related_name="images", null=True
+    product_variation = models.ManyToManyField(
+        ProductVariation, related_name="images"
     )
     image = models.ImageField(upload_to=product_images)
+    primary = models.BooleanField(default=False)
 
-    def __str__(self):
-        return self.product_variation
+    def save(self, *args, **kwargs):
+        return super().save(*args, **kwargs)
+    # def __str__(self):
+    #     return str(self.product_variation.all() .first())
 
 
 class ProductHighlight(models.Model):

@@ -7,10 +7,14 @@ from .models import (ACType, DisplayType, MobileVariant, OperatingSystem,
                      ProductSpeakersFeatures, ProductTelivisionFeatures,
                      ProductWashingMachineFeatures, RefrigeratorType,
                      ScreenType, SpeakerType, WashingMethod, ProductSpecification,
-                     ProductWarranty, FashionSize, ProductVariation, ProductImages, ProductHighlight)
+                     ProductWarranty, FashionSize, ProductVariation, ProductImages, ProductHighlight, SimType)
 
 # Register your models here.
 
+
+@admin.register(SimType)
+class SimeTypeAdmin(admin.ModelAdmin):
+    list_display = ('name',)
 
 @admin.register(WashingMethod)
 class WashingMethodAdmin(admin.ModelAdmin):
@@ -93,7 +97,7 @@ class MobileFeaturesAdmin(admin.ModelAdmin):
     )
     list_filter = ("touchscreen", "smart_phone", "os")
     search_fields = ("sim_type", "variant")
-    list_select_related = ("variant", "os")
+    list_select_related = ("os",)
 
 
 @admin.register(ProductLaptopFeatures)
@@ -155,15 +159,16 @@ class ProductSpecificationAdmin(admin.ModelAdmin):
 
 @admin.register(ProductWarranty)
 class ProductWarrentyAdmin(admin.ModelAdmin):
-    list_display = ('type', "summary")
-    search_fields = ('summary', "type")
+    list_display = ("summary",)
+    search_fields = ('summary',)
 
 
 @admin.register(FashionSize)
 class FashionSizeAdmin(admin.ModelAdmin):
 
-    list_display = ('name',)
-    search_fields = ('name',)
+    list_display = ('name', 'code')
+    search_fields = ('name', 'code')
+    list_editable = ('code',)
 
 
 @admin.register(ProductVariation)
@@ -176,9 +181,10 @@ class ProductVariationAdmin(admin.ModelAdmin):
 
 @admin.register(ProductImages)
 class ProductImageAdmin(admin.ModelAdmin):
-    list_display = ('product_variation', 'image')
+    list_display = ('image', "primary",)
     search_fields = ('product_variation',)
-    list_select_related = ('product_variation',)
+
+
 
 
 @admin.register(ProductHighlight)
