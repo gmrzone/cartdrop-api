@@ -220,7 +220,7 @@ class Product(Timestamps, UUIDField):
         "core.ProductSubcategory", on_delete=models.CASCADE, related_name="items"
     )
     description = models.TextField(max_length=100, blank=True, null=True)
-    overall_rating = models.DecimalField(max_digits=1, decimal_places=1)
+    overall_rating = models.DecimalField(max_digits=1, decimal_places=1, blank=True)
     specification = models.OneToOneField(
         ProductSpecification,
         null=True,
@@ -271,12 +271,21 @@ class ProductVariation(UUIDField):
         FashionSize, on_delete=models.SET_NULL, null=True, blank=True
     )
 
+
     def save(self, *args, **kwargs):
         if not self.pk:
             self.PID = self.product.product_code + get_random_string(
                 length=15, allowed_chars=ascii_uppercase
             )
         return super().save(*args, **kwargs)
+
+
+    def __str__(self):
+        variant = self.variant
+        size = self.size
+        color = self.color
+        s = ",".join([i for i in [variant, size, color] if i])
+        return f"{self.product.name} {(s) if s else ''}"
 
 
 class ProductImages(models.Model):
@@ -286,7 +295,7 @@ class ProductImages(models.Model):
     image = models.ImageField(upload_to=product_images)
 
     def __str__(self):
-        return self.product.name
+        return self.product_variation
 
 
 class ProductHighlight(models.Model):

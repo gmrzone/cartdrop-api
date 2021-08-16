@@ -6,7 +6,8 @@ from .models import (ACType, DisplayType, MobileVariant, OperatingSystem,
                      ProductRefrigeratorFeature, ProductSeries,
                      ProductSpeakersFeatures, ProductTelivisionFeatures,
                      ProductWashingMachineFeatures, RefrigeratorType,
-                     ScreenType, SpeakerType, WashingMethod)
+                     ScreenType, SpeakerType, WashingMethod, ProductSpecification,
+                     ProductWarranty, FashionSize, ProductVariation, ProductImages, ProductHighlight)
 
 # Register your models here.
 
@@ -25,8 +26,9 @@ class ProductColorAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ("name", "slug", "brand")
-    search_fields = ("name", "brand")
+    list_display = ("name", "subcategory", "brand", "seller")
+    search_fields = ("name", "brand", "subcategory")
+    list_select_related = ('brand', 'subcategory')
 
 
 @admin.register(DisplayType)
@@ -142,3 +144,49 @@ class SpeakerFeatureAdmin(admin.ModelAdmin):
     list_display = ("type", "has_bluetooth", "frequency_response", "power_output")
     list_filter = ("has_bluetooth",)
     search_fields = ("type",)
+
+
+@admin.register(ProductSpecification)
+class ProductSpecificationAdmin(admin.ModelAdmin):
+    list_display = ('model_no', "model_name", 'in_box', "launched_date")
+    list_filter = ('launched_date',)
+    search_fields = ("model_no", 'model_name')
+
+
+@admin.register(ProductWarranty)
+class ProductWarrentyAdmin(admin.ModelAdmin):
+    list_display = ('type', "summary")
+    search_fields = ('summary', "type")
+
+
+@admin.register(FashionSize)
+class FashionSizeAdmin(admin.ModelAdmin):
+
+    list_display = ('name',)
+    search_fields = ('name',)
+
+
+@admin.register(ProductVariation)
+class ProductVariationAdmin(admin.ModelAdmin):
+    list_display = ('__str__', 'product', 'retail_price', "price")
+    list_filter = ('size', 'color', 'active')
+    search_fields = ('product',)
+    list_select_related = ('product',)
+
+
+@admin.register(ProductImages)
+class ProductImageAdmin(admin.ModelAdmin):
+    list_display = ('product_variation', 'image')
+    search_fields = ('product_variation',)
+    list_select_related = ('product_variation',)
+
+
+@admin.register(ProductHighlight)
+class ProductHighlightsAdmin(admin.ModelAdmin):
+    list_display = ('product', 'name')
+    search_fields = ('name',)
+    list_select_related = ('product',)
+
+
+
+    
