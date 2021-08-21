@@ -258,6 +258,7 @@ class Product(Timestamps, UUIDField):
         ProductWarranty, on_delete=models.SET_NULL, null=True, blank=True
     )
     weight = models.CharField(max_length=100, default=0)
+    specification = models.OneToOneField(ProductSpecification, on_delete=models.SET_NULL, null=True, related_name="get_product")
 
     def save(self, *args, **kwargs):
         if not self.pk:
