@@ -560,6 +560,13 @@
     }
 },
 {
+    "model": "products.productseries",
+    "pk": 21,
+    "fields": {
+        "name": "APPLE iPhone 12"
+    }
+},
+{
     "model": "products.refrigeratortype",
     "pk": 1,
     "fields": {
@@ -609,6 +616,13 @@
     }
 },
 {
+    "model": "products.simtype",
+    "pk": 2,
+    "fields": {
+        "name": "Single Sim"
+    }
+},
+{
     "model": "products.productmobilefeatures",
     "pk": 1,
     "fields": {
@@ -625,6 +639,22 @@
     }
 },
 {
+    "model": "products.productmobilefeatures",
+    "pk": 2,
+    "fields": {
+        "display_size": "15.49 cm (6.1 inch)",
+        "display_type": 5,
+        "resolution": "2532 x 1170 Pixels",
+        "sim_type": 2,
+        "touchscreen": true,
+        "smart_phone": true,
+        "battery_capicity": "2815 mAh",
+        "os": 3,
+        "ram": "4 GB",
+        "series": 21
+    }
+},
+{
     "model": "products.productspecification",
     "pk": 3,
     "fields": {
@@ -633,6 +663,23 @@
         "model_no": "MHGQ3HN/A",
         "model_name": "iPhone SE",
         "mobile": 1,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 5,
+    "fields": {
+        "in_box": "iPhone, USB-C to Lightning Cable, Documentation",
+        "launched_date": "2021-08-23",
+        "model_no": "MGJC3HN/A",
+        "model_name": "iPhone 12",
+        "mobile": 2,
         "laptop": null,
         "tv": null,
         "washing_machine": null,
@@ -671,6 +718,29 @@
         "warranty": 1,
         "weight": "148",
         "specification": 3
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "created": "2021-08-23T15:01:31.649Z",
+        "updated": "2021-08-23T15:01:31.649Z",
+        "uuid": "2740ef5c-97c6-4d21-b633-45b0e4916fea",
+        "brand": 2,
+        "product_code": "MBL",
+        "name": "APPLE iPhone 12",
+        "slug": "apple-iphone-12",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 1,
+        "description": "",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": 1,
+        "weight": "162 g",
+        "specification": 5
     }
 },
 {
@@ -772,8 +842,8 @@
         "uuid": "7ac4a8c4-59d3-4caa-8457-f0fe00ca9db3",
         "PID": "MBLPYPMBGCAATDWXSN",
         "product": 1,
-        "retail_price": "32999.00",
-        "price": "39999.00",
+        "retail_price": "39900.00",
+        "price": "32999.00",
         "color": 8,
         "active": true,
         "available_stock": 9,

@@ -217,8 +217,8 @@ class ProductSpecification(models.Model):
         ProductSpeakersFeatures, on_delete=models.SET_NULL, null=True, blank=True
     )
 
-    def __str__(self) -> str:
-        return self.get_product.name
+    # def __str__(self) -> str:
+    #     return self.get_product.name
 
 
 class ProductWarranty(models.Model):
@@ -234,7 +234,7 @@ class Product(Timestamps, UUIDField):
     brand = models.ForeignKey(
         "core.Brand", on_delete=models.CASCADE, related_name="product_list"
     )
-    product_code = models.CharField(max_length=3, unique=True, default="NCD")
+    product_code = models.CharField(max_length=3, default="NCD")
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, db_index=True, blank=True)
     seller = models.ForeignKey(
