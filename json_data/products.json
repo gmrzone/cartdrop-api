@@ -720,5 +720,179 @@
         "name": "DOUBLE EXTRA LARGE",
         "code": "XXL"
     }
+},
+{
+    "model": "products.productvariation",
+    "pk": 1,
+    "fields": {
+        "uuid": "54b5423d-f00a-43c1-a605-584c932b9f92",
+        "PID": "MBLOGTKIADMSGKIKZJ",
+        "product": 1,
+        "retail_price": "39900.00",
+        "price": "32999.00",
+        "color": 7,
+        "active": true,
+        "available_stock": 10,
+        "variant": 4,
+        "size": null,
+        "images": [
+            1,
+            2,
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 2,
+    "fields": {
+        "uuid": "0f959fb0-4227-4145-b738-05b34f4cdb38",
+        "PID": "MBLEWRGZAVMRISCPOF",
+        "product": 1,
+        "retail_price": "44900.00",
+        "price": "34999.00",
+        "color": 2,
+        "active": true,
+        "available_stock": 10,
+        "variant": 14,
+        "size": null,
+        "images": [
+            8,
+            5,
+            6,
+            7
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 3,
+    "fields": {
+        "uuid": "7ac4a8c4-59d3-4caa-8457-f0fe00ca9db3",
+        "PID": "MBLPYPMBGCAATDWXSN",
+        "product": 1,
+        "retail_price": "32999.00",
+        "price": "39999.00",
+        "color": 8,
+        "active": true,
+        "available_stock": 9,
+        "variant": 4,
+        "size": null,
+        "images": [
+            9,
+            10,
+            11,
+            12
+        ]
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 1,
+    "fields": {
+        "image_summary": "black main",
+        "image": "test/front.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 2,
+    "fields": {
+        "image_summary": "black camera",
+        "image": "test/camera.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 3,
+    "fields": {
+        "image_summary": "black back",
+        "image": "test/back_Ux7JcGz.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 4,
+    "fields": {
+        "image_summary": "black side",
+        "image": "test/side.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 5,
+    "fields": {
+        "image_summary": "red main",
+        "image": "test/front_bDLw6AT.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 6,
+    "fields": {
+        "image_summary": "red back",
+        "image": "test/back_9qtDpCX.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 7,
+    "fields": {
+        "image_summary": "red side",
+        "image": "test/side_tze75A9.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 8,
+    "fields": {
+        "image_summary": "red camera",
+        "image": "test/camera_q2sOklQ.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 9,
+    "fields": {
+        "image_summary": "White main",
+        "image": "test/front_ATLc10X.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 10,
+    "fields": {
+        "image_summary": "white side",
+        "image": "test/side_2quDWNn.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 11,
+    "fields": {
+        "image_summary": "white camera",
+        "image": "test/camera_ZBIrxrF.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 12,
+    "fields": {
+        "image_summary": "white back",
+        "image": "test/back_N0dq2jC.jpeg",
+        "primary": false
+    }
 }
 ]

@@ -315,8 +315,8 @@ class ProductImages(models.Model):
     image = models.ImageField(upload_to="test")
     primary = models.BooleanField(default=False)
 
-    # def __str__(self):
-    #     return self.image_summary
+    def __str__(self):
+        return self.image_summary
 
 
 class ProductHighlight(models.Model):
