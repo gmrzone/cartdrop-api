@@ -858,10 +858,171 @@
     }
 },
 {
+    "model": "products.productvariation",
+    "pk": 4,
+    "fields": {
+        "uuid": "685b91d4-0e22-47da-a1b0-e9f892b3109b",
+        "PID": "MBLOCPIQAORLDBNAHW",
+        "product": 2,
+        "retail_price": "79900.00",
+        "price": "77900.00",
+        "color": 7,
+        "active": true,
+        "available_stock": 20,
+        "variant": 2,
+        "size": null,
+        "images": [
+            13,
+            14,
+            15,
+            16,
+            17
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 5,
+    "fields": {
+        "uuid": "77ceb6cc-df8c-4fbc-8c7d-787860c46dcf",
+        "PID": "MBLSYJANKJXEVGANXD",
+        "product": 2,
+        "retail_price": "84900.00",
+        "price": "82900.00",
+        "color": 7,
+        "active": true,
+        "available_stock": 15,
+        "variant": 6,
+        "size": null,
+        "images": [
+            13,
+            14,
+            15,
+            16,
+            17
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 6,
+    "fields": {
+        "uuid": "d6815d4b-e63a-4f6e-bc00-ef8941979c96",
+        "PID": "MBLWRSUXDXZEAKTEGE",
+        "product": 2,
+        "retail_price": "94900.00",
+        "price": "92900.00",
+        "color": 7,
+        "active": true,
+        "available_stock": 5,
+        "variant": 7,
+        "size": null,
+        "images": [
+            13,
+            14,
+            15,
+            16,
+            17
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 7,
+    "fields": {
+        "uuid": "24645020-b689-40b1-ae1f-6f50226e9bcd",
+        "PID": "MBLKSVVEESOITBPXZS",
+        "product": 2,
+        "retail_price": "79900.00",
+        "price": "77900.00",
+        "color": 2,
+        "active": true,
+        "available_stock": 50,
+        "variant": 2,
+        "size": null,
+        "images": [
+            17,
+            18,
+            19,
+            20,
+            21
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 8,
+    "fields": {
+        "uuid": "1b14ab0c-c138-4eb0-8233-983cf1a0cfea",
+        "PID": "MBLVJGELBYVOOLRYQI",
+        "product": 2,
+        "retail_price": "79900.00",
+        "price": "77900.00",
+        "color": 8,
+        "active": true,
+        "available_stock": 20,
+        "variant": 2,
+        "size": null,
+        "images": [
+            17,
+            22,
+            23,
+            24,
+            25
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 9,
+    "fields": {
+        "uuid": "9bf36858-c786-4597-a4b1-25709c28eaaa",
+        "PID": "MBLMTAQWPVSIZCLUFO",
+        "product": 2,
+        "retail_price": "94900.00",
+        "price": "92900.00",
+        "color": 2,
+        "active": true,
+        "available_stock": 0,
+        "variant": 7,
+        "size": null,
+        "images": [
+            17,
+            18,
+            19,
+            20,
+            21
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 10,
+    "fields": {
+        "uuid": "5f4a9736-5be5-4ce6-8ed3-1da3b0e54165",
+        "PID": "MBLSPKOGALENOMHUJA",
+        "product": 2,
+        "retail_price": "84900.00",
+        "price": "82900.00",
+        "color": 8,
+        "active": true,
+        "available_stock": 11,
+        "variant": 6,
+        "size": null,
+        "images": [
+            17,
+            22,
+            23,
+            24,
+            25
+        ]
+    }
+},
+{
     "model": "products.productimages",
     "pk": 1,
     "fields": {
-        "image_summary": "black main",
+        "image_summary": "Iphone se black main",
         "image": "test/front.jpeg",
         "primary": true
     }
@@ -870,7 +1031,7 @@
     "model": "products.productimages",
     "pk": 2,
     "fields": {
-        "image_summary": "black camera",
+        "image_summary": "Iphone se black camera",
         "image": "test/camera.jpeg",
         "primary": false
     }
@@ -879,7 +1040,7 @@
     "model": "products.productimages",
     "pk": 3,
     "fields": {
-        "image_summary": "black back",
+        "image_summary": "Iphone se black back",
         "image": "test/back_Ux7JcGz.jpeg",
         "primary": false
     }
@@ -888,7 +1049,7 @@
     "model": "products.productimages",
     "pk": 4,
     "fields": {
-        "image_summary": "black side",
+        "image_summary": "Iphone se black side",
         "image": "test/side.jpeg",
         "primary": false
     }
@@ -897,7 +1058,7 @@
     "model": "products.productimages",
     "pk": 5,
     "fields": {
-        "image_summary": "red main",
+        "image_summary": "Iphone se red main",
         "image": "test/front_bDLw6AT.jpeg",
         "primary": true
     }
@@ -906,7 +1067,7 @@
     "model": "products.productimages",
     "pk": 6,
     "fields": {
-        "image_summary": "red back",
+        "image_summary": "Iphone se red back",
         "image": "test/back_9qtDpCX.jpeg",
         "primary": false
     }
@@ -915,7 +1076,7 @@
     "model": "products.productimages",
     "pk": 7,
     "fields": {
-        "image_summary": "red side",
+        "image_summary": "Iphone se red side",
         "image": "test/side_tze75A9.jpeg",
         "primary": false
     }
@@ -924,7 +1085,7 @@
     "model": "products.productimages",
     "pk": 8,
     "fields": {
-        "image_summary": "red camera",
+        "image_summary": "Iphone se red camera",
         "image": "test/camera_q2sOklQ.jpeg",
         "primary": false
     }
@@ -933,7 +1094,7 @@
     "model": "products.productimages",
     "pk": 9,
     "fields": {
-        "image_summary": "White main",
+        "image_summary": "Iphone se White main",
         "image": "test/front_ATLc10X.jpeg",
         "primary": true
     }
@@ -942,7 +1103,7 @@
     "model": "products.productimages",
     "pk": 10,
     "fields": {
-        "image_summary": "white side",
+        "image_summary": "Iphone se white side",
         "image": "test/side_2quDWNn.jpeg",
         "primary": false
     }
@@ -951,7 +1112,7 @@
     "model": "products.productimages",
     "pk": 11,
     "fields": {
-        "image_summary": "white camera",
+        "image_summary": "Iphone se white camera",
         "image": "test/camera_ZBIrxrF.jpeg",
         "primary": false
     }
@@ -960,8 +1121,125 @@
     "model": "products.productimages",
     "pk": 12,
     "fields": {
-        "image_summary": "white back",
+        "image_summary": "Iphone se white back",
         "image": "test/back_N0dq2jC.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 13,
+    "fields": {
+        "image_summary": "Iphone 12 black main",
+        "image": "test/front_main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 14,
+    "fields": {
+        "image_summary": "Iphone 12 black front",
+        "image": "test/front_black.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 15,
+    "fields": {
+        "image_summary": "Iphone 12 black camera",
+        "image": "test/front_camera.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 16,
+    "fields": {
+        "image_summary": "Iphone 12 black camera 2",
+        "image": "test/front_camera2.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 17,
+    "fields": {
+        "image_summary": "Iphone 12 detail",
+        "image": "test/iphone_12_detail.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 18,
+    "fields": {
+        "image_summary": "Iphone 12 red main",
+        "image": "test/red_main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 19,
+    "fields": {
+        "image_summary": "Iphone 12 red front",
+        "image": "test/red_front.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 20,
+    "fields": {
+        "image_summary": "Iphone 12 red camera",
+        "image": "test/red_camera.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 21,
+    "fields": {
+        "image_summary": "Iphone 12 red camera 2",
+        "image": "test/red_camera2.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 22,
+    "fields": {
+        "image_summary": "Iphone 12 white main",
+        "image": "test/white_main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 23,
+    "fields": {
+        "image_summary": "Iphone 12 white front",
+        "image": "test/white_front.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 24,
+    "fields": {
+        "image_summary": "Iphone 12 white camera",
+        "image": "test/white_camera.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 25,
+    "fields": {
+        "image_summary": "Iphone 12 white camera 2",
+        "image": "test/white_camera2.jpeg",
         "primary": false
     }
 }
