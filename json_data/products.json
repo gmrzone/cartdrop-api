@@ -553,6 +553,13 @@
     }
 },
 {
+    "model": "products.productseries",
+    "pk": 20,
+    "fields": {
+        "name": "APPLE iPhone SE"
+    }
+},
+{
     "model": "products.refrigeratortype",
     "pk": 1,
     "fields": {
@@ -592,6 +599,78 @@
     "pk": 3,
     "fields": {
         "name": "Home Theatres"
+    }
+},
+{
+    "model": "products.simtype",
+    "pk": 1,
+    "fields": {
+        "name": "Dual Sim"
+    }
+},
+{
+    "model": "products.productmobilefeatures",
+    "pk": 1,
+    "fields": {
+        "display_size": "11.94 cm (4.7 inch)",
+        "display_type": 3,
+        "resolution": "1334 x 750 Pixels",
+        "sim_type": 1,
+        "touchscreen": true,
+        "smart_phone": true,
+        "battery_capicity": "1,821mAh",
+        "os": 4,
+        "ram": "3 GB",
+        "series": 20
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 3,
+    "fields": {
+        "in_box": "iPhone, USB-C to Lightning Cable, Documentation",
+        "launched_date": "2021-08-08",
+        "model_no": "MHGQ3HN/A",
+        "model_name": "iPhone SE",
+        "mobile": 1,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productwarranty",
+    "pk": 1,
+    "fields": {
+        "summary": "Brand Warranty of 1 Year",
+        "covered": "6 Month Accessories Warranty and 1 Year Mobile Warranty",
+        "not_covered": "Broken Display not covered under warranty"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "created": "2021-08-08T15:33:16.910Z",
+        "updated": "2021-08-08T15:33:16.910Z",
+        "uuid": "bdff80c7-f1d2-484e-a82a-cf2231b7fac5",
+        "brand": 2,
+        "product_code": "MBL",
+        "name": "APPLE iPhone SE",
+        "slug": "apple-iphone-se",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 1,
+        "description": "",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": 1,
+        "weight": "148",
+        "specification": 3
     }
 },
 {

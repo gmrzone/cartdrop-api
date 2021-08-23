@@ -195,12 +195,6 @@ class ProductSpecification(models.Model):
     launched_date = models.DateField(auto_now=True)
     model_no = models.CharField(max_length=100, blank=True, null=True, unique=True)
     model_name = models.CharField(max_length=100, blank=True, null=True)
-    product = models.OneToOneField(
-        "products.Product",
-        on_delete=models.SET_NULL,
-        null=True,
-        related_name="product_specification",
-    )
     mobile = models.OneToOneField(
         ProductMobileFeatures, on_delete=models.SET_NULL, null=True, blank=True
     )
@@ -224,7 +218,7 @@ class ProductSpecification(models.Model):
     )
 
     def __str__(self) -> str:
-        return self.product.name
+        return self.get_product.name
 
 
 class ProductWarranty(models.Model):
