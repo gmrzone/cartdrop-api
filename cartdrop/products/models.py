@@ -323,7 +323,7 @@ class ProductVariation(UUIDField):
 
 class ProductImages(models.Model):
     image_summary = models.CharField(max_length=100, null=True)
-    image = models.ImageField(upload_to="test")
+    image = models.ImageField(upload_to=product_images)
     primary = models.BooleanField(default=False)
 
     def __str__(self):

@@ -209,11 +209,10 @@ class ProductVariationAdmin(admin.ModelAdmin):
 @admin.register(ProductImages)
 class ProductImageAdmin(admin.ModelAdmin):
     list_display = (
+        "image_summary",
         "primary",
         "image",
-        "image_summary",
     )
-    list_editable = ("image_summary",)
     # search_fields = ('product_variation',)
 
 

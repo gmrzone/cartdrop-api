@@ -96,6 +96,14 @@
     }
 },
 {
+    "model": "products.productcolor",
+    "pk": 14,
+    "fields": {
+        "slug": "jet-black",
+        "name": "Jet Black"
+    }
+},
+{
     "model": "products.screentype",
     "pk": 1,
     "fields": {
@@ -303,6 +311,20 @@
     "pk": 14,
     "fields": {
         "name": "3GB / 128GB"
+    }
+},
+{
+    "model": "products.laptopvariant",
+    "pk": 1,
+    "fields": {
+        "name": "8 GB / 1 TB HDD"
+    }
+},
+{
+    "model": "products.laptopvariant",
+    "pk": 2,
+    "fields": {
+        "name": "8 GB / 256 GB SDD"
     }
 },
 {
@@ -581,6 +603,13 @@
     }
 },
 {
+    "model": "products.productseries",
+    "pk": 23,
+    "fields": {
+        "name": "HP 15s"
+    }
+},
+{
     "model": "products.refrigeratortype",
     "pk": 1,
     "fields": {
@@ -677,11 +706,23 @@
         "series": 22,
         "os": 1,
         "processor": "Ryzen 5 Hexa Core",
-        "ram": "8 GB",
         "resolution": "1920X1080 Pixel",
         "battery_backup": "Upto 13 hours",
-        "touchscreen": false,
-        "storage": "256 GB SSD"
+        "touchscreen": false
+    }
+},
+{
+    "model": "products.productlaptopfeatures",
+    "pk": 2,
+    "fields": {
+        "display_size": "39.62 cm (15.6 Inch)",
+        "display_type": 12,
+        "series": 23,
+        "os": 1,
+        "processor": "Intel Core i3 10th Gen",
+        "resolution": "1920 x 1080 Pixel",
+        "battery_backup": "Upto 12 hours",
+        "touchscreen": false
     }
 },
 {
@@ -728,6 +769,23 @@
         "model_name": "ThinkPad E14",
         "mobile": null,
         "laptop": 1,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 7,
+    "fields": {
+        "in_box": "Laptop, Power Adaptor, User Guide, Warranty Documents",
+        "launched_date": "2021-08-24",
+        "model_no": "15s-DU1066TU",
+        "model_name": "HP 15s",
+        "mobile": null,
+        "laptop": 2,
         "tv": null,
         "washing_machine": null,
         "ac": null,
@@ -804,7 +862,7 @@
     "pk": 3,
     "fields": {
         "created": "2021-08-24T05:30:18.397Z",
-        "updated": "2021-08-24T05:30:18.397Z",
+        "updated": "2021-08-24T08:09:35.906Z",
         "uuid": "e2ffb734-bd35-4588-aab0-a71b39ca24da",
         "brand": 5,
         "product_code": "LPT",
@@ -820,6 +878,29 @@
         "warranty": 2,
         "weight": "1.59 kg",
         "specification": 6
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "created": "2021-08-24T06:00:20.399Z",
+        "updated": "2021-08-24T06:00:20.399Z",
+        "uuid": "9e78a81b-7e09-4ad1-875a-7b75165d7ca0",
+        "brand": 6,
+        "product_code": "LPT",
+        "name": "HP 15s Core i3 10th Gen",
+        "slug": "hp-15s-core-i3-10th-gen",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 3,
+        "description": "",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": 2,
+        "weight": "1.76 KG",
+        "specification": 7
     }
 },
 {
@@ -882,7 +963,8 @@
         "color": 7,
         "active": true,
         "available_stock": 10,
-        "variant": 4,
+        "mobile_variant": 4,
+        "laptop_variant": null,
         "size": null,
         "images": [
             1,
@@ -904,7 +986,8 @@
         "color": 2,
         "active": true,
         "available_stock": 10,
-        "variant": 14,
+        "mobile_variant": 14,
+        "laptop_variant": null,
         "size": null,
         "images": [
             8,
@@ -926,7 +1009,8 @@
         "color": 8,
         "active": true,
         "available_stock": 9,
-        "variant": 4,
+        "mobile_variant": 4,
+        "laptop_variant": null,
         "size": null,
         "images": [
             9,
@@ -948,7 +1032,8 @@
         "color": 7,
         "active": true,
         "available_stock": 20,
-        "variant": 2,
+        "mobile_variant": 2,
+        "laptop_variant": null,
         "size": null,
         "images": [
             13,
@@ -971,7 +1056,8 @@
         "color": 7,
         "active": true,
         "available_stock": 15,
-        "variant": 6,
+        "mobile_variant": 6,
+        "laptop_variant": null,
         "size": null,
         "images": [
             13,
@@ -994,7 +1080,8 @@
         "color": 7,
         "active": true,
         "available_stock": 5,
-        "variant": 7,
+        "mobile_variant": 7,
+        "laptop_variant": null,
         "size": null,
         "images": [
             13,
@@ -1017,7 +1104,8 @@
         "color": 2,
         "active": true,
         "available_stock": 50,
-        "variant": 2,
+        "mobile_variant": 2,
+        "laptop_variant": null,
         "size": null,
         "images": [
             17,
@@ -1040,7 +1128,8 @@
         "color": 8,
         "active": true,
         "available_stock": 20,
-        "variant": 2,
+        "mobile_variant": 2,
+        "laptop_variant": null,
         "size": null,
         "images": [
             17,
@@ -1063,7 +1152,8 @@
         "color": 2,
         "active": true,
         "available_stock": 0,
-        "variant": 7,
+        "mobile_variant": 7,
+        "laptop_variant": null,
         "size": null,
         "images": [
             17,
@@ -1086,7 +1176,8 @@
         "color": 8,
         "active": true,
         "available_stock": 11,
-        "variant": 6,
+        "mobile_variant": 6,
+        "laptop_variant": null,
         "size": null,
         "images": [
             17,
@@ -1109,9 +1200,39 @@
         "color": 7,
         "active": true,
         "available_stock": 12,
-        "variant": null,
+        "mobile_variant": null,
+        "laptop_variant": 2,
         "size": null,
-        "images": []
+        "images": [
+            32,
+            33,
+            34,
+            30,
+            31
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 12,
+    "fields": {
+        "uuid": "4e06e729-56b7-48c5-8d65-2ce953486f4b",
+        "PID": "LPTPUXHMKVGRHEUSEO",
+        "product": 4,
+        "retail_price": "43900.00",
+        "price": "40990.00",
+        "color": 14,
+        "active": true,
+        "available_stock": 50,
+        "mobile_variant": null,
+        "laptop_variant": 1,
+        "size": null,
+        "images": [
+            26,
+            27,
+            28,
+            29
+        ]
     }
 },
 {
@@ -1119,7 +1240,7 @@
     "pk": 1,
     "fields": {
         "image_summary": "Iphone se black main",
-        "image": "test/front.jpeg",
+        "image": "Product Image/Iphone/Iphone se black main/front.jpeg",
         "primary": true
     }
 },
@@ -1128,7 +1249,7 @@
     "pk": 2,
     "fields": {
         "image_summary": "Iphone se black camera",
-        "image": "test/camera.jpeg",
+        "image": "Product Image/Iphone/Iphone se black camera/camera.jpeg",
         "primary": false
     }
 },
@@ -1137,7 +1258,7 @@
     "pk": 3,
     "fields": {
         "image_summary": "Iphone se black back",
-        "image": "test/back_Ux7JcGz.jpeg",
+        "image": "Product Image/Iphone/Iphone se black back/back.jpeg",
         "primary": false
     }
 },
@@ -1146,7 +1267,7 @@
     "pk": 4,
     "fields": {
         "image_summary": "Iphone se black side",
-        "image": "test/side.jpeg",
+        "image": "Product Image/Iphone/Iphone se black side/side.jpeg",
         "primary": false
     }
 },
@@ -1155,7 +1276,7 @@
     "pk": 5,
     "fields": {
         "image_summary": "Iphone se red main",
-        "image": "test/front_bDLw6AT.jpeg",
+        "image": "Product Image/Iphone/Iphone se red main/front.jpeg",
         "primary": true
     }
 },
@@ -1164,7 +1285,7 @@
     "pk": 6,
     "fields": {
         "image_summary": "Iphone se red back",
-        "image": "test/back_9qtDpCX.jpeg",
+        "image": "Product Image/Iphone/Iphone se red back/back.jpeg",
         "primary": false
     }
 },
@@ -1173,7 +1294,7 @@
     "pk": 7,
     "fields": {
         "image_summary": "Iphone se red side",
-        "image": "test/side_tze75A9.jpeg",
+        "image": "Product Image/Iphone/Iphone se red side/side.jpeg",
         "primary": false
     }
 },
@@ -1182,7 +1303,7 @@
     "pk": 8,
     "fields": {
         "image_summary": "Iphone se red camera",
-        "image": "test/camera_q2sOklQ.jpeg",
+        "image": "Product Image/Iphone/Iphone se red camera/camera.jpeg",
         "primary": false
     }
 },
@@ -1191,7 +1312,7 @@
     "pk": 9,
     "fields": {
         "image_summary": "Iphone se White main",
-        "image": "test/front_ATLc10X.jpeg",
+        "image": "Product Image/Iphone/Iphone se White main/front.jpeg",
         "primary": true
     }
 },
@@ -1200,7 +1321,7 @@
     "pk": 10,
     "fields": {
         "image_summary": "Iphone se white side",
-        "image": "test/side_2quDWNn.jpeg",
+        "image": "Product Image/Iphone/Iphone se white side/side.jpeg",
         "primary": false
     }
 },
@@ -1209,7 +1330,7 @@
     "pk": 11,
     "fields": {
         "image_summary": "Iphone se white camera",
-        "image": "test/camera_ZBIrxrF.jpeg",
+        "image": "Product Image/Iphone/Iphone se white camera/camera.jpeg",
         "primary": false
     }
 },
@@ -1218,7 +1339,7 @@
     "pk": 12,
     "fields": {
         "image_summary": "Iphone se white back",
-        "image": "test/back_N0dq2jC.jpeg",
+        "image": "Product Image/Iphone/Iphone se white back/back.jpeg",
         "primary": false
     }
 },
@@ -1227,7 +1348,7 @@
     "pk": 13,
     "fields": {
         "image_summary": "Iphone 12 black main",
-        "image": "test/front_main.jpeg",
+        "image": "Product Image/Iphone/Iphone 12 black main/front_main.jpeg",
         "primary": true
     }
 },
@@ -1236,7 +1357,7 @@
     "pk": 14,
     "fields": {
         "image_summary": "Iphone 12 black front",
-        "image": "test/front_black.jpeg",
+        "image": "Product Image/Iphone/Iphone 12 black front/front_black.jpeg",
         "primary": false
     }
 },
@@ -1245,7 +1366,7 @@
     "pk": 15,
     "fields": {
         "image_summary": "Iphone 12 black camera",
-        "image": "test/front_camera.jpeg",
+        "image": "Product Image/Iphone/Iphone 12 black camera/front_camera.jpeg",
         "primary": false
     }
 },
@@ -1254,7 +1375,7 @@
     "pk": 16,
     "fields": {
         "image_summary": "Iphone 12 black camera 2",
-        "image": "test/front_camera2.jpeg",
+        "image": "Product Image/Iphone/Iphone 12 black camera 2/front_camera2.jpeg",
         "primary": false
     }
 },
@@ -1263,7 +1384,7 @@
     "pk": 17,
     "fields": {
         "image_summary": "Iphone 12 detail",
-        "image": "test/iphone_12_detail.jpeg",
+        "image": "Product Image/Iphone/Iphone 12 detail/iphone_12_detail.jpeg",
         "primary": false
     }
 },
@@ -1272,7 +1393,7 @@
     "pk": 18,
     "fields": {
         "image_summary": "Iphone 12 red main",
-        "image": "test/red_main.jpeg",
+        "image": "Product Image/Iphone/Iphone 12 red main/red_main.jpeg",
         "primary": true
     }
 },
@@ -1281,7 +1402,7 @@
     "pk": 19,
     "fields": {
         "image_summary": "Iphone 12 red front",
-        "image": "test/red_front.jpeg",
+        "image": "Product Image/Iphone/Iphone 12 red front/red_front.jpeg",
         "primary": false
     }
 },
@@ -1290,7 +1411,7 @@
     "pk": 20,
     "fields": {
         "image_summary": "Iphone 12 red camera",
-        "image": "test/red_camera.jpeg",
+        "image": "Product Image/Iphone/Iphone 12 red camera/red_camera.jpeg",
         "primary": false
     }
 },
@@ -1299,7 +1420,7 @@
     "pk": 21,
     "fields": {
         "image_summary": "Iphone 12 red camera 2",
-        "image": "test/red_camera2.jpeg",
+        "image": "Product Image/Iphone/Iphone 12 red camera 2/red_camera2.jpeg",
         "primary": false
     }
 },
@@ -1308,7 +1429,7 @@
     "pk": 22,
     "fields": {
         "image_summary": "Iphone 12 white main",
-        "image": "test/white_main.jpeg",
+        "image": "Product Image/Iphone/Iphone 12 white main/white_main.jpeg",
         "primary": true
     }
 },
@@ -1317,7 +1438,7 @@
     "pk": 23,
     "fields": {
         "image_summary": "Iphone 12 white front",
-        "image": "test/white_front.jpeg",
+        "image": "Product Image/Iphone/Iphone 12 white front/white_front.jpeg",
         "primary": false
     }
 },
@@ -1326,7 +1447,7 @@
     "pk": 24,
     "fields": {
         "image_summary": "Iphone 12 white camera",
-        "image": "test/white_camera.jpeg",
+        "image": "Product Image/Iphone/Iphone 12 white camera/white_camera.jpeg",
         "primary": false
     }
 },
@@ -1335,7 +1456,88 @@
     "pk": 25,
     "fields": {
         "image_summary": "Iphone 12 white camera 2",
-        "image": "test/white_camera2.jpeg",
+        "image": "Product Image/Iphone/Iphone 12 white camera 2/white_camera2.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 26,
+    "fields": {
+        "image_summary": "HP 15s main",
+        "image": "Product Image/HP/HP 15s main/main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 27,
+    "fields": {
+        "image_summary": "HP 15s side",
+        "image": "Product Image/HP/HP 15s side/side.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 28,
+    "fields": {
+        "image_summary": "HP 15s back",
+        "image": "Product Image/HP/HP 15s back/back.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 29,
+    "fields": {
+        "image_summary": "HP 15s closed",
+        "image": "Product Image/HP/HP 15s closed/closed.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 30,
+    "fields": {
+        "image_summary": "Lenovo ThinkPad E14 main",
+        "image": "Product Image/Lenovo/Lenovo ThinkPad E14 main/main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 31,
+    "fields": {
+        "image_summary": "Lenovo ThinkPad E14 touchID",
+        "image": "Product Image/Lenovo/Lenovo ThinkPad E14 touchID/touch_id.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 32,
+    "fields": {
+        "image_summary": "Lenovo ThinkPad E14 feature_one",
+        "image": "Product Image/Lenovo/Lenovo ThinkPad E14 feature_one/features_one.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 33,
+    "fields": {
+        "image_summary": "Lenovo ThinkPad E14 feature_two",
+        "image": "Product Image/Lenovo/Lenovo ThinkPad E14 feature_two/features_two.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 34,
+    "fields": {
+        "image_summary": "Lenovo ThinkPad E14 feature_three",
+        "image": "Product Image/Lenovo/Lenovo ThinkPad E14 feature_three/features_three.jpeg",
         "primary": false
     }
 }
