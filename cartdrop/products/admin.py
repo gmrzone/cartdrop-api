@@ -26,6 +26,7 @@ from .models import (
     SimType,
     SpeakerType,
     WashingMethod,
+    LaptopVariant
 )
 
 # Register your models here.
@@ -63,6 +64,12 @@ class DisplayTypeAdmin(admin.ModelAdmin):
 
 @admin.register(MobileVariant)
 class MobileVariantAdmin(admin.ModelAdmin):
+
+    list_display = ("__str__",)
+    search_fields = ("name",)
+
+@admin.register(LaptopVariant)
+class LaptopVariantAdmin(admin.ModelAdmin):
 
     list_display = ("__str__",)
     search_fields = ("name",)

@@ -35,9 +35,14 @@ class DisplayType(models.Model):
     def __str__(self):
         return self.name
 
-
 # Mobile Variant like 6gb/64gb, 8gb/128gb etc
 class MobileVariant(models.Model):
+    name = models.CharField(max_length=200, db_index=True)
+
+    def __str__(self):
+        return self.name
+
+class LaptopVariant(models.Model):
     name = models.CharField(max_length=200, db_index=True)
 
     def __str__(self):
@@ -132,11 +137,11 @@ class ProductLaptopFeatures(models.Model):
     series = models.ForeignKey(ProductSeries, on_delete=models.CASCADE)
     os = models.ForeignKey(OperatingSystem, on_delete=models.CASCADE)
     processor = models.CharField(max_length=100)
-    ram = models.CharField(max_length=100)
     resolution = models.CharField(max_length=100)
     battery_backup = models.CharField(max_length=100)
     touchscreen = models.BooleanField(default=True)
-    storage = models.CharField(max_length=100)
+    
+
 
 
 class ProductTelivisionFeatures(models.Model):
@@ -290,9 +295,10 @@ class ProductVariation(UUIDField):
     color = models.ForeignKey(ProductColor, on_delete=models.SET_NULL, null=True)
     active = models.BooleanField(default=True)
     available_stock = models.PositiveIntegerField(default=0)
-    variant = models.ForeignKey(
+    mobile_variant = models.ForeignKey(
         MobileVariant, on_delete=models.SET_NULL, null=True, blank=True
     )
+    laptop_variant = models.ForeignKey(LaptopVariant, on_delete=models.SET_NULL, null=True, blank=True)
     size = models.ForeignKey(
         FashionSize, on_delete=models.SET_NULL, null=True, blank=True
     )
@@ -308,7 +314,7 @@ class ProductVariation(UUIDField):
         return super().save(*args, **kwargs)
 
     def __str__(self):
-        variant = self.variant.name if hasattr(self.variant, "name") else None
+        variant = self.mobile_variant.name if hasattr(self.mobile_variant, "name") else self.laptop_variant.name if hasattr(self.laptop_variant, "name") else None
         size = self.size
         color = self.color.name
         s = f"({', '.join([i for i in [color, variant, size] if i])})"
