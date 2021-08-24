@@ -3,8 +3,12 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 from .behaviours import Slugable, Timestamps, UUIDField
-from .utils import (brand_photo_location, category_images,
-                    review_image_location, subcategory_images)
+from .utils import (
+    brand_photo_location,
+    category_images,
+    review_image_location,
+    subcategory_images,
+)
 
 # Create your models here.
 

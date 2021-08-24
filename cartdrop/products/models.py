@@ -252,7 +252,12 @@ class Product(Timestamps, UUIDField):
         ProductWarranty, on_delete=models.SET_NULL, null=True, blank=True
     )
     weight = models.CharField(max_length=100, default=0)
-    specification = models.OneToOneField(ProductSpecification, on_delete=models.SET_NULL, null=True, related_name="get_product")
+    specification = models.OneToOneField(
+        ProductSpecification,
+        on_delete=models.SET_NULL,
+        null=True,
+        related_name="get_product",
+    )
 
     def save(self, *args, **kwargs):
         if not self.pk:
@@ -303,7 +308,7 @@ class ProductVariation(UUIDField):
         return super().save(*args, **kwargs)
 
     def __str__(self):
-        variant = self.variant.name
+        variant = self.variant.name if hasattr(self.variant, "name") else None
         size = self.size
         color = self.color.name
         s = f"({', '.join([i for i in [color, variant, size] if i])})"

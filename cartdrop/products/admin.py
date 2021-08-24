@@ -1,15 +1,32 @@
 from django.contrib import admin
 
-from .models import (ACType, DisplayType, FashionSize, MobileVariant,
-                     OperatingSystem, Product, ProductAirConditionerFeature,
-                     ProductColor, ProductHighlight, ProductImages,
-                     ProductLaptopFeatures, ProductMobileFeatures,
-                     ProductRefrigeratorFeature, ProductSeries,
-                     ProductSpeakersFeatures, ProductSpecification,
-                     ProductTelivisionFeatures, ProductVariation,
-                     ProductWarranty, ProductWashingMachineFeatures,
-                     RefrigeratorType, ScreenType, SimType, SpeakerType,
-                     WashingMethod)
+from .models import (
+    ACType,
+    DisplayType,
+    FashionSize,
+    MobileVariant,
+    OperatingSystem,
+    Product,
+    ProductAirConditionerFeature,
+    ProductColor,
+    ProductHighlight,
+    ProductImages,
+    ProductLaptopFeatures,
+    ProductMobileFeatures,
+    ProductRefrigeratorFeature,
+    ProductSeries,
+    ProductSpeakersFeatures,
+    ProductSpecification,
+    ProductTelivisionFeatures,
+    ProductVariation,
+    ProductWarranty,
+    ProductWashingMachineFeatures,
+    RefrigeratorType,
+    ScreenType,
+    SimType,
+    SpeakerType,
+    WashingMethod,
+)
 
 # Register your models here.
 
@@ -189,7 +206,7 @@ class ProductImageAdmin(admin.ModelAdmin):
         "image",
         "image_summary",
     )
-    list_editable = ('image_summary',)
+    list_editable = ("image_summary",)
     # search_fields = ('product_variation',)
 
 

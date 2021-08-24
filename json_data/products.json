@@ -201,6 +201,13 @@
     }
 },
 {
+    "model": "products.displaytype",
+    "pk": 12,
+    "fields": {
+        "name": "FHD LED Backlit Anti-glare Display"
+    }
+},
+{
     "model": "products.mobilevariant",
     "pk": 1,
     "fields": {
@@ -567,6 +574,13 @@
     }
 },
 {
+    "model": "products.productseries",
+    "pk": 22,
+    "fields": {
+        "name": "ThinkPad E14 Gen2"
+    }
+},
+{
     "model": "products.refrigeratortype",
     "pk": 1,
     "fields": {
@@ -655,6 +669,22 @@
     }
 },
 {
+    "model": "products.productlaptopfeatures",
+    "pk": 1,
+    "fields": {
+        "display_size": "35.56 cm (14 inch)",
+        "display_type": 12,
+        "series": 22,
+        "os": 1,
+        "processor": "Ryzen 5 Hexa Core",
+        "ram": "8 GB",
+        "resolution": "1920X1080 Pixel",
+        "battery_backup": "Upto 13 hours",
+        "touchscreen": false,
+        "storage": "256 GB SSD"
+    }
+},
+{
     "model": "products.productspecification",
     "pk": 3,
     "fields": {
@@ -689,12 +719,38 @@
     }
 },
 {
+    "model": "products.productspecification",
+    "pk": 6,
+    "fields": {
+        "in_box": "Laptop, Power Adaptor, User Guide, Warranty Documents",
+        "launched_date": "2021-08-24",
+        "model_no": "E14",
+        "model_name": "ThinkPad E14",
+        "mobile": null,
+        "laptop": 1,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
     "model": "products.productwarranty",
     "pk": 1,
     "fields": {
         "summary": "Brand Warranty of 1 Year",
         "covered": "6 Month Accessories Warranty and 1 Year Mobile Warranty",
         "not_covered": "Broken Display not covered under warranty"
+    }
+},
+{
+    "model": "products.productwarranty",
+    "pk": 2,
+    "fields": {
+        "summary": "1 Year Onsite Warranty",
+        "covered": "Manufacturing Defects",
+        "not_covered": "Physical Damage"
     }
 },
 {
@@ -741,6 +797,29 @@
         "warranty": 1,
         "weight": "162 g",
         "specification": 5
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "created": "2021-08-24T05:30:18.397Z",
+        "updated": "2021-08-24T05:30:18.397Z",
+        "uuid": "e2ffb734-bd35-4588-aab0-a71b39ca24da",
+        "brand": 5,
+        "product_code": "LPT",
+        "name": "Lenovo ThinkPad E14 Gen2 Ryzen 5 Hexa Core 4650U 5th Gen",
+        "slug": "lenovo-thinkpad-e14-gen2-ryzen-5-hexa-core-4650u-5th-gen",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 3,
+        "description": "From attending online classes and virtual meetings to playing games and watching movies, the Lenovo",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": 2,
+        "weight": "1.59 kg",
+        "specification": 6
     }
 },
 {
@@ -1016,6 +1095,23 @@
             24,
             25
         ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 11,
+    "fields": {
+        "uuid": "69ba45fe-0c44-43af-9d80-1bbe28db57b2",
+        "PID": "LPTZWJPMELZZMMOFUK",
+        "product": 3,
+        "retail_price": "64038.00",
+        "price": "53990.00",
+        "color": 7,
+        "active": true,
+        "available_stock": 12,
+        "variant": null,
+        "size": null,
+        "images": []
     }
 },
 {
