@@ -1801,6 +1801,135 @@
     }
 },
 {
+    "model": "products.productvariation",
+    "pk": 21,
+    "fields": {
+        "uuid": "9102aa8c-dedb-4c53-8e4d-da323deacc7f",
+        "PID": "NCDCMDKJGUNUVWHPMZ",
+        "product": 8,
+        "retail_price": "42990.00",
+        "price": "27490.00",
+        "color": 5,
+        "active": true,
+        "available_stock": 10,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": 1,
+        "ac_star_variant": 1,
+        "size": null,
+        "images": [
+            64,
+            60,
+            61,
+            62,
+            63
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 22,
+    "fields": {
+        "uuid": "05959c43-3fc8-471c-9a59-232106f9aa0b",
+        "PID": "NCDMQSEDBFIZAEGAKH",
+        "product": 8,
+        "retail_price": "45990.00",
+        "price": "30990.00",
+        "color": 5,
+        "active": true,
+        "available_stock": 8,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": 2,
+        "ac_star_variant": 1,
+        "size": null,
+        "images": [
+            64,
+            60,
+            61,
+            62,
+            63
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 23,
+    "fields": {
+        "uuid": "2eefb84e-d512-4584-b469-9efa02c2bda5",
+        "PID": "NCDYFHZKIYTXMYCGDJ",
+        "product": 8,
+        "retail_price": "44990.00",
+        "price": "28990.00",
+        "color": 5,
+        "active": true,
+        "available_stock": 8,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": 1,
+        "ac_star_variant": 2,
+        "size": null,
+        "images": [
+            64,
+            60,
+            61,
+            62,
+            63
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 24,
+    "fields": {
+        "uuid": "6a46e6e5-9503-4d1e-a521-992c7c342b81",
+        "PID": "NCDJDSEEWBUVLVRWDN",
+        "product": 8,
+        "retail_price": "51990.00",
+        "price": "32990.00",
+        "color": 5,
+        "active": true,
+        "available_stock": 14,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": 2,
+        "ac_star_variant": 2,
+        "size": null,
+        "images": [
+            64,
+            60,
+            61,
+            62,
+            63
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 25,
+    "fields": {
+        "uuid": "20aad60b-ae36-4502-ae23-6602fefcdec6",
+        "PID": "NCDOEIPNRWODCTRTMU",
+        "product": 8,
+        "retail_price": "56990.00",
+        "price": "34990.00",
+        "color": 5,
+        "active": true,
+        "available_stock": 0,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": 2,
+        "ac_star_variant": 3,
+        "size": null,
+        "images": []
+    }
+},
+{
     "model": "products.productimages",
     "pk": 1,
     "fields": {
@@ -2319,6 +2448,51 @@
     "fields": {
         "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL size",
         "image": "Product Image/BOSCH/BOSCH 8 kg INVERTER TOUCH CONTROL size/size.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 60,
+    "fields": {
+        "image_summary": "SAMSUNG Star Split Inverter AC main",
+        "image": "Product Image/SAMSUNG/SAMSUNG Star Split Inverter AC main/main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 61,
+    "fields": {
+        "image_summary": "SAMSUNG Star Split Inverter AC open",
+        "image": "Product Image/SAMSUNG/SAMSUNG Star Split Inverter AC main/main_open.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 62,
+    "fields": {
+        "image_summary": "SAMSUNG Star Split Inverter AC side",
+        "image": "Product Image/SAMSUNG/SAMSUNG Star Split Inverter AC side/side_one.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 63,
+    "fields": {
+        "image_summary": "SAMSUNG Star Split Inverter AC side open",
+        "image": "Product Image/SAMSUNG/SAMSUNG Star Split Inverter AC side open/side_open.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 64,
+    "fields": {
+        "image_summary": "SAMSUNG Star Split Inverter AC back",
+        "image": "Product Image/SAMSUNG/SAMSUNG Star Split Inverter AC back/back.jpeg",
         "primary": false
     }
 }

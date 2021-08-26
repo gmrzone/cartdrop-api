@@ -62,14 +62,14 @@ class TVVariant(models.Model):
 class ACCapacityVariant(models.Model):
     capacity = models.CharField(max_length=100)
 
-    def __str_(self):
+    def __str__(self):
         return self.capacity
 
 
 class ACStarRatingVariant(models.Model):
     star = models.CharField(max_length=100)
 
-    def __str_(self):
+    def __str__(self):
         return self.star
 
 
@@ -368,9 +368,11 @@ class ProductVariation(UUIDField):
         )
         size = self.size.code if hasattr(self.size, "code") else None
         color = self.color.name if hasattr(self.color, "name") else None
+        ac_star_variant = self.ac_star_variant.star if hasattr(self.ac_star_variant, 'star') else None
+        ac_capacity_variant = self.ac_capacity_variant.capacity if hasattr(self.ac_capacity_variant, 'capacity') else None
         if not variant and not size and not color:
             return self.product.name
-        s = f"({', '.join([i for i in [color, variant, size] if i])})"
+        s = f"({', '.join([i for i in [color, variant, size, ac_star_variant, ac_capacity_variant] if i])})"
         return f"{self.product.name} {s if s else ''}"
 
 
