@@ -1,9 +1,12 @@
 from django.contrib import admin
 
 from .models import (
+    ACCapacityVariant,
+    ACStarRatingVariant,
     ACType,
     DisplayType,
     FashionSize,
+    LaptopVariant,
     MobileVariant,
     OperatingSystem,
     Product,
@@ -25,11 +28,8 @@ from .models import (
     ScreenType,
     SimType,
     SpeakerType,
-    WashingMethod,
-    LaptopVariant,
     TVVariant,
-    ACStarRatingVariant,
-    ACCapacityVariant,
+    WashingMethod,
 )
 
 # Register your models here.

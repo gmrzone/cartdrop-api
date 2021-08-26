@@ -339,6 +339,7 @@ class ProductVariation(UUIDField):
     ac_capacity_variant = models.ForeignKey(
         ACCapacityVariant, on_delete=models.SET_NULL, null=True, blank=True
     )
+    refrigerator_capacity = models.CharField(max_length=100, null=True, blank=True)
     ac_star_variant = models.ForeignKey(
         ACStarRatingVariant, on_delete=models.SET_NULL, null=True, blank=True
     )
@@ -368,11 +369,18 @@ class ProductVariation(UUIDField):
         )
         size = self.size.code if hasattr(self.size, "code") else None
         color = self.color.name if hasattr(self.color, "name") else None
-        ac_star_variant = self.ac_star_variant.star if hasattr(self.ac_star_variant, 'star') else None
-        ac_capacity_variant = self.ac_capacity_variant.capacity if hasattr(self.ac_capacity_variant, 'capacity') else None
+        ac_star_variant = (
+            self.ac_star_variant.star if hasattr(self.ac_star_variant, "star") else None
+        )
+        ac_capacity_variant = (
+            self.ac_capacity_variant.capacity
+            if hasattr(self.ac_capacity_variant, "capacity")
+            else None
+        )
+        refrigerator_capacity = self.refrigerator_capacity
         if not variant and not size and not color:
             return self.product.name
-        s = f"({', '.join([i for i in [color, variant, size, ac_star_variant, ac_capacity_variant] if i])})"
+        s = f"({', '.join([i for i in [color, variant, size, ac_star_variant, ac_capacity_variant, refrigerator_capacity] if i])})"
         return f"{self.product.name} {s if s else ''}"
 
 
