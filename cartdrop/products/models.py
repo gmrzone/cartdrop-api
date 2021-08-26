@@ -3,6 +3,7 @@ from string import ascii_uppercase
 from django.conf import settings
 from django.core.validators import MaxValueValidator
 from django.db import models
+from django.db.models.base import Model
 from django.db.models.deletion import SET_NULL
 from django.utils.crypto import get_random_string
 from django.utils.text import slugify
@@ -48,6 +49,11 @@ class LaptopVariant(models.Model):
     def __str__(self):
         return self.name
 
+class TVVariant(models.Model):
+    display_size = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.display_size + " Inches"
 
 # Operating System like Android, Windows Mac OS for mobiles and laptops and other products that has operating system
 class OperatingSystem(Slugable):
@@ -229,8 +235,10 @@ class ProductSpecification(models.Model):
         ProductSpeakersFeatures, on_delete=models.SET_NULL, null=True, blank=True
     )
 
-    # def __str__(self) -> str:
-    #     return self.get_product.name
+    def __str__(self) -> str:
+        return self.model_name
+
+
 
 
 class ProductWarranty(models.Model):
@@ -299,13 +307,14 @@ class ProductVariation(UUIDField):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     retail_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    color = models.ForeignKey(ProductColor, on_delete=models.SET_NULL, null=True)
+    color = models.ForeignKey(ProductColor, on_delete=models.SET_NULL, null=True, blank=True)
     active = models.BooleanField(default=True)
     available_stock = models.PositiveIntegerField(default=0)
     mobile_variant = models.ForeignKey(
         MobileVariant, on_delete=models.SET_NULL, null=True, blank=True
     )
     laptop_variant = models.ForeignKey(LaptopVariant, on_delete=models.SET_NULL, null=True, blank=True)
+    tv_variant = models.ForeignKey(TVVariant, on_delete=models.SET_NULL, null=True, blank=True)
     size = models.ForeignKey(
         FashionSize, on_delete=models.SET_NULL, null=True, blank=True
     )
@@ -323,7 +332,9 @@ class ProductVariation(UUIDField):
     def __str__(self):
         variant = self.mobile_variant.name if hasattr(self.mobile_variant, "name") else self.laptop_variant.name if hasattr(self.laptop_variant, "name") else None
         size = self.size.code if hasattr(self.size, 'code') else None
-        color = self.color.name
+        color = self.color.name if hasattr(self.color, "name") else None
+        if not variant and not size and not color:
+            return self.product.name
         s = f"({', '.join([i for i in [color, variant, size] if i])})"
         return f"{self.product.name} {s if s else ''}"
 

@@ -328,6 +328,13 @@
     }
 },
 {
+    "model": "products.tvvariant",
+    "pk": 2,
+    "fields": {
+        "display_size": "65"
+    }
+},
+{
     "model": "products.operatingsystem",
     "pk": 1,
     "fields": {
@@ -610,6 +617,13 @@
     }
 },
 {
+    "model": "products.productseries",
+    "pk": 24,
+    "fields": {
+        "name": "The Frame 2021 Series"
+    }
+},
+{
     "model": "products.refrigeratortype",
     "pk": 1,
     "fields": {
@@ -726,6 +740,21 @@
     }
 },
 {
+    "model": "products.producttelivisionfeatures",
+    "pk": 1,
+    "fields": {
+        "display_size": "163 cm (65 inch)",
+        "series": 24,
+        "screen_type": 8,
+        "is_3d": false,
+        "is_curved": false,
+        "has_wify": true,
+        "usb_count": 2,
+        "refresh_rate": "120 Hz",
+        "includes_wallmount": true
+    }
+},
+{
     "model": "products.productspecification",
     "pk": 3,
     "fields": {
@@ -794,6 +823,23 @@
     }
 },
 {
+    "model": "products.productspecification",
+    "pk": 8,
+    "fields": {
+        "in_box": "1 LED TV, 1 Power Cord, 1 Remocon, 2 Stand-Top, 1 OC",
+        "launched_date": "2021-08-26",
+        "model_no": "QA65LS03AAKLXL",
+        "model_name": "The Frame 2021 Series",
+        "mobile": null,
+        "laptop": null,
+        "tv": 1,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
     "model": "products.productwarranty",
     "pk": 1,
     "fields": {
@@ -809,6 +855,15 @@
         "summary": "1 Year Onsite Warranty",
         "covered": "Manufacturing Defects",
         "not_covered": "Physical Damage"
+    }
+},
+{
+    "model": "products.productwarranty",
+    "pk": 3,
+    "fields": {
+        "summary": "1 Year Product Warranty and 1 Year Additional on Panel",
+        "covered": "All Manufacturing Defects",
+        "not_covered": "Warranty Does Not Cover Any External Accessories (Such as Battery, Cable, Carrying Bag), Damage Caused to the Product Due to Improper Installation by Customer, Normal Wear and Tear and Damages Caused to the Product by Accident, Lightening, Ingress of Water, Fire, Dropping or Excessive Shock, Any Damage Caused Due to Tampering of the Product by an Unauthorized Agent."
     }
 },
 {
@@ -904,6 +959,29 @@
     }
 },
 {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "created": "2021-08-26T08:54:37.107Z",
+        "updated": "2021-08-26T08:54:37.107Z",
+        "uuid": "353a796e-0db4-42a8-930f-298658964b0f",
+        "brand": 1,
+        "product_code": "TVS",
+        "name": "SAMSUNG The Frame 2021 Series 163 cm (65 inch) QLED Ultra HD (4K) Smart TV",
+        "slug": "samsung-the-frame-2021-series-163-cm-65-inch-qled-ultra-hd-4k-smart-tv",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 5,
+        "description": "Create your own art gallery, watch TV and smartphone content simultaneously, and enjoy lifelike visu",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": 3,
+        "weight": "22.5 kg",
+        "specification": 8
+    }
+},
+{
     "model": "products.fashionsize",
     "pk": 1,
     "fields": {
@@ -965,6 +1043,7 @@
         "available_stock": 10,
         "mobile_variant": 4,
         "laptop_variant": null,
+        "tv_variant": null,
         "size": null,
         "images": [
             1,
@@ -988,6 +1067,7 @@
         "available_stock": 10,
         "mobile_variant": 14,
         "laptop_variant": null,
+        "tv_variant": null,
         "size": null,
         "images": [
             8,
@@ -1011,6 +1091,7 @@
         "available_stock": 9,
         "mobile_variant": 4,
         "laptop_variant": null,
+        "tv_variant": null,
         "size": null,
         "images": [
             9,
@@ -1034,6 +1115,7 @@
         "available_stock": 20,
         "mobile_variant": 2,
         "laptop_variant": null,
+        "tv_variant": null,
         "size": null,
         "images": [
             13,
@@ -1058,6 +1140,7 @@
         "available_stock": 15,
         "mobile_variant": 6,
         "laptop_variant": null,
+        "tv_variant": null,
         "size": null,
         "images": [
             13,
@@ -1082,6 +1165,7 @@
         "available_stock": 5,
         "mobile_variant": 7,
         "laptop_variant": null,
+        "tv_variant": null,
         "size": null,
         "images": [
             13,
@@ -1106,6 +1190,7 @@
         "available_stock": 50,
         "mobile_variant": 2,
         "laptop_variant": null,
+        "tv_variant": null,
         "size": null,
         "images": [
             17,
@@ -1130,6 +1215,7 @@
         "available_stock": 20,
         "mobile_variant": 2,
         "laptop_variant": null,
+        "tv_variant": null,
         "size": null,
         "images": [
             17,
@@ -1154,6 +1240,7 @@
         "available_stock": 0,
         "mobile_variant": 7,
         "laptop_variant": null,
+        "tv_variant": null,
         "size": null,
         "images": [
             17,
@@ -1178,6 +1265,7 @@
         "available_stock": 11,
         "mobile_variant": 6,
         "laptop_variant": null,
+        "tv_variant": null,
         "size": null,
         "images": [
             17,
@@ -1202,6 +1290,7 @@
         "available_stock": 12,
         "mobile_variant": null,
         "laptop_variant": 2,
+        "tv_variant": null,
         "size": null,
         "images": [
             32,
@@ -1226,12 +1315,41 @@
         "available_stock": 50,
         "mobile_variant": null,
         "laptop_variant": 1,
+        "tv_variant": null,
         "size": null,
         "images": [
             26,
             27,
             28,
             29
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 14,
+    "fields": {
+        "uuid": "f7f4c975-15c9-49e7-891f-521255d9dc5b",
+        "PID": "TVSQDMJQZBSHNATFQW",
+        "product": 5,
+        "retail_price": "222900.00",
+        "price": "124999.00",
+        "color": null,
+        "active": true,
+        "available_stock": 5,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": 2,
+        "size": null,
+        "images": [
+            35,
+            36,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43
         ]
     }
 },
@@ -1538,6 +1656,78 @@
     "fields": {
         "image_summary": "Lenovo ThinkPad E14 feature_three",
         "image": "Product Image/Lenovo/Lenovo ThinkPad E14 feature_three/features_three.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 35,
+    "fields": {
+        "image_summary": "SAMSUNG The Frame main",
+        "image": "Product Image/SAMSUNG/SAMSUNG The Frame/main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 36,
+    "fields": {
+        "image_summary": "SAMSUNG The Frame edge",
+        "image": "Product Image/SAMSUNG/SAMSUNG The Frame/edge.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 38,
+    "fields": {
+        "image_summary": "SAMSUNG The Frame feature_one",
+        "image": "Product Image/SAMSUNG/SAMSUNG The Frame frature_one/feature_one_ovzy7n0.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 39,
+    "fields": {
+        "image_summary": "SAMSUNG The Frame feature_two",
+        "image": "Product Image/SAMSUNG/SAMSUNG The Frame feature_two/feature_two.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 40,
+    "fields": {
+        "image_summary": "SAMSUNG The Frame front",
+        "image": "Product Image/SAMSUNG/SAMSUNG The Frame front/front.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 41,
+    "fields": {
+        "image_summary": "SAMSUNG The Frame back",
+        "image": "Product Image/SAMSUNG/SAMSUNG The Frame back/back.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 42,
+    "fields": {
+        "image_summary": "SAMSUNG The Frame remote",
+        "image": "Product Image/SAMSUNG/SAMSUNG The Frame remote/remote.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 43,
+    "fields": {
+        "image_summary": "SAMSUNG The Frame side",
+        "image": "Product Image/SAMSUNG/SAMSUNG The Frame side/side.jpeg",
         "primary": false
     }
 }

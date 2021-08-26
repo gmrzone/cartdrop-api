@@ -26,7 +26,8 @@ from .models import (
     SimType,
     SpeakerType,
     WashingMethod,
-    LaptopVariant
+    LaptopVariant,
+    TVVariant
 )
 
 # Register your models here.
@@ -221,3 +222,10 @@ class ProductHighlightsAdmin(admin.ModelAdmin):
     list_display = ("product", "name")
     search_fields = ("name",)
     list_select_related = ("product",)
+
+
+@admin.register(TVVariant)
+class TVVariantAdmin(admin.ModelAdmin):
+    list_display = ('display_size',)
+    search_fields = ('display_size',)
+    
