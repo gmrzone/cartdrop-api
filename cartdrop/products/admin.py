@@ -203,7 +203,7 @@ class ProductVariationAdmin(admin.ModelAdmin):
     list_display = ("__str__", "product", "retail_price", "price")
     list_filter = ("size", "color", "active")
     search_fields = ("product",)
-    list_select_related = ("product",)
+    list_select_related = ("product", "mobile_variant", "laptop_variant", "color")
 
 
 @admin.register(ProductImages)

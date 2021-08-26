@@ -140,6 +140,9 @@ class ProductLaptopFeatures(models.Model):
     resolution = models.CharField(max_length=100)
     battery_backup = models.CharField(max_length=100)
     touchscreen = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.series.name
     
 
 
@@ -154,7 +157,11 @@ class ProductTelivisionFeatures(models.Model):
     is_curved = models.BooleanField(default=False)
     has_wify = models.BooleanField(default=True)
     usb_count = models.PositiveIntegerField(default=0)
+    refresh_rate = models.CharField(max_length=100, null=True)
+    includes_wallmount = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.series.name
 
 class ProductWashingMachineFeatures(models.Model):
     energy_rating = models.PositiveIntegerField(
@@ -315,7 +322,7 @@ class ProductVariation(UUIDField):
 
     def __str__(self):
         variant = self.mobile_variant.name if hasattr(self.mobile_variant, "name") else self.laptop_variant.name if hasattr(self.laptop_variant, "name") else None
-        size = self.size
+        size = self.size.code if hasattr(self.size, 'code') else None
         color = self.color.name
         s = f"({', '.join([i for i in [color, variant, size] if i])})"
         return f"{self.product.name} {s if s else ''}"
