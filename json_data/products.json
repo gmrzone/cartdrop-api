@@ -695,13 +695,6 @@
     }
 },
 {
-    "model": "products.speakertype",
-    "pk": 4,
-    "fields": {
-        "name": "Mobile/Tablet Speaker"
-    }
-},
-{
     "model": "products.simtype",
     "pk": 1,
     "fields": {
@@ -797,7 +790,7 @@
         "power_output": "",
         "frequency_response": null,
         "has_bluetooth": true,
-        "type": 4
+        "type": 2
     }
 },
 {
@@ -1548,7 +1541,12 @@
         "laptop_variant": null,
         "tv_variant": null,
         "size": null,
-        "images": []
+        "images": [
+            50,
+            51,
+            52,
+            53
+        ]
     }
 },
 {
@@ -1567,7 +1565,14 @@
         "laptop_variant": null,
         "tv_variant": null,
         "size": null,
-        "images": []
+        "images": [
+            44,
+            45,
+            46,
+            47,
+            48,
+            49
+        ]
     }
 },
 {
@@ -1945,6 +1950,96 @@
     "fields": {
         "image_summary": "SAMSUNG The Frame side",
         "image": "Product Image/SAMSUNG/SAMSUNG The Frame side/side.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 44,
+    "fields": {
+        "image_summary": "Bose 500 Silver main",
+        "image": "Product Image/Bose/Bose 500 Silver/main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 45,
+    "fields": {
+        "image_summary": "Bose 500 Silver feature one",
+        "image": "Product Image/Bose/Bose 500 Silver feature one/feature_one.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 46,
+    "fields": {
+        "image_summary": "Bose 500 Silver feature two",
+        "image": "Product Image/Bose/Bose 500 Silver feature two/feature_two.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 47,
+    "fields": {
+        "image_summary": "Bose 500 Silver detail",
+        "image": "Product Image/Bose/Bose 500 Silver detail/detail.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 48,
+    "fields": {
+        "image_summary": "Bose 500 Silver top",
+        "image": "Product Image/Bose/Bose 500 Silver top/top.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 49,
+    "fields": {
+        "image_summary": "Bose 500 Silver top one",
+        "image": "Product Image/Bose/Bose 500 Silver top one/top_two.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 50,
+    "fields": {
+        "image_summary": "Bose 500 Black main",
+        "image": "Product Image/Bose/Bose 500 Black main/main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 51,
+    "fields": {
+        "image_summary": "Bose 500 Black side",
+        "image": "Product Image/Bose/Bose 500 Black side/side.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 52,
+    "fields": {
+        "image_summary": "Bose 500 Black feature one",
+        "image": "Product Image/Bose/Bose 500 Black feature one/feature_one.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 53,
+    "fields": {
+        "image_summary": "Bose 500 Black top",
+        "image": "Product Image/Bose/Bose 500 Black top/top_one.jpeg",
         "primary": false
     }
 }
