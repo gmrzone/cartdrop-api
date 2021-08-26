@@ -330,7 +330,7 @@ class ProductVariation(UUIDField):
         return super().save(*args, **kwargs)
 
     def __str__(self):
-        variant = self.mobile_variant.name if hasattr(self.mobile_variant, "name") else self.laptop_variant.name if hasattr(self.laptop_variant, "name") else None
+        variant = self.mobile_variant.name if hasattr(self.mobile_variant, "name") else self.laptop_variant.name if hasattr(self.laptop_variant, "name") else self.tv_variant.display_size + " inch" if hasattr(self.tv_variant, "display_size") else None
         size = self.size.code if hasattr(self.size, 'code') else None
         color = self.color.name if hasattr(self.color, "name") else None
         if not variant and not size and not color:

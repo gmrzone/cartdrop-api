@@ -335,6 +335,27 @@
     }
 },
 {
+    "model": "products.tvvariant",
+    "pk": 3,
+    "fields": {
+        "display_size": "55"
+    }
+},
+{
+    "model": "products.tvvariant",
+    "pk": 4,
+    "fields": {
+        "display_size": "50"
+    }
+},
+{
+    "model": "products.tvvariant",
+    "pk": 5,
+    "fields": {
+        "display_size": "43"
+    }
+},
+{
     "model": "products.operatingsystem",
     "pk": 1,
     "fields": {
@@ -963,11 +984,11 @@
     "pk": 5,
     "fields": {
         "created": "2021-08-26T08:54:37.107Z",
-        "updated": "2021-08-26T08:54:37.107Z",
+        "updated": "2021-08-26T13:26:51.514Z",
         "uuid": "353a796e-0db4-42a8-930f-298658964b0f",
         "brand": 1,
         "product_code": "TVS",
-        "name": "SAMSUNG The Frame 2021 Series 163 cm (65 inch) QLED Ultra HD (4K) Smart TV",
+        "name": "SAMSUNG The Frame 2021 Series QLED Ultra HD (4K) Smart TV",
         "slug": "samsung-the-frame-2021-series-163-cm-65-inch-qled-ultra-hd-4k-smart-tv",
         "seller": [
             "admin"
@@ -1340,6 +1361,90 @@
         "mobile_variant": null,
         "laptop_variant": null,
         "tv_variant": 2,
+        "size": null,
+        "images": [
+            35,
+            36,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 15,
+    "fields": {
+        "uuid": "a3e22982-219a-4630-90c0-fbefe198b4b2",
+        "PID": "TVSXHYFLBVCGVULKJR",
+        "product": 5,
+        "retail_price": "1444900.00",
+        "price": "92999.00",
+        "color": null,
+        "active": true,
+        "available_stock": 10,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": 3,
+        "size": null,
+        "images": [
+            35,
+            36,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 16,
+    "fields": {
+        "uuid": "68d7f591-a8b2-44bc-af24-1acd33312a03",
+        "PID": "TVSSVBWCOJVSWRXXHX",
+        "product": 5,
+        "retail_price": "119900.00",
+        "price": "77999.00",
+        "color": null,
+        "active": true,
+        "available_stock": 18,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": 4,
+        "size": null,
+        "images": [
+            35,
+            36,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 17,
+    "fields": {
+        "uuid": "61159402-449e-429d-9bfa-a086f66d8945",
+        "PID": "TVSCHJAXODSAOWEJCK",
+        "product": 5,
+        "retail_price": "89990.00",
+        "price": "61999.00",
+        "color": null,
+        "active": true,
+        "available_stock": 12,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": 5,
         "size": null,
         "images": [
             35,
