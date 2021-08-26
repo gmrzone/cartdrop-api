@@ -784,6 +784,16 @@
     }
 },
 {
+    "model": "products.productwashingmachinefeatures",
+    "pk": 1,
+    "fields": {
+        "energy_rating": 5,
+        "washing_capicity": 8,
+        "washing_method": 4,
+        "has_inbuilt_heater": true
+    }
+},
+{
     "model": "products.productspeakersfeatures",
     "pk": 1,
     "fields": {
@@ -896,6 +906,23 @@
     }
 },
 {
+    "model": "products.productspecification",
+    "pk": 10,
+    "fields": {
+        "in_box": "1 Washing Machine, Inlet Hose, User Manual",
+        "launched_date": "2021-08-26",
+        "model_no": null,
+        "model_name": "WAJ2426MIN",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": 1,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
     "model": "products.productwarranty",
     "pk": 1,
     "fields": {
@@ -929,6 +956,15 @@
         "summary": "1 year from date of invoice when bought from authorized seller",
         "covered": "Bose Corporation (\"Bose\") warrants your product against defects in materials and workmanship when purchased directly from Bose or a Bose authorised reseller. This warranty is extended only to the original end-use purchaser or the person receiving the product as a gift and shall not be extended to any other person or transferee",
         "not_covered": "defects or damage arising from improper use or maintenance, normal wear and tear, commercial use, accident or external causes. Unauthorised repair, modification or customisation of your product"
+    }
+},
+{
+    "model": "products.productwarranty",
+    "pk": 5,
+    "fields": {
+        "summary": "2 Years Warranty on Product and 12 Years Warranty on Motor",
+        "covered": "All Parts Excluding Outer Cabinet Ans Plastic Parts from the Date of Purchase Will Be Covered Under Warranty.all Manufacturing Defects Are Also Covered",
+        "not_covered": "Parts: Outer Cabinet and Plastic Parts, Any Accessories External to the Product, The Product is not Used According to the Instructions Given in the Instructions Manual, Defects Caused by Improper Use as Determined by the Company Personnel, Modification or Alteration of Any Nature Made in the Electrical Circuitry or Physical Construction of the Set, Site (Where the Premises is Kept) Conditions That do not Confirm to the Recommended Operating Conditions of the Machine, The Serial Number is Remove"
     }
 },
 {
@@ -1070,6 +1106,29 @@
     }
 },
 {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+        "created": "2021-08-26T14:29:39.349Z",
+        "updated": "2021-08-26T14:29:39.349Z",
+        "uuid": "b7a75066-a34b-4ecd-9400-8ce52bf81803",
+        "brand": 10,
+        "product_code": "WMS",
+        "name": "BOSCH 8 kg INVERTER TOUCH CONTROL Fully Automatic Front Load with In-built Heater",
+        "slug": "bosch-8-kg-inverter-touch-control-fully-automatic-front-load-with-in-built-heater",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 14,
+        "description": "",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": 5,
+        "weight": "71.45 Kg",
+        "specification": 10
+    }
+},
+{
     "model": "products.fashionsize",
     "pk": 1,
     "fields": {
@@ -1158,10 +1217,10 @@
         "tv_variant": null,
         "size": null,
         "images": [
-            8,
             5,
             6,
-            7
+            7,
+            8
         ]
     }
 },
@@ -1206,11 +1265,11 @@
         "tv_variant": null,
         "size": null,
         "images": [
-            13,
             14,
             15,
             16,
-            17
+            17,
+            13
         ]
     }
 },
@@ -1231,11 +1290,11 @@
         "tv_variant": null,
         "size": null,
         "images": [
-            13,
             14,
             15,
             16,
-            17
+            17,
+            13
         ]
     }
 },
@@ -1256,11 +1315,11 @@
         "tv_variant": null,
         "size": null,
         "images": [
-            13,
             14,
             15,
             16,
-            17
+            17,
+            13
         ]
     }
 },
@@ -1381,11 +1440,11 @@
         "tv_variant": null,
         "size": null,
         "images": [
+            31,
+            30,
             32,
             33,
-            34,
-            30,
-            31
+            34
         ]
     }
 },
@@ -1406,8 +1465,8 @@
         "tv_variant": null,
         "size": null,
         "images": [
-            26,
             27,
+            26,
             28,
             29
         ]
@@ -1432,10 +1491,10 @@
         "images": [
             35,
             36,
-            38,
             39,
             40,
             41,
+            38,
             42,
             43
         ]
@@ -1460,10 +1519,10 @@
         "images": [
             35,
             36,
-            38,
             39,
             40,
             41,
+            38,
             42,
             43
         ]
@@ -1488,10 +1547,10 @@
         "images": [
             35,
             36,
-            38,
             39,
             40,
             41,
+            38,
             42,
             43
         ]
@@ -1516,10 +1575,10 @@
         "images": [
             35,
             36,
-            38,
             39,
             40,
             41,
+            38,
             42,
             43
         ]
@@ -1572,6 +1631,32 @@
             47,
             48,
             49
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 20,
+    "fields": {
+        "uuid": "a401ff10-cccc-4ddf-a933-8d2588f09e67",
+        "PID": "WMSOTJLTGXGPSTCOWX",
+        "product": 7,
+        "retail_price": "43399.00",
+        "price": "34490.00",
+        "color": 8,
+        "active": true,
+        "available_stock": 9,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "size": null,
+        "images": [
+            54,
+            55,
+            56,
+            57,
+            58,
+            59
         ]
     }
 },
@@ -2040,6 +2125,60 @@
     "fields": {
         "image_summary": "Bose 500 Black top",
         "image": "Product Image/Bose/Bose 500 Black top/top_one.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 54,
+    "fields": {
+        "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL main",
+        "image": "Product Image/BOSCH/BOSCH 8 kg INVERTER TOUCH CONTROL main/main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 55,
+    "fields": {
+        "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL secondary",
+        "image": "Product Image/BOSCH/BOSCH 8 kg INVERTER TOUCH CONTROL secondary/secondary.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 56,
+    "fields": {
+        "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL features",
+        "image": "Product Image/BOSCH/BOSCH 8 kg INVERTER TOUCH CONTROL features/features.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 57,
+    "fields": {
+        "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL inside",
+        "image": "Product Image/BOSCH/BOSCH 8 kg INVERTER TOUCH CONTROL inside/inside.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 58,
+    "fields": {
+        "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL back",
+        "image": "Product Image/BOSCH/BOSCH 8 kg INVERTER TOUCH CONTROL back/back.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 59,
+    "fields": {
+        "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL size",
+        "image": "Product Image/BOSCH/BOSCH 8 kg INVERTER TOUCH CONTROL size/size.jpeg",
         "primary": false
     }
 }
