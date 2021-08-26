@@ -364,6 +364,48 @@
     }
 },
 {
+    "model": "products.accapacityvariant",
+    "pk": 1,
+    "fields": {
+        "capacity": "1 Ton"
+    }
+},
+{
+    "model": "products.accapacityvariant",
+    "pk": 2,
+    "fields": {
+        "capacity": "1.5 Ton"
+    }
+},
+{
+    "model": "products.accapacityvariant",
+    "pk": 3,
+    "fields": {
+        "capacity": "2 Ton"
+    }
+},
+{
+    "model": "products.acstarratingvariant",
+    "pk": 1,
+    "fields": {
+        "star": "3 Star"
+    }
+},
+{
+    "model": "products.acstarratingvariant",
+    "pk": 2,
+    "fields": {
+        "star": "4 Star"
+    }
+},
+{
+    "model": "products.acstarratingvariant",
+    "pk": 3,
+    "fields": {
+        "star": "5 Star"
+    }
+},
+{
     "model": "products.operatingsystem",
     "pk": 1,
     "fields": {
@@ -794,6 +836,17 @@
     }
 },
 {
+    "model": "products.productairconditionerfeature",
+    "pk": 1,
+    "fields": {
+        "type": 1,
+        "compressor": "Rotary",
+        "cooling_capacity": 5000,
+        "series": null,
+        "cooling_coverage_area": "450 Square Feet sq ft"
+    }
+},
+{
     "model": "products.productspeakersfeatures",
     "pk": 1,
     "fields": {
@@ -923,6 +976,23 @@
     }
 },
 {
+    "model": "products.productspecification",
+    "pk": 11,
+    "fields": {
+        "in_box": "1 Indoor Unit, 1 Outdoor Unit, Remote, User manual",
+        "launched_date": "2021-08-26",
+        "model_no": null,
+        "model_name": "AR18AYNZBBE/AR18AYNZBBENNA /AR18AYNZBBEXNA",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": 1,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
     "model": "products.productwarranty",
     "pk": 1,
     "fields": {
@@ -965,6 +1035,15 @@
         "summary": "2 Years Warranty on Product and 12 Years Warranty on Motor",
         "covered": "All Parts Excluding Outer Cabinet Ans Plastic Parts from the Date of Purchase Will Be Covered Under Warranty.all Manufacturing Defects Are Also Covered",
         "not_covered": "Parts: Outer Cabinet and Plastic Parts, Any Accessories External to the Product, The Product is not Used According to the Instructions Given in the Instructions Manual, Defects Caused by Improper Use as Determined by the Company Personnel, Modification or Alteration of Any Nature Made in the Electrical Circuitry or Physical Construction of the Set, Site (Where the Premises is Kept) Conditions That do not Confirm to the Recommended Operating Conditions of the Machine, The Serial Number is Remove"
+    }
+},
+{
+    "model": "products.productwarranty",
+    "pk": 6,
+    "fields": {
+        "summary": "1 Year Comprehensive Warranty on Product, 1 Year on PCB, 1 Year on Condenser, 1 Year on Gas Recharge and 10 Years on Compressor from Samsung",
+        "covered": "All Parts, Excluding Air Filter/ Front Grill & Plastic Parts (After Installation). The Warranty Covers Defective Materials and Workmanship From the Date of Purchase. Beyond the First Year of the Warranty Period\r\n\r\nOnly the Compressor Repair (Excluding Gas Filled Inside the Compressor) Will be Provided Free of Cost for 5 Years From Date of Purchase. Refrigerant Gas is Having Only One Year Warranty",
+        "not_covered": "Parts: Air Filter/Front Grill is Not Covered in the Warranty After Installation. The Warranty Does Not Cover Installation/Demonstration. Accessories External to the System. Damage parts. The Product is Not Used According to the Instructions Given in the Instruction Manual. Defects Caused by Improper Use as Determined by the Company Personnel. Modification / Alteration of Any Nature is Made in the Electrical Circuitry or Physical Construction of the Set. Site (Premises Where the Product is Kept)"
     }
 },
 {
@@ -1129,6 +1208,29 @@
     }
 },
 {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+        "created": "2021-08-26T14:57:31.510Z",
+        "updated": "2021-08-26T14:57:31.510Z",
+        "uuid": "05f390f5-5c02-4f78-8f94-cc7e2f93bd8d",
+        "brand": 1,
+        "product_code": "NCD",
+        "name": "SAMSUNG Split Inverter AC",
+        "slug": "samsung-split-inverter-ac",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 12,
+        "description": "Stay cool at home even on a hot and humid day with the help of the Samsung split inverter AC. Equipp",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": 6,
+        "weight": "11.4 Kg",
+        "specification": 11
+    }
+},
+{
     "model": "products.fashionsize",
     "pk": 1,
     "fields": {
@@ -1191,6 +1293,8 @@
         "mobile_variant": 4,
         "laptop_variant": null,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             1,
@@ -1215,6 +1319,8 @@
         "mobile_variant": 14,
         "laptop_variant": null,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             5,
@@ -1239,6 +1345,8 @@
         "mobile_variant": 4,
         "laptop_variant": null,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             9,
@@ -1263,6 +1371,8 @@
         "mobile_variant": 2,
         "laptop_variant": null,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             14,
@@ -1288,6 +1398,8 @@
         "mobile_variant": 6,
         "laptop_variant": null,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             14,
@@ -1313,6 +1425,8 @@
         "mobile_variant": 7,
         "laptop_variant": null,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             14,
@@ -1338,6 +1452,8 @@
         "mobile_variant": 2,
         "laptop_variant": null,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             17,
@@ -1363,6 +1479,8 @@
         "mobile_variant": 2,
         "laptop_variant": null,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             17,
@@ -1388,6 +1506,8 @@
         "mobile_variant": 7,
         "laptop_variant": null,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             17,
@@ -1413,6 +1533,8 @@
         "mobile_variant": 6,
         "laptop_variant": null,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             17,
@@ -1438,6 +1560,8 @@
         "mobile_variant": null,
         "laptop_variant": 2,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             31,
@@ -1463,6 +1587,8 @@
         "mobile_variant": null,
         "laptop_variant": 1,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             27,
@@ -1487,6 +1613,8 @@
         "mobile_variant": null,
         "laptop_variant": null,
         "tv_variant": 2,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             35,
@@ -1515,6 +1643,8 @@
         "mobile_variant": null,
         "laptop_variant": null,
         "tv_variant": 3,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             35,
@@ -1543,6 +1673,8 @@
         "mobile_variant": null,
         "laptop_variant": null,
         "tv_variant": 4,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             35,
@@ -1571,6 +1703,8 @@
         "mobile_variant": null,
         "laptop_variant": null,
         "tv_variant": 5,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             35,
@@ -1599,6 +1733,8 @@
         "mobile_variant": null,
         "laptop_variant": null,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             50,
@@ -1623,6 +1759,8 @@
         "mobile_variant": null,
         "laptop_variant": null,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             44,
@@ -1649,6 +1787,8 @@
         "mobile_variant": null,
         "laptop_variant": null,
         "tv_variant": null,
+        "ac_capacity_variant": null,
+        "ac_star_variant": null,
         "size": null,
         "images": [
             54,

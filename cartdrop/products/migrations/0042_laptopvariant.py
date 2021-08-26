@@ -6,15 +6,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0041_rename_variant_productvariation_mobile_variant'),
+        ("products", "0041_rename_variant_productvariation_mobile_variant"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='LaptopVariant',
+            name="LaptopVariant",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(db_index=True, max_length=200)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(db_index=True, max_length=200)),
             ],
         ),
     ]

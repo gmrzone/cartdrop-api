@@ -7,13 +7,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0044_rename_laptop_variation_productvariation_laptop_variant'),
+        ("products", "0044_rename_laptop_variation_productvariation_laptop_variant"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='productimages',
-            name='image',
+            model_name="productimages",
+            name="image",
             field=models.ImageField(upload_to=cartdrop.products.utils.product_images),
         ),
     ]

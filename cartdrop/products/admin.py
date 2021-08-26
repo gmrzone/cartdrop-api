@@ -29,7 +29,7 @@ from .models import (
     LaptopVariant,
     TVVariant,
     ACStarRatingVariant,
-    ACCapacityVariant
+    ACCapacityVariant,
 )
 
 # Register your models here.
@@ -70,6 +70,7 @@ class MobileVariantAdmin(admin.ModelAdmin):
 
     list_display = ("__str__",)
     search_fields = ("name",)
+
 
 @admin.register(LaptopVariant)
 class LaptopVariantAdmin(admin.ModelAdmin):
@@ -228,17 +229,17 @@ class ProductHighlightsAdmin(admin.ModelAdmin):
 
 @admin.register(TVVariant)
 class TVVariantAdmin(admin.ModelAdmin):
-    list_display = ('display_size',)
-    search_fields = ('display_size',)
+    list_display = ("display_size",)
+    search_fields = ("display_size",)
 
 
 @admin.register(ACCapacityVariant)
 class ACCapacityVariantAdmin(admin.ModelAdmin):
-    list_display = ('capacity',)
-    search_fields = ('capacity',)
+    list_display = ("capacity",)
+    search_fields = ("capacity",)
 
 
 @admin.register(ACStarRatingVariant)
 class ACStarRatingVariant(admin.ModelAdmin):
-    list_display = ('star',)
-    search_fields = ('star',)
+    list_display = ("star",)
+    search_fields = ("star",)

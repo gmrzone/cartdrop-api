@@ -7,32 +7,58 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0051_auto_20210826_1357'),
+        ("products", "0051_auto_20210826_1357"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='ACCapacityVariant',
+            name="ACCapacityVariant",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('capacity', models.CharField(max_length=100)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("capacity", models.CharField(max_length=100)),
             ],
         ),
         migrations.CreateModel(
-            name='ACStarRatingVariant',
+            name="ACStarRatingVariant",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('star', models.CharField(max_length=100)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("star", models.CharField(max_length=100)),
             ],
         ),
         migrations.AddField(
-            model_name='productvariation',
-            name='ac_capacity_variant',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='products.accapacityvariant'),
+            model_name="productvariation",
+            name="ac_capacity_variant",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to="products.accapacityvariant",
+            ),
         ),
         migrations.AddField(
-            model_name='productvariation',
-            name='ac_star_variant',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='products.acstarratingvariant'),
+            model_name="productvariation",
+            name="ac_star_variant",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to="products.acstarratingvariant",
+            ),
         ),
     ]

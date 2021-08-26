@@ -7,21 +7,26 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0042_laptopvariant'),
+        ("products", "0042_laptopvariant"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='productlaptopfeatures',
-            name='ram',
+            model_name="productlaptopfeatures",
+            name="ram",
         ),
         migrations.RemoveField(
-            model_name='productlaptopfeatures',
-            name='storage',
+            model_name="productlaptopfeatures",
+            name="storage",
         ),
         migrations.AddField(
-            model_name='productvariation',
-            name='laptop_variation',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='products.laptopvariant'),
+            model_name="productvariation",
+            name="laptop_variation",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to="products.laptopvariant",
+            ),
         ),
     ]

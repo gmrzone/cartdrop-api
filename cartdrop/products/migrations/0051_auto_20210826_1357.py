@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0050_alter_productvariation_color'),
+        ("products", "0050_alter_productvariation_color"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='productspeakersfeatures',
-            name='frequency_response',
+            model_name="productspeakersfeatures",
+            name="frequency_response",
             field=models.CharField(blank=True, max_length=100, null=True),
         ),
         migrations.AlterField(
-            model_name='productspeakersfeatures',
-            name='power_output',
+            model_name="productspeakersfeatures",
+            name="power_output",
             field=models.CharField(blank=True, max_length=20),
         ),
     ]

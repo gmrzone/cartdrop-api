@@ -36,6 +36,7 @@ class DisplayType(models.Model):
     def __str__(self):
         return self.name
 
+
 # Mobile Variant like 6gb/64gb, 8gb/128gb etc
 class MobileVariant(models.Model):
     name = models.CharField(max_length=200, db_index=True)
@@ -43,17 +44,20 @@ class MobileVariant(models.Model):
     def __str__(self):
         return self.name
 
+
 class LaptopVariant(models.Model):
     name = models.CharField(max_length=200, db_index=True)
 
     def __str__(self):
         return self.name
 
+
 class TVVariant(models.Model):
     display_size = models.CharField(max_length=100)
 
     def __str__(self):
         return self.display_size + " Inches"
+
 
 class ACCapacityVariant(models.Model):
     capacity = models.CharField(max_length=100)
@@ -163,8 +167,6 @@ class ProductLaptopFeatures(models.Model):
 
     def __str__(self):
         return self.series.name
-    
-
 
 
 class ProductTelivisionFeatures(models.Model):
@@ -182,6 +184,7 @@ class ProductTelivisionFeatures(models.Model):
 
     def __str__(self):
         return self.series.name
+
 
 class ProductWashingMachineFeatures(models.Model):
     energy_rating = models.PositiveIntegerField(
@@ -253,8 +256,6 @@ class ProductSpecification(models.Model):
         return self.model_name
 
 
-
-
 class ProductWarranty(models.Model):
     summary = models.CharField(max_length=200)
     covered = models.TextField(max_length=500, blank=True)
@@ -321,16 +322,26 @@ class ProductVariation(UUIDField):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     retail_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    color = models.ForeignKey(ProductColor, on_delete=models.SET_NULL, null=True, blank=True)
+    color = models.ForeignKey(
+        ProductColor, on_delete=models.SET_NULL, null=True, blank=True
+    )
     active = models.BooleanField(default=True)
     available_stock = models.PositiveIntegerField(default=0)
     mobile_variant = models.ForeignKey(
         MobileVariant, on_delete=models.SET_NULL, null=True, blank=True
     )
-    laptop_variant = models.ForeignKey(LaptopVariant, on_delete=models.SET_NULL, null=True, blank=True)
-    tv_variant = models.ForeignKey(TVVariant, on_delete=models.SET_NULL, null=True, blank=True)
-    ac_capacity_variant = models.ForeignKey(ACCapacityVariant, on_delete=models.SET_NULL, null=True, blank=True)
-    ac_star_variant = models.ForeignKey(ACStarRatingVariant, on_delete=models.SET_NULL, null=True, blank=True)
+    laptop_variant = models.ForeignKey(
+        LaptopVariant, on_delete=models.SET_NULL, null=True, blank=True
+    )
+    tv_variant = models.ForeignKey(
+        TVVariant, on_delete=models.SET_NULL, null=True, blank=True
+    )
+    ac_capacity_variant = models.ForeignKey(
+        ACCapacityVariant, on_delete=models.SET_NULL, null=True, blank=True
+    )
+    ac_star_variant = models.ForeignKey(
+        ACStarRatingVariant, on_delete=models.SET_NULL, null=True, blank=True
+    )
     size = models.ForeignKey(
         FashionSize, on_delete=models.SET_NULL, null=True, blank=True
     )
@@ -346,8 +357,16 @@ class ProductVariation(UUIDField):
         return super().save(*args, **kwargs)
 
     def __str__(self):
-        variant = self.mobile_variant.name if hasattr(self.mobile_variant, "name") else self.laptop_variant.name if hasattr(self.laptop_variant, "name") else self.tv_variant.display_size + " inch" if hasattr(self.tv_variant, "display_size") else None
-        size = self.size.code if hasattr(self.size, 'code') else None
+        variant = (
+            self.mobile_variant.name
+            if hasattr(self.mobile_variant, "name")
+            else self.laptop_variant.name
+            if hasattr(self.laptop_variant, "name")
+            else self.tv_variant.display_size + " inch"
+            if hasattr(self.tv_variant, "display_size")
+            else None
+        )
+        size = self.size.code if hasattr(self.size, "code") else None
         color = self.color.name if hasattr(self.color, "name") else None
         if not variant and not size and not color:
             return self.product.name

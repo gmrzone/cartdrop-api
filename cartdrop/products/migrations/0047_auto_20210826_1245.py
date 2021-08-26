@@ -6,22 +6,22 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0046_producttelivisionfeatures_wify'),
+        ("products", "0046_producttelivisionfeatures_wify"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='producttelivisionfeatures',
-            name='wify',
+            model_name="producttelivisionfeatures",
+            name="wify",
         ),
         migrations.AddField(
-            model_name='producttelivisionfeatures',
-            name='includes_wallmount',
+            model_name="producttelivisionfeatures",
+            name="includes_wallmount",
             field=models.BooleanField(default=False),
         ),
         migrations.AddField(
-            model_name='producttelivisionfeatures',
-            name='refresh_rate',
+            model_name="producttelivisionfeatures",
+            name="refresh_rate",
             field=models.CharField(max_length=100, null=True),
         ),
     ]
