@@ -55,6 +55,20 @@ class TVVariant(models.Model):
     def __str__(self):
         return self.display_size + " Inches"
 
+class ACCapacityVariant(models.Model):
+    capacity = models.CharField(max_length=100)
+
+    def __str_(self):
+        return self.capacity
+
+
+class ACStarRatingVariant(models.Model):
+    star = models.CharField(max_length=100)
+
+    def __str_(self):
+        return self.star
+
+
 # Operating System like Android, Windows Mac OS for mobiles and laptops and other products that has operating system
 class OperatingSystem(Slugable):
     name = models.CharField(max_length=100, db_index=True)
@@ -315,6 +329,8 @@ class ProductVariation(UUIDField):
     )
     laptop_variant = models.ForeignKey(LaptopVariant, on_delete=models.SET_NULL, null=True, blank=True)
     tv_variant = models.ForeignKey(TVVariant, on_delete=models.SET_NULL, null=True, blank=True)
+    ac_capacity_variant = models.ForeignKey(ACCapacityVariant, on_delete=models.SET_NULL, null=True, blank=True)
+    ac_star_variant = models.ForeignKey(ACStarRatingVariant, on_delete=models.SET_NULL, null=True, blank=True)
     size = models.ForeignKey(
         FashionSize, on_delete=models.SET_NULL, null=True, blank=True
     )

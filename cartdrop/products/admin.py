@@ -27,7 +27,9 @@ from .models import (
     SpeakerType,
     WashingMethod,
     LaptopVariant,
-    TVVariant
+    TVVariant,
+    ACStarRatingVariant,
+    ACCapacityVariant
 )
 
 # Register your models here.
@@ -228,4 +230,15 @@ class ProductHighlightsAdmin(admin.ModelAdmin):
 class TVVariantAdmin(admin.ModelAdmin):
     list_display = ('display_size',)
     search_fields = ('display_size',)
-    
+
+
+@admin.register(ACCapacityVariant)
+class ACCapacityVariantAdmin(admin.ModelAdmin):
+    list_display = ('capacity',)
+    search_fields = ('capacity',)
+
+
+@admin.register(ACStarRatingVariant)
+class ACStarRatingVariant(admin.ModelAdmin):
+    list_display = ('star',)
+    search_fields = ('star',)
