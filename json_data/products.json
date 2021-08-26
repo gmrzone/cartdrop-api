@@ -4,7 +4,7 @@
     "pk": 2,
     "fields": {
         "slug": "red",
-        "name": "RED"
+        "name": "Red"
     }
 },
 {
@@ -20,7 +20,7 @@
     "pk": 4,
     "fields": {
         "slug": "green",
-        "name": "GREEN"
+        "name": "Green"
     }
 },
 {
@@ -28,7 +28,7 @@
     "pk": 5,
     "fields": {
         "slug": "blue",
-        "name": "BLUE"
+        "name": "Blue"
     }
 },
 {
@@ -36,7 +36,7 @@
     "pk": 6,
     "fields": {
         "slug": "navy-blue",
-        "name": "NAVY BLUE"
+        "name": "Navy Blue"
     }
 },
 {
@@ -44,7 +44,7 @@
     "pk": 7,
     "fields": {
         "slug": "black",
-        "name": "BLACK"
+        "name": "Black"
     }
 },
 {
@@ -52,7 +52,7 @@
     "pk": 8,
     "fields": {
         "slug": "white",
-        "name": "WHITE"
+        "name": "White"
     }
 },
 {
@@ -60,7 +60,7 @@
     "pk": 9,
     "fields": {
         "slug": "purple",
-        "name": "PURPLE"
+        "name": "Purple"
     }
 },
 {
@@ -68,7 +68,7 @@
     "pk": 10,
     "fields": {
         "slug": "brown",
-        "name": "BROWN"
+        "name": "Brown"
     }
 },
 {
@@ -76,7 +76,7 @@
     "pk": 11,
     "fields": {
         "slug": "grey",
-        "name": "GREY"
+        "name": "Grey"
     }
 },
 {
@@ -84,7 +84,7 @@
     "pk": 12,
     "fields": {
         "slug": "gold",
-        "name": "GOLD"
+        "name": "Gold"
     }
 },
 {
@@ -92,7 +92,7 @@
     "pk": 13,
     "fields": {
         "slug": "space-grey",
-        "name": "SPACE GREY"
+        "name": "Space Grey"
     }
 },
 {
@@ -101,6 +101,14 @@
     "fields": {
         "slug": "jet-black",
         "name": "Jet Black"
+    }
+},
+{
+    "model": "products.productcolor",
+    "pk": 15,
+    "fields": {
+        "slug": "silver",
+        "name": "Silver"
     }
 },
 {
@@ -687,6 +695,13 @@
     }
 },
 {
+    "model": "products.speakertype",
+    "pk": 4,
+    "fields": {
+        "name": "Mobile/Tablet Speaker"
+    }
+},
+{
     "model": "products.simtype",
     "pk": 1,
     "fields": {
@@ -776,6 +791,16 @@
     }
 },
 {
+    "model": "products.productspeakersfeatures",
+    "pk": 1,
+    "fields": {
+        "power_output": "",
+        "frequency_response": null,
+        "has_bluetooth": true,
+        "type": 4
+    }
+},
+{
     "model": "products.productspecification",
     "pk": 3,
     "fields": {
@@ -861,6 +886,23 @@
     }
 },
 {
+    "model": "products.productspecification",
+    "pk": 9,
+    "fields": {
+        "in_box": "1 Speaker, Power Cord",
+        "launched_date": "2021-08-26",
+        "model_no": "500",
+        "model_name": "Bose 500",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": 1
+    }
+},
+{
     "model": "products.productwarranty",
     "pk": 1,
     "fields": {
@@ -885,6 +927,15 @@
         "summary": "1 Year Product Warranty and 1 Year Additional on Panel",
         "covered": "All Manufacturing Defects",
         "not_covered": "Warranty Does Not Cover Any External Accessories (Such as Battery, Cable, Carrying Bag), Damage Caused to the Product Due to Improper Installation by Customer, Normal Wear and Tear and Damages Caused to the Product by Accident, Lightening, Ingress of Water, Fire, Dropping or Excessive Shock, Any Damage Caused Due to Tampering of the Product by an Unauthorized Agent."
+    }
+},
+{
+    "model": "products.productwarranty",
+    "pk": 4,
+    "fields": {
+        "summary": "1 year from date of invoice when bought from authorized seller",
+        "covered": "Bose Corporation (\"Bose\") warrants your product against defects in materials and workmanship when purchased directly from Bose or a Bose authorised reseller. This warranty is extended only to the original end-use purchaser or the person receiving the product as a gift and shall not be extended to any other person or transferee",
+        "not_covered": "defects or damage arising from improper use or maintenance, normal wear and tear, commercial use, accident or external causes. Unauthorised repair, modification or customisation of your product"
     }
 },
 {
@@ -1000,6 +1051,29 @@
         "warranty": 3,
         "weight": "22.5 kg",
         "specification": 8
+    }
+},
+{
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "created": "2021-08-26T13:59:30.973Z",
+        "updated": "2021-08-26T13:59:30.973Z",
+        "uuid": "b946f33f-ca55-4b33-811e-6682da65db0d",
+        "brand": 8,
+        "product_code": "NCD",
+        "name": "Bose 500 Bluetooth Speaker",
+        "slug": "bose-500-bluetooth-speaker",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 15,
+        "description": "Make your parties even more exciting and memorable with this Bose Bluetooth Speaker. It comes with",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": 4,
+        "weight": "600 g",
+        "specification": 9
     }
 },
 {
@@ -1456,6 +1530,44 @@
             42,
             43
         ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 18,
+    "fields": {
+        "uuid": "74975249-224f-44e5-a9c9-2541dc7d0cac",
+        "PID": "NCDIVSOXOXYIIQBYRT",
+        "product": 6,
+        "retail_price": "39000.00",
+        "price": "39000.00",
+        "color": 7,
+        "active": true,
+        "available_stock": 4,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "size": null,
+        "images": []
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 19,
+    "fields": {
+        "uuid": "99532551-0391-49d0-a253-7c8169c455cf",
+        "PID": "NCDRHXIHFCKAKAZSZI",
+        "product": 6,
+        "retail_price": "39000.00",
+        "price": "39000.00",
+        "color": 15,
+        "active": true,
+        "available_stock": 12,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "size": null,
+        "images": []
     }
 },
 {
