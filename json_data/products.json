@@ -112,6 +112,22 @@
     }
 },
 {
+    "model": "products.productcolor",
+    "pk": 16,
+    "fields": {
+        "slug": "purple-glow",
+        "name": "Purple Glow"
+    }
+},
+{
+    "model": "products.productcolor",
+    "pk": 17,
+    "fields": {
+        "slug": "blue-charm",
+        "name": "Blue Charm"
+    }
+},
+{
     "model": "products.screentype",
     "pk": 1,
     "fields": {
@@ -847,6 +863,17 @@
     }
 },
 {
+    "model": "products.productrefrigeratorfeature",
+    "pk": 1,
+    "fields": {
+        "capacity": "200 L",
+        "energy_rating": 4,
+        "compressor_type": "Smart Inverter Compressor",
+        "type": 3,
+        "stabilizer_required": false
+    }
+},
+{
     "model": "products.productspeakersfeatures",
     "pk": 1,
     "fields": {
@@ -964,7 +991,7 @@
     "fields": {
         "in_box": "1 Washing Machine, Inlet Hose, User Manual",
         "launched_date": "2021-08-26",
-        "model_no": null,
+        "model_no": "WAJ2426MIN",
         "model_name": "WAJ2426MIN",
         "mobile": null,
         "laptop": null,
@@ -981,13 +1008,47 @@
     "fields": {
         "in_box": "1 Indoor Unit, 1 Outdoor Unit, Remote, User manual",
         "launched_date": "2021-08-26",
-        "model_no": null,
+        "model_no": "AR18AYNZBBE/AR18AYNZBBENNA /AR18AYNZBBEXNA",
         "model_name": "AR18AYNZBBE/AR18AYNZBBENNA /AR18AYNZBBEXNA",
         "mobile": null,
         "laptop": null,
         "tv": null,
         "washing_machine": null,
         "ac": 1,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 13,
+    "fields": {
+        "in_box": "1 Refrigerator Unit, Owner's Manual",
+        "launched_date": "2021-08-26",
+        "model_no": "GL-B221APGY",
+        "model_name": "GL-B221APGY",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": 1,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 14,
+    "fields": {
+        "in_box": "Asian Paints",
+        "launched_date": "2021-08-27",
+        "model_no": "TE-3",
+        "model_name": "Asian Paints white Emulsion",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
         "refrigerator": null,
         "speaker": null
     }
@@ -1044,6 +1105,15 @@
         "summary": "1 Year Comprehensive Warranty on Product, 1 Year on PCB, 1 Year on Condenser, 1 Year on Gas Recharge and 10 Years on Compressor from Samsung",
         "covered": "All Parts, Excluding Air Filter/ Front Grill & Plastic Parts (After Installation). The Warranty Covers Defective Materials and Workmanship From the Date of Purchase. Beyond the First Year of the Warranty Period\r\n\r\nOnly the Compressor Repair (Excluding Gas Filled Inside the Compressor) Will be Provided Free of Cost for 5 Years From Date of Purchase. Refrigerant Gas is Having Only One Year Warranty",
         "not_covered": "Parts: Air Filter/Front Grill is Not Covered in the Warranty After Installation. The Warranty Does Not Cover Installation/Demonstration. Accessories External to the System. Damage parts. The Product is Not Used According to the Instructions Given in the Instruction Manual. Defects Caused by Improper Use as Determined by the Company Personnel. Modification / Alteration of Any Nature is Made in the Electrical Circuitry or Physical Construction of the Set. Site (Premises Where the Product is Kept)"
+    }
+},
+{
+    "model": "products.productwarranty",
+    "pk": 7,
+    "fields": {
+        "summary": "1 Year Warranty on Unit and 10 Years Warranty on Compressor from LG",
+        "covered": "All Parts Excluding Plastic Parts, Glassware, Bulb and Tube from the Date of Purchase Against Defective Material and Workmanship",
+        "not_covered": "Parts: Plastic / Glassware / Bulb / Tube. Any Accessories External to the Product. The Product is Not Used According to the Instructions Given in the Instructions Manual. Defects Caused by Improper Use as Determined by the Company Personnel. Modification or Alteration of Any Nature made in the Electrical Circuitry or Physical Construction of the Set. Site (Where the Premises is Kept) Conditions That do Not Confirm to the Recommended Operating Conditions of the Machine. The Serial Number is Remo"
     }
 },
 {
@@ -1231,6 +1301,52 @@
     }
 },
 {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+        "created": "2021-08-26T19:36:09.532Z",
+        "updated": "2021-08-26T19:36:09.532Z",
+        "uuid": "812044f4-41f4-4e64-b62a-15165442b986",
+        "brand": 3,
+        "product_code": "REF",
+        "name": "LG Direct Cool Single Door 4 Star Refrigerator",
+        "slug": "lg-direct-cool-single-door-4-star-refrigerator",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 13,
+        "description": "This LG refrigerator comes equipped with a Smart Inverter Compressor that gives you efficient perfo",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": 7,
+        "weight": "40 kg",
+        "specification": 13
+    }
+},
+{
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+        "created": "2021-08-27T04:17:14.375Z",
+        "updated": "2021-08-27T04:18:21.082Z",
+        "uuid": "dfb16fc4-75bc-4e2b-bb76-64163787e2bb",
+        "brand": 13,
+        "product_code": "PNT",
+        "name": "ASIAN PAINTS TE-3 Emulsion Wall Paint  (4 L)",
+        "slug": "asian-paints-te-3-white-emulsion-wall-paint-4-l",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 6,
+        "description": "Asian Paints Tractor Emulsion is an acrylic emulsion paint that offers excellent smoothness to touch",
+        "overall_rating": "0.0",
+        "replacement_days": 0,
+        "warranty": null,
+        "weight": "4 L",
+        "specification": 14
+    }
+},
+{
     "model": "products.fashionsize",
     "pk": 1,
     "fields": {
@@ -1294,7 +1410,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             1,
@@ -1320,7 +1438,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             5,
@@ -1346,7 +1466,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             9,
@@ -1372,7 +1494,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             14,
@@ -1399,7 +1523,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             14,
@@ -1426,7 +1552,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             14,
@@ -1453,7 +1581,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             17,
@@ -1480,7 +1610,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             17,
@@ -1507,7 +1639,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             17,
@@ -1534,7 +1668,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             17,
@@ -1561,7 +1697,9 @@
         "laptop_variant": 2,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             31,
@@ -1588,7 +1726,9 @@
         "laptop_variant": 1,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             27,
@@ -1614,7 +1754,9 @@
         "laptop_variant": null,
         "tv_variant": 2,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             35,
@@ -1644,7 +1786,9 @@
         "laptop_variant": null,
         "tv_variant": 3,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             35,
@@ -1674,7 +1818,9 @@
         "laptop_variant": null,
         "tv_variant": 4,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             35,
@@ -1704,7 +1850,9 @@
         "laptop_variant": null,
         "tv_variant": 5,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             35,
@@ -1734,7 +1882,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             50,
@@ -1760,7 +1910,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             44,
@@ -1788,7 +1940,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "juices_quantity": null,
         "size": null,
         "images": [
             54,
@@ -1816,7 +1970,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": 1,
+        "refrigerator_capacity": null,
         "ac_star_variant": 1,
+        "juices_quantity": null,
         "size": null,
         "images": [
             64,
@@ -1843,7 +1999,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": 2,
+        "refrigerator_capacity": null,
         "ac_star_variant": 1,
+        "juices_quantity": null,
         "size": null,
         "images": [
             64,
@@ -1870,7 +2028,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": 1,
+        "refrigerator_capacity": null,
         "ac_star_variant": 2,
+        "juices_quantity": null,
         "size": null,
         "images": [
             64,
@@ -1897,7 +2057,9 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": 2,
+        "refrigerator_capacity": null,
         "ac_star_variant": 2,
+        "juices_quantity": null,
         "size": null,
         "images": [
             64,
@@ -1924,9 +2086,97 @@
         "laptop_variant": null,
         "tv_variant": null,
         "ac_capacity_variant": 2,
+        "refrigerator_capacity": null,
         "ac_star_variant": 3,
+        "juices_quantity": null,
         "size": null,
         "images": []
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 26,
+    "fields": {
+        "uuid": "a870b012-a459-43a5-89a4-4ebd80978489",
+        "PID": "REFPVKSOYNKUKLDOHZ",
+        "product": 9,
+        "retail_price": "23590.00",
+        "price": "19399.00",
+        "color": 16,
+        "active": true,
+        "available_stock": 10,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": "215 L",
+        "ac_star_variant": null,
+        "juices_quantity": null,
+        "size": null,
+        "images": [
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 27,
+    "fields": {
+        "uuid": "ffd787a5-c284-4be6-a9c9-dc5c10174e62",
+        "PID": "REFRACTSAUHVVFWZOQ",
+        "product": 9,
+        "retail_price": "24990.00",
+        "price": "20490.00",
+        "color": 17,
+        "active": true,
+        "available_stock": 8,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": "235 L",
+        "ac_star_variant": null,
+        "juices_quantity": null,
+        "size": null,
+        "images": [
+            65,
+            66,
+            67,
+            68,
+            69,
+            70
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 28,
+    "fields": {
+        "uuid": "b4b95cc9-471e-45bc-a520-deb7286b9521",
+        "PID": "PNTSRRKOOTMDQCRKYH",
+        "product": 10,
+        "retail_price": "1591.00",
+        "price": "999.00",
+        "color": 8,
+        "active": true,
+        "available_stock": 100,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "juices_quantity": null,
+        "size": null,
+        "images": [
+            77
+        ]
     }
 },
 {
@@ -2494,6 +2744,123 @@
         "image_summary": "SAMSUNG Star Split Inverter AC back",
         "image": "Product Image/SAMSUNG/SAMSUNG Star Split Inverter AC back/back.jpeg",
         "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 65,
+    "fields": {
+        "image_summary": "LG 235 L Direct Cool Single Door Blue Charm 235 L main",
+        "image": "Product Image/LG/LG 235 L Direct Cool Single Door Blue Charm 235 L main/main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 66,
+    "fields": {
+        "image_summary": "LG 235 L Direct Cool Single Door Blue Charm 235 L opened",
+        "image": "Product Image/LG/LG 235 L Direct Cool Single Door Blue Charm 235 L opened/opened.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 67,
+    "fields": {
+        "image_summary": "LG 235 L Direct Cool Single Door Blue Charm 235 L back",
+        "image": "Product Image/LG/LG 235 L Direct Cool Single Door Blue Charm 235 L back/back.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 68,
+    "fields": {
+        "image_summary": "LG 235 L Direct Cool Single Door Blue Charm 235 L bottom",
+        "image": "Product Image/LG/LG 235 L Direct Cool Single Door Blue Charm 235 L bottom/section_bottom.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 69,
+    "fields": {
+        "image_summary": "LG 235 L Direct Cool Single Door Blue Charm 235 L top",
+        "image": "Product Image/LG/LG 235 L Direct Cool Single Door Blue Charm 235 L top/section_top.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 70,
+    "fields": {
+        "image_summary": "LG 235 L Direct Cool Single Door details",
+        "image": "Product Image/LG/LG 235 L Direct Cool Single Door details/details.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 71,
+    "fields": {
+        "image_summary": "LG 235 L Direct Cool Single Door Purple Glow 215 L main",
+        "image": "Product Image/LG/LG 235 L Direct Cool Single Door Purple Glow 215 L main/main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 72,
+    "fields": {
+        "image_summary": "LG 235 L Direct Cool Single Door Purple Glow 215 L opened",
+        "image": "Product Image/LG/LG 235 L Direct Cool Single Door Purple Glow 215 L opened/opened.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 73,
+    "fields": {
+        "image_summary": "LG 235 L Direct Cool Single Door Purple Glow 215 L feature one",
+        "image": "Product Image/LG/LG 235 L Direct Cool Single Door Purple Glow 215 L feature one/features_one.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 74,
+    "fields": {
+        "image_summary": "LG 235 L Direct Cool Single Door Purple Glow 215 L feature two",
+        "image": "Product Image/LG/LG 235 L Direct Cool Single Door Purple Glow 215 L feature two/features_two.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 75,
+    "fields": {
+        "image_summary": "LG 235 L Direct Cool Single Door Purple Glow 215 L feature three",
+        "image": "Product Image/LG/LG 235 L Direct Cool Single Door Purple Glow 215 L feature three/featu_3AYjJyn.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 76,
+    "fields": {
+        "image_summary": "LG 235 L Direct Cool Single Door Purple Glow 215 L back",
+        "image": "Product Image/LG/LG 235 L Direct Cool Single Door Purple Glow 215 L back/back.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 77,
+    "fields": {
+        "image_summary": "ASIAN PAINTS TE-3 white main",
+        "image": "Product Image/ASIAN/ASIAN PAINTS TE-3 white main/main.jpeg",
+        "primary": true
     }
 }
 ]

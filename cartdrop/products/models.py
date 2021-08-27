@@ -343,6 +343,7 @@ class ProductVariation(UUIDField):
     ac_star_variant = models.ForeignKey(
         ACStarRatingVariant, on_delete=models.SET_NULL, null=True, blank=True
     )
+    juices_quantity = models.CharField(max_length=100, null=True, blank=True)
     size = models.ForeignKey(
         FashionSize, on_delete=models.SET_NULL, null=True, blank=True
     )
@@ -378,9 +379,10 @@ class ProductVariation(UUIDField):
             else None
         )
         refrigerator_capacity = self.refrigerator_capacity
+        juice_quantity = self.juices_quantity
         if not variant and not size and not color:
             return self.product.name
-        s = f"({', '.join([i for i in [color, variant, size, ac_star_variant, ac_capacity_variant, refrigerator_capacity] if i])})"
+        s = f"({', '.join([i for i in [color, variant, size, ac_star_variant, ac_capacity_variant, refrigerator_capacity, juice_quantity] if i])})"
         return f"{self.product.name} {s if s else ''}"
 
 
