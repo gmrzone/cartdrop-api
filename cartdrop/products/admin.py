@@ -1,37 +1,17 @@
 from django.contrib import admin
 
-from .models import (
-    ACCapacityVariant,
-    ACStarRatingVariant,
-    ACType,
-    DisplayType,
-    FashionSize,
-    LaptopVariant,
-    MobileVariant,
-    OperatingSystem,
-    Product,
-    ProductAirConditionerFeature,
-    ProductColor,
-    ProductHighlight,
-    ProductImages,
-    ProductLaptopFeatures,
-    ProductMobileFeatures,
-    ProductRefrigeratorFeature,
-    ProductSeries,
-    ProductSpeakersFeatures,
-    ProductSpecification,
-    ProductTelivisionFeatures,
-    ProductVariation,
-    ProductWarranty,
-    ProductWashingMachineFeatures,
-    RefrigeratorType,
-    ScreenType,
-    SimType,
-    SpeakerType,
-    TVVariant,
-    WashingMethod,
-    BookVariant
-)
+from .models import (ACCapacityVariant, ACStarRatingVariant, ACType,
+                     BookVariant, DisplayType, FashionSize, LaptopVariant,
+                     MobileVariant, OperatingSystem, Product,
+                     ProductAirConditionerFeature, ProductColor,
+                     ProductHighlight, ProductImages, ProductLaptopFeatures,
+                     ProductMobileFeatures, ProductRefrigeratorFeature,
+                     ProductSeries, ProductSpeakersFeatures,
+                     ProductSpecification, ProductTelivisionFeatures,
+                     ProductVariation, ProductWarranty,
+                     ProductWashingMachineFeatures, RefrigeratorType,
+                     ScreenType, SimType, SpeakerType, TVVariant,
+                     WashingMethod)
 
 # Register your models here.
 
@@ -249,4 +229,4 @@ class ACStarRatingVariant(admin.ModelAdmin):
 @admin.register(BookVariant)
 class BookVariantAdmin(admin.ModelAdmin):
     list_display = ("name",)
-    search_fields = ('name',)
+    search_fields = ("name",)
