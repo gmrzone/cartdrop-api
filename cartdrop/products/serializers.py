@@ -1,7 +1,11 @@
+from accounts.serializers import SellerUserSerializer
+from core.serializers import BrandSerializer, ProductSubcategorySerializer
 from django.db import models
 from django.db.models import fields
 from rest_framework.serializers import ModelSerializer
-from .models import ProductVariation, Product, ProductSpecification, ProductWarranty
+
+from .models import (Product, ProductSpecification, ProductVariation,
+                     ProductWarranty)
 
 
 class ProductWarrantySerializer(ModelSerializer):
@@ -29,9 +33,11 @@ class ProductSpecificationSerializer(ModelSerializer):
 
 
 class ProductVariationSerializer(ModelSerializer):
-
-    specification = ProductSpecification(many=False)
+    brand = BrandSerializer(many=False)
+    seller = SellerUserSerializer(many=False)
+    subcategory = ProductSubcategorySerializer(many=False)
     warranty = ProductWarranty(many=False)
+    specification = ProductSpecification(many=False)
 
     class Meta:
         model = Product

@@ -1,8 +1,18 @@
+from django.db import models
+from django.db.models import fields
 from rest_framework import serializers
-from rest_framework.fields import ImageField, SerializerMethodField
+from rest_framework.fields import ImageField
 from rest_framework.serializers import ModelSerializer, Serializer
 
-from .models import CategoryImage, ProductCategory, ProductSubcategory
+from .models import Brand, CategoryImage, ProductCategory, ProductSubcategory
+
+
+class BrandSerializer(ModelSerializer):
+    photo = ImageField(required=True, allow_empty_file=False)
+
+    class Meta:
+        model = Brand
+        fields = ("name", "photo")
 
 
 class CategoryImageSerializer(ModelSerializer):

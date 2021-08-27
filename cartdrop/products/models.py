@@ -7,6 +7,7 @@ from django.db.models.base import Model
 from django.db.models.deletion import SET_NULL
 from django.utils.crypto import get_random_string
 from django.utils.text import slugify
+
 from cartdrop.core.behaviours import Slugable, Timestamps, UUIDField
 
 from .utils import product_images
