@@ -422,6 +422,20 @@
     }
 },
 {
+    "model": "products.bookvariant",
+    "pk": 1,
+    "fields": {
+        "name": "E-Book"
+    }
+},
+{
+    "model": "products.bookvariant",
+    "pk": 2,
+    "fields": {
+        "name": "Paperback"
+    }
+},
+{
     "model": "products.operatingsystem",
     "pk": 1,
     "fields": {
@@ -1054,6 +1068,40 @@
     }
 },
 {
+    "model": "products.productspecification",
+    "pk": 15,
+    "fields": {
+        "in_box": "Auric Mens Energy pack of 3",
+        "launched_date": "2021-08-27",
+        "model_no": null,
+        "model_name": "Mens Energy",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 16,
+    "fields": {
+        "in_box": "JavaScript – The Definitive Guide, 7e: Master the World's Most-Used Programming Language",
+        "launched_date": "2021-08-27",
+        "model_no": null,
+        "model_name": "JavaScript – The Definitive Guide",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
     "model": "products.productwarranty",
     "pk": 1,
     "fields": {
@@ -1347,6 +1395,52 @@
     }
 },
 {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+        "created": "2021-08-27T13:26:08.552Z",
+        "updated": "2021-08-27T13:26:08.552Z",
+        "uuid": "cccf0a15-3c8d-4a6d-acbb-989d92696aeb",
+        "brand": 14,
+        "product_code": "JUE",
+        "name": "Auric Mens Energy",
+        "slug": "auric-mens-energy",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 17,
+        "description": "Product information provided by the seller on the Website is not exhaustive, please read the label",
+        "overall_rating": "0.0",
+        "replacement_days": 0,
+        "warranty": null,
+        "weight": "750 ml",
+        "specification": 15
+    }
+},
+{
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+        "created": "2021-08-27T13:33:17.456Z",
+        "updated": "2021-08-27T13:33:17.456Z",
+        "uuid": "f1c3ac03-5a9f-4fb5-8d88-62aaaf3de93f",
+        "brand": 18,
+        "product_code": "BKS",
+        "name": "JavaScript – The Definitive Guide, 7e: Master the World's Most-Used Programming Language",
+        "slug": "javascript-the-definitive-guide-7e-master-the-worlds-most-used-programming-language",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 16,
+        "description": "JavaScript is the programming language of the web and is used by more software developers today than",
+        "overall_rating": "0.0",
+        "replacement_days": 0,
+        "warranty": null,
+        "weight": "400 g",
+        "specification": 16
+    }
+},
+{
     "model": "products.fashionsize",
     "pk": 1,
     "fields": {
@@ -1412,6 +1506,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1440,6 +1535,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1468,6 +1564,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1496,6 +1593,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1525,6 +1623,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1554,6 +1653,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1583,6 +1683,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1612,6 +1713,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1641,6 +1743,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1670,6 +1773,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1699,6 +1803,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1728,6 +1833,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1756,6 +1862,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1788,6 +1895,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1820,6 +1928,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1852,6 +1961,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1884,6 +1994,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1912,6 +2023,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1942,6 +2054,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -1972,6 +2085,7 @@
         "ac_capacity_variant": 1,
         "refrigerator_capacity": null,
         "ac_star_variant": 1,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -2001,6 +2115,7 @@
         "ac_capacity_variant": 2,
         "refrigerator_capacity": null,
         "ac_star_variant": 1,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -2030,6 +2145,7 @@
         "ac_capacity_variant": 1,
         "refrigerator_capacity": null,
         "ac_star_variant": 2,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -2059,6 +2175,7 @@
         "ac_capacity_variant": 2,
         "refrigerator_capacity": null,
         "ac_star_variant": 2,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -2088,6 +2205,7 @@
         "ac_capacity_variant": 2,
         "refrigerator_capacity": null,
         "ac_star_variant": 3,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": []
@@ -2111,6 +2229,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": "215 L",
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -2142,6 +2261,7 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": "235 L",
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
@@ -2172,11 +2292,84 @@
         "ac_capacity_variant": null,
         "refrigerator_capacity": null,
         "ac_star_variant": null,
+        "book_variation": null,
         "juices_quantity": null,
         "size": null,
         "images": [
             77
         ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 29,
+    "fields": {
+        "uuid": "11d18216-293b-4823-a177-17456e0c5b0c",
+        "PID": "JUECLULQXBRMBIXMGL",
+        "product": 11,
+        "retail_price": "255.00",
+        "price": "255.00",
+        "color": null,
+        "active": true,
+        "available_stock": 0,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": null,
+        "juices_quantity": "3 x 250 ml",
+        "size": null,
+        "images": []
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 30,
+    "fields": {
+        "uuid": "3ee0d8be-c5fd-4ed5-adc6-7ffd99b0568f",
+        "PID": "BKSPEPULGXEREHQQZA",
+        "product": 12,
+        "retail_price": "4421.00",
+        "price": "4421.00",
+        "color": null,
+        "active": true,
+        "available_stock": 30,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": 2,
+        "juices_quantity": null,
+        "size": null,
+        "images": []
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 31,
+    "fields": {
+        "uuid": "8af15f52-203d-4ba0-bdee-2ae72477ed94",
+        "PID": "BKSXYKJXWBRAIFXELR",
+        "product": 12,
+        "retail_price": "2042.50",
+        "price": "2042.50",
+        "color": null,
+        "active": true,
+        "available_stock": 5000,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": 1,
+        "juices_quantity": null,
+        "size": null,
+        "images": []
     }
 },
 {

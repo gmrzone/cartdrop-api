@@ -73,6 +73,13 @@ class ACStarRatingVariant(models.Model):
         return self.star
 
 
+class BookVariant(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
 # Operating System like Android, Windows Mac OS for mobiles and laptops and other products that has operating system
 class OperatingSystem(Slugable):
     name = models.CharField(max_length=100, db_index=True)
@@ -343,6 +350,7 @@ class ProductVariation(UUIDField):
     ac_star_variant = models.ForeignKey(
         ACStarRatingVariant, on_delete=models.SET_NULL, null=True, blank=True
     )
+    book_variation = models.ForeignKey(BookVariant, on_delete=models.SET_NULL, null=True, blank=True)
     juices_quantity = models.CharField(max_length=100, null=True, blank=True)
     size = models.ForeignKey(
         FashionSize, on_delete=models.SET_NULL, null=True, blank=True
@@ -379,10 +387,11 @@ class ProductVariation(UUIDField):
             else None
         )
         refrigerator_capacity = self.refrigerator_capacity
-        juice_quantity = self.juices_quantity
-        if not variant and not size and not color:
+        juices_quantity = self.juices_quantity
+        book_variation = self.book_variation.name if hasattr(self.book_variation, "name") else None
+        if not variant and not size and not color and not ac_star_variant and not ac_capacity_variant and not refrigerator_capacity and not juices_quantity and not book_variation:
             return self.product.name
-        s = f"({', '.join([i for i in [color, variant, size, ac_star_variant, ac_capacity_variant, refrigerator_capacity, juice_quantity] if i])})"
+        s = f"({', '.join([i for i in [color, variant, size, ac_star_variant, ac_capacity_variant, refrigerator_capacity, juices_quantity, book_variation] if i])})"
         return f"{self.product.name} {s if s else ''}"
 
 

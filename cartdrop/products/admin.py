@@ -30,6 +30,7 @@ from .models import (
     SpeakerType,
     TVVariant,
     WashingMethod,
+    BookVariant
 )
 
 # Register your models here.
@@ -243,3 +244,9 @@ class ACCapacityVariantAdmin(admin.ModelAdmin):
 class ACStarRatingVariant(admin.ModelAdmin):
     list_display = ("star",)
     search_fields = ("star",)
+
+
+@admin.register(BookVariant)
+class BookVariantAdmin(admin.ModelAdmin):
+    list_display = ("name",)
+    search_fields = ('name',)
