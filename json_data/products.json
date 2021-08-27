@@ -2321,7 +2321,13 @@
         "book_variation": null,
         "juices_quantity": "3 x 250 ml",
         "size": null,
-        "images": []
+        "images": [
+            78,
+            79,
+            80,
+            81,
+            82
+        ]
     }
 },
 {
@@ -2345,7 +2351,9 @@
         "book_variation": 2,
         "juices_quantity": null,
         "size": null,
-        "images": []
+        "images": [
+            83
+        ]
     }
 },
 {
@@ -2369,7 +2377,9 @@
         "book_variation": 1,
         "juices_quantity": null,
         "size": null,
-        "images": []
+        "images": [
+            83
+        ]
     }
 },
 {
@@ -3053,6 +3063,60 @@
     "fields": {
         "image_summary": "ASIAN PAINTS TE-3 white main",
         "image": "Product Image/ASIAN/ASIAN PAINTS TE-3 white main/main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 78,
+    "fields": {
+        "image_summary": "Auric Mens Energy  main",
+        "image": "Product Image/Auric/Auric Mens Energy  main/main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 79,
+    "fields": {
+        "image_summary": "Auric Mens Energy back",
+        "image": "Product Image/Auric/Auric Mens Energy back/back.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 80,
+    "fields": {
+        "image_summary": "Auric Mens Energy secondary",
+        "image": "Product Image/Auric/Auric Mens Energy secondary/secondary.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 81,
+    "fields": {
+        "image_summary": "Auric Mens Energy detail",
+        "image": "Product Image/Auric/Auric Mens Energy detail/detail.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 82,
+    "fields": {
+        "image_summary": "Auric Mens Energy detail_one",
+        "image": "Product Image/Auric/Auric Mens Energy detail_one/detail_one.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 83,
+    "fields": {
+        "image_summary": "Javascript the definative guide",
+        "image": "Product Image/Javascript/Javascript the definative guide/main.jpg",
         "primary": true
     }
 }
