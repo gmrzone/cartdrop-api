@@ -5,8 +5,29 @@ from django.db.models import fields
 from rest_framework.serializers import ModelSerializer
 
 from .models import (DisplayType, OperatingSystem, Product,
-                     ProductLaptopFeatures, ProductSeries,
-                     ProductSpecification, ProductVariation, ProductWarranty)
+                     ProductLaptopFeatures, ProductMobileFeatures,
+                     ProductSeries, ProductSpecification,
+                     ProductTelivisionFeatures, ProductVariation,
+                     ProductWarranty, ProductWashingMachineFeatures,
+                     ScreenType, SimType, WashingMethod)
+
+
+class WashingMethodSerializer(ModelSerializer):
+    class Meta:
+        model = WashingMethod
+        fields = ("name",)
+
+
+class ScreenTypeSerializer(ModelSerializer):
+    class Meta:
+        model = ScreenType
+        fields = ("name",)
+
+
+class SimTypeSerializer(ModelSerializer):
+    class Meta:
+        model = SimType
+        fields = ("name",)
 
 
 class OperatingSystemSerializer(ModelSerializer):
@@ -25,6 +46,28 @@ class DisplayTypeSerializer(ModelSerializer):
     class Meta:
         model = DisplayType
         fields = ("name",)
+
+
+class MobileFeatureSerializer(ModelSerializer):
+    display_type = DisplayTypeSerializer(many=False)
+    sim_type = SimTypeSerializer(many=False)
+    os = OperatingSystemSerializer(many=False)
+    series = ProductSeriesSerializer(many=False)
+
+    class Meta:
+        model = ProductMobileFeatures
+        fields = (
+            "display_size",
+            "display_type",
+            "resolution",
+            "sim_type",
+            "touchscreen",
+            "smart_phone",
+            "battery_capicity",
+            "os",
+            "ram",
+            "series",
+        )
 
 
 class LaptopFeatureSerializer(ModelSerializer):
@@ -46,6 +89,38 @@ class LaptopFeatureSerializer(ModelSerializer):
         )
 
 
+class TelevisionFeatureSerializer(ModelSerializer):
+    series = ProductSeriesSerializer(many=False)
+    screen_type = ScreenTypeSerializer(many=False)
+
+    class Meta:
+        model = ProductTelivisionFeatures
+        fields = (
+            "display_size",
+            "series",
+            "screen_type",
+            "is_3d",
+            "is_curved",
+            "has_wifi",
+            "usb_count",
+            "refresh_rate",
+            "includes_wallmount",
+        )
+
+
+class WashingMachineFeatureSerializer(ModelSerializer):
+    washing_method = WashingMethodSerializer(many=False)
+
+    class Meta:
+        model = ProductWashingMachineFeatures
+        fields = (
+            "energy_rating",
+            "washing_capicity",
+            "washing_method",
+            "has_inbuilt_heater",
+        )
+
+
 class ProductWarrantySerializer(ModelSerializer):
     class Meta:
         models = ProductWarranty
@@ -54,6 +129,9 @@ class ProductWarrantySerializer(ModelSerializer):
 
 class ProductSpecificationSerializer(ModelSerializer):
     laptop = LaptopFeatureSerializer(many=False)
+    mobile = MobileFeatureSerializer(many=False)
+    tv = TelevisionFeatureSerializer(many=False)
+    washing_machine = WashingMachineFeatureSerializer(many=False)
 
     class Meta:
         model = ProductSpecification
