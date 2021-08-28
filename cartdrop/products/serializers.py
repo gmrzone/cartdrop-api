@@ -2,16 +2,44 @@ from accounts.serializers import SellerUserSerializer
 from core.serializers import BrandSerializer, ProductSubcategorySerializer
 from django.db import models
 from django.db.models import fields
+from django.db.models.fields.files import ImageField
+from rest_framework.fields import SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
-from .models import (ACType, DisplayType, OperatingSystem, Product,
-                     ProductAirConditionerFeature, ProductLaptopFeatures,
+from .models import (ACType, DisplayType, LaptopVariant, MobileVariant,
+                     OperatingSystem, Product, ProductAirConditionerFeature,
+                     ProductColor, ProductImages, ProductLaptopFeatures,
                      ProductMobileFeatures, ProductRefrigeratorFeature,
                      ProductSeries, ProductSpeakersFeatures,
                      ProductSpecification, ProductTelivisionFeatures,
                      ProductVariation, ProductWarranty,
                      ProductWashingMachineFeatures, RefrigeratorType,
-                     ScreenType, SimType, SpeakerType, WashingMethod)
+                     ScreenType, SimType, SpeakerType, TVVariant,
+                     WashingMethod)
+
+
+class ProductColorSerializere(ModelSerializer):
+    class Meta:
+        model = ProductColor
+        fields = ("name",)
+
+
+class MobileVariantSerializer(ModelSerializer):
+    class Meta:
+        model = MobileVariant
+        fields = ("name",)
+
+
+class LaptopVariantSerializer(ModelSerializer):
+    class Meta:
+        model = LaptopVariant
+        fields = ("name",)
+
+
+class TVVariantSerializer(ModelSerializer):
+    class Meta:
+        model = TVVariant
+        fields = ("name",)
 
 
 class SpeakerTypeSerializer(ModelSerializer):
@@ -191,6 +219,7 @@ class ProductSpecificationSerializer(ModelSerializer):
     washing_machine = WashingMachineFeatureSerializer(many=False)
     ac = AirConditionerFeatureSerializer(many=False)
     refrigerator = RefrigeratorFeatureSerializer(many=False)
+    speaker = SpeakerFetaureSerializer(many=False)
 
     class Meta:
         model = ProductSpecification
@@ -209,7 +238,7 @@ class ProductSpecificationSerializer(ModelSerializer):
         )
 
 
-class ProductVariationSerializer(ModelSerializer):
+class ProductSerializer(ModelSerializer):
     brand = BrandSerializer(many=False)
     seller = SellerUserSerializer(many=False)
     subcategory = ProductSubcategorySerializer(many=False)
@@ -219,7 +248,7 @@ class ProductVariationSerializer(ModelSerializer):
     class Meta:
         model = Product
         fields = (
-            "brand",
+            "uuid" "brand",
             "name",
             "slug",
             "seller",
@@ -231,18 +260,34 @@ class ProductVariationSerializer(ModelSerializer):
             "weight",
             "specification",
         )
+        read_only_fields = ("uuid", "slug")
+
+
+class ProductImageSerializer(ModelSerializer):
+    image = ImageField(required=True, allow_empty_file=False)
+
+    class Meta:
+        model = ProductImages
+        fields = ("image_summary", "image", "primary")
+        read_only_fields = ("image_summary",)
 
 
 class ProductVariationSerializer(ModelSerializer):
-
-    product = ProductVariationSerializer(many=False)
+    images = ProductImageSerializer(many=True)
+    product = ProductSerializer(many=False)
+    discount = SerializerMethodField(method_name="calculate_discount")
+    color = ProductColorSerializere(many=False)
+    mobile_variant = MobileVariantSerializer(many=False)
+    laptop_variant = LaptopVariantSerializer(many=False)
+    tv_variant = TVVariantSerializer(many=False)
 
     class Meta:
         model = ProductVariation
         fields = (
-            "PID",
+            "uuid" "PID",
             "product",
             "retail_price",
+            "discount",
             "price",
             "color",
             "available_stock",
@@ -257,3 +302,8 @@ class ProductVariationSerializer(ModelSerializer):
             "size",
             "images",
         )
+        read_only_fields = ("PID", "uuid", "discount")
+
+    def calculate_discount(self, obj):
+
+        return round((100 - (self.price * 100 / self.retail_price)), 2)
