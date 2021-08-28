@@ -332,7 +332,7 @@ class ProductVariation(UUIDField):
     color = models.ForeignKey(
         ProductColor, on_delete=models.SET_NULL, null=True, blank=True
     )
-    active = models.BooleanField(default=True)
+    active = models.BooleanField(default=True, db_index=True)
     available_stock = models.PositiveIntegerField(default=0)
     mobile_variant = models.ForeignKey(
         MobileVariant, on_delete=models.SET_NULL, null=True, blank=True

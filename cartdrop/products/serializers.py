@@ -1,9 +1,6 @@
-from accounts.serializers import SellerUserSerializer
-from core.serializers import BrandSerializer, ProductSubcategorySerializer
-from django.db import models
-from django.db.models import fields
-from django.db.models.fields.files import ImageField
-from rest_framework.fields import SerializerMethodField
+from cartdrop.accounts.serializers import SellerUserSerializer
+from cartdrop.core.serializers import BrandSerializer, ProductSubcategorySerializer
+from rest_framework.fields import SerializerMethodField, ImageField
 from rest_framework.serializers import ModelSerializer
 
 from .models import (
@@ -60,7 +57,7 @@ class LaptopVariantSerializer(ModelSerializer):
 class TVVariantSerializer(ModelSerializer):
     class Meta:
         model = TVVariant
-        fields = ("name",)
+        fields = ("display_size",)
 
 
 class ACCapacityVariantSerializer(ModelSerializer):
@@ -143,10 +140,10 @@ class DisplayTypeSerializer(ModelSerializer):
 
 
 class MobileFeatureSerializer(ModelSerializer):
-    display_type = DisplayTypeSerializer(many=False)
-    sim_type = SimTypeSerializer(many=False)
-    os = OperatingSystemSerializer(many=False)
-    series = ProductSeriesSerializer(many=False)
+    display_type = DisplayTypeSerializer()
+    sim_type = SimTypeSerializer()
+    os = OperatingSystemSerializer()
+    series = ProductSeriesSerializer()
 
     class Meta:
         model = ProductMobileFeatures
@@ -165,9 +162,9 @@ class MobileFeatureSerializer(ModelSerializer):
 
 
 class LaptopFeatureSerializer(ModelSerializer):
-    display_type = DisplayTypeSerializer(many=False)
-    series = ProductSeriesSerializer(many=False)
-    os = OperatingSystemSerializer(many=False)
+    display_type = DisplayTypeSerializer()
+    series = ProductSeriesSerializer()
+    os = OperatingSystemSerializer()
 
     class Meta:
         model = ProductLaptopFeatures
@@ -184,8 +181,8 @@ class LaptopFeatureSerializer(ModelSerializer):
 
 
 class TelevisionFeatureSerializer(ModelSerializer):
-    series = ProductSeriesSerializer(many=False)
-    screen_type = ScreenTypeSerializer(many=False)
+    series = ProductSeriesSerializer()
+    screen_type = ScreenTypeSerializer()
 
     class Meta:
         model = ProductTelivisionFeatures
@@ -203,7 +200,7 @@ class TelevisionFeatureSerializer(ModelSerializer):
 
 
 class WashingMachineFeatureSerializer(ModelSerializer):
-    washing_method = WashingMethodSerializer(many=False)
+    washing_method = WashingMethodSerializer()
 
     class Meta:
         model = ProductWashingMachineFeatures
@@ -216,8 +213,8 @@ class WashingMachineFeatureSerializer(ModelSerializer):
 
 
 class AirConditionerFeatureSerializer(ModelSerializer):
-    type = ACTypeSerializer(many=False)
-    series = ProductSeriesSerializer(many=False)
+    type = ACTypeSerializer()
+    series = ProductSeriesSerializer()
 
     class Meta:
         model = ProductAirConditionerFeature
@@ -231,7 +228,7 @@ class AirConditionerFeatureSerializer(ModelSerializer):
 
 
 class RefrigeratorFeatureSerializer(ModelSerializer):
-    type = RefrigeratorTypeSerializer(many=False)
+    type = RefrigeratorTypeSerializer()
 
     class Meta:
         model = ProductRefrigeratorFeature
@@ -245,7 +242,7 @@ class RefrigeratorFeatureSerializer(ModelSerializer):
 
 
 class SpeakerFetaureSerializer(ModelSerializer):
-    type = SpeakerTypeSerializer(many=False)
+    type = SpeakerTypeSerializer()
 
     class Meta:
         model = ProductSpeakersFeatures
@@ -259,13 +256,13 @@ class ProductWarrantySerializer(ModelSerializer):
 
 
 class ProductSpecificationSerializer(ModelSerializer):
-    laptop = LaptopFeatureSerializer(many=False)
-    mobile = MobileFeatureSerializer(many=False)
-    tv = TelevisionFeatureSerializer(many=False)
-    washing_machine = WashingMachineFeatureSerializer(many=False)
-    ac = AirConditionerFeatureSerializer(many=False)
-    refrigerator = RefrigeratorFeatureSerializer(many=False)
-    speaker = SpeakerFetaureSerializer(many=False)
+    laptop = LaptopFeatureSerializer()
+    mobile = MobileFeatureSerializer()
+    tv = TelevisionFeatureSerializer()
+    washing_machine = WashingMachineFeatureSerializer()
+    ac = AirConditionerFeatureSerializer()
+    refrigerator = RefrigeratorFeatureSerializer()
+    speaker = SpeakerFetaureSerializer()
 
     class Meta:
         model = ProductSpecification
@@ -285,16 +282,17 @@ class ProductSpecificationSerializer(ModelSerializer):
 
 
 class ProductSerializer(ModelSerializer):
-    brand = BrandSerializer(many=False)
-    seller = SellerUserSerializer(many=False)
-    subcategory = ProductSubcategorySerializer(many=False)
-    warranty = ProductWarranty(many=False)
-    specification = ProductSpecification(many=False)
+    brand = BrandSerializer()
+    seller = SellerUserSerializer()
+    subcategory = ProductSubcategorySerializer()
+    warranty = ProductWarranty()
+    specification = ProductSpecification()
 
     class Meta:
         model = Product
         fields = (
-            "uuid" "brand",
+            "uuid",
+            "brand",
             "name",
             "slug",
             "seller",
@@ -320,21 +318,22 @@ class ProductImageSerializer(ModelSerializer):
 
 class ProductVariationSerializer(ModelSerializer):
     images = ProductImageSerializer(many=True)
-    product = ProductSerializer(many=False)
+    product = ProductSerializer()
     discount = SerializerMethodField(method_name="calculate_discount")
-    color = ProductColorSerializere(many=False)
-    mobile_variant = MobileVariantSerializer(many=False)
-    laptop_variant = LaptopVariantSerializer(many=False)
-    tv_variant = TVVariantSerializer(many=False)
-    ac_capacity_variant = ACCapacityVariantSerializer(many=False)
-    ac_star_variant = ACStarRatingVariantSerializer(many=False)
-    book_variation = BookVariantSerializer(many=False)
+    color = ProductColorSerializere()
+    mobile_variant = MobileVariantSerializer()
+    laptop_variant = LaptopVariantSerializer()
+    tv_variant = TVVariantSerializer()
+    ac_capacity_variant = ACCapacityVariantSerializer()
+    ac_star_variant = ACStarRatingVariantSerializer()
+    book_variation = BookVariantSerializer()
     size = FashionSizeSerializer()
 
     class Meta:
         model = ProductVariation
         fields = (
-            "uuid" "PID",
+            "uuid",
+            "PID",
             "product",
             "retail_price",
             "discount",
@@ -356,4 +355,4 @@ class ProductVariationSerializer(ModelSerializer):
 
     def calculate_discount(self, obj):
 
-        return round((100 - (self.price * 100 / self.retail_price)), 2)
+        return round((100 - (obj.price * 100 / obj.retail_price)), 2)

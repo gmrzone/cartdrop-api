@@ -39,11 +39,11 @@ class ProductCategorySerializer(ModelSerializer):
 
 class ProductSubcategorySerializer(ModelSerializer):
 
-    photo = ImageField(required=True, allow_empty_file=False)
+    # photo = ImageField(required=True, allow_empty_file=False)
 
     class Meta:
-        models = ProductSubcategory
-        fields = ("name", "category", "slug", "uuid", "photo", "created")
+        model = ProductSubcategory
+        fields = ("name", "category", "slug", "uuid", "created")
         extra_kwargs = {
             "created": {"read_only": True},
             "uuid": {"read_only": True},
