@@ -4,12 +4,32 @@ from django.db import models
 from django.db.models import fields
 from rest_framework.serializers import ModelSerializer
 
-from .models import (DisplayType, OperatingSystem, Product,
-                     ProductLaptopFeatures, ProductMobileFeatures,
-                     ProductSeries, ProductSpecification,
-                     ProductTelivisionFeatures, ProductVariation,
-                     ProductWarranty, ProductWashingMachineFeatures,
-                     ScreenType, SimType, WashingMethod)
+from .models import (ACType, DisplayType, OperatingSystem, Product,
+                     ProductAirConditionerFeature, ProductLaptopFeatures,
+                     ProductMobileFeatures, ProductRefrigeratorFeature,
+                     ProductSeries, ProductSpeakersFeatures,
+                     ProductSpecification, ProductTelivisionFeatures,
+                     ProductVariation, ProductWarranty,
+                     ProductWashingMachineFeatures, RefrigeratorType,
+                     ScreenType, SimType, SpeakerType, WashingMethod)
+
+
+class SpeakerTypeSerializer(ModelSerializer):
+    class Meta:
+        model = SpeakerType
+        fields = ("name",)
+
+
+class RefrigeratorTypeSerializer(ModelSerializer):
+    class Meta:
+        model = RefrigeratorType
+        fields = ("name",)
+
+
+class ACTypeSerializer(ModelSerializer):
+    class Meta:
+        model = ACType
+        fields = ("name",)
 
 
 class WashingMethodSerializer(ModelSerializer):
@@ -121,9 +141,46 @@ class WashingMachineFeatureSerializer(ModelSerializer):
         )
 
 
+class AirConditionerFeatureSerializer(ModelSerializer):
+    type = ACTypeSerializer(many=False)
+    series = ProductSeriesSerializer(many=False)
+
+    class Meta:
+        model = ProductAirConditionerFeature
+        fields = (
+            "type",
+            "compressor",
+            "cooling_capacity",
+            "series",
+            "cooling_coverage_area",
+        )
+
+
+class RefrigeratorFeatureSerializer(ModelSerializer):
+    type = RefrigeratorTypeSerializer(many=False)
+
+    class Meta:
+        model = ProductRefrigeratorFeature
+        fields = (
+            "capacity",
+            "energy_rating",
+            "compressor_type",
+            "type",
+            "stabilizer_required",
+        )
+
+
+class SpeakerFetaureSerializer(ModelSerializer):
+    type = SpeakerTypeSerializer(many=False)
+
+    class Meta:
+        model = ProductSpeakersFeatures
+        fields = ("power_output", "frequency_response", "has_bluetooth", "type")
+
+
 class ProductWarrantySerializer(ModelSerializer):
     class Meta:
-        models = ProductWarranty
+        model = ProductWarranty
         fields = ("summary", "covered", "not_covered")
 
 
@@ -132,6 +189,8 @@ class ProductSpecificationSerializer(ModelSerializer):
     mobile = MobileFeatureSerializer(many=False)
     tv = TelevisionFeatureSerializer(many=False)
     washing_machine = WashingMachineFeatureSerializer(many=False)
+    ac = AirConditionerFeatureSerializer(many=False)
+    refrigerator = RefrigeratorFeatureSerializer(many=False)
 
     class Meta:
         model = ProductSpecification
