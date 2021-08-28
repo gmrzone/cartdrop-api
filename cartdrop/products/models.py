@@ -320,7 +320,7 @@ class FashionSize(models.Model):
 
 
 class ProductVariation(UUIDField):
-    PID = models.CharField(
+    pid = models.CharField(
         max_length=50,
         db_index=True,
         blank=True,
@@ -363,7 +363,7 @@ class ProductVariation(UUIDField):
 
     def save(self, *args, **kwargs):
         if not self.pk:
-            self.PID = self.product.product_code + get_random_string(
+            self.pid = self.product.product_code + get_random_string(
                 length=15, allowed_chars=ascii_uppercase
             )
         return super().save(*args, **kwargs)

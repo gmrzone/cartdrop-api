@@ -1,7 +1,12 @@
 from django.contrib import admin
 
-from .models import (Brand, CategoryImage, ProductCategory, ProductSubcategory,
-                     SubcategoryImage)
+from .models import (
+    Brand,
+    CategoryImage,
+    ProductCategory,
+    ProductSubcategory,
+    SubcategoryImage,
+)
 
 # Register your models here.
 

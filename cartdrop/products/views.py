@@ -1,9 +1,11 @@
+from django.db.models import query
+from django.db.models.expressions import OrderBy
 from django.shortcuts import render
 from rest_framework.generics import ListAPIView
 
 from .models import ProductVariation
 from .serializers import ProductVariationSerializer
-
+from django.db.models import F
 # Create your views here.
 
 
@@ -12,8 +14,10 @@ class ProductVariationList(ListAPIView):
     http_method_names = ["get"]
 
     def get_queryset(self):
+        # queryset to return a unique product variants that has discount percent greater then 20%. This is temperary we will add a better algorithm for featured products
         queryset = (
-            ProductVariation.objects.filter(active=True)
+            ProductVariation.objects.annotate(discount_percent=(100 - (F("price") * 100 / F("retail_price"))))
+            .filter(active=True, discount_percent__gt=20)
             .select_related(
                 "color",
                 "laptop_variant",
@@ -29,5 +33,9 @@ class ProductVariationList(ListAPIView):
                 "product__subcategory",
             )
             .prefetch_related("images")
+            .distinct("product__id")   
         )
+
         return queryset
+
+

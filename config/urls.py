@@ -18,11 +18,11 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
+
 # Documentations
 from django.views.generic import TemplateView
 from rest_framework.schemas import get_schema_view
-from rest_framework_simplejwt.views import (TokenObtainPairView,
-                                            TokenRefreshView)
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -35,7 +35,7 @@ urlpatterns = [
     path(
         "openapi",
         get_schema_view(
-            title="Cartdrop",
+            title="CartDrop",
             description="Documentation for cartdrop api using swagger ui",
             version="1.10.0",
         ),
