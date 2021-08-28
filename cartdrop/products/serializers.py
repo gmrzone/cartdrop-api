@@ -6,16 +6,37 @@ from django.db.models.fields.files import ImageField
 from rest_framework.fields import SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
-from .models import (ACType, DisplayType, LaptopVariant, MobileVariant,
-                     OperatingSystem, Product, ProductAirConditionerFeature,
-                     ProductColor, ProductImages, ProductLaptopFeatures,
-                     ProductMobileFeatures, ProductRefrigeratorFeature,
-                     ProductSeries, ProductSpeakersFeatures,
-                     ProductSpecification, ProductTelivisionFeatures,
-                     ProductVariation, ProductWarranty,
-                     ProductWashingMachineFeatures, RefrigeratorType,
-                     ScreenType, SimType, SpeakerType, TVVariant,
-                     WashingMethod)
+from .models import (
+    ACCapacityVariant,
+    ACStarRatingVariant,
+    ACType,
+    BookVariant,
+    DisplayType,
+    FashionSize,
+    LaptopVariant,
+    MobileVariant,
+    OperatingSystem,
+    Product,
+    ProductAirConditionerFeature,
+    ProductColor,
+    ProductImages,
+    ProductLaptopFeatures,
+    ProductMobileFeatures,
+    ProductRefrigeratorFeature,
+    ProductSeries,
+    ProductSpeakersFeatures,
+    ProductSpecification,
+    ProductTelivisionFeatures,
+    ProductVariation,
+    ProductWarranty,
+    ProductWashingMachineFeatures,
+    RefrigeratorType,
+    ScreenType,
+    SimType,
+    SpeakerType,
+    TVVariant,
+    WashingMethod,
+)
 
 
 class ProductColorSerializere(ModelSerializer):
@@ -40,6 +61,31 @@ class TVVariantSerializer(ModelSerializer):
     class Meta:
         model = TVVariant
         fields = ("name",)
+
+
+class ACCapacityVariantSerializer(ModelSerializer):
+    class Meta:
+        model = ACCapacityVariant
+        fields = ("capacity",)
+
+
+class ACStarRatingVariantSerializer(ModelSerializer):
+    class Meta:
+        model = ACStarRatingVariant
+        fields = ("star",)
+
+
+class BookVariantSerializer(ModelSerializer):
+    class Meta:
+        model = BookVariant
+        fields = ("name",)
+
+
+class FashionSizeSerializer(ModelSerializer):
+    class Meta:
+        model = FashionSize
+        fields = ("name", "code")
+        extra_kwargs = {"name": {"write_only": True}}
 
 
 class SpeakerTypeSerializer(ModelSerializer):
@@ -280,6 +326,10 @@ class ProductVariationSerializer(ModelSerializer):
     mobile_variant = MobileVariantSerializer(many=False)
     laptop_variant = LaptopVariantSerializer(many=False)
     tv_variant = TVVariantSerializer(many=False)
+    ac_capacity_variant = ACCapacityVariantSerializer(many=False)
+    ac_star_variant = ACStarRatingVariantSerializer(many=False)
+    book_variation = BookVariantSerializer(many=False)
+    size = FashionSizeSerializer()
 
     class Meta:
         model = ProductVariation
