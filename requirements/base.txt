@@ -1,3 +1,5 @@
+
+
 appdirs==1.4.4
 asgiref==3.4.1
 click==8.0.1
@@ -12,3 +14,8 @@ regex==2021.7.6
 sqlparse==0.4.1
 tomli==1.2.0
 djangorestframework-simplejwt==4.7.2
+
+# Documentations
+
+uritemplate==3.0.1
+PyYAML==5.4.1
