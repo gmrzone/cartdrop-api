@@ -4,8 +4,46 @@ from django.db import models
 from django.db.models import fields
 from rest_framework.serializers import ModelSerializer
 
-from .models import (Product, ProductSpecification, ProductVariation,
-                     ProductWarranty)
+from .models import (DisplayType, OperatingSystem, Product,
+                     ProductLaptopFeatures, ProductSeries,
+                     ProductSpecification, ProductVariation, ProductWarranty)
+
+
+class OperatingSystemSerializer(ModelSerializer):
+    class Meta:
+        model = OperatingSystem
+        fields = ("name",)
+
+
+class ProductSeriesSerializer(ModelSerializer):
+    class Meta:
+        model = ProductSeries
+        fields = ("name",)
+
+
+class DisplayTypeSerializer(ModelSerializer):
+    class Meta:
+        model = DisplayType
+        fields = ("name",)
+
+
+class LaptopFeatureSerializer(ModelSerializer):
+    display_type = DisplayTypeSerializer(many=False)
+    series = ProductSeriesSerializer(many=False)
+    os = OperatingSystemSerializer(many=False)
+
+    class Meta:
+        model = ProductLaptopFeatures
+        fields = (
+            "display_size",
+            "display_type",
+            "series",
+            "os",
+            "processor",
+            "resolution",
+            "battery_backup",
+            "touchscreen",
+        )
 
 
 class ProductWarrantySerializer(ModelSerializer):
@@ -15,6 +53,8 @@ class ProductWarrantySerializer(ModelSerializer):
 
 
 class ProductSpecificationSerializer(ModelSerializer):
+    laptop = LaptopFeatureSerializer(many=False)
+
     class Meta:
         model = ProductSpecification
         fields = (
