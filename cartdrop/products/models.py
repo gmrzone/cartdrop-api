@@ -326,7 +326,7 @@ class ProductVariation(UUIDField):
         blank=True,
         help_text="A Unique Product Identification Number",
     )
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="variations")
     retail_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     color = models.ForeignKey(

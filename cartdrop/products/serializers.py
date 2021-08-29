@@ -1,8 +1,9 @@
+from django.db import models
 from rest_framework.fields import ImageField, SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
 from cartdrop.accounts.serializers import SellerUserSerializer
-from cartdrop.core.serializers import BrandSerializer, ProductSubcategorySerializer
+from cartdrop.core.serializers import BrandSerializer, ProductSubcategorySerializer, ProductSubcategoryBase
 
 from .models import (
     ACCapacityVariant,
@@ -40,7 +41,7 @@ from .models import (
 class ProductColorSerializere(ModelSerializer):
     class Meta:
         model = ProductColor
-        fields = ("name",)
+        fields = ("name", "slug")
 
 
 class MobileVariantSerializer(ModelSerializer):
@@ -282,7 +283,7 @@ class ProductSpecificationSerializer(ModelSerializer):
         )
 
 
-class ProductSerializer(ModelSerializer):
+class ProductDetailSerializer(ModelSerializer):
     brand = BrandSerializer()
     seller = SellerUserSerializer()
     subcategory = ProductSubcategorySerializer()
@@ -313,13 +314,13 @@ class ProductImageSerializer(ModelSerializer):
 
     class Meta:
         model = ProductImages
-        fields = ("image_summary", "image", "primary")
-        read_only_fields = ("image_summary",)
+        fields = ("image", "primary")
 
 
-class ProductVariationSerializer(ModelSerializer):
+
+class ProductVariationDetailSerializer(ModelSerializer):
     images = ProductImageSerializer(many=True)
-    product = ProductSerializer()
+    product = ProductDetailSerializer()
     discount = SerializerMethodField(method_name="calculate_discount")
     color = ProductColorSerializere()
     mobile_variant = MobileVariantSerializer()
@@ -357,3 +358,21 @@ class ProductVariationSerializer(ModelSerializer):
     def calculate_discount(self, obj):
 
         return round((100 - (obj.price * 100 / obj.retail_price)), 2)
+
+
+
+# Base Serializers
+class ProductBaseSerializer(ModelSerializer):
+    subcategory = ProductSubcategoryBase(   )
+    class Meta:
+        model = Product
+        fields = ("uuid", "subcategory", "name", "slug", "overall_rating")
+        read_only_fields = ("uuid", "slug")
+
+
+class ProductVariationBaseSerializer(ProductVariationDetailSerializer):
+    product = ProductBaseSerializer()
+
+
+
+

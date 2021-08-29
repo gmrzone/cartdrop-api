@@ -49,3 +49,11 @@ class ProductSubcategorySerializer(ModelSerializer):
             "uuid": {"read_only": True},
             "slug": {"read_only": True},
         }
+
+class ProductSubcategoryBase(ModelSerializer):
+    class Meta:
+        model = ProductSubcategory
+        fields = ("name",  "slug")
+        extra_kwargs = {
+            "slug": {"read_only": True},
+        } 

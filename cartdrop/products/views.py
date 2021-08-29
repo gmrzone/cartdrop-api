@@ -1,16 +1,15 @@
 from django.db.models import query
-from django.db.models.expressions import OrderBy
 from django.shortcuts import render
 from rest_framework.generics import ListAPIView
 
 from .models import ProductVariation
-from .serializers import ProductVariationSerializer
+from .serializers import ProductVariationBaseSerializer
 from django.db.models import F
 # Create your views here.
 
 
 class ProductVariationList(ListAPIView):
-    serializer_class = ProductVariationSerializer
+    serializer_class = ProductVariationBaseSerializer
     http_method_names = ["get"]
 
     def get_queryset(self):
@@ -37,5 +36,8 @@ class ProductVariationList(ListAPIView):
         )
 
         return queryset
+
+
+
 
 

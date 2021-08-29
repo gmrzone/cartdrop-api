@@ -6,4 +6,7 @@ from .views import ProductVariationList
 app_name = "products"
 
 
-urlpatterns = [path("featured/", ProductVariationList.as_view(), name="featured")]
+urlpatterns = [
+    path("featured/", ProductVariationList.as_view(), name="featured"),
+    
+    ]
