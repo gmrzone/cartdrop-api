@@ -81,7 +81,7 @@
     "pk": 3,
     "fields": {
         "category": 2,
-        "image": "Category Media/mobiles/mobile_2-nobg.png"
+        "image": "Category_Media/mobiles/mobile_2-nobg.png"
     }
 },
 {
@@ -89,7 +89,7 @@
     "pk": 4,
     "fields": {
         "category": 2,
-        "image": "Category Media/mobiles/mobile_1-bg_removed.png"
+        "image": "Category_Media/mobiles/mobile_1-bg_removed.png"
     }
 },
 {
@@ -97,7 +97,7 @@
     "pk": 5,
     "fields": {
         "category": 2,
-        "image": "Category Media/mobiles/mobile_4-nobg.png"
+        "image": "Category_Media/mobiles/mobile_4-nobg.png"
     }
 },
 {
@@ -105,7 +105,7 @@
     "pk": 6,
     "fields": {
         "category": 3,
-        "image": "Category Media/electronics/laptop_1_nobg.png"
+        "image": "Category_Media/electronics/laptop_1_nobg.png"
     }
 },
 {
@@ -113,7 +113,7 @@
     "pk": 7,
     "fields": {
         "category": 3,
-        "image": "Category Media/electronics/laptop_3-nobg.png"
+        "image": "Category_Media/electronics/laptop_3-nobg.png"
     }
 },
 {
@@ -121,7 +121,7 @@
     "pk": 8,
     "fields": {
         "category": 4,
-        "image": "Category Media/accessories/accessories_1-nobg.png"
+        "image": "Category_Media/accessories/accessories_1-nobg.png"
     }
 },
 {
@@ -129,7 +129,7 @@
     "pk": 9,
     "fields": {
         "category": 5,
-        "image": "Category Media/fashion/fashion_nobg.png.png"
+        "image": "Category_Media/fashion/fashion_nobg.png.png"
     }
 },
 {
@@ -137,7 +137,7 @@
     "pk": 10,
     "fields": {
         "category": 6,
-        "image": "Category Media/appliances/appliances_nobg.png"
+        "image": "Category_Media/appliances/appliances_nobg.png"
     }
 },
 {
@@ -145,7 +145,7 @@
     "pk": 11,
     "fields": {
         "category": 7,
-        "image": "Category Media/groceries/groceries_nogb.png"
+        "image": "Category_Media/groceries/groceries_nogb.png"
     }
 },
 {
@@ -153,7 +153,7 @@
     "pk": 12,
     "fields": {
         "category": 8,
-        "image": "Category Media/books/books_2-nobg.png"
+        "image": "Category_Media/books/books_2-nobg.png"
     }
 },
 {
@@ -161,7 +161,7 @@
     "pk": 13,
     "fields": {
         "category": 2,
-        "image": "Category Media/mobiles/mobile_3-nobg_adj.png"
+        "image": "Category_Media/mobiles/mobile_3-nobg_adj.png"
     }
 },
 {
@@ -397,7 +397,7 @@
     "pk": 1,
     "fields": {
         "subcategory": 1,
-        "image": "Subcategory Media/mobiles/mobiles/mobile_4-nobg.png"
+        "image": "Subcategory_Media/mobiles/mobiles/mobile_4-nobg.png"
     }
 },
 {
@@ -405,7 +405,7 @@
     "pk": 2,
     "fields": {
         "subcategory": 1,
-        "image": "Subcategory Media/mobiles/mobiles/mobile_3-nobg_adj.png"
+        "image": "Subcategory_Media/mobiles/mobiles/mobile_3-nobg_adj.png"
     }
 },
 {
@@ -413,7 +413,7 @@
     "pk": 3,
     "fields": {
         "subcategory": 1,
-        "image": "Subcategory Media/mobiles/mobiles/mobile_2-nobg.png"
+        "image": "Subcategory_Media/mobiles/mobiles/mobile_2-nobg.png"
     }
 },
 {
@@ -421,7 +421,7 @@
     "pk": 4,
     "fields": {
         "subcategory": 1,
-        "image": "Subcategory Media/mobiles/mobiles/mobile_1-bg_removed.png"
+        "image": "Subcategory_Media/mobiles/mobiles/mobile_1-bg_removed.png"
     }
 },
 {
@@ -429,7 +429,7 @@
     "pk": 5,
     "fields": {
         "subcategory": 3,
-        "image": "Subcategory Media/electronics/laptop/laptop_1_nobg.png"
+        "image": "Subcategory_Media/electronics/laptop/laptop_1_nobg.png"
     }
 },
 {
@@ -437,7 +437,7 @@
     "pk": 6,
     "fields": {
         "subcategory": 3,
-        "image": "Subcategory Media/electronics/laptop/laptop_3-nobg.png"
+        "image": "Subcategory_Media/electronics/laptop/laptop_3-nobg.png"
     }
 },
 {
@@ -445,7 +445,7 @@
     "pk": 7,
     "fields": {
         "subcategory": 3,
-        "image": "Subcategory Media/electronics/laptop/laptop_3_nobg.png"
+        "image": "Subcategory_Media/electronics/laptop/laptop_3_nobg.png"
     }
 },
 {
@@ -453,7 +453,7 @@
     "pk": 8,
     "fields": {
         "subcategory": 3,
-        "image": "Subcategory Media/electronics/laptop/laptop_4_nobg.png"
+        "image": "Subcategory_Media/electronics/laptop/laptop_4_nobg.png"
     }
 },
 {
@@ -461,7 +461,7 @@
     "pk": 9,
     "fields": {
         "subcategory": 14,
-        "image": "Subcategory Media/appliances/washing-machines/washing_machine1-nobg.png"
+        "image": "Subcategory_Media/appliances/washing-machines/washing_machine1-nobg.png"
     }
 },
 {
@@ -469,7 +469,7 @@
     "pk": 10,
     "fields": {
         "subcategory": 5,
-        "image": "Subcategory Media/electronics/television/TV.jpg"
+        "image": "Subcategory_Media/electronics/television/TV.jpg"
     }
 },
 {
@@ -477,7 +477,7 @@
     "pk": 11,
     "fields": {
         "subcategory": 13,
-        "image": "Subcategory Media/appliances/refrigerators/fridge.jpg"
+        "image": "Subcategory_Media/appliances/refrigerators/fridge.jpg"
     }
 },
 {
@@ -485,7 +485,7 @@
     "pk": 12,
     "fields": {
         "subcategory": 9,
-        "image": "Subcategory Media/fashion/backpack/bag_2-nobg.png"
+        "image": "Subcategory_Media/fashion/backpack/bag_2-nobg.png"
     }
 },
 {
@@ -495,7 +495,7 @@
         "slug": "samsung",
         "uuid": "6a034235-14ed-4ebb-90b8-1abd85974371",
         "name": "Samsung",
-        "photo": "Brand images/samsung/samsung.png"
+        "photo": "Brand_images/samsung/samsung.png"
     }
 },
 {
@@ -505,7 +505,7 @@
         "slug": "apple",
         "uuid": "fb086bad-03d6-4f0d-a3a1-aab95a174cd6",
         "name": "Apple",
-        "photo": "Brand images/apple/apple.png"
+        "photo": "Brand_images/apple/apple.png"
     }
 },
 {
@@ -515,7 +515,7 @@
         "slug": "lg",
         "uuid": "3299fe2c-3ffe-4ac5-866d-493675b1af33",
         "name": "LG",
-        "photo": "Brand images/lg/LG.png"
+        "photo": "Brand_images/lg/LG.png"
     }
 },
 {
@@ -525,7 +525,7 @@
         "slug": "huawei",
         "uuid": "020e95bc-2411-4118-9a46-6b17fefa7cd2",
         "name": "Huawei",
-        "photo": "Brand images/huawei/Huawei.png"
+        "photo": "Brand_images/huawei/Huawei.png"
     }
 },
 {
@@ -535,7 +535,7 @@
         "slug": "lenovo",
         "uuid": "ea391d7a-3bc9-41e9-8a0a-515c6ea72bab",
         "name": "Lenovo",
-        "photo": "Brand images/lenovo/lenovo.png"
+        "photo": "Brand_images/lenovo/lenovo.png"
     }
 },
 {
@@ -545,7 +545,7 @@
         "slug": "hp",
         "uuid": "7dcee671-35bf-47fb-ad2a-c19ecab38826",
         "name": "HP",
-        "photo": "Brand images/hp/HP.png"
+        "photo": "Brand_images/hp/HP.png"
     }
 },
 {
@@ -555,7 +555,7 @@
         "slug": "msi",
         "uuid": "8b5e7770-0882-459d-9b21-6ecf6c56460a",
         "name": "MSI",
-        "photo": "Brand images/msi/MSI.png"
+        "photo": "Brand_images/msi/MSI.png"
     }
 },
 {
@@ -565,7 +565,7 @@
         "slug": "bose",
         "uuid": "22cf02f5-d77f-46e0-acf1-6a5bb131474b",
         "name": "Bose",
-        "photo": "Brand images/bose/Bose.png"
+        "photo": "Brand_images/bose/Bose.png"
     }
 },
 {
@@ -575,7 +575,7 @@
         "slug": "jbl",
         "uuid": "c3e5c8ee-afef-48ad-8495-2fc5316c24d0",
         "name": "JBL",
-        "photo": "Brand images/jbl/JBL.png"
+        "photo": "Brand_images/jbl/JBL.png"
     }
 },
 {
@@ -585,7 +585,7 @@
         "slug": "bosch",
         "uuid": "b802aa12-0bac-4752-9345-a9b08fa17975",
         "name": "BOSCH",
-        "photo": "Brand images/bosch/Bosch.png"
+        "photo": "Brand_images/bosch/Bosch.png"
     }
 },
 {
@@ -595,7 +595,7 @@
         "slug": "whirlpool",
         "uuid": "0ba0628c-020c-44b6-bbbe-22188ca9c0ab",
         "name": "Whirlpool",
-        "photo": "Brand images/whirlpool/whirlpool.png"
+        "photo": "Brand_images/whirlpool/whirlpool.png"
     }
 },
 {
@@ -605,7 +605,7 @@
         "slug": "carrier",
         "uuid": "3e7eac1c-d176-4eb3-aae2-3cf31d365b55",
         "name": "Carrier",
-        "photo": "Brand images/carrier/carrier.png"
+        "photo": "Brand_images/carrier/carrier.png"
     }
 },
 {
@@ -615,7 +615,7 @@
         "slug": "asian-paint",
         "uuid": "58dbddc9-e72f-4974-b309-367a0c75de32",
         "name": "Asian Paint",
-        "photo": "Brand images/asian-paint/asian-paints.png"
+        "photo": "Brand_images/asian-paint/asian-paints.png"
     }
 },
 {
@@ -625,7 +625,7 @@
         "slug": "auric",
         "uuid": "629078f5-d0c3-4c81-a9d9-b665162bab09",
         "name": "Auric",
-        "photo": "Brand images/auric/auric.png"
+        "photo": "Brand_images/auric/auric.png"
     }
 },
 {
@@ -635,7 +635,7 @@
         "slug": "real-active",
         "uuid": "385a8aef-14cb-4f97-b222-73171ed04162",
         "name": "Real Active",
-        "photo": "Brand images/real-active/real_active.jpeg"
+        "photo": "Brand_images/real-active/real_active.jpeg"
     }
 },
 {
@@ -645,7 +645,7 @@
         "slug": "tropicana",
         "uuid": "71d62203-e43a-4f03-b293-75bf7d6cb3c7",
         "name": "Tropicana",
-        "photo": "Brand images/tropicana/Tropicana.png"
+        "photo": "Brand_images/tropicana/Tropicana.png"
     }
 },
 {
@@ -655,7 +655,7 @@
         "slug": "cadbury",
         "uuid": "53416714-6ab5-4b48-b18e-19753d8b9bdb",
         "name": "Cadbury",
-        "photo": "Brand images/cadbury/cadbury.jpg"
+        "photo": "Brand_images/cadbury/cadbury.jpg"
     }
 },
 {
@@ -665,7 +665,7 @@
         "slug": "oreally",
         "uuid": "a320e63c-9ae7-43ed-a6ff-4ca970255caf",
         "name": "O'really",
-        "photo": "Brand images/oreally/oreally.png"
+        "photo": "Brand_images/oreally/oreally.png"
     }
 },
 {
@@ -675,7 +675,7 @@
         "slug": "packt",
         "uuid": "94c76260-32c9-4d73-bda4-27dfeac6b95f",
         "name": "Packt",
-        "photo": "Brand images/packt/packt.png"
+        "photo": "Brand_images/packt/packt.png"
     }
 }
 ]
