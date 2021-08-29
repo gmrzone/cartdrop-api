@@ -1510,10 +1510,10 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            1,
-            2,
+            4,
             3,
-            4
+            2,
+            1
         ]
     }
 },
@@ -1539,10 +1539,10 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            5,
-            6,
+            8,
             7,
-            8
+            6,
+            5
         ]
     }
 },
@@ -1568,10 +1568,10 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            9,
-            10,
+            12,
             11,
-            12
+            10,
+            9
         ]
     }
 },
@@ -1597,11 +1597,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            14,
-            15,
-            16,
             17,
-            13
+            15,
+            14,
+            13,
+            16
         ]
     }
 },
@@ -1627,11 +1627,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            14,
-            15,
-            16,
             17,
-            13
+            15,
+            14,
+            13,
+            16
         ]
     }
 },
@@ -1657,11 +1657,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            14,
-            15,
-            16,
             17,
-            13
+            15,
+            14,
+            13,
+            16
         ]
     }
 },
@@ -1687,11 +1687,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            17,
-            18,
-            19,
+            21,
             20,
-            21
+            19,
+            18,
+            17
         ]
     }
 },
@@ -1717,11 +1717,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            17,
-            22,
-            23,
+            25,
             24,
-            25
+            23,
+            22,
+            17
         ]
     }
 },
@@ -1747,11 +1747,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            17,
-            18,
-            19,
+            21,
             20,
-            21
+            19,
+            18,
+            17
         ]
     }
 },
@@ -1777,11 +1777,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            17,
-            22,
-            23,
+            25,
             24,
-            25
+            23,
+            22,
+            17
         ]
     }
 },
@@ -1807,11 +1807,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            31,
-            30,
-            32,
+            34,
             33,
-            34
+            32,
+            31,
+            30
         ]
     }
 },
@@ -1837,10 +1837,10 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            27,
-            26,
+            29,
             28,
-            29
+            27,
+            26
         ]
     }
 },
@@ -1866,14 +1866,14 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            35,
-            36,
-            39,
-            40,
-            41,
-            38,
+            43,
             42,
-            43
+            41,
+            40,
+            39,
+            38,
+            36,
+            35
         ]
     }
 },
@@ -1899,14 +1899,14 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            35,
-            36,
-            39,
-            40,
-            41,
-            38,
+            43,
             42,
-            43
+            41,
+            40,
+            39,
+            38,
+            36,
+            35
         ]
     }
 },
@@ -1932,14 +1932,14 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            35,
-            36,
-            39,
-            40,
-            41,
-            38,
+            43,
             42,
-            43
+            41,
+            40,
+            39,
+            38,
+            36,
+            35
         ]
     }
 },
@@ -1965,14 +1965,14 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            35,
-            36,
-            39,
-            40,
-            41,
-            38,
+            43,
             42,
-            43
+            41,
+            40,
+            39,
+            38,
+            36,
+            35
         ]
     }
 },
@@ -1998,10 +1998,10 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            50,
-            51,
+            53,
             52,
-            53
+            51,
+            50
         ]
     }
 },
@@ -2027,12 +2027,12 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            44,
-            45,
-            46,
-            47,
+            49,
             48,
-            49
+            47,
+            46,
+            45,
+            44
         ]
     }
 },
@@ -2058,12 +2058,12 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            54,
-            55,
-            56,
-            57,
+            59,
             58,
-            59
+            57,
+            56,
+            55,
+            54
         ]
     }
 },
@@ -2090,10 +2090,10 @@
         "size": null,
         "images": [
             64,
-            60,
-            61,
+            63,
             62,
-            63
+            61,
+            60
         ]
     }
 },
@@ -2120,10 +2120,10 @@
         "size": null,
         "images": [
             64,
-            60,
-            61,
+            63,
             62,
-            63
+            61,
+            60
         ]
     }
 },
@@ -2150,10 +2150,10 @@
         "size": null,
         "images": [
             64,
-            60,
-            61,
+            63,
             62,
-            63
+            61,
+            60
         ]
     }
 },
@@ -2180,10 +2180,10 @@
         "size": null,
         "images": [
             64,
-            60,
-            61,
+            63,
             62,
-            63
+            61,
+            60
         ]
     }
 },
@@ -2208,7 +2208,13 @@
         "book_variation": null,
         "juices_quantity": null,
         "size": null,
-        "images": []
+        "images": [
+            64,
+            60,
+            61,
+            62,
+            63
+        ]
     }
 },
 {
@@ -2233,13 +2239,13 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            70,
-            71,
-            72,
-            73,
-            74,
-            75,
-            76
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90
         ]
     }
 },
@@ -2264,14 +2270,7 @@
         "book_variation": null,
         "juices_quantity": null,
         "size": null,
-        "images": [
-            65,
-            66,
-            67,
-            68,
-            69,
-            70
-        ]
+        "images": []
     }
 },
 {
@@ -2322,11 +2321,11 @@
         "juices_quantity": "3 x 250 ml",
         "size": null,
         "images": [
-            78,
-            79,
-            80,
+            82,
             81,
-            82
+            80,
+            79,
+            78
         ]
     }
 },
@@ -2387,7 +2386,7 @@
     "pk": 1,
     "fields": {
         "image_summary": "Iphone se black main",
-        "image": "Product_Image/Iphone/Iphone se black main/front.jpeg",
+        "image": "Product_Image/Iphone/iphone-se-black-main/front.jpeg",
         "primary": true
     }
 },
@@ -2396,7 +2395,7 @@
     "pk": 2,
     "fields": {
         "image_summary": "Iphone se black camera",
-        "image": "Product_Image/Iphone/Iphone se black camera/camera.jpeg",
+        "image": "Product_Image/Iphone/iphone-se-black-camera/camera.jpeg",
         "primary": false
     }
 },
@@ -2405,7 +2404,7 @@
     "pk": 3,
     "fields": {
         "image_summary": "Iphone se black back",
-        "image": "Product_Image/Iphone/Iphone se black back/back.jpeg",
+        "image": "Product_Image/Iphone/iphone-se-black-back/back.jpeg",
         "primary": false
     }
 },
@@ -2414,7 +2413,7 @@
     "pk": 4,
     "fields": {
         "image_summary": "Iphone se black side",
-        "image": "Product_Image/Iphone/Iphone se black side/side.jpeg",
+        "image": "Product_Image/Iphone/iphone-se-black-side/side.jpeg",
         "primary": false
     }
 },
@@ -2423,7 +2422,7 @@
     "pk": 5,
     "fields": {
         "image_summary": "Iphone se red main",
-        "image": "Product_Image/Iphone/Iphone se red main/front.jpeg",
+        "image": "Product_Image/Iphone/iphone-se-red-main/front.jpeg",
         "primary": true
     }
 },
@@ -2432,7 +2431,7 @@
     "pk": 6,
     "fields": {
         "image_summary": "Iphone se red back",
-        "image": "Product_Image/Iphone/Iphone se red back/back.jpeg",
+        "image": "Product_Image/Iphone/iphone-se-red-back/back.jpeg",
         "primary": false
     }
 },
@@ -2441,7 +2440,7 @@
     "pk": 7,
     "fields": {
         "image_summary": "Iphone se red side",
-        "image": "Product_Image/Iphone/Iphone se red side/side.jpeg",
+        "image": "Product_Image/Iphone/iphone-se-red-side/side.jpeg",
         "primary": false
     }
 },
@@ -2450,7 +2449,7 @@
     "pk": 8,
     "fields": {
         "image_summary": "Iphone se red camera",
-        "image": "Product_Image/Iphone/Iphone se red camera/camera.jpeg",
+        "image": "Product_Image/Iphone/iphone-se-red-camera/camera.jpeg",
         "primary": false
     }
 },
@@ -2459,7 +2458,7 @@
     "pk": 9,
     "fields": {
         "image_summary": "Iphone se White main",
-        "image": "Product_Image/Iphone/Iphone se White main/front.jpeg",
+        "image": "Product_Image/Iphone/iphone-se-white-main/front.jpeg",
         "primary": true
     }
 },
@@ -2468,7 +2467,7 @@
     "pk": 10,
     "fields": {
         "image_summary": "Iphone se white side",
-        "image": "Product_Image/Iphone/Iphone se white side/side.jpeg",
+        "image": "Product_Image/Iphone/iphone-se-white-side/side.jpeg",
         "primary": false
     }
 },
@@ -2477,7 +2476,7 @@
     "pk": 11,
     "fields": {
         "image_summary": "Iphone se white camera",
-        "image": "Product_Image/Iphone/Iphone se white camera/camera.jpeg",
+        "image": "Product_Image/Iphone/iphone-se-white-camera/camera.jpeg",
         "primary": false
     }
 },
@@ -2486,7 +2485,7 @@
     "pk": 12,
     "fields": {
         "image_summary": "Iphone se white back",
-        "image": "Product_Image/Iphone/Iphone se white back/back.jpeg",
+        "image": "Product_Image/Iphone/iphone-se-white-back/back.jpeg",
         "primary": false
     }
 },
@@ -2495,7 +2494,7 @@
     "pk": 13,
     "fields": {
         "image_summary": "Iphone 12 black main",
-        "image": "Product_Image/Iphone/Iphone 12 black main/front_main.jpeg",
+        "image": "Product_Image/Iphone/iphone-12-black-main/front_main.jpeg",
         "primary": true
     }
 },
@@ -2504,7 +2503,7 @@
     "pk": 14,
     "fields": {
         "image_summary": "Iphone 12 black front",
-        "image": "Product_Image/Iphone/Iphone 12 black front/front_black.jpeg",
+        "image": "Product_Image/Iphone/iphone-12-black-front/front_black.jpeg",
         "primary": false
     }
 },
@@ -2513,7 +2512,7 @@
     "pk": 15,
     "fields": {
         "image_summary": "Iphone 12 black camera",
-        "image": "Product_Image/Iphone/Iphone 12 black camera/front_camera.jpeg",
+        "image": "Product_Image/Iphone/iphone-12-black-camera/front_camera.jpeg",
         "primary": false
     }
 },
@@ -2522,7 +2521,7 @@
     "pk": 16,
     "fields": {
         "image_summary": "Iphone 12 black camera 2",
-        "image": "Product_Image/Iphone/Iphone 12 black camera 2/front_camera2.jpeg",
+        "image": "Product_Image/Iphone/iphone-12-black-camera-2/front_camera2.jpeg",
         "primary": false
     }
 },
@@ -2531,7 +2530,7 @@
     "pk": 17,
     "fields": {
         "image_summary": "Iphone 12 detail",
-        "image": "Product_Image/Iphone/Iphone 12 detail/iphone_12_detail.jpeg",
+        "image": "Product_Image/Iphone/iphone-12-detail/iphone_12_detail.jpeg",
         "primary": false
     }
 },
@@ -2540,7 +2539,7 @@
     "pk": 18,
     "fields": {
         "image_summary": "Iphone 12 red main",
-        "image": "Product_Image/Iphone/Iphone 12 red main/red_main.jpeg",
+        "image": "Product_Image/Iphone/iphone-12-red-main/red_main.jpeg",
         "primary": true
     }
 },
@@ -2549,7 +2548,7 @@
     "pk": 19,
     "fields": {
         "image_summary": "Iphone 12 red front",
-        "image": "Product_Image/Iphone/Iphone 12 red front/red_front.jpeg",
+        "image": "Product_Image/Iphone/iphone-12-red-front/red_front.jpeg",
         "primary": false
     }
 },
@@ -2558,7 +2557,7 @@
     "pk": 20,
     "fields": {
         "image_summary": "Iphone 12 red camera",
-        "image": "Product_Image/Iphone/Iphone 12 red camera/red_camera.jpeg",
+        "image": "Product_Image/Iphone/iphone-12-red-camera/red_camera.jpeg",
         "primary": false
     }
 },
@@ -2567,7 +2566,7 @@
     "pk": 21,
     "fields": {
         "image_summary": "Iphone 12 red camera 2",
-        "image": "Product_Image/Iphone/Iphone 12 red camera 2/red_camera2.jpeg",
+        "image": "Product_Image/Iphone/iphone-12-red-camera-2/red_camera2.jpeg",
         "primary": false
     }
 },
@@ -2576,7 +2575,7 @@
     "pk": 22,
     "fields": {
         "image_summary": "Iphone 12 white main",
-        "image": "Product_Image/Iphone/Iphone 12 white main/white_main.jpeg",
+        "image": "Product_Image/Iphone/iphone-12-white-main/white_main.jpeg",
         "primary": true
     }
 },
@@ -2585,7 +2584,7 @@
     "pk": 23,
     "fields": {
         "image_summary": "Iphone 12 white front",
-        "image": "Product_Image/Iphone/Iphone 12 white front/white_front.jpeg",
+        "image": "Product_Image/Iphone/iphone-12-white-front/white_front.jpeg",
         "primary": false
     }
 },
@@ -2594,7 +2593,7 @@
     "pk": 24,
     "fields": {
         "image_summary": "Iphone 12 white camera",
-        "image": "Product_Image/Iphone/Iphone 12 white camera/white_camera.jpeg",
+        "image": "Product_Image/Iphone/iphone-12-white-camera/white_camera.jpeg",
         "primary": false
     }
 },
@@ -2603,7 +2602,7 @@
     "pk": 25,
     "fields": {
         "image_summary": "Iphone 12 white camera 2",
-        "image": "Product_Image/Iphone/Iphone 12 white camera 2/white_camera2.jpeg",
+        "image": "Product_Image/Iphone/iphone-12-white-camera-2/white_camera2.jpeg",
         "primary": false
     }
 },
@@ -2612,7 +2611,7 @@
     "pk": 26,
     "fields": {
         "image_summary": "HP 15s main",
-        "image": "Product_Image/HP/HP 15s main/main.jpeg",
+        "image": "Product_Image/HP/hp-15s-main/main.jpeg",
         "primary": true
     }
 },
@@ -2621,7 +2620,7 @@
     "pk": 27,
     "fields": {
         "image_summary": "HP 15s side",
-        "image": "Product_Image/HP/HP 15s side/side.jpeg",
+        "image": "Product_Image/HP/hp-15s-side/side.jpeg",
         "primary": false
     }
 },
@@ -2630,7 +2629,7 @@
     "pk": 28,
     "fields": {
         "image_summary": "HP 15s back",
-        "image": "Product_Image/HP/HP 15s back/back.jpeg",
+        "image": "Product_Image/HP/hp-15s-back/back.jpeg",
         "primary": false
     }
 },
@@ -2639,7 +2638,7 @@
     "pk": 29,
     "fields": {
         "image_summary": "HP 15s closed",
-        "image": "Product_Image/HP/HP 15s closed/closed.jpeg",
+        "image": "Product_Image/HP/hp-15s-closed/closed.jpeg",
         "primary": false
     }
 },
@@ -2648,7 +2647,7 @@
     "pk": 30,
     "fields": {
         "image_summary": "Lenovo ThinkPad E14 main",
-        "image": "Product_Image/Lenovo/Lenovo ThinkPad E14 main/main.jpeg",
+        "image": "Product_Image/Lenovo/lenovo-thinkpad-e14-main/main.jpeg",
         "primary": true
     }
 },
@@ -2657,7 +2656,7 @@
     "pk": 31,
     "fields": {
         "image_summary": "Lenovo ThinkPad E14 touchID",
-        "image": "Product_Image/Lenovo/Lenovo ThinkPad E14 touchID/touch_id.jpeg",
+        "image": "Product_Image/Lenovo/lenovo-thinkpad-e14-touchid/touch_id.jpeg",
         "primary": false
     }
 },
@@ -2666,7 +2665,7 @@
     "pk": 32,
     "fields": {
         "image_summary": "Lenovo ThinkPad E14 feature_one",
-        "image": "Product_Image/Lenovo/Lenovo ThinkPad E14 feature_one/features_one.jpeg",
+        "image": "Product_Image/Lenovo/lenovo-thinkpad-e14-feature_one/features_one.jpeg",
         "primary": false
     }
 },
@@ -2675,7 +2674,7 @@
     "pk": 33,
     "fields": {
         "image_summary": "Lenovo ThinkPad E14 feature_two",
-        "image": "Product_Image/Lenovo/Lenovo ThinkPad E14 feature_two/features_two.jpeg",
+        "image": "Product_Image/Lenovo/lenovo-thinkpad-e14-feature_two/features_two.jpeg",
         "primary": false
     }
 },
@@ -2684,7 +2683,7 @@
     "pk": 34,
     "fields": {
         "image_summary": "Lenovo ThinkPad E14 feature_three",
-        "image": "Product_Image/Lenovo/Lenovo ThinkPad E14 feature_three/features_three.jpeg",
+        "image": "Product_Image/Lenovo/lenovo-thinkpad-e14-feature_three/features_three.jpeg",
         "primary": false
     }
 },
@@ -2693,7 +2692,7 @@
     "pk": 35,
     "fields": {
         "image_summary": "SAMSUNG The Frame main",
-        "image": "Product_Image/SAMSUNG/SAMSUNG The Frame/main.jpeg",
+        "image": "Product_Image/SAMSUNG/samsung-the-frame-main/main.jpeg",
         "primary": true
     }
 },
@@ -2702,7 +2701,7 @@
     "pk": 36,
     "fields": {
         "image_summary": "SAMSUNG The Frame edge",
-        "image": "Product_Image/SAMSUNG/SAMSUNG The Frame/edge.jpeg",
+        "image": "Product_Image/SAMSUNG/samsung-the-frame-edge/edge.jpeg",
         "primary": false
     }
 },
@@ -2711,7 +2710,7 @@
     "pk": 38,
     "fields": {
         "image_summary": "SAMSUNG The Frame feature_one",
-        "image": "Product_Image/SAMSUNG/SAMSUNG The Frame frature_one/feature_one_ovzy7n0.jpeg",
+        "image": "Product_Image/SAMSUNG/samsung-the-frame-feature_one/feature_one.jpeg",
         "primary": false
     }
 },
@@ -2720,7 +2719,7 @@
     "pk": 39,
     "fields": {
         "image_summary": "SAMSUNG The Frame feature_two",
-        "image": "Product_Image/SAMSUNG/SAMSUNG The Frame feature_two/feature_two.jpeg",
+        "image": "Product_Image/SAMSUNG/samsung-the-frame-feature_two/feature_two.jpeg",
         "primary": false
     }
 },
@@ -2729,7 +2728,7 @@
     "pk": 40,
     "fields": {
         "image_summary": "SAMSUNG The Frame front",
-        "image": "Product_Image/SAMSUNG/SAMSUNG The Frame front/front.jpeg",
+        "image": "Product_Image/SAMSUNG/samsung-the-frame-front/front.jpeg",
         "primary": false
     }
 },
@@ -2738,7 +2737,7 @@
     "pk": 41,
     "fields": {
         "image_summary": "SAMSUNG The Frame back",
-        "image": "Product_Image/SAMSUNG/SAMSUNG The Frame back/back.jpeg",
+        "image": "Product_Image/SAMSUNG/samsung-the-frame-back/back.jpeg",
         "primary": false
     }
 },
@@ -2747,7 +2746,7 @@
     "pk": 42,
     "fields": {
         "image_summary": "SAMSUNG The Frame remote",
-        "image": "Product_Image/SAMSUNG/SAMSUNG The Frame remote/remote.jpeg",
+        "image": "Product_Image/SAMSUNG/samsung-the-frame-remote/remote.jpeg",
         "primary": false
     }
 },
@@ -2756,7 +2755,7 @@
     "pk": 43,
     "fields": {
         "image_summary": "SAMSUNG The Frame side",
-        "image": "Product_Image/SAMSUNG/SAMSUNG The Frame side/side.jpeg",
+        "image": "Product_Image/SAMSUNG/samsung-the-frame-side/side.jpeg",
         "primary": false
     }
 },
@@ -2765,7 +2764,7 @@
     "pk": 44,
     "fields": {
         "image_summary": "Bose 500 Silver main",
-        "image": "Product_Image/Bose/Bose 500 Silver/main.jpeg",
+        "image": "Product_Image/Bose/bose-500-silver-main/main.jpeg",
         "primary": true
     }
 },
@@ -2774,7 +2773,7 @@
     "pk": 45,
     "fields": {
         "image_summary": "Bose 500 Silver feature one",
-        "image": "Product_Image/Bose/Bose 500 Silver feature one/feature_one.jpeg",
+        "image": "Product_Image/Bose/bose-500-silver-feature-one/feature_one.jpeg",
         "primary": false
     }
 },
@@ -2783,7 +2782,7 @@
     "pk": 46,
     "fields": {
         "image_summary": "Bose 500 Silver feature two",
-        "image": "Product_Image/Bose/Bose 500 Silver feature two/feature_two.jpeg",
+        "image": "Product_Image/Bose/bose-500-silver-feature-two/feature_two.jpeg",
         "primary": false
     }
 },
@@ -2792,7 +2791,7 @@
     "pk": 47,
     "fields": {
         "image_summary": "Bose 500 Silver detail",
-        "image": "Product_Image/Bose/Bose 500 Silver detail/detail.jpeg",
+        "image": "Product_Image/Bose/bose-500-silver-detail/detail.jpeg",
         "primary": false
     }
 },
@@ -2801,7 +2800,7 @@
     "pk": 48,
     "fields": {
         "image_summary": "Bose 500 Silver top",
-        "image": "Product_Image/Bose/Bose 500 Silver top/top.jpeg",
+        "image": "Product_Image/Bose/bose-500-silver-top/top_two.jpeg",
         "primary": false
     }
 },
@@ -2810,7 +2809,7 @@
     "pk": 49,
     "fields": {
         "image_summary": "Bose 500 Silver top one",
-        "image": "Product_Image/Bose/Bose 500 Silver top one/top_two.jpeg",
+        "image": "Product_Image/Bose/bose-500-silver-top-one/top.jpeg",
         "primary": false
     }
 },
@@ -2819,7 +2818,7 @@
     "pk": 50,
     "fields": {
         "image_summary": "Bose 500 Black main",
-        "image": "Product_Image/Bose/Bose 500 Black main/main.jpeg",
+        "image": "Product_Image/Bose/bose-500-black-main/main.jpeg",
         "primary": true
     }
 },
@@ -2828,7 +2827,7 @@
     "pk": 51,
     "fields": {
         "image_summary": "Bose 500 Black side",
-        "image": "Product_Image/Bose/Bose 500 Black side/side.jpeg",
+        "image": "Product_Image/Bose/bose-500-black-side/side.jpeg",
         "primary": false
     }
 },
@@ -2837,7 +2836,7 @@
     "pk": 52,
     "fields": {
         "image_summary": "Bose 500 Black feature one",
-        "image": "Product_Image/Bose/Bose 500 Black feature one/feature_one.jpeg",
+        "image": "Product_Image/Bose/bose-500-black-feature-one/feature_one.jpeg",
         "primary": false
     }
 },
@@ -2846,7 +2845,7 @@
     "pk": 53,
     "fields": {
         "image_summary": "Bose 500 Black top",
-        "image": "Product_Image/Bose/Bose 500 Black top/top_one.jpeg",
+        "image": "Product_Image/Bose/bose-500-black-top/top_one.jpeg",
         "primary": false
     }
 },
@@ -2855,7 +2854,7 @@
     "pk": 54,
     "fields": {
         "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL main",
-        "image": "Product_Image/BOSCH/BOSCH 8 kg INVERTER TOUCH CONTROL main/main.jpeg",
+        "image": "Product_Image/BOSCH/bosch-8-kg-inverter-touch-control-main/main.jpeg",
         "primary": true
     }
 },
@@ -2864,7 +2863,7 @@
     "pk": 55,
     "fields": {
         "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL secondary",
-        "image": "Product_Image/BOSCH/BOSCH 8 kg INVERTER TOUCH CONTROL secondary/secondary.jpeg",
+        "image": "Product_Image/BOSCH/bosch-8-kg-inverter-touch-control-secondary/secondary.jpeg",
         "primary": false
     }
 },
@@ -2873,7 +2872,7 @@
     "pk": 56,
     "fields": {
         "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL features",
-        "image": "Product_Image/BOSCH/BOSCH 8 kg INVERTER TOUCH CONTROL features/features.jpeg",
+        "image": "Product_Image/BOSCH/bosch-8-kg-inverter-touch-control-features/features.jpeg",
         "primary": false
     }
 },
@@ -2882,7 +2881,7 @@
     "pk": 57,
     "fields": {
         "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL inside",
-        "image": "Product_Image/BOSCH/BOSCH 8 kg INVERTER TOUCH CONTROL inside/inside.jpeg",
+        "image": "Product_Image/BOSCH/bosch-8-kg-inverter-touch-control-inside/inside.jpeg",
         "primary": false
     }
 },
@@ -2891,7 +2890,7 @@
     "pk": 58,
     "fields": {
         "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL back",
-        "image": "Product_Image/BOSCH/BOSCH 8 kg INVERTER TOUCH CONTROL back/back.jpeg",
+        "image": "Product_Image/BOSCH/bosch-8-kg-inverter-touch-control-back/back.jpeg",
         "primary": false
     }
 },
@@ -2900,7 +2899,7 @@
     "pk": 59,
     "fields": {
         "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL size",
-        "image": "Product_Image/BOSCH/BOSCH 8 kg INVERTER TOUCH CONTROL size/size.jpeg",
+        "image": "Product_Image/BOSCH/bosch-8-kg-inverter-touch-control-size/size.jpeg",
         "primary": false
     }
 },
@@ -2909,7 +2908,7 @@
     "pk": 60,
     "fields": {
         "image_summary": "SAMSUNG Star Split Inverter AC main",
-        "image": "Product_Image/SAMSUNG/SAMSUNG Star Split Inverter AC main/main.jpeg",
+        "image": "Product_Image/SAMSUNG/samsung-star-split-inverter-ac-main/main.jpeg",
         "primary": true
     }
 },
@@ -2918,7 +2917,7 @@
     "pk": 61,
     "fields": {
         "image_summary": "SAMSUNG Star Split Inverter AC open",
-        "image": "Product_Image/SAMSUNG/SAMSUNG Star Split Inverter AC main/main_open.jpeg",
+        "image": "Product_Image/SAMSUNG/samsung-star-split-inverter-ac-open/main_open.jpeg",
         "primary": false
     }
 },
@@ -2927,7 +2926,7 @@
     "pk": 62,
     "fields": {
         "image_summary": "SAMSUNG Star Split Inverter AC side",
-        "image": "Product_Image/SAMSUNG/SAMSUNG Star Split Inverter AC side/side_one.jpeg",
+        "image": "Product_Image/SAMSUNG/samsung-star-split-inverter-ac-side/side_one.jpeg",
         "primary": false
     }
 },
@@ -2936,7 +2935,7 @@
     "pk": 63,
     "fields": {
         "image_summary": "SAMSUNG Star Split Inverter AC side open",
-        "image": "Product_Image/SAMSUNG/SAMSUNG Star Split Inverter AC side open/side_open.jpeg",
+        "image": "Product_Image/SAMSUNG/samsung-star-split-inverter-ac-side-open/side_open.jpeg",
         "primary": false
     }
 },
@@ -2945,115 +2944,7 @@
     "pk": 64,
     "fields": {
         "image_summary": "SAMSUNG Star Split Inverter AC back",
-        "image": "Product_Image/SAMSUNG/SAMSUNG Star Split Inverter AC back/back.jpeg",
-        "primary": false
-    }
-},
-{
-    "model": "products.productimages",
-    "pk": 65,
-    "fields": {
-        "image_summary": "LG 235 L Direct Cool Single Door Blue Charm 235 L main",
-        "image": "Product_Image/LG/LG 235 L Direct Cool Single Door Blue Charm 235 L main/main.jpeg",
-        "primary": true
-    }
-},
-{
-    "model": "products.productimages",
-    "pk": 66,
-    "fields": {
-        "image_summary": "LG 235 L Direct Cool Single Door Blue Charm 235 L opened",
-        "image": "Product_Image/LG/LG 235 L Direct Cool Single Door Blue Charm 235 L opened/opened.jpeg",
-        "primary": false
-    }
-},
-{
-    "model": "products.productimages",
-    "pk": 67,
-    "fields": {
-        "image_summary": "LG 235 L Direct Cool Single Door Blue Charm 235 L back",
-        "image": "Product_Image/LG/LG 235 L Direct Cool Single Door Blue Charm 235 L back/back.jpeg",
-        "primary": false
-    }
-},
-{
-    "model": "products.productimages",
-    "pk": 68,
-    "fields": {
-        "image_summary": "LG 235 L Direct Cool Single Door Blue Charm 235 L bottom",
-        "image": "Product_Image/LG/LG 235 L Direct Cool Single Door Blue Charm 235 L bottom/section_bottom.jpeg",
-        "primary": false
-    }
-},
-{
-    "model": "products.productimages",
-    "pk": 69,
-    "fields": {
-        "image_summary": "LG 235 L Direct Cool Single Door Blue Charm 235 L top",
-        "image": "Product_Image/LG/LG 235 L Direct Cool Single Door Blue Charm 235 L top/section_top.jpeg",
-        "primary": false
-    }
-},
-{
-    "model": "products.productimages",
-    "pk": 70,
-    "fields": {
-        "image_summary": "LG 235 L Direct Cool Single Door details",
-        "image": "Product_Image/LG/LG 235 L Direct Cool Single Door details/details.jpeg",
-        "primary": false
-    }
-},
-{
-    "model": "products.productimages",
-    "pk": 71,
-    "fields": {
-        "image_summary": "LG 235 L Direct Cool Single Door Purple Glow 215 L main",
-        "image": "Product_Image/LG/LG 235 L Direct Cool Single Door Purple Glow 215 L main/main.jpeg",
-        "primary": true
-    }
-},
-{
-    "model": "products.productimages",
-    "pk": 72,
-    "fields": {
-        "image_summary": "LG 235 L Direct Cool Single Door Purple Glow 215 L opened",
-        "image": "Product_Image/LG/LG 235 L Direct Cool Single Door Purple Glow 215 L opened/opened.jpeg",
-        "primary": false
-    }
-},
-{
-    "model": "products.productimages",
-    "pk": 73,
-    "fields": {
-        "image_summary": "LG 235 L Direct Cool Single Door Purple Glow 215 L feature one",
-        "image": "Product_Image/LG/LG 235 L Direct Cool Single Door Purple Glow 215 L feature one/features_one.jpeg",
-        "primary": false
-    }
-},
-{
-    "model": "products.productimages",
-    "pk": 74,
-    "fields": {
-        "image_summary": "LG 235 L Direct Cool Single Door Purple Glow 215 L feature two",
-        "image": "Product_Image/LG/LG 235 L Direct Cool Single Door Purple Glow 215 L feature two/features_two.jpeg",
-        "primary": false
-    }
-},
-{
-    "model": "products.productimages",
-    "pk": 75,
-    "fields": {
-        "image_summary": "LG 235 L Direct Cool Single Door Purple Glow 215 L feature three",
-        "image": "Product_Image/LG/LG 235 L Direct Cool Single Door Purple Glow 215 L feature three/featu_3AYjJyn.jpeg",
-        "primary": false
-    }
-},
-{
-    "model": "products.productimages",
-    "pk": 76,
-    "fields": {
-        "image_summary": "LG 235 L Direct Cool Single Door Purple Glow 215 L back",
-        "image": "Product_Image/LG/LG 235 L Direct Cool Single Door Purple Glow 215 L back/back.jpeg",
+        "image": "Product_Image/SAMSUNG/samsung-star-split-inverter-ac-back/back.jpeg",
         "primary": false
     }
 },
@@ -3062,7 +2953,7 @@
     "pk": 77,
     "fields": {
         "image_summary": "ASIAN PAINTS TE-3 white main",
-        "image": "Product_Image/ASIAN/ASIAN PAINTS TE-3 white main/main.jpeg",
+        "image": "Product_Image/ASIAN/asian-paints-te-3-white-main/main.jpeg",
         "primary": true
     }
 },
@@ -3071,7 +2962,7 @@
     "pk": 78,
     "fields": {
         "image_summary": "Auric Mens Energy  main",
-        "image": "Product_Image/Auric/Auric Mens Energy  main/main.jpeg",
+        "image": "Product_Image/Auric/auric-mens-energy-main/main.jpeg",
         "primary": true
     }
 },
@@ -3080,7 +2971,7 @@
     "pk": 79,
     "fields": {
         "image_summary": "Auric Mens Energy back",
-        "image": "Product_Image/Auric/Auric Mens Energy back/back.jpeg",
+        "image": "Product_Image/Auric/auric-mens-energy-back/back.jpeg",
         "primary": false
     }
 },
@@ -3089,7 +2980,7 @@
     "pk": 80,
     "fields": {
         "image_summary": "Auric Mens Energy secondary",
-        "image": "Product_Image/Auric/Auric Mens Energy secondary/secondary.jpeg",
+        "image": "Product_Image/Auric/auric-mens-energy-secondary/secondary.jpeg",
         "primary": false
     }
 },
@@ -3098,7 +2989,7 @@
     "pk": 81,
     "fields": {
         "image_summary": "Auric Mens Energy detail",
-        "image": "Product_Image/Auric/Auric Mens Energy detail/detail.jpeg",
+        "image": "Product_Image/Auric/auric-mens-energy-detail/detail.jpeg",
         "primary": false
     }
 },
@@ -3107,7 +2998,7 @@
     "pk": 82,
     "fields": {
         "image_summary": "Auric Mens Energy detail_one",
-        "image": "Product_Image/Auric/Auric Mens Energy detail_one/detail_one.jpeg",
+        "image": "Product_Image/Auric/auric-mens-energy-detail_one/detail_one.jpeg",
         "primary": false
     }
 },
@@ -3116,8 +3007,116 @@
     "pk": 83,
     "fields": {
         "image_summary": "Javascript the definative guide",
-        "image": "Product_Image/Javascript/Javascript the definative guide/main.jpg",
+        "image": "Product_Image/Javascript/javascript-the-definative-guide/main.jpg",
         "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 84,
+    "fields": {
+        "image_summary": "LG 215 L Direct Cool Single Door Purple Glow main",
+        "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-main/main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 85,
+    "fields": {
+        "image_summary": "LG 215 L Direct Cool Single Door Purple Glow back",
+        "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-back/back.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 86,
+    "fields": {
+        "image_summary": "LG 215 L Direct Cool Single Door Purple Glow details",
+        "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-details/details.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 87,
+    "fields": {
+        "image_summary": "LG 215 L Direct Cool Single Door Purple Glow opened",
+        "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-opened/opened.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 88,
+    "fields": {
+        "image_summary": "LG 215 L Direct Cool Single Door Purple Glow feature one",
+        "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-feature-one/features_one.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 89,
+    "fields": {
+        "image_summary": "LG 215 L Direct Cool Single Door Purple Glow feature two",
+        "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-feature-two/features_two.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 90,
+    "fields": {
+        "image_summary": "LG 215 L Direct Cool Single Door Purple Glow feature three",
+        "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-feature-three/features_three.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 91,
+    "fields": {
+        "image_summary": "LG 215 L Direct Cool Single Door Blue Charm main",
+        "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-blue-charm-main/main.jpeg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 92,
+    "fields": {
+        "image_summary": "LG 215 L Direct Cool Single Door Blue back",
+        "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-blue-back/back.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 93,
+    "fields": {
+        "image_summary": "LG 215 L Direct Cool Single Door Blue opened",
+        "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-blue-opened/opened.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 94,
+    "fields": {
+        "image_summary": "LG 215 L Direct Cool Single Door Blue bottom",
+        "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-blue-bottom/section_bottom.jpeg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 95,
+    "fields": {
+        "image_summary": "LG 215 L Direct Cool Single Door Blue top",
+        "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-blue-top/section_top.jpeg",
+        "primary": false
     }
 }
 ]
