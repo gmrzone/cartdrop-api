@@ -243,112 +243,112 @@
     "model": "products.mobilevariant",
     "pk": 1,
     "fields": {
-        "name": "6GB / 64GB"
+        "name": "6GB/64GB"
     }
 },
 {
     "model": "products.mobilevariant",
     "pk": 2,
     "fields": {
-        "name": "4GB / 64GB"
+        "name": "4GB/64GB"
     }
 },
 {
     "model": "products.mobilevariant",
     "pk": 3,
     "fields": {
-        "name": "8GB / 64GB"
+        "name": "8GB/64GB"
     }
 },
 {
     "model": "products.mobilevariant",
     "pk": 4,
     "fields": {
-        "name": "3GB / 64GB"
+        "name": "3GB/64GB"
     }
 },
 {
     "model": "products.mobilevariant",
     "pk": 5,
     "fields": {
-        "name": "12GB / 64GB"
+        "name": "12GB/64GB"
     }
 },
 {
     "model": "products.mobilevariant",
     "pk": 6,
     "fields": {
-        "name": "4GB / 128gb"
+        "name": "4GB/128gb"
     }
 },
 {
     "model": "products.mobilevariant",
     "pk": 7,
     "fields": {
-        "name": "4GB / 256GB"
+        "name": "4GB/256GB"
     }
 },
 {
     "model": "products.mobilevariant",
     "pk": 8,
     "fields": {
-        "name": "6GB / 128gb"
+        "name": "6GB/128gb"
     }
 },
 {
     "model": "products.mobilevariant",
     "pk": 9,
     "fields": {
-        "name": "6GB / 256GB"
+        "name": "6GB/256GB"
     }
 },
 {
     "model": "products.mobilevariant",
     "pk": 10,
     "fields": {
-        "name": "8GB / 128GB"
+        "name": "8GB/128GB"
     }
 },
 {
     "model": "products.mobilevariant",
     "pk": 11,
     "fields": {
-        "name": "8GB / 256GB"
+        "name": "8GB/256GB"
     }
 },
 {
     "model": "products.mobilevariant",
     "pk": 12,
     "fields": {
-        "name": "12GB / 128GB"
+        "name": "12GB/128GB"
     }
 },
 {
     "model": "products.mobilevariant",
     "pk": 13,
     "fields": {
-        "name": "12GB / 256GB"
+        "name": "12GB/256GB"
     }
 },
 {
     "model": "products.mobilevariant",
     "pk": 14,
     "fields": {
-        "name": "3GB / 128GB"
+        "name": "3GB/128GB"
     }
 },
 {
     "model": "products.laptopvariant",
     "pk": 1,
     "fields": {
-        "name": "8 GB / 1 TB HDD"
+        "name": "8GB/1TB HDD"
     }
 },
 {
     "model": "products.laptopvariant",
     "pk": 2,
     "fields": {
-        "name": "8 GB / 256 GB SDD"
+        "name": "8GB/256GB SDD"
     }
 },
 {
