@@ -6,6 +6,7 @@ from .models import (
     ProductCategory,
     ProductSubcategory,
     SubcategoryImage,
+    CouponCode
 )
 
 # Register your models here.
@@ -37,3 +38,11 @@ class SubcategoryImageAdmin(admin.ModelAdmin):
 class BrandAdmin(admin.ModelAdmin):
     list_display = ("name",)
     search_fields = ("__str__",)
+
+    
+@admin.register(CouponCode)
+class CouponCodeAdmin(admin.ModelAdmin):
+    list_display = ('code', "discount", "subcategory", "valid_from", "valid_to")
+    list_filter = ('active', )
+    list_editable = ('discount', "valid_from", "valid_to")
+    list_select_related = ('subcategory',)

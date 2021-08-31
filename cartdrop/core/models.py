@@ -1,6 +1,8 @@
 from django.conf import settings
+from django.contrib.admin.decorators import action
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
+from django.conf import settings
 
 from .behaviours import Slugable, Timestamps, UUIDField
 from .utils import (
@@ -78,3 +80,16 @@ class ReviewImages(models.Model):
         ProductReview, on_delete=models.CASCADE, related_name="review_images"
     )
     image = models.ImageField(upload_to=review_image_location)
+
+
+class CouponCode(UUIDField, Timestamps):
+    code = models.CharField(max_length=20, db_index=True)
+    subcategory = models.ForeignKey(ProductSubcategory, on_delete=models.SET_NULL, null=True, blank=True)
+    discount = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(100), MinValueValidator(0)])
+    valid_from = models.DateTimeField()
+    valid_to = models.DateTimeField()
+    users = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True)
+    active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.code
