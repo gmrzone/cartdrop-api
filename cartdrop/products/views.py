@@ -16,7 +16,7 @@ class ProductVariationList(ListAPIView):
         # queryset to return a unique product variants that has discount percent greater then 20%. This is temperary we will add a better algorithm for featured products
         queryset = (
             ProductVariation.objects.annotate(discount_percent=(100 - (F("price") * 100 / F("retail_price"))))
-            .filter(active=True, discount_percent__gt=20)
+            .filter(active=True, discount_percent__gt=10)
             .select_related(
                 "color",
                 "laptop_variant",
