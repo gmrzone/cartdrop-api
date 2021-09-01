@@ -677,5 +677,203 @@
         "name": "Packt",
         "photo": "Brand_images/packt/packt.png"
     }
+},
+{
+    "model": "core.couponcode",
+    "pk": 1,
+    "fields": {
+        "created": "2021-09-01T05:05:05.459Z",
+        "updated": "2021-09-01T05:53:20.502Z",
+        "uuid": "f4e75450-3d5f-47c8-b4db-fbb891dd1a4c",
+        "code": "FIRST_ORDER",
+        "reusable_type": "SINGLE",
+        "summary": "Get 20% off on all products. This coupon can only be used on your first order.",
+        "subcategory": null,
+        "discount": 20,
+        "valid_from": "2021-09-01T05:04:57Z",
+        "valid_to": "2022-09-01T05:04:59Z",
+        "active": true,
+        "users": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 2,
+    "fields": {
+        "created": "2021-09-01T05:06:08.647Z",
+        "updated": "2021-09-01T05:49:33.436Z",
+        "uuid": "641f6626-ecf3-403a-b896-fb52c2f0a1c1",
+        "code": "MOBILE_10",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 10% off on all mobiles. This coupon can only be used once per month",
+        "subcategory": 1,
+        "discount": 10,
+        "valid_from": "2021-09-01T05:06:00Z",
+        "valid_to": "2022-09-01T05:06:01Z",
+        "active": true,
+        "users": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 3,
+    "fields": {
+        "created": "2021-09-01T05:06:38.753Z",
+        "updated": "2021-09-01T05:49:29.014Z",
+        "uuid": "9fd10c73-d215-419a-a957-b9651fcdc764",
+        "code": "LAPPY_12",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 12% off on all Laptops. This Coupon can only be used once per month.",
+        "subcategory": 3,
+        "discount": 12,
+        "valid_from": "2021-09-01T05:06:31Z",
+        "valid_to": "2022-09-01T05:06:33Z",
+        "active": true,
+        "users": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 4,
+    "fields": {
+        "created": "2021-09-01T05:07:19.146Z",
+        "updated": "2021-09-01T05:49:24.646Z",
+        "uuid": "abd1908c-8b5c-40b5-8db7-d6a20b3293e4",
+        "code": "TV_13",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 13% off on all Television. This Coupon can only be used once per month.",
+        "subcategory": 5,
+        "discount": 13,
+        "valid_from": "2021-09-01T05:07:10Z",
+        "valid_to": "2022-09-01T05:07:14Z",
+        "active": true,
+        "users": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 5,
+    "fields": {
+        "created": "2021-09-01T05:28:26.933Z",
+        "updated": "2021-09-01T05:48:30.959Z",
+        "uuid": "b7be15ee-72c6-4e63-b17c-f30f09fdef22",
+        "code": "PAINT-5",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 5% off on all paints. This coupon can only be used once per month.",
+        "subcategory": 6,
+        "discount": 5,
+        "valid_from": "2021-09-01T05:28:11Z",
+        "valid_to": "2022-09-01T05:28:12Z",
+        "active": true,
+        "users": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 6,
+    "fields": {
+        "created": "2021-09-01T05:51:02.969Z",
+        "updated": "2021-09-01T05:51:02.969Z",
+        "uuid": "3641aada-476c-4589-807e-803f52c52526",
+        "code": "AC_NINE",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 9% off on Air Conditioners. This coupon can only be used once per month",
+        "subcategory": 12,
+        "discount": 9,
+        "valid_from": "2021-09-01T05:50:50Z",
+        "valid_to": "2022-09-01T05:50:55Z",
+        "active": true,
+        "users": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 7,
+    "fields": {
+        "created": "2021-09-01T05:52:19.405Z",
+        "updated": "2021-09-01T05:52:39.599Z",
+        "uuid": "5e0ed434-344e-4cf1-b52a-d347e41c59c8",
+        "code": "FREEZER_10",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 10% discount on Refrigerators. This coupon can only be used once per month.",
+        "subcategory": 13,
+        "discount": 10,
+        "valid_from": "2021-09-01T05:52:13Z",
+        "valid_to": "2022-09-01T05:52:14Z",
+        "active": true,
+        "users": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 8,
+    "fields": {
+        "created": "2021-09-01T05:57:42.161Z",
+        "updated": "2021-09-01T05:57:42.161Z",
+        "uuid": "440b79b5-5ee9-4240-9a4c-699bd1463bce",
+        "code": "WASH_12",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 12% off on all Washing Machines. This Coupon can only be used once per month.",
+        "subcategory": 14,
+        "discount": 12,
+        "valid_from": "2021-09-01T05:57:35Z",
+        "valid_to": "2022-09-01T05:57:36Z",
+        "active": true,
+        "users": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 9,
+    "fields": {
+        "created": "2021-09-01T05:58:51.574Z",
+        "updated": "2021-09-01T05:58:51.574Z",
+        "uuid": "fb01af27-3a5d-4cdd-8a7c-425be5ab9f81",
+        "code": "SPEAKER_11",
+        "reusable_type": "SINGLE",
+        "summary": "Get 11% off on all speakers. This coupon can only ny used once per month",
+        "subcategory": 15,
+        "discount": 11,
+        "valid_from": "2021-09-01T05:58:45Z",
+        "valid_to": "2022-09-01T05:58:46Z",
+        "active": true,
+        "users": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 10,
+    "fields": {
+        "created": "2021-09-01T06:00:09.410Z",
+        "updated": "2021-09-01T06:00:09.410Z",
+        "uuid": "3d2dd307-47b4-4c92-a4a0-ecbc4b79b2b2",
+        "code": "PROGRAMMER_5",
+        "reusable_type": "SINGLE",
+        "summary": "Get 5% off on all Programming books. This coupon can only be used once per month",
+        "subcategory": 16,
+        "discount": 0,
+        "valid_from": "2021-09-01T05:59:56Z",
+        "valid_to": "2022-09-01T06:00:01Z",
+        "active": true,
+        "users": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 11,
+    "fields": {
+        "created": "2021-09-01T06:01:21.440Z",
+        "updated": "2021-09-01T06:01:21.440Z",
+        "uuid": "b209fb83-d00e-472c-8966-8056337fe2b3",
+        "code": "JUICE_5",
+        "reusable_type": "SINGLE",
+        "summary": "Get 5% off on all Juices. This Coupon can only be used once per month",
+        "subcategory": 17,
+        "discount": 0,
+        "valid_from": "2021-09-01T06:01:15Z",
+        "valid_to": "2022-09-01T06:01:16Z",
+        "active": true,
+        "users": []
+    }
 }
 ]
