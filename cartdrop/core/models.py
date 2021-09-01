@@ -93,7 +93,7 @@ class CouponCode(UUIDField, Timestamps):
     code = models.CharField(max_length=20, db_index=True)
     reusable_type = models.CharField(max_length=200, default=CouponReusableTypeChoises.SINGLE, choices=CouponReusableTypeChoises.choices)
     summary = models.CharField(max_length=200, null=True)
-    subcategory = models.ForeignKey(ProductSubcategory, on_delete=models.SET_NULL, null=True, blank=True)
+    subcategory = models.ForeignKey(ProductSubcategory, on_delete=models.SET_NULL, null=True, blank=True, related_name="coupons")
     discount = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(100), MinValueValidator(0)])
     valid_from = models.DateTimeField()
     valid_to = models.DateTimeField()
@@ -101,6 +101,5 @@ class CouponCode(UUIDField, Timestamps):
     active = models.BooleanField(default=True)
     
     
-
     def __str__(self):
         return self.code

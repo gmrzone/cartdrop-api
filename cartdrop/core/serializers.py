@@ -1,10 +1,10 @@
-from django.db import models
+from django.db.models import Max
 from django.db.models import fields
 from rest_framework import serializers
-from rest_framework.fields import ImageField
+from rest_framework.fields import ImageField, SerializerMethodField
 from rest_framework.serializers import ModelSerializer, Serializer
 
-from .models import Brand, CategoryImage, ProductCategory, ProductSubcategory
+from .models import Brand, CategoryImage, ProductCategory, ProductSubcategory, SubcategoryImage, CouponCode
 
 
 class BrandSerializer(ModelSerializer):
@@ -37,18 +37,31 @@ class ProductCategorySerializer(ModelSerializer):
         }
 
 
+class SubcategoryImageSerializer(ModelSerializer):
+    image = ImageField(required=True, allow_empty_file=False)
+    class Meta:
+        model = SubcategoryImage
+        fields = ("image",)
+
+
+class CouponSerializerBase(ModelSerializer):
+    class Meta:
+        model = CouponCode
+        fields = ("code", "discount")
+
 class ProductSubcategorySerializer(ModelSerializer):
 
-    # photo = ImageField(required=True, allow_empty_file=False)
-
+    subcategory_images = SubcategoryImageSerializer(many=True)
+    coupons = CouponSerializerBase(many=True)
     class Meta:
         model = ProductSubcategory
-        fields = ("name", "category", "slug", "uuid", "created")
+        fields = ("name", "slug", "uuid", "subcategory_images", "coupons")
         extra_kwargs = {
-            "created": {"read_only": True},
             "uuid": {"read_only": True},
             "slug": {"read_only": True},
         }
+
+
 
 class ProductSubcategoryBase(ModelSerializer):
     class Meta:
