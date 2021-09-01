@@ -657,6 +657,70 @@
     }
 },
 {
+    "model": "core.subcategoryimage",
+    "pk": 34,
+    "fields": {
+        "subcategory": 15,
+        "image": "Subcategory_Media/electronics/speakers/main.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 35,
+    "fields": {
+        "subcategory": 15,
+        "image": "Subcategory_Media/electronics/speakers/main_PSgG25d.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 36,
+    "fields": {
+        "subcategory": 15,
+        "image": "Subcategory_Media/electronics/speakers/main_Bcg4qrl.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 37,
+    "fields": {
+        "subcategory": 15,
+        "image": "Subcategory_Media/electronics/speakers/main_Cfbjp4U.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 38,
+    "fields": {
+        "subcategory": 6,
+        "image": "Subcategory_Media/accessories/paints/main.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 39,
+    "fields": {
+        "subcategory": 6,
+        "image": "Subcategory_Media/accessories/paints/main_04BnJYi.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 40,
+    "fields": {
+        "subcategory": 6,
+        "image": "Subcategory_Media/accessories/paints/main_IOdkAIG.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 41,
+    "fields": {
+        "subcategory": 6,
+        "image": "Subcategory_Media/accessories/paints/main_S5OBGzJ.jpeg"
+    }
+},
+{
     "model": "core.brand",
     "pk": 1,
     "fields": {
@@ -1031,13 +1095,13 @@
     "pk": 11,
     "fields": {
         "created": "2021-09-01T06:01:21.440Z",
-        "updated": "2021-09-01T06:01:21.440Z",
+        "updated": "2021-09-01T08:11:34.436Z",
         "uuid": "b209fb83-d00e-472c-8966-8056337fe2b3",
         "code": "JUICE_5",
         "reusable_type": "SINGLE",
         "summary": "Get 5% off on all Juices. This Coupon can only be used once per month",
         "subcategory": 17,
-        "discount": 0,
+        "discount": 5,
         "valid_from": "2021-09-01T06:01:15Z",
         "valid_to": "2022-09-01T06:01:16Z",
         "active": true,
