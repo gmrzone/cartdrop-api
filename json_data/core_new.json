@@ -489,6 +489,174 @@
     }
 },
 {
+    "model": "core.subcategoryimage",
+    "pk": 13,
+    "fields": {
+        "subcategory": 14,
+        "image": "Subcategory_Media/appliances/washing-machines/main.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 14,
+    "fields": {
+        "subcategory": 14,
+        "image": "Subcategory_Media/appliances/washing-machines/main_WWZqz5L.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 15,
+    "fields": {
+        "subcategory": 14,
+        "image": "Subcategory_Media/appliances/washing-machines/main_1FUHozI.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 16,
+    "fields": {
+        "subcategory": 5,
+        "image": "Subcategory_Media/electronics/television/main.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 17,
+    "fields": {
+        "subcategory": 5,
+        "image": "Subcategory_Media/electronics/television/main_iCz69Wc.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 18,
+    "fields": {
+        "subcategory": 5,
+        "image": "Subcategory_Media/electronics/television/main_4uooLYP.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 19,
+    "fields": {
+        "subcategory": 13,
+        "image": "Subcategory_Media/appliances/refrigerators/main.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 20,
+    "fields": {
+        "subcategory": 13,
+        "image": "Subcategory_Media/appliances/refrigerators/main_w14dAOO.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 21,
+    "fields": {
+        "subcategory": 13,
+        "image": "Subcategory_Media/appliances/refrigerators/main_j66Tagk.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 22,
+    "fields": {
+        "subcategory": 12,
+        "image": "Subcategory_Media/appliances/air-conditioner/main_open.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 23,
+    "fields": {
+        "subcategory": 12,
+        "image": "Subcategory_Media/appliances/air-conditioner/main.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 24,
+    "fields": {
+        "subcategory": 12,
+        "image": "Subcategory_Media/appliances/air-conditioner/main_lTtkDhs.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 25,
+    "fields": {
+        "subcategory": 12,
+        "image": "Subcategory_Media/appliances/air-conditioner/main_MBxNc78.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 26,
+    "fields": {
+        "subcategory": 16,
+        "image": "Subcategory_Media/books/programming/main.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 27,
+    "fields": {
+        "subcategory": 16,
+        "image": "Subcategory_Media/books/programming/main_9RvKIhM.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 28,
+    "fields": {
+        "subcategory": 16,
+        "image": "Subcategory_Media/books/programming/main_97NMPnY.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 29,
+    "fields": {
+        "subcategory": 16,
+        "image": "Subcategory_Media/books/programming/main_EMMbb5o.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 30,
+    "fields": {
+        "subcategory": 17,
+        "image": "Subcategory_Media/groceries/juices/main.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 31,
+    "fields": {
+        "subcategory": 17,
+        "image": "Subcategory_Media/groceries/juices/main_x25stzF.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 32,
+    "fields": {
+        "subcategory": 17,
+        "image": "Subcategory_Media/groceries/juices/main_FyRdVtU.jpeg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 33,
+    "fields": {
+        "subcategory": 17,
+        "image": "Subcategory_Media/groceries/juices/main_lCOlTXd.jpeg"
+    }
+},
+{
     "model": "core.brand",
     "pk": 1,
     "fields": {
