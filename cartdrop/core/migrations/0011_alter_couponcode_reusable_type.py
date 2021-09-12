@@ -6,13 +6,21 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0010_auto_20210901_0520'),
+        ("core", "0010_auto_20210901_0520"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='couponcode',
-            name='reusable_type',
-            field=models.CharField(choices=[('SINGLE', 'Single'), ('MONTHLY', 'Monthly'), ('YEARLY', 'Yearly')], default='SINGLE', max_length=200),
+            model_name="couponcode",
+            name="reusable_type",
+            field=models.CharField(
+                choices=[
+                    ("SINGLE", "Single"),
+                    ("MONTHLY", "Monthly"),
+                    ("YEARLY", "Yearly"),
+                ],
+                default="SINGLE",
+                max_length=200,
+            ),
         ),
     ]

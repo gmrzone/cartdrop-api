@@ -6,23 +6,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0009_couponcode'),
+        ("core", "0009_couponcode"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='couponcode',
-            name='is_repeatable',
+            model_name="couponcode",
+            name="is_repeatable",
             field=models.BooleanField(default=False),
         ),
         migrations.AddField(
-            model_name='couponcode',
-            name='reusable_type',
-            field=models.CharField(default='SINGLE', max_length=200),
+            model_name="couponcode",
+            name="reusable_type",
+            field=models.CharField(default="SINGLE", max_length=200),
         ),
         migrations.AddField(
-            model_name='couponcode',
-            name='summary',
+            model_name="couponcode",
+            name="summary",
             field=models.CharField(max_length=200, null=True),
         ),
     ]

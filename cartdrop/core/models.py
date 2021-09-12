@@ -2,19 +2,12 @@ from django.conf import settings
 from django.contrib.admin.decorators import action
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
-from django.conf import settings
 
 from .behaviours import Slugable, Timestamps, UUIDField
-from .utils import (
-    brand_photo_location,
-    brand_photo_placeholder_location,
-    category_images,
-    category_images_placeholder,
-    review_image_location,
-    review_image_placeholder_location,
-    subcategory_images,
-    subcategory_images_placeholder
-)
+from .utils import (brand_photo_location, brand_photo_placeholder_location,
+                    category_images, category_images_placeholder,
+                    review_image_location, review_image_placeholder_location,
+                    subcategory_images, subcategory_images_placeholder)
 
 # Create your models here.
 
@@ -31,7 +24,10 @@ class CategoryImage(models.Model):
         ProductCategory, on_delete=models.CASCADE, related_name="category_images"
     )
     image = models.ImageField(upload_to=category_images)
-    placeholder = models.ImageField(upload_to=category_images_placeholder, default="default_placeholder.jpg")
+    placeholder = models.ImageField(
+        upload_to=category_images_placeholder, default="default_placeholder.jpg"
+    )
+
 
 class ProductSubcategory(Timestamps, Slugable, UUIDField):
     category = models.ForeignKey(
@@ -50,13 +46,17 @@ class SubcategoryImage(models.Model):
         ProductSubcategory, on_delete=models.CASCADE, related_name="subcategory_images"
     )
     image = models.ImageField(upload_to=subcategory_images)
-    placeholder = models.ImageField(upload_to=subcategory_images_placeholder, default="default_placeholder.jpg")
+    placeholder = models.ImageField(
+        upload_to=subcategory_images_placeholder, default="default_placeholder.jpg"
+    )
 
 
 class Brand(UUIDField, Slugable):
     name = models.CharField(max_length=100)
     photo = models.ImageField(upload_to=brand_photo_location)
-    placeholder = models.ImageField(upload_to=brand_photo_placeholder_location, default="default_placeholder.jpg")
+    placeholder = models.ImageField(
+        upload_to=brand_photo_placeholder_location, default="default_placeholder.jpg"
+    )
 
     def __str__(self):
         return self.name
@@ -86,27 +86,38 @@ class ReviewImages(models.Model):
         ProductReview, on_delete=models.CASCADE, related_name="review_images"
     )
     image = models.ImageField(upload_to=review_image_location)
-    placeholder = models.ImageField(upload_to=review_image_placeholder_location, default="default_placeholder.jpg")
+    placeholder = models.ImageField(
+        upload_to=review_image_placeholder_location, default="default_placeholder.jpg"
+    )
 
 
 class CouponCode(UUIDField, Timestamps):
-
     class CouponReusableTypeChoises(models.TextChoices):
         SINGLE = "SINGLE", "Single"
         MONTHLY = "MONTHLY", "Monthly"
         YEARLY = "YEARLY", "Yearly"
 
-
     code = models.CharField(max_length=20, db_index=True)
-    reusable_type = models.CharField(max_length=200, default=CouponReusableTypeChoises.SINGLE, choices=CouponReusableTypeChoises.choices)
+    reusable_type = models.CharField(
+        max_length=200,
+        default=CouponReusableTypeChoises.SINGLE,
+        choices=CouponReusableTypeChoises.choices,
+    )
     summary = models.CharField(max_length=200, null=True)
-    subcategory = models.ForeignKey(ProductSubcategory, on_delete=models.SET_NULL, null=True, blank=True, related_name="coupons")
-    discount = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(100), MinValueValidator(0)])
+    subcategory = models.ForeignKey(
+        ProductSubcategory,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="coupons",
+    )
+    discount = models.PositiveIntegerField(
+        default=0, validators=[MaxValueValidator(100), MinValueValidator(0)]
+    )
     valid_from = models.DateTimeField()
     valid_to = models.DateTimeField()
     users = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True)
     active = models.BooleanField(default=True)
-    
-    
+
     def __str__(self):
         return self.code

@@ -1,13 +1,7 @@
 from django.contrib import admin
 
-from .models import (
-    Brand,
-    CategoryImage,
-    ProductCategory,
-    ProductSubcategory,
-    SubcategoryImage,
-    CouponCode
-)
+from .models import (Brand, CategoryImage, CouponCode, ProductCategory,
+                     ProductSubcategory, SubcategoryImage)
 
 # Register your models here.
 
@@ -39,10 +33,10 @@ class BrandAdmin(admin.ModelAdmin):
     list_display = ("name",)
     search_fields = ("__str__",)
 
-    
+
 @admin.register(CouponCode)
 class CouponCodeAdmin(admin.ModelAdmin):
-    list_display = ('code', "discount", "subcategory", "valid_from", "valid_to")
-    list_filter = ('active', )
-    list_editable = ('discount', "valid_from", "valid_to")
-    list_select_related = ('subcategory',)
+    list_display = ("code", "discount", "subcategory", "valid_from", "valid_to")
+    list_filter = ("active",)
+    list_editable = ("discount", "valid_from", "valid_to")
+    list_select_related = ("subcategory",)

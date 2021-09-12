@@ -8,5 +8,7 @@ app_name = "core"
 
 urlpatterns = [
     path("categories/", CategoryList.as_view(), name="category_list"),
-    path('subcategory/offers/', SubcategoryOfferList.as_view(), name="subcategory_offers"),
+    path(
+        "subcategory/offers/", SubcategoryOfferList.as_view(), name="subcategory_offers"
+    ),
 ]

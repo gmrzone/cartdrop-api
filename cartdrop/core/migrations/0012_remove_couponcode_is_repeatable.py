@@ -6,12 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0011_alter_couponcode_reusable_type'),
+        ("core", "0011_alter_couponcode_reusable_type"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='couponcode',
-            name='is_repeatable',
+            model_name="couponcode",
+            name="is_repeatable",
         ),
     ]

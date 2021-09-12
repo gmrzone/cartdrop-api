@@ -3,39 +3,20 @@ from rest_framework.fields import ImageField, SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
 from cartdrop.accounts.serializers import SellerUserSerializer
-from cartdrop.core.serializers import BrandSerializer, ProductSubcategorySerializer, ProductSubcategoryBase
+from cartdrop.core.serializers import (BrandSerializer, ProductSubcategoryBase,
+                                       ProductSubcategorySerializer)
 
-from .models import (
-    ACCapacityVariant,
-    ACStarRatingVariant,
-    ACType,
-    BookVariant,
-    DisplayType,
-    FashionSize,
-    LaptopVariant,
-    MobileVariant,
-    OperatingSystem,
-    Product,
-    ProductAirConditionerFeature,
-    ProductColor,
-    ProductImages,
-    ProductLaptopFeatures,
-    ProductMobileFeatures,
-    ProductRefrigeratorFeature,
-    ProductSeries,
-    ProductSpeakersFeatures,
-    ProductSpecification,
-    ProductTelivisionFeatures,
-    ProductVariation,
-    ProductWarranty,
-    ProductWashingMachineFeatures,
-    RefrigeratorType,
-    ScreenType,
-    SimType,
-    SpeakerType,
-    TVVariant,
-    WashingMethod,
-)
+from .models import (ACCapacityVariant, ACStarRatingVariant, ACType,
+                     BookVariant, DisplayType, FashionSize, LaptopVariant,
+                     MobileVariant, OperatingSystem, Product,
+                     ProductAirConditionerFeature, ProductColor, ProductImages,
+                     ProductLaptopFeatures, ProductMobileFeatures,
+                     ProductRefrigeratorFeature, ProductSeries,
+                     ProductSpeakersFeatures, ProductSpecification,
+                     ProductTelivisionFeatures, ProductVariation,
+                     ProductWarranty, ProductWashingMachineFeatures,
+                     RefrigeratorType, ScreenType, SimType, SpeakerType,
+                     TVVariant, WashingMethod)
 
 
 class ProductColorSerializere(ModelSerializer):
@@ -317,7 +298,6 @@ class ProductImageSerializer(ModelSerializer):
         fields = ("image", "primary")
 
 
-
 class ProductVariationDetailSerializer(ModelSerializer):
     images = ProductImageSerializer(many=True)
     product = ProductDetailSerializer()
@@ -360,10 +340,10 @@ class ProductVariationDetailSerializer(ModelSerializer):
         return round((100 - (obj.price * 100 / obj.retail_price)), 2)
 
 
-
 # Base Serializers
 class ProductBaseSerializer(ModelSerializer):
-    subcategory = ProductSubcategoryBase(   )
+    subcategory = ProductSubcategoryBase()
+
     class Meta:
         model = Product
         fields = ("uuid", "subcategory", "name", "slug", "overall_rating")
@@ -372,7 +352,3 @@ class ProductBaseSerializer(ModelSerializer):
 
 class ProductVariationBaseSerializer(ProductVariationDetailSerializer):
     product = ProductBaseSerializer()
-
-
-
-

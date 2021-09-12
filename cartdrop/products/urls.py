@@ -8,5 +8,4 @@ app_name = "products"
 
 urlpatterns = [
     path("featured/", ProductVariationList.as_view(), name="featured"),
-    
-    ]
+]

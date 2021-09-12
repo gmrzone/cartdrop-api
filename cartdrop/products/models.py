@@ -10,7 +10,7 @@ from django.utils.text import slugify
 
 from cartdrop.core.behaviours import Slugable, Timestamps, UUIDField
 
-from .utils import product_images
+from .utils import product_images, product_images_placeholder
 
 # Create your models here.
 
@@ -326,7 +326,9 @@ class ProductVariation(UUIDField):
         blank=True,
         help_text="A Unique Product Identification Number",
     )
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="variations")
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="variations"
+    )
     retail_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     color = models.ForeignKey(
@@ -411,6 +413,9 @@ class ProductVariation(UUIDField):
 class ProductImages(models.Model):
     image_summary = models.CharField(max_length=100, null=True)
     image = models.ImageField(upload_to=product_images)
+    placeholder = models.ImageField(
+        upload_to=product_images_placeholder, default="default_placeholder.jpg"
+    )
     primary = models.BooleanField(default=False)
 
     def __str__(self):

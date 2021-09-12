@@ -1,10 +1,10 @@
-from django.db.models import Max
-from django.db.models import fields
+from django.db.models import Max, fields
 from rest_framework import serializers
 from rest_framework.fields import ImageField, SerializerMethodField
 from rest_framework.serializers import ModelSerializer, Serializer
 
-from .models import Brand, CategoryImage, ProductCategory, ProductSubcategory, SubcategoryImage, CouponCode
+from .models import (Brand, CategoryImage, CouponCode, ProductCategory,
+                     ProductSubcategory, SubcategoryImage)
 
 
 class BrandSerializer(ModelSerializer):
@@ -39,6 +39,7 @@ class ProductCategorySerializer(ModelSerializer):
 
 class SubcategoryImageSerializer(ModelSerializer):
     image = ImageField(required=True, allow_empty_file=False)
+
     class Meta:
         model = SubcategoryImage
         fields = ("image",)
@@ -49,10 +50,12 @@ class CouponSerializerBase(ModelSerializer):
         model = CouponCode
         fields = ("code", "discount")
 
+
 class ProductSubcategorySerializer(ModelSerializer):
 
     subcategory_images = SubcategoryImageSerializer(many=True)
     coupons = CouponSerializerBase(many=True)
+
     class Meta:
         model = ProductSubcategory
         fields = ("name", "slug", "uuid", "subcategory_images", "coupons")
@@ -62,11 +65,10 @@ class ProductSubcategorySerializer(ModelSerializer):
         }
 
 
-
 class ProductSubcategoryBase(ModelSerializer):
     class Meta:
         model = ProductSubcategory
-        fields = ("name",  "slug")
+        fields = ("name", "slug")
         extra_kwargs = {
             "slug": {"read_only": True},
-        } 
+        }
