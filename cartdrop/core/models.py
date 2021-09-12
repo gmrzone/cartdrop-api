@@ -7,9 +7,13 @@ from django.conf import settings
 from .behaviours import Slugable, Timestamps, UUIDField
 from .utils import (
     brand_photo_location,
+    brand_photo_placeholder_location,
     category_images,
+    category_images_placeholder,
     review_image_location,
+    review_image_placeholder_location,
     subcategory_images,
+    subcategory_images_placeholder
 )
 
 # Create your models here.
@@ -27,7 +31,7 @@ class CategoryImage(models.Model):
         ProductCategory, on_delete=models.CASCADE, related_name="category_images"
     )
     image = models.ImageField(upload_to=category_images)
-
+    placeholder = models.ImageField(upload_to=category_images_placeholder, default="default_placeholder.jpg")
 
 class ProductSubcategory(Timestamps, Slugable, UUIDField):
     category = models.ForeignKey(
@@ -46,11 +50,13 @@ class SubcategoryImage(models.Model):
         ProductSubcategory, on_delete=models.CASCADE, related_name="subcategory_images"
     )
     image = models.ImageField(upload_to=subcategory_images)
+    placeholder = models.ImageField(upload_to=subcategory_images_placeholder, default="default_placeholder.jpg")
 
 
 class Brand(UUIDField, Slugable):
     name = models.CharField(max_length=100)
     photo = models.ImageField(upload_to=brand_photo_location)
+    placeholder = models.ImageField(upload_to=brand_photo_placeholder_location, default="default_placeholder.jpg")
 
     def __str__(self):
         return self.name
@@ -80,6 +86,7 @@ class ReviewImages(models.Model):
         ProductReview, on_delete=models.CASCADE, related_name="review_images"
     )
     image = models.ImageField(upload_to=review_image_location)
+    placeholder = models.ImageField(upload_to=review_image_placeholder_location, default="default_placeholder.jpg")
 
 
 class CouponCode(UUIDField, Timestamps):
