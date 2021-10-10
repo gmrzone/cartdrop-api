@@ -33,6 +33,11 @@ def get_value(key: str):
         except KeyError:
             if key == "SECRET_KEY":
                 return None
+            else:
+                error_mssg = (
+                    f"Please Setup Environment Variable or Secret JSON for {key}"
+                )
+                raise ImproperlyConfigured(error_mssg)
         else:
             return value
     else:
