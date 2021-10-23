@@ -1,8 +1,7 @@
 from rest_framework.generics import ListAPIView
 
 from .models import ProductCategory, ProductSubcategory
-from .serializers import (ProductCategorySerializer,
-                          ProductSubcategorySerializer)
+from .serializers import ProductCategorySerializer, ProductSubcategorySerializer
 
 
 class CategoryList(ListAPIView):
@@ -11,6 +10,17 @@ class CategoryList(ListAPIView):
 
     def get_queryset(self):
         queryset = ProductCategory.objects.all().prefetch_related("category_images")
+        return queryset
+
+
+class SubcategoryList(ListAPIView):
+    serializer_class = ProductSubcategorySerializer
+
+    def get_queryset(self):
+        category = self.kwargs["category"]
+        queryset = ProductSubcategory.objects.filter(
+            category__slug=category
+        ).prefetch_related("subcategory_images", "coupons")
         return queryset
 
 

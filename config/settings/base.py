@@ -44,7 +44,7 @@ def get_value(key: str):
         return value
 
 
-SECRET_KEY = get_value("SECRET_KEY'") or "afzal_saiyed"
+SECRET_KEY = get_value("SECRET_KEY") or "afzal_saiyed"
 
 
 BASE_APPS = [

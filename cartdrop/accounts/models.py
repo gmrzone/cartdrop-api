@@ -15,7 +15,6 @@ from .validators import pincode_validator
 
 
 class CartDropUser(AbstractBaseUser, PermissionsMixin):
-    
     class UserTypes(models.TextChoices):
         CUSTOMER = "CUSTOMER", "Customer"
         SELLER = "SELLER", "Seller"
