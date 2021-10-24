@@ -363,6 +363,9 @@ class ProductVariation(UUIDField):
         "products.ProductImages", related_name="for_variations", blank=True
     )
 
+    class Meta:
+        ordering = ('-product__created',)
+
     def save(self, *args, **kwargs):
         if not self.pk:
             self.pid = self.product.product_code + get_random_string(

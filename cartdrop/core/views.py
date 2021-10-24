@@ -24,10 +24,6 @@ class SubcategoryList(ListAPIView):
         return queryset
 
 
-class categoryProducts(ListAPIView):
-    pass
-
-
 class SubcategoryOfferList(ListAPIView):
     serializer_class = ProductSubcategorySerializer
     http_method_names = ["get"]

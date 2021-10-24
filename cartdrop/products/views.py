@@ -8,7 +8,7 @@ from .serializers import ProductVariationBaseSerializer
 # Create your views here.
 
 
-class ProductVariationList(ListAPIView):
+class FeaturedProductVariationList(ListAPIView):
     serializer_class = ProductVariationBaseSerializer
     http_method_names = ["get"]
 
@@ -71,4 +71,33 @@ class TopCategoryProductVariationList(ListAPIView):
             .order_by("-product__overall_rating")
         )
 
+        return queryset
+
+class ProductListForCategory(ListAPIView):
+    
+    serializer_class = ProductVariationBaseSerializer
+    http_method_names = ["get"]
+
+    def get_queryset(self):
+        category = self.kwargs["category"]
+        queryset = (
+            ProductVariation.objects.filter(
+                product__subcategory__category__slug=category
+            )
+            .select_related(
+                "color",
+                "laptop_variant",
+                "mobile_variant",
+                "tv_variant",
+                "ac_capacity_variant",
+                "ac_star_variant",
+                "book_variation",
+                "size",
+                "product",
+                "product__brand",
+                "product__seller",
+                "product__subcategory",
+            )
+            .prefetch_related("images")
+        )
         return queryset
