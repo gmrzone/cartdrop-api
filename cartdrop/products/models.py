@@ -287,7 +287,7 @@ class Product(Timestamps, UUIDField):
     )
     description = models.TextField(max_length=100, blank=True, null=True)
     overall_rating = models.DecimalField(
-        max_digits=1, decimal_places=1, blank=True, default=0.0
+        max_digits=2, decimal_places=1, blank=True, default=0.0
     )
     replacement_days = models.PositiveIntegerField(default=0)
     warranty = models.ForeignKey(

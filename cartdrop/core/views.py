@@ -23,6 +23,10 @@ class SubcategoryList(ListAPIView):
         ).prefetch_related("subcategory_images", "coupons")
         return queryset
 
+class categoryProducts(ListAPIView):
+    pass
+
+
 
 class SubcategoryOfferList(ListAPIView):
     serializer_class = ProductSubcategorySerializer
