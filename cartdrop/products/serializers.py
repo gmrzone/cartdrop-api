@@ -376,8 +376,10 @@ class ProductBaseSerializer(ModelSerializer):
 class ProductVariationBaseSerializer(ProductVariationDetailSerializer):
     product = ProductBaseSerializer()
 
+
 class ProductBrandSerializer(ModelSerializer):
     brand = BrandSerializer()
+
     class Meta:
         model = Product
-        fields = ('brand',)
+        fields = ("brand",)

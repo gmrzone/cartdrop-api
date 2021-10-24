@@ -73,8 +73,9 @@ class TopCategoryProductVariationList(ListAPIView):
 
         return queryset
 
+
 class ProductListForCategory(ListAPIView):
-    
+
     serializer_class = ProductVariationBaseSerializer
     http_method_names = ["get"]
 
@@ -102,11 +103,14 @@ class ProductListForCategory(ListAPIView):
         )
         return queryset
 
+
 class ProductBrandsByCategory(ListAPIView):
     serializer_class = ProductBrandSerializer
     http_method_names = ["get"]
 
     def get_queryset(self):
         category = self.kwargs["category"]
-        queryset = Product.objects.filter(subcategory__category__slug=category).select_related('brand')
+        queryset = Product.objects.filter(
+            subcategory__category__slug=category
+        ).select_related("brand")
         return queryset

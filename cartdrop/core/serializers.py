@@ -16,6 +16,7 @@ from .models import (
 class BrandSerializer(ModelSerializer):
     photo = ImageField(required=True, allow_empty_file=False)
     placeholder = ImageField(required=False, allow_empty_file=True)
+
     class Meta:
         model = Brand
         fields = ("name", "photo", "placeholder")

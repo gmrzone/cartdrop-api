@@ -364,7 +364,7 @@ class ProductVariation(UUIDField):
     )
 
     class Meta:
-        ordering = ('-product__created',)
+        ordering = ("-product__created",)
 
     def save(self, *args, **kwargs):
         if not self.pk:
