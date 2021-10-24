@@ -2,8 +2,8 @@ from django.db.models import F, query
 from django.shortcuts import render
 from rest_framework.generics import ListAPIView
 
-from .models import ProductVariation
-from .serializers import ProductVariationBaseSerializer
+from .models import ProductVariation, Product
+from .serializers import ProductVariationBaseSerializer, ProductBrandSerializer
 
 # Create your views here.
 
@@ -100,4 +100,13 @@ class ProductListForCategory(ListAPIView):
             )
             .prefetch_related("images")
         )
+        return queryset
+
+class ProductBrandsByCategory(ListAPIView):
+    serializer_class = ProductBrandSerializer
+    http_method_names = ["get"]
+
+    def get_queryset(self):
+        category = self.kwargs["category"]
+        queryset = Product.objects.filter(subcategory__category__slug=category).select_related('brand')
         return queryset
