@@ -39,17 +39,20 @@ class ProductVariationList(ListAPIView):
 
         return queryset
 
+
 # View to return top products based on passed category slug
 class TopCategoryProductVariationList(ListAPIView):
     serializer_class = ProductVariationBaseSerializer
     http_method_names = ["get"]
 
     def get_queryset(self):
-        category = self.kwargs['category']
+        category = self.kwargs["category"]
         # FIlter product variation by category and order by overall rating desc so that top rated product are first
-        # WIll change it later so the this queryset will order productVariation by no of purchases using redis 
+        # WIll change it later so the this queryset will order productVariation by no of purchases using redis
         queryset = (
-            ProductVariation.objects.filter(product__subcategory__category__slug=category)
+            ProductVariation.objects.filter(
+                product__subcategory__category__slug=category
+            )
             .select_related(
                 "color",
                 "laptop_variant",
@@ -65,7 +68,7 @@ class TopCategoryProductVariationList(ListAPIView):
                 "product__subcategory",
             )
             .prefetch_related("images")
-            .order_by('-product__overall_rating')
+            .order_by("-product__overall_rating")
         )
 
         return queryset
