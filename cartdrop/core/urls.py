@@ -13,6 +13,6 @@ urlpatterns = [
         name="subcategory_list",
     ),
     path(
-        "subcategory/offers/", SubcategoryOfferList.as_view(), name="subcategory_offers"
+        "offers/", SubcategoryOfferList.as_view(), name="subcategory_offers"
     ),
 ]
