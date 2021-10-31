@@ -16,6 +16,8 @@ services:
             - ./scripts/postgres_init.dev.sh:/docker-entrypoint-initdb.d/init_sql_dev.sh
         env_file: dockerfiles/.dev.env
         restart: unless-stopped
+        ports: 
+            - 5432:5432
 
         
 

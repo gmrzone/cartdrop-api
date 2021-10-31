@@ -30,7 +30,7 @@ def create_super_user(username, email, number: None, password):
     if created:
         user.set_password(password)
         user.save()
-        message = f"Super with {username} and {email} has been created"
+        message = f"Super User with {username} and {email} has been created"
     else:
-        message = f"Super with {username} and {email} already exist"
+        message = f"Super User with {username} and {email} already exist"
     return message
