@@ -34,6 +34,7 @@ class FeaturedProductVariationList(ListAPIView):
                 "product__subcategory",
             )
             .prefetch_related("images")
+            .order_by()
             .distinct("product__id")
         )
 
