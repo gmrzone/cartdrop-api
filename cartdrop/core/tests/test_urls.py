@@ -26,7 +26,7 @@ class ListUrlsTest(TestCase):
             "products:top_category_products", kwargs={"category": "appliances"}
         )
         resolver = resolve(url)
-        self.assertEqual(resolver.func.view_class, TopCategoryProductVariationList)
+        self.assertEqual(resolver.func.view_class, TopCategoryProductVariation)
 
     def test_products_based_by_category(self):
         url = reverse("products:category_products", kwargs={"category": "appliances"})

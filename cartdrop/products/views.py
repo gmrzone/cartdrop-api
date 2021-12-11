@@ -42,7 +42,7 @@ class FeaturedProductVariationList(ListAPIView):
 
 
 # View to return top products based on passed category slug
-class TopCategoryProductVariationList(ListAPIView):
+class TopCategoryProductVariation(ListAPIView):
     serializer_class = ProductVariationBaseSerializer
     http_method_names = ["get"]
 

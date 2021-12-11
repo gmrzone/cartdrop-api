@@ -1,0 +1,70 @@
+2021-12-11 13:55:25,280 INFO Watching for file changes with StatReloader
+2021-12-11 13:55:59,596 INFO "GET / HTTP/1.1" 200 10874
+2021-12-11 13:55:59,670 INFO "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+2021-12-11 13:55:59,682 INFO "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+2021-12-11 13:55:59,891 INFO "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+2021-12-11 13:55:59,899 INFO "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+2021-12-11 13:55:59,980 INFO "GET /openapi HTTP/1.1" 200 11491
+2021-12-11 13:57:05,069 INFO /cartdrop/config/settings/base.py changed, reloading.
+2021-12-11 13:57:05,789 INFO Watching for file changes with StatReloader
+2021-12-11 13:58:21,830 INFO "GET / HTTP/1.1" 200 10874
+2021-12-11 13:58:22,173 INFO "GET /openapi HTTP/1.1" 200 11491
+2021-12-11 14:00:27,624 INFO /cartdrop/config/settings/base.py changed, reloading.
+2021-12-11 14:00:28,341 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:00:43,342 INFO django.server "GET /admin HTTP/1.1" 301 0
+2021-12-11 14:00:43,429 INFO django.server "GET /admin/ HTTP/1.1" 302 0
+2021-12-11 14:00:43,493 INFO django.server "GET /admin/login/?next=/admin/ HTTP/1.1" 200 12220
+2021-12-11 14:00:43,576 INFO django.server "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2616
+2021-12-11 14:00:43,581 INFO django.server "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3401
+2021-12-11 14:00:43,583 INFO django.server "GET /static/admin/css/login.css HTTP/1.1" 200 954
+2021-12-11 14:00:43,583 INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+2021-12-11 14:00:43,599 INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 200 18545
+2021-12-11 14:00:43,630 INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2021-12-11 14:00:43,733 INFO django.server "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+2021-12-11 14:00:43,751 INFO django.server "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+2021-12-11 14:01:02,866 INFO django.server "GET / HTTP/1.1" 200 10874
+2021-12-11 14:01:03,279 INFO django.server "GET /openapi HTTP/1.1" 200 11491
+2021-12-11 14:02:22,814 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-11 14:02:23,461 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:02:45,830 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-11 14:02:46,543 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:02:55,676 INFO django.server "GET / HTTP/1.1" 200 10874
+2021-12-11 14:02:56,118 INFO django.server "GET /openapi HTTP/1.1" 200 11441
+2021-12-11 14:03:08,966 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-11 14:03:09,573 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:03:46,393 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-11 14:03:47,054 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:03:53,819 INFO django.server "GET / HTTP/1.1" 200 10874
+2021-12-11 14:03:54,260 INFO django.server "GET /openapi HTTP/1.1" 200 13770
+2021-12-11 14:04:08,523 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-11 14:04:09,202 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:04:12,141 INFO django.server "GET / HTTP/1.1" 200 10874
+2021-12-11 14:04:12,516 INFO django.server "GET /openapi HTTP/1.1" 200 11491
+2021-12-11 14:05:09,859 INFO django.utils.autoreload /cartdrop/config/urls.py changed, reloading.
+2021-12-11 14:05:10,584 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:05:18,606 INFO django.server "GET / HTTP/1.1" 200 10874
+2021-12-11 14:05:18,986 INFO django.server "GET /openapi HTTP/1.1" 200 11467
+2021-12-11 14:05:30,069 INFO django.utils.autoreload /cartdrop/config/urls.py changed, reloading.
+2021-12-11 14:05:30,771 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:05:39,812 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-11 14:05:40,409 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:05:41,578 INFO django.server "GET / HTTP/1.1" 200 10874
+2021-12-11 14:05:41,943 INFO django.server "GET /openapi HTTP/1.1" 200 10568
+2021-12-11 14:05:47,302 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-11 14:05:47,917 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:05:59,480 INFO django.server "GET / HTTP/1.1" 200 10875
+2021-12-11 14:05:59,860 INFO django.server "GET /openapi HTTP/1.1" 200 11491
+2021-12-11 14:06:00,158 INFO django.server "GET / HTTP/1.1" 200 10876
+2021-12-11 14:06:00,473 INFO django.server "GET /openapi HTTP/1.1" 200 11491
+2021-12-11 14:08:04,941 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-11 14:08:05,496 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:08:13,683 INFO django.server "GET / HTTP/1.1" 200 10874
+2021-12-11 14:08:14,037 INFO django.server "GET /openapi HTTP/1.1" 200 10965
+2021-12-11 14:08:58,777 INFO django.utils.autoreload /cartdrop/cartdrop/products/views.py changed, reloading.
+2021-12-11 14:08:59,482 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:09:07,238 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-11 14:09:07,797 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:09:12,516 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-11 14:09:13,163 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-11 14:10:15,828 INFO django.server "GET / HTTP/1.1" 200 10874
+2021-12-11 14:10:16,208 INFO django.server "GET /openapi HTTP/1.1" 200 11491
