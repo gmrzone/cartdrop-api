@@ -48,7 +48,7 @@ class TopCategoryProductVariation(ListAPIView):
 
     def get_queryset(self):
         category = self.kwargs["category"]
-        # FIlter product variation by category and order by overall rating desc so that top rated product are first
+        # TODO:  FIlter product variation by category and order by overall rating desc so that top rated product are first
         # WIll change it later so the this queryset will order productVariation by no of purchases using redis
         queryset = (
             ProductVariation.objects.filter(
@@ -74,7 +74,7 @@ class TopCategoryProductVariation(ListAPIView):
 
         return queryset
 
-
+# TODO : View to get products based on categories (Will add filters later)
 class ProductListForCategory(ListAPIView):
 
     serializer_class = ProductVariationBaseSerializer
@@ -82,6 +82,7 @@ class ProductListForCategory(ListAPIView):
 
     def get_queryset(self):
         category = self.kwargs["category"]
+        self.request.GET.get("")
         queryset = (
             ProductVariation.objects.filter(
                 product__subcategory__category__slug=category

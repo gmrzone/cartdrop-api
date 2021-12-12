@@ -3,7 +3,7 @@ from .views import (
     FeaturedProductVariationList,
     TopCategoryProductVariation,
     ProductListForCategory,
-    ProductBrandsByCategory,
+    ProductBrandsByCategory
 )
 
 app_name = "products"

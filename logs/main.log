@@ -68,3 +68,232 @@
 2021-12-11 14:09:13,163 INFO django.utils.autoreload Watching for file changes with StatReloader
 2021-12-11 14:10:15,828 INFO django.server "GET / HTTP/1.1" 200 10874
 2021-12-11 14:10:16,208 INFO django.server "GET /openapi HTTP/1.1" 200 11491
+2021-12-12 08:16:36,346 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-12 08:19:19,515 INFO django.utils.autoreload /cartdrop/cartdrop/products/views.py changed, reloading.
+2021-12-12 08:19:20,042 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-12 08:22:02,710 INFO django.server "GET / HTTP/1.1" 200 10874
+2021-12-12 08:22:04,221 INFO django.server "GET /openapi HTTP/1.1" 200 11491
+2021-12-12 08:22:27,852 INFO django.server "GET /products/featured/ HTTP/1.1" 200 9170
+2021-12-12 08:22:41,685 INFO django.server "GET /products/featured/ HTTP/1.1" 200 9170
+2021-12-12 08:23:05,048 INFO django.server "GET /products/appliances/top/ HTTP/1.1" 200 10302
+2021-12-12 08:31:45,813 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 08:31:45,993 INFO django.server "GET /products/featured/ HTTP/1.1" 200 9170
+2021-12-12 08:31:46,454 INFO django.server "GET /core/offers/ HTTP/1.1" 200 5389
+2021-12-12 08:31:47,928 INFO django.server "GET /media/Category_Media/electronics/laptop_1_nobg.png HTTP/1.1" 200 148438
+2021-12-12 08:31:47,941 INFO django.server "GET /media/Category_Media/fashion/fashion_nobg.png.png HTTP/1.1" 200 22675
+2021-12-12 08:31:47,967 INFO django.server "GET /media/Category_Media/mobiles/mobile_2-nobg.png HTTP/1.1" 200 221206
+2021-12-12 08:31:48,065 INFO django.server "GET /media/Category_Media/appliances/appliances_nobg.png HTTP/1.1" 200 23388
+2021-12-12 08:31:48,066 INFO django.server "GET /media/Category_Media/accessories/accessories_1-nobg.png HTTP/1.1" 200 334285
+2021-12-12 08:31:48,070 INFO 2021-12-12 13:00:11,572 INFO django.utils.autoreload Watching for file changes with StatReloader
+-12 08:31:48,162 INFO django.server "GET /media/Category_Media/books/books_2-nobg.png HTTP/1.1" 200 189896
+2021-12-12 08:31:53,226 INFO django.server "GET /media/Product_Image/Lenovo/lenovo-thinkpad-e14-main/main.jpeg HTTP/1.1" 200 16854
+2021-12-12 08:31:53,278 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-black-main/front.jpeg HTTP/1.1" 200 13308
+2021-12-12 08:31:53,280 INFO django.server "GET /media/Product_Image/SAMSUNG/samsung-the-frame-main/main.jpeg HTTP/1.1" 200 21720
+2021-12-12 08:31:53,282 INFO django.server "GET /media/Product_Image/BOSCH/bosch-8-kg-inverter-touch-control-main/main.jpeg HTTP/1.1" 200 12947
+2021-12-12 08:31:53,832 INFO django.server "GET /media/Subcategory_Media/electronics/television/main.jpeg HTTP/1.1" 200 21720
+2021-12-12 08:31:53,868 INFO django.server "GET /media/Subcategory_Media/electronics/laptop/laptop_3-nobg.png HTTP/1.1" 200 184601
+2021-12-12 08:31:53,885 INFO django.server "GET /media/Subcategory_Media/mobiles/mobiles/mobile_3-nobg_adj.png HTTP/1.1" 200 229529
+2021-12-12 08:31:53,894 INFO django.server "GET /media/Subcategory_Media/electronics/laptop/laptop_1_nobg.png HTTP/1.1" 200 148438
+2021-12-12 08:31:53,903 INFO django.server "GET /media/Subcategory_Media/mobiles/mobiles/mobile_4-nobg.png HTTP/1.1" 200 266984
+2021-12-12 08:31:53,904 INFO django.server "GET /media/Subcategory_Media/electronics/television/TV.jpg HTTP/1.1" 200 218953
+2021-12-12 08:31:53,948 INFO django.server "GET /media/Subcategory_Media/accessories/paints/main.jpeg HTTP/1.1" 200 18810
+2021-12-12 08:31:54,044 INFO django.server "GET /media/Subcategory_Media/accessories/paints/main_04BnJYi.jpeg HTTP/1.1" 200 18060
+2021-12-12 08:31:54,231 INFO django.server "GET /media/Subcategory_Media/mobiles/mobiles/mobile_2-nobg.png HTTP/1.1" 200 221206
+2021-12-12 08:31:54,344 INFO django.server "GET /media/Subcategory_Media/mobiles/mobiles/mobile_1-bg_removed.png HTTP/1.1" 200 302954
+2021-12-12 08:31:54,473 INFO django.server "GET /media/Subcategory_Media/electronics/laptop/laptop_3_nobg.png HTTP/1.1" 200 144977
+2021-12-12 08:31:54,825 INFO django.server "GET /media/Subcategory_Media/electronics/laptop/laptop_4_nobg.png HTTP/1.1" 200 228236
+2021-12-12 08:31:54,868 INFO django.server "GET /media/Subcategory_Media/electronics/television/main_iCz69Wc.jpeg HTTP/1.1" 200 24508
+2021-12-12 08:31:54,915 INFO django.server "GET /media/Subcategory_Media/electronics/television/main_4uooLYP.jpeg HTTP/1.1" 200 16342
+2021-12-12 08:31:55,089 INFO django.server "GET /media/Subcategory_Media/accessories/paints/main_IOdkAIG.jpeg HTTP/1.1" 200 23059
+2021-12-12 08:31:55,231 INFO django.server "GET /media/Subcategory_Media/accessories/paints/main_S5OBGzJ.jpeg HTTP/1.1" 200 16289
+2021-12-12 08:31:57,434 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 08:31:57,530 INFO django.server "GET /core/subcategory/mobiles/ HTTP/1.1" 200 672
+2021-12-12 08:31:57,690 INFO django.server "GET /products/mobiles/top/ HTTP/1.1" 200 11365
+2021-12-12 08:31:57,747 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 08:31:57,989 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-red-main/front.jpeg HTTP/1.1" 200 13001
+2021-12-12 08:31:57,990 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-black-main/front_main.jpeg HTTP/1.1" 200 12701
+2021-12-12 08:31:57,995 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-white-main/front.jpeg HTTP/1.1" 200 13677
+2021-12-12 08:32:04,319 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 08:32:04,534 INFO django.server "GET /products/featured/ HTTP/1.1" 200 9170
+2021-12-12 08:32:05,045 INFO django.server "GET /core/offers/ HTTP/1.1" 200 5389
+2021-12-12 08:32:57,700 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 08:32:57,782 INFO django.server "GET /core/subcategory/mobiles/ HTTP/1.1" 200 672
+2021-12-12 08:32:57,939 INFO django.server "GET /products/mobiles/top/ HTTP/1.1" 200 11365
+2021-12-12 08:32:57,995 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 08:33:19,204 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-red-main/red_main.jpeg HTTP/1.1" 200 14504
+2021-12-12 08:33:19,205 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-white-main/white_main.jpeg HTTP/1.1" 200 12266
+2021-12-12 08:33:19,561 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-red-main/red_main.jpeg HTTP/1.1" 200 14504
+2021-12-12 08:33:19,562 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-white-main/white_main.jpeg HTTP/1.1" 200 12266
+2021-12-12 08:34:50,417 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 08:34:50,526 INFO django.server "GET /core/subcategory/mobiles/ HTTP/1.1" 200 672
+2021-12-12 08:34:50,714 INFO django.server "GET /products/mobiles/top/ HTTP/1.1" 200 11365
+2021-12-12 08:34:50,783 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 08:34:51,611 INFO django.server "GET /media/Category_Media/fashion/fashion_nobg.png.png HTTP/1.1" 200 22675
+2021-12-12 08:34:51,612 INFO django.server "GET /media/Category_Media/appliances/appliances_nobg.png HTTP/1.1" 200 23388
+2021-12-12 08:34:51,675 INFO django.server "GET /media/Category_Media/groceries/groceries_nogb.png HTTP/1.1" 200 25354
+2021-12-12 08:34:51,692 INFO django.server "GET /media/Category_Media/electronics/laptop_1_nobg.png HTTP/1.1" 200 148438
+2021-12-12 08:34:51,731 INFO django.server "GET /media/Category_Media/mobiles/mobile_2-nobg.png HTTP/1.1" 200 221206
+2021-12-12 08:34:51,731 INFO django.server "GET /media/Category_Media/accessories/accessories_1-nobg.png HTTP/1.1" 200 334285
+2021-12-12 08:34:51,759 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-black-main/front.jpeg HTTP/1.1" 200 13308
+2021-12-12 08:34:51,802 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-red-main/front.jpeg HTTP/1.1" 200 13001
+2021-12-12 08:34:51,803 INFO django.server "GET /media/Category_Media/books/books_2-nobg.png HTTP/1.1" 200 189896
+2021-12-12 08:34:51,862 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-white-main/front.jpeg HTTP/1.1" 200 13677
+2021-12-12 08:34:51,997 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-black-main/front_main.jpeg HTTP/1.1" 200 12701
+2021-12-12 08:43:28,551 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 08:43:28,783 INFO django.server "GET /products/featured/ HTTP/1.1" 200 9170
+2021-12-12 08:43:29,450 INFO django.server "GET /core/offers/ HTTP/1.1" 200 5389
+2021-12-12 08:43:30,173 INFO django.server "GET /media/Category_Media/appliances/appliances_nobg.png HTTP/1.1" 200 23388
+2021-12-12 08:43:30,207 INFO django.server "GET /media/Category_Media/fashion/fashion_nobg.png.png HTTP/1.1" 200 22675
+2021-12-12 08:43:30,263 INFO django.server "GET /media/Category_Media/groceries/groceries_nogb.png HTTP/1.1" 200 25354
+2021-12-12 08:43:30,287 INFO django.server "GET /media/Category_Media/electronics/laptop_1_nobg.png HTTP/1.1" 200 148438
+2021-12-12 08:43:30,319 INFO django.server "GET /media/Category_Media/accessories/accessories_1-nobg.png HTTP/1.1" 200 334285
+2021-12-12 08:43:30,337 INFO django.server "GET /media/Category_Media/mobiles/mobile_2-nobg.png HTTP/1.1" 200 221206
+2021-12-12 08:43:30,361 INFO django.server "GET /media/Category_Media/books/books_2-nobg.png HTTP/1.1" 200 189896
+2021-12-12 08:43:31,269 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 08:43:31,405 INFO django.server "GET /core/subcategory/mobiles/ HTTP/1.1" 200 672
+2021-12-12 08:43:31,714 INFO django.server "GET /products/mobiles/top/ HTTP/1.1" 200 11365
+2021-12-12 08:43:31,795 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 08:43:32,113 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-red-main/front.jpeg HTTP/1.1" 200 13001
+2021-12-12 08:43:32,135 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-white-main/front.jpeg HTTP/1.1" 200 13677
+2021-12-12 08:43:32,147 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-black-main/front.jpeg HTTP/1.1" 200 13308
+2021-12-12 08:45:30,837 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 08:45:30,962 INFO django.server "GET /core/subcategory/mobiles/ HTTP/1.1" 200 672
+2021-12-12 08:45:31,170 INFO django.server "GET /products/mobiles/top/ HTTP/1.1" 200 11365
+2021-12-12 08:45:31,250 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 08:45:32,394 INFO django.server "GET /media/Category_Media/mobiles/mobile_2-nobg.png HTTP/1.1" 200 221206
+2021-12-12 08:45:32,461 INFO django.server "GET /media/Category_Media/appliances/appliances_nobg.png HTTP/1.1" 200 23388
+2021-12-12 08:45:32,461 INFO django.server "GET /media/Category_Media/fashion/fashion_nobg.png.png HTTP/1.1" 200 22675
+2021-12-12 08:45:32,471 INFO django.server "GET /media/Category_Media/accessories/accessories_1-nobg.png HTTP/1.1" 200 334285
+2021-12-12 08:45:32,472 INFO django.server "GET /media/Category_Media/groceries/groceries_nogb.png HTTP/1.1" 200 25354
+2021-12-12 08:45:32,481 INFO django.server "GET /media/Category_Media/electronics/laptop_1_nobg.png HTTP/1.1" 200 148438
+2021-12-12 08:45:32,730 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-black-main/front.jpeg HTTP/1.1" 200 13308
+2021-12-12 08:45:32,797 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-red-main/front.jpeg HTTP/1.1" 200 13001
+2021-12-12 08:45:32,800 INFO django.server "GET /media/Category_Media/books/books_2-nobg.png HTTP/1.1" 200 189896
+2021-12-12 08:45:32,801 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-white-main/front.jpeg HTTP/1.1" 200 13677
+2021-12-12 10:35:27,450 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 10:35:27,574 INFO django.server "GET /core/subcategory/mobiles/ HTTP/1.1" 200 672
+2021-12-12 10:35:27,803 INFO django.server "GET /products/mobiles/top/ HTTP/1.1" 200 11365
+2021-12-12 10:35:27,883 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 10:35:29,093 INFO django.server "GET /media/Category_Media/mobiles/mobile_2-nobg.png HTTP/1.1" 200 221206
+2021-12-12 10:35:29,203 INFO django.server "GET /media/Category_Media/electronics/laptop_1_nobg.png HTTP/1.1" 200 148438
+2021-12-12 10:35:29,217 INFO django.server "GET /media/Category_Media/groceries/groceries_nogb.png HTTP/1.1" 200 25354
+2021-12-12 10:35:29,221 INFO django.server "GET /media/Category_Media/fashion/fashion_nobg.png.png HTTP/1.1" 200 22675
+2021-12-12 10:35:29,256 INFO django.server "GET /media/Category_Media/appliances/appliances_nobg.png HTTP/1.1" 200 23388
+2021-12-12 10:35:29,282 INFO django.server "GET /media/Category_Media/accessories/accessories_1-nobg.png HTTP/1.1" 200 334285
+2021-12-12 10:35:29,373 INFO django.server "GET /media/Category_Media/books/books_2-nobg.png HTTP/1.1" 200 189896
+2021-12-12 10:35:29,529 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-black-main/front.jpeg HTTP/1.1" 200 13308
+2021-12-12 10:35:29,577 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-red-main/front.jpeg HTTP/1.1" 200 13001
+2021-12-12 10:35:29,591 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-white-main/front.jpeg HTTP/1.1" 200 13677
+2021-12-12 11:34:56,922 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-black-main/front_main.jpeg HTTP/1.1" 200 12701
+2021-12-12 11:34:59,728 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-red-main/red_main.jpeg HTTP/1.1" 200 14504
+2021-12-12 11:35:00,026 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-white-main/white_main.jpeg HTTP/1.1" 200 12266
+2021-12-12 11:47:07,051 INFO django.server "GET /media/Category_Media/appliances/appliances_nobg.png HTTP/1.1" 200 23388
+2021-12-12 11:47:07,091 INFO django.server "GET /media/Category_Media/fashion/fashion_nobg.png.png HTTP/1.1" 200 22675
+2021-12-12 11:47:07,139 INFO django.server "GET /media/Category_Media/groceries/groceries_nogb.png HTTP/1.1" 200 25354
+2021-12-12 11:47:07,199 INFO django.server "GET /media/Category_Media/mobiles/mobile_2-nobg.png HTTP/1.1" 200 221206
+2021-12-12 11:47:07,211 INFO django.server "GET /media/Category_Media/electronics/laptop_1_nobg.png HTTP/1.1" 200 148438
+2021-12-12 11:47:07,298 INFO django.server "GET /media/Category_Media/accessories/accessories_1-nobg.png HTTP/1.1" 200 334285
+2021-12-12 11:47:07,318 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-black-main/front.jpeg HTTP/1.1" 200 13308
+2021-12-12 11:47:07,326 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-red-main/front.jpeg HTTP/1.1" 200 13001
+2021-12-12 11:47:07,328 INFO django.server "GET /media/Category_Media/books/books_2-nobg.png HTTP/1.1" 200 189896
+2021-12-12 11:47:07,440 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-white-main/front.jpeg HTTP/1.1" 200 13677
+2021-12-12 11:47:07,557 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-black-main/front_main.jpeg HTTP/1.1" 200 12701
+2021-12-12 11:47:07,681 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-red-main/red_main.jpeg HTTP/1.1" 200 14504
+2021-12-12 11:47:07,720 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-white-main/white_main.jpeg HTTP/1.1" 200 12266
+2021-12-12 11:48:18,459 INFO django.server "GET /media/Category_Media/fashion/fashion_nobg.png.png HTTP/1.1" 200 22675
+2021-12-12 11:48:18,509 INFO django.server "GET /media/Category_Media/groceries/groceries_nogb.png HTTP/1.1" 200 25354
+2021-12-12 11:48:18,528 INFO django.server "GET /media/Category_Media/appliances/appliances_nobg.png HTTP/1.1" 200 23388
+2021-12-12 11:48:18,567 INFO django.server "GET /media/Category_Media/electronics/laptop_1_nobg.png HTTP/1.1" 200 148438
+2021-12-12 11:48:18,644 INFO django.server "GET /media/Category_Media/mobiles/mobile_2-nobg.png HTTP/1.1" 200 221206
+2021-12-12 11:48:18,761 INFO django.server "GET /media/Category_Media/accessories/accessories_1-nobg.png HTTP/1.1" 200 334285
+2021-12-12 11:48:18,767 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-red-main/front.jpeg HTTP/1.1" 200 13001
+2021-12-12 11:48:18,788 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-black-main/front.jpeg HTTP/1.1" 200 13308
+2021-12-12 11:48:18,793 INFO django.server "GET /media/Category_Media/books/books_2-nobg.png HTTP/1.1" 200 189896
+2021-12-12 11:48:18,829 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-white-main/front.jpeg HTTP/1.1" 200 13677
+2021-12-12 11:48:18,900 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-black-main/front_main.jpeg HTTP/1.1" 200 12701
+2021-12-12 11:48:18,994 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-red-main/red_main.jpeg HTTP/1.1" 200 14504
+2021-12-12 11:48:19,029 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-white-main/white_main.jpeg HTTP/1.1" 200 12266
+2021-12-12 11:48:25,580 INFO django.server "GET /media/Category_Media/appliances/appliances_nobg.png HTTP/1.1" 200 23388
+2021-12-12 11:48:25,601 INFO django.server "GET /media/Category_Media/mobiles/mobile_2-nobg.png HTTP/1.1" 200 221206
+2021-12-12 11:48:25,649 INFO django.server "GET /media/Category_Media/fashion/fashion_nobg.png.png HTTP/1.1" 200 22675
+2021-12-12 11:48:25,671 INFO django.server "GET /media/Category_Media/groceries/groceries_nogb.png HTTP/1.1" 200 25354
+2021-12-12 11:48:25,693 INFO django.server "GET /media/Category_Media/accessories/accessories_1-nobg.png HTTP/1.1" 200 334285
+2021-12-12 11:48:25,698 INFO django.server "GET /media/Category_Media/electronics/laptop_1_nobg.png HTTP/1.1" 200 148438
+2021-12-12 11:48:25,736 INFO django.server "GET /media/Category_Media/books/books_2-nobg.png HTTP/1.1" 200 189896
+2021-12-12 11:48:25,869 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-black-main/front.jpeg HTTP/1.1" 200 13308
+2021-12-12 11:48:25,946 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-white-main/front.jpeg HTTP/1.1" 200 13677
+2021-12-12 11:48:25,950 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-red-main/front.jpeg HTTP/1.1" 200 13001
+2021-12-12 11:48:26,121 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-black-main/front_main.jpeg HTTP/1.1" 200 12701
+2021-12-12 11:48:26,160 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-red-main/red_main.jpeg HTTP/1.1" 200 14504
+2021-12-12 11:48:26,256 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-white-main/white_main.jpeg HTTP/1.1" 200 12266
+2021-12-12 11:58:55,722 INFO django.server "GET /media/Category_Media/electronics/laptop_1_nobg.png HTTP/1.1" 200 148438
+2021-12-12 11:58:55,754 INFO django.server "GET /media/Category_Media/groceries/groceries_nogb.png HTTP/1.1" 200 25354
+2021-12-12 11:58:55,760 INFO django.server "GET /media/Category_Media/fashion/fashion_nobg.png.png HTTP/1.1" 200 22675
+2021-12-12 11:58:55,781 INFO django.server "GET /media/Category_Media/appliances/appliances_nobg.png HTTP/1.1" 200 23388
+2021-12-12 11:58:55,810 INFO django.server "GET /media/Category_Media/mobiles/mobile_2-nobg.png HTTP/1.1" 200 221206
+2021-12-12 11:58:55,818 INFO django.server "GET /media/Category_Media/accessories/accessories_1-nobg.png HTTP/1.1" 200 334285
+2021-12-12 11:58:55,978 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-black-main/front.jpeg HTTP/1.1" 200 13308
+2021-12-12 11:58:56,004 INFO django.server "GET /media/Category_Media/books/books_2-nobg.png HTTP/1.1" 200 189896
+2021-12-12 11:58:56,038 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-red-main/front.jpeg HTTP/1.1" 200 13001
+2021-12-12 11:58:56,040 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-white-main/front.jpeg HTTP/1.1" 200 13677
+2021-12-12 11:58:56,091 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-black-main/front_main.jpeg HTTP/1.1" 200 12701
+2021-12-12 11:58:56,198 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-red-main/red_main.jpeg HTTP/1.1" 200 14504
+2021-12-12 11:58:56,225 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-white-main/white_main.jpeg HTTP/1.1" 200 12266
+2021-12-12 12:28:19,481 INFO django.server "GET /media/Category_Media/appliances/appliances_nobg.png HTTP/1.1" 200 23388
+2021-12-12 12:28:19,539 INFO django.server "GET /media/Category_Media/mobiles/mobile_2-nobg.png HTTP/1.1" 200 221206
+2021-12-12 12:28:19,562 INFO django.server "GET /media/Category_Media/groceries/groceries_nogb.png HTTP/1.1" 200 25354
+2021-12-12 12:28:19,564 INFO django.server "GET /media/Category_Media/fashion/fashion_nobg.png.png HTTP/1.1" 200 22675
+2021-12-12 12:28:19,579 INFO django.server "GET /media/Category_Media/electronics/laptop_1_nobg.png HTTP/1.1" 200 148438
+2021-12-12 12:28:19,603 INFO django.server "GET /media/Category_Media/accessories/accessories_1-nobg.png HTTP/1.1" 200 334285
+2021-12-12 12:28:19,611 INFO django.server "GET /media/Category_Media/books/books_2-nobg.png HTTP/1.1" 200 189896
+2021-12-12 12:28:19,799 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-black-main/front.jpeg HTTP/1.1" 200 13308
+2021-12-12 12:28:19,829 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-red-main/front.jpeg HTTP/1.1" 200 13001
+2021-12-12 12:28:19,850 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-white-main/front.jpeg HTTP/1.1" 200 13677
+2021-12-12 12:28:19,899 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-black-main/front_main.jpeg HTTP/1.1" 200 12701
+2021-12-12 12:28:20,000 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-red-main/red_main.jpeg HTTP/1.1" 200 14504
+2021-12-12 12:28:20,117 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-white-main/white_main.jpeg HTTP/1.1" 200 12266
+2021-12-12 13:00:10,946 INFO django.utils.autoreload /cartdrop/cartdrop/products/views.py changed, reloading.
+2021-12-12 13:00:31,703 INFO django.utils.autoreload /cartdrop/cartdrop/products/views.py changed, reloading.
+2021-12-12 13:00:32,266 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-12 13:01:48,981 INFO django.utils.autoreload /cartdrop/cartdrop/products/views.py changed, reloading.
+2021-12-12 13:01:49,572 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-12 13:01:51,156 INFO django.utils.autoreload /cartdrop/cartdrop/products/views.py changed, reloading.
+2021-12-12 13:01:51,703 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-12 13:02:18,937 INFO django.utils.autoreload /cartdrop/cartdrop/products/views.py changed, reloading.
+2021-12-12 13:02:19,468 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-12 13:02:24,199 INFO django.utils.autoreload /cartdrop/cartdrop/products/views.py changed, reloading.
+2021-12-12 13:02:24,787 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-12 13:03:17,837 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-12 13:03:18,471 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-12 13:03:58,167 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-12 13:03:58,743 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-12 13:04:00,490 INFO django.utils.autoreload /cartdrop/cartdrop/products/views.py changed, reloading.
+2021-12-12 13:04:01,052 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-12 13:06:12,770 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 13:06:12,890 INFO django.server "GET /core/subcategory/mobiles/ HTTP/1.1" 200 672
+2021-12-12 13:06:13,091 INFO django.server "GET /products/mobiles/top/ HTTP/1.1" 200 11365
+2021-12-12 13:06:13,169 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-12 13:06:23,783 WARNING django.request Not Found: /mobiles
+2021-12-12 13:06:23,786 WARNING django.server "GET /mobiles HTTP/1.1" 404 13276
+2021-12-12 13:06:23,848 INFO django.server "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+2021-12-12 13:06:23,853 INFO django.server "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+2021-12-12 13:06:23,897 INFO django.server "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+2021-12-12 13:06:23,901 INFO django.server "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+2021-12-12 13:06:27,580 WARNING django.request Not Found: /mobile
+2021-12-12 13:06:27,582 WARNING django.server "GET /mobile HTTP/1.1" 404 13272
+2021-12-12 13:06:39,873 INFO django.server "GET /products/mobile HTTP/1.1" 301 0
+2021-12-12 13:06:40,057 INFO django.server "GET /products/mobile/ HTTP/1.1" 200 15027
+2021-12-12 13:06:40,128 INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2021-12-12 13:06:40,129 INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2021-12-12 13:06:40,135 INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+2021-12-12 13:06:40,142 INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2021-12-12 13:06:40,149 INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+2021-12-12 13:06:40,156 INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+2021-12-12 13:06:40,161 INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+2021-12-12 13:06:40,162 INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2021-12-12 13:06:40,166 INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+2021-12-12 13:06:40,167 INFO django.server "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 200 89476
+2021-12-12 13:06:40,182 INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2021-12-12 13:06:45,757 INFO django.server "GET /products/mobiles/ HTTP/1.1" 200 44106
+2021-12-12 13:39:05,706 INFO django.utils.autoreload /cartdrop/cartdrop/products/views.py changed, reloading.
+2021-12-12 13:39:06,323 INFO django.utils.autoreload Watching for file changes with StatReloader
