@@ -1670,3 +1670,51 @@ django.core.exceptions.FieldError: Cannot resolve keyword '' into field. Choices
 2021-12-19 18:01:56,134 INFO django.server "GET /media/Product_Image/SAMSUNG/samsung-the-frame-main/main.jpeg HTTP/1.1" 200 21720
 2021-12-19 18:02:01,087 INFO django.server "GET /media/Product_Image/Bose/bose-500-black-main/main.jpeg HTTP/1.1" 200 18643
 2021-12-19 18:02:01,806 INFO django.server "GET /media/Product_Image/Bose/bose-500-silver-main/main.jpeg HTTP/1.1" 200 26583
+2021-12-19 18:03:02,407 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-19 18:03:02,551 INFO django.server "GET /core/subcategory/mobiles/ HTTP/1.1" 200 672
+2021-12-19 18:03:02,772 INFO django.server "GET /products/mobiles/top/ HTTP/1.1" 200 11365
+2021-12-19 18:03:02,916 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-19 18:03:03,611 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-19 18:03:03,708 INFO django.server "GET /core/subcategory/mobiles/ HTTP/1.1" 200 672
+2021-12-19 18:03:03,880 INFO django.server "GET /products/mobiles/top/ HTTP/1.1" 200 11365
+2021-12-19 18:03:03,944 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-19 18:03:15,801 INFO django.server "GET /admin/ HTTP/1.1" 200 31449
+2021-12-19 18:03:20,673 INFO django.server "GET /admin/products/productvariation/ HTTP/1.1" 200 44228
+2021-12-19 18:03:20,820 INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2021-12-19 18:03:39,382 INFO django.server "GET /admin/products/product/ HTTP/1.1" 200 33804
+2021-12-19 18:03:39,514 INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2021-12-19 18:07:26,149 INFO django.utils.autoreload /cartdrop/cartdrop/products/views.py changed, reloading.
+2021-12-19 18:07:26,754 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-19 18:08:28,171 INFO django.utils.autoreload /cartdrop/cartdrop/products/views.py changed, reloading.
+2021-12-19 18:08:28,870 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-19 18:08:52,250 INFO django.utils.autoreload /cartdrop/cartdrop/core/views.py changed, reloading.
+2021-12-19 18:08:52,860 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-19 18:11:07,397 INFO django.utils.autoreload /cartdrop/cartdrop/core/views.py changed, reloading.
+2021-12-19 18:11:07,934 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-19 18:11:21,909 INFO django.utils.autoreload /cartdrop/cartdrop/core/urls.py changed, reloading.
+2021-12-19 18:11:22,545 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-19 18:11:44,724 INFO django.utils.autoreload /cartdrop/cartdrop/core/urls.py changed, reloading.
+2021-12-19 18:11:45,323 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-19 18:12:11,719 INFO django.utils.autoreload /cartdrop/cartdrop/core/urls.py changed, reloading.
+2021-12-19 18:12:12,380 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-19 18:12:16,058 INFO django.utils.autoreload /cartdrop/cartdrop/core/urls.py changed, reloading.
+2021-12-19 18:12:16,730 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-19 18:12:24,495 INFO django.server "GET / HTTP/1.1" 200 10874
+2021-12-19 18:12:26,058 INFO django.server "GET /openapi HTTP/1.1" 200 12216
+2021-12-19 18:12:35,510 INFO django.server "GET /core/brand/appliances/ HTTP/1.1" 200 454
+2021-12-19 18:12:48,123 INFO django.server "GET /core/brand/mobiles/ HTTP/1.1" 200 305
+2021-12-19 18:12:59,970 INFO django.utils.autoreload /cartdrop/cartdrop/core/views.py changed, reloading.
+2021-12-19 18:13:00,652 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-19 18:13:03,251 INFO django.server "GET /core/brand/mobiles/ HTTP/1.1" 200 153
+2021-12-19 18:13:24,268 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-19 18:13:25,027 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-19 18:13:54,634 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-19 18:13:55,257 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-19 18:14:12,720 INFO django.server "GET / HTTP/1.1" 200 10874
+2021-12-19 18:14:13,087 INFO django.server "GET /openapi HTTP/1.1" 200 11273
+2021-12-19 18:14:33,241 INFO django.server "GET /__debug__/render_panel/?store_id=4b640b89e3ca44e8aa2a106c7d262958&panel_id=SQLPanel HTTP/1.1" 200 25855
+2021-12-19 18:14:41,494 INFO django.server "GET / HTTP/1.1" 200 10872
+2021-12-19 18:14:41,881 INFO django.server "GET /openapi HTTP/1.1" 200 11273
+2021-12-19 18:14:51,703 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-19 18:14:52,288 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-19 18:18:16,696 INFO django.utils.autoreload Watching for file changes with StatReloader

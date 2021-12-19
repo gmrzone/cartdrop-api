@@ -3,7 +3,7 @@ from django.shortcuts import render
 from rest_framework.generics import ListAPIView
 
 from .models import ProductVariation, Product
-from .serializers import ProductVariationBaseSerializer, ProductBrandSerializer
+from .serializers import ProductVariationBaseSerializer, ProductBrandSerializer, BrandSerializer
 
 # Create your views here.
 
@@ -116,3 +116,5 @@ class ProductBrandsByCategory(ListAPIView):
             subcategory__category__slug=category
         ).select_related("brand").distinct("brand")
         return queryset
+
+

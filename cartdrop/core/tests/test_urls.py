@@ -33,7 +33,12 @@ class ListUrlsTest(TestCase):
         resolver = resolve(url)
         self.assertEqual(resolver.func.view_class, ProductListForCategory)
 
+    # def test_product_brands_by_category(self):
+    #     url = reverse("products:brands_by_category", kwargs={"category": "appliances"})
+    #     resolver = resolve(url)
+    #     self.assertEqual(resolver.func.view_class, ProductBrandsByCategory)
+
     def test_product_brands_by_category(self):
-        url = reverse("products:brands_by_category", kwargs={"category": "appliances"})
+        url = reverse("core:brand_by_category_new", kwargs={"category": "appliances"})
         resolver = resolve(url)
-        self.assertEqual(resolver.func.view_class, ProductBrandsByCategory)
+        self.assertEqual(resolver.func.view_class, ProductBrandsByCategoryNew)
