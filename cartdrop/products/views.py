@@ -114,5 +114,5 @@ class ProductBrandsByCategory(ListAPIView):
         category = self.kwargs["category"]
         queryset = Product.objects.filter(
             subcategory__category__slug=category
-        ).select_related("brand")
+        ).select_related("brand").distinct("brand")
         return queryset
