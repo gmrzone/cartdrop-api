@@ -16,10 +16,6 @@ urlpatterns = [
         name="top_category_products",
     ),
     path("<str:category>/", ProductListForCategory.as_view(), name="category_products"),
-    # path(
-    #     "<str:category>/brands/",
-    #     ProductBrandsByCategory.as_view(),
-    #     name="brands_by_category",
-    # ), outdated view
+
 ]
 

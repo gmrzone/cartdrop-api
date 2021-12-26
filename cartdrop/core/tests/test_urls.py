@@ -41,4 +41,4 @@ class ListUrlsTest(TestCase):
     def test_product_brands_by_category(self):
         url = reverse("core:brand_by_category_new", kwargs={"category": "appliances"})
         resolver = resolve(url)
-        self.assertEqual(resolver.func.view_class, ProductBrandsByCategoryNew)
+        self.assertEqual(resolver.func.view_class, ProductBrandsByCategory)

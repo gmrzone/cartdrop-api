@@ -1718,3 +1718,58 @@ django.core.exceptions.FieldError: Cannot resolve keyword '' into field. Choices
 2021-12-19 18:14:51,703 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
 2021-12-19 18:14:52,288 INFO django.utils.autoreload Watching for file changes with StatReloader
 2021-12-19 18:18:16,696 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-19 18:19:08,818 INFO django.utils.autoreload /cartdrop/cartdrop/products/views.py changed, reloading.
+2021-12-19 18:19:09,538 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-25 08:00:12,851 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-25 08:02:01,060 INFO django.server "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+2021-12-25 08:02:01,129 INFO django.server "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+2021-12-25 08:02:01,417 INFO django.server "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+2021-12-25 08:02:01,460 INFO django.server "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+2021-12-25 08:02:01,655 INFO django.server "GET /openapi HTTP/1.1" 200 11273
+2021-12-25 08:02:01,672 WARNING django.request Not Found: /favicon.ico
+2021-12-25 08:02:01,674 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 13294
+2021-12-25 08:02:05,009 INFO django.server "GET /admin/products/product/ HTTP/1.1" 200 33804
+2021-12-25 08:02:05,041 INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2021-12-25 08:02:05,058 INFO django.server "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2021-12-25 08:02:05,067 INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2021-12-25 08:02:05,068 INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2021-12-25 08:02:05,078 INFO django.server "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2021-12-25 08:02:05,088 INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2021-12-25 08:02:05,098 INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2021-12-25 08:02:05,101 INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2021-12-25 08:02:05,111 INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2021-12-25 08:02:05,113 INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2021-12-25 08:02:05,116 INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2021-12-25 08:02:05,190 INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+2021-12-25 08:02:05,194 INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 288580
+2021-12-25 08:02:05,204 INFO django.server "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2021-12-25 08:02:05,212 INFO django.server "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+2021-12-25 08:02:05,303 INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2021-12-25 08:02:05,338 INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2021-12-25 08:02:05,341 INFO django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2021-12-25 08:02:05,396 INFO django.server "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+2021-12-25 08:02:05,398 INFO django.server "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+2021-12-25 08:02:05,430 INFO django.server "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+2021-12-25 08:03:45,531 INFO django.server "GET / HTTP/1.1" 200 10874
+2021-12-25 08:03:45,941 INFO django.server "GET /openapi HTTP/1.1" 200 11273
+2021-12-25 08:03:56,661 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-25 08:03:56,905 INFO django.server "GET /products/featured/ HTTP/1.1" 200 9170
+2021-12-25 08:03:57,420 INFO django.server "GET /core/offers/ HTTP/1.1" 200 5389
+2021-12-25 08:04:00,094 INFO django.server "GET /media/Category_Media/electronics/laptop_1_nobg.png HTTP/1.1" 200 148438
+2021-12-25 08:04:00,105 INFO django.server "GET /media/Category_Media/fashion/fashion_nobg.png.png HTTP/1.1" 200 22675
+2021-12-25 08:04:00,151 INFO django.server "GET /media/Category_Media/accessories/accessories_1-nobg.png HTTP/1.1" 200 334285
+2021-12-25 08:04:00,154 INFO django.server "GET /media/Category_Media/appliances/appliances_nobg.png HTTP/1.1" 200 23388
+2021-12-25 08:04:00,156 INFO django.server "GET /media/Category_Media/mobiles/mobile_2-nobg.png HTTP/1.1" 200 221206
+2021-12-25 08:04:00,190 INFO django.server "GET /media/Category_Media/groceries/groceries_nogb.png HTTP/1.1" 200 25354
+2021-12-25 08:04:00,303 INFO django.server "GET /media/Category_Media/books/books_2-nobg.png HTTP/1.1" 200 189896
+2021-12-25 08:04:33,218 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-25 08:04:33,371 INFO django.server "GET /core/subcategory/mobiles/ HTTP/1.1" 200 672
+2021-12-25 08:04:33,646 INFO django.server "GET /products/mobiles/top/ HTTP/1.1" 200 11365
+2021-12-25 08:04:33,744 INFO django.server "GET /core/categories/ HTTP/1.1" 200 1943
+2021-12-25 08:04:34,280 INFO django.server "GET /media/Product_Image/Iphone/iphone-12-black-main/front_main.jpeg HTTP/1.1" 200 12701
+2021-12-25 08:04:34,292 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-red-main/front.jpeg HTTP/1.1" 200 13001
+2021-12-25 08:04:34,308 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-black-main/front.jpeg HTTP/1.1" 200 13308
+2021-12-25 08:04:34,310 INFO django.server "GET /media/Product_Image/Iphone/iphone-se-white-main/front.jpeg HTTP/1.1" 200 13677
+2021-12-25 08:06:50,491 INFO django.utils.autoreload /cartdrop/cartdrop/products/urls.py changed, reloading.
+2021-12-25 08:06:51,082 INFO django.utils.autoreload Watching for file changes with StatReloader
+2021-12-25 08:06:55,785 INFO django.utils.autoreload /cartdrop/config/settings/base.py changed, reloading.

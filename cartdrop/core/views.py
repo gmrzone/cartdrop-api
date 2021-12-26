@@ -32,7 +32,7 @@ class SubcategoryOfferList(ListAPIView):
         queryset = ProductSubcategory.objects.all().exclude(coupons=None)
         return queryset
 
-class ProductBrandsByCategoryNew(ListAPIView):
+class ProductBrandsByCategory(ListAPIView):
     serializer_class = BrandSerializer
     http_method_names = ['get']
 

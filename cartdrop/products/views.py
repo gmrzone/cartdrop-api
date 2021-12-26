@@ -106,15 +106,15 @@ class ProductListForCategory(ListAPIView):
         return queryset
 
 
-class ProductBrandsByCategory(ListAPIView):
-    serializer_class = ProductBrandSerializer
-    http_method_names = ["get"]
+# class ProductBrandsByCategory(ListAPIView):
+#     serializer_class = ProductBrandSerializer
+#     http_method_names = ["get"]
 
-    def get_queryset(self):
-        category = self.kwargs["category"]
-        queryset = Product.objects.filter(
-            subcategory__category__slug=category
-        ).select_related("brand").distinct("brand")
-        return queryset
+#     def get_queryset(self):
+#         category = self.kwargs["category"]
+#         queryset = Product.objects.filter(
+#             subcategory__category__slug=category
+#         ).select_related("brand").distinct("brand")
+#         return queryset
 
 
