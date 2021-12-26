@@ -38,27 +38,21 @@ CORS_ALLOWED_ORIGINS = ["https://cartdrop.afzalsaiyed.info", "https://cartdrop.i
 # LOGGING
 
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': True,
-    "loggers": {
-        "django": {
-            "handlers": ["file"],
-            "level": "DEBUG"
-        }
-    },
+    "version": 1,
+    "disable_existing_loggers": True,
+    "loggers": {"django": {"handlers": ["file"], "level": "DEBUG"}},
     "handlers": {
         "file": {
             "level": "INFO",
             "class": "logging.FileHandler",
             "filename": f"{BASE_DIR}/logs/main.log",
-            "formatter": "cart_drop_formatter"
+            "formatter": "cart_drop_formatter",
         }
     },
     "formatters": {
         "cart_drop_formatter": {
             "format": "{asctime} {levelname} {name} {message}",
-            "style": "{"
-
+            "style": "{",
         }
-    }
+    },
 }

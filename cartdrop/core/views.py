@@ -1,7 +1,11 @@
 from rest_framework.generics import ListAPIView
 
 from .models import ProductCategory, ProductSubcategory, Brand
-from .serializers import ProductCategorySerializer, ProductSubcategorySerializer, BrandSerializer
+from .serializers import (
+    ProductCategorySerializer,
+    ProductSubcategorySerializer,
+    BrandSerializer,
+)
 
 
 class CategoryList(ListAPIView):
@@ -32,12 +36,14 @@ class SubcategoryOfferList(ListAPIView):
         queryset = ProductSubcategory.objects.all().exclude(coupons=None)
         return queryset
 
+
 class ProductBrandsByCategory(ListAPIView):
     serializer_class = BrandSerializer
-    http_method_names = ['get']
+    http_method_names = ["get"]
 
     def get_queryset(self):
         category = self.kwargs["category"]
-        queryset = Brand.objects.filter(product_list__subcategory__category__slug=category).distinct()
+        queryset = Brand.objects.filter(
+            product_list__subcategory__category__slug=category
+        ).distinct()
         return queryset
-
