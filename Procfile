@@ -1,2 +1,2 @@
 web: gunicorn config.wsgi --log-file -
-release: python manage.py migrate && python manage.py generatedatabase --createadmin && python manage.py loaddata json_data/core_new.json && python manage.py loaddata json_data/products.json
+release: python manage.py migrate && python manage.py generatedatabase --createadmin && python manage.py loaddata json_data/core_latest.json && python manage.py loaddata json_data/product_latest.json
