@@ -1,4 +1,3 @@
-from django.db import models
 from rest_framework.fields import ImageField, SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 

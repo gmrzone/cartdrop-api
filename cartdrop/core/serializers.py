@@ -1,7 +1,5 @@
-from django.db.models import Max, fields
-from rest_framework import serializers
-from rest_framework.fields import ImageField, SerializerMethodField
-from rest_framework.serializers import ModelSerializer, Serializer
+from rest_framework.fields import ImageField
+from rest_framework.serializers import ModelSerializer
 
 from .models import (Brand, CategoryImage, CouponCode, ProductCategory,
                      ProductSubcategory, SubcategoryImage)

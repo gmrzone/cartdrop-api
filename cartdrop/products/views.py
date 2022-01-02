@@ -1,11 +1,9 @@
-from django.db.models import F, query
-from django.shortcuts import render
+from django.db.models import F
 from rest_framework.generics import ListAPIView
 
-from .models import Product, ProductVariation
+from .models import ProductVariation
 from .pagination import ProductVariationPagination
-from .serializers import (BrandSerializer, ProductBrandSerializer,
-                          ProductVariationBaseSerializer)
+from .serializers import ProductVariationBaseSerializer
 
 # Create your views here.
 
