@@ -81,7 +81,7 @@ class ProductListForCategory(ListAPIView):
     serializer_class = ProductVariationBaseSerializer
     http_method_names = ["get"]
     pagination_class = ProductVariationPagination
-    pagination_class.page_size = 5
+    pagination_class.page_size = 6
 
     def get_queryset(self):
         category = self.kwargs["category"]
