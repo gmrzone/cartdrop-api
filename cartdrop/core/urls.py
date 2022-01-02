@@ -1,11 +1,7 @@
 from django.urls import path
 
-from .views import (
-    CategoryList,
-    SubcategoryOfferList,
-    SubcategoryList,
-    ProductBrandsByCategory,
-)
+from .views import (CategoryList, ProductBrandsByCategory, SubcategoryList,
+                    SubcategoryOfferList)
 
 app_name = "core"
 

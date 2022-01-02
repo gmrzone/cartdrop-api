@@ -1,8 +1,8 @@
 from django.test import TestCase
 from django.urls import resolve, reverse
 
-from ..views import *
 from ...products.views import *
+from ..views import *
 
 
 class ListUrlsTest(TestCase):

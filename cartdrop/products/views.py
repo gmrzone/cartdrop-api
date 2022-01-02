@@ -2,12 +2,10 @@ from django.db.models import F, query
 from django.shortcuts import render
 from rest_framework.generics import ListAPIView
 
-from .models import ProductVariation, Product
-from .serializers import (
-    ProductVariationBaseSerializer,
-    ProductBrandSerializer,
-    BrandSerializer,
-)
+from .models import Product, ProductVariation
+from .pagination import ProductVariationPagination
+from .serializers import (BrandSerializer, ProductBrandSerializer,
+                          ProductVariationBaseSerializer)
 
 # Create your views here.
 
@@ -84,6 +82,8 @@ class ProductListForCategory(ListAPIView):
 
     serializer_class = ProductVariationBaseSerializer
     http_method_names = ["get"]
+    pagination_class = ProductVariationPagination
+    pagination_class.page_size = 5
 
     def get_queryset(self):
         category = self.kwargs["category"]
