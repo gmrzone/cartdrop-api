@@ -1,7 +1,7 @@
 from django.urls import path
 
 from .views import (FeaturedProductVariationList, ProductListForCategory,
-                    TopCategoryProductVariation)
+                    ProductVariationDetail, TopCategoryProductVariation)
 
 app_name = "products"
 
@@ -14,4 +14,9 @@ urlpatterns = [
         name="top_category_products",
     ),
     path("<str:category>/", ProductListForCategory.as_view(), name="category_products"),
+    path(
+        "detail/<str:uuid>/<str:pid>/",
+        ProductVariationDetail.as_view(),
+        name="product_variation_detail",
+    ),
 ]
