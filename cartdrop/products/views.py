@@ -124,7 +124,7 @@ class ProductListForCategory(ListAPIView):
 class ProductVariationDetail(RetrieveAPIView):
     serializer_class = ProductVariationBaseSerializer
     http_method_names = ["get"]
-    lookup_fields = ("uuid", "pid")
+    lookup_fields = ("uuid", "pid", "product__slug")
 
     def get_queryset(self):
         queryset = (
