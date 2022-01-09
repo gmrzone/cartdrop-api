@@ -42,3 +42,8 @@ class ListUrlsTest(TestCase):
         url = reverse("core:brand_by_category_new", kwargs={"category": "appliances"})
         resolver = resolve(url)
         self.assertEqual(resolver.func.view_class, ProductBrandsByCategory)
+
+    def test_product_variation_detail(self):
+        url = reverse("products:product_variation_detail", kwargs={"uuid": "0f959fb0-4227-4145-b738-05b34f4cdb38", "pid": "MBLEWRGZAVMRISCPOF"})
+        resolver = resolve(url)
+        self.assertEqual(resolver.func.view_class, ProductVariationDetail)
