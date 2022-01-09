@@ -1,5 +1,6 @@
 from django.db.models import F
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import (ListAPIView, RetrieveAPIView,
+                                     get_object_or_404)
 
 from .models import ProductVariation
 from .pagination import ProductVariationPagination
@@ -85,7 +86,6 @@ class ProductListForCategory(ListAPIView):
 
     def get_queryset(self):
         category = self.kwargs["category"]
-        self.request.GET.get("")
         queryset = (
             ProductVariation.objects.filter(
                 product__subcategory__category__slug=category
@@ -119,3 +119,41 @@ class ProductListForCategory(ListAPIView):
 #             subcategory__category__slug=category
 #         ).select_related("brand").distinct("brand")
 #         return queryset
+
+
+class ProductVariationDetail(RetrieveAPIView):
+    serializer_class = ProductVariationBaseSerializer
+    http_method_names = ["get"]
+    lookup_fields = ("uuid", "pid")
+
+    def get_queryset(self):
+        queryset = (
+            ProductVariation.objects.all()
+            .select_related(
+                "color",
+                "laptop_variant",
+                "mobile_variant",
+                "tv_variant",
+                "ac_capacity_variant",
+                "ac_star_variant",
+                "book_variation",
+                "size",
+                "product",
+                "product__brand",
+                "product__seller",
+                "product__subcategory",
+            )
+            .prefetch_related("images")
+        )
+        return queryset
+
+    def get_object(self):
+        queryset = self.filter_queryset(self.get_queryset())
+        filters = {
+            field: self.kwargs[field]
+            for field in self.lookup_fields
+            if self.kwargs.get(field, None)
+        }
+        obj = get_object_or_404(queryset=queryset, **filters)
+        self.check_object_permissions(self.request, obj)
+        return obj
