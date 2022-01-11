@@ -309,6 +309,7 @@ class ProductVariationDetailSerializer(ModelSerializer):
     ac_star_variant = ACStarRatingVariantSerializer()
     book_variation = BookVariantSerializer()
     size = FashionSizeSerializer()
+    full_name = SerializerMethodField(method_name="get_full_name")
 
     class Meta:
         model = ProductVariation
@@ -316,6 +317,7 @@ class ProductVariationDetailSerializer(ModelSerializer):
             "uuid",
             "pid",
             "product",
+            "full_name",
             "retail_price",
             "discount",
             "price",
@@ -337,6 +339,10 @@ class ProductVariationDetailSerializer(ModelSerializer):
     def calculate_discount(self, obj):
 
         return round((100 - (obj.price * 100 / obj.retail_price)), 2)
+
+
+    def get_full_name(self, obj):
+        return str(obj)
 
 
 # Base Serializers
