@@ -294,7 +294,7 @@ class ProductImageSerializer(ModelSerializer):
 
     class Meta:
         model = ProductImages
-        fields = ("image", "primary")
+        fields = ("id", "image", "primary")
 
 
 class ProductVariationDetailSerializer(ModelSerializer):
