@@ -1,8 +1,11 @@
 from rest_framework.generics import ListAPIView
 
 from .models import Brand, ProductCategory, ProductSubcategory
-from .serializers import (BrandSerializer, ProductCategorySerializer,
-                          ProductSubcategorySerializer)
+from .serializers import (
+    BrandSerializer,
+    ProductCategorySerializer,
+    ProductSubcategorySerializer,
+)
 
 
 class CategoryList(ListAPIView):

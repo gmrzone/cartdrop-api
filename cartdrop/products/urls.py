@@ -1,7 +1,11 @@
 from django.urls import path
 
-from .views import (FeaturedProductVariationList, ProductListForCategory,
-                    ProductVariationDetail, TopCategoryProductVariation)
+from .views import (
+    FeaturedProductVariationList,
+    ProductListForCategory,
+    ProductVariationDetail,
+    TopCategoryProductVariation,
+)
 
 app_name = "products"
 

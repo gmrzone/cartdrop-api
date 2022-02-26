@@ -44,6 +44,13 @@ class ListUrlsTest(TestCase):
         self.assertEqual(resolver.func.view_class, ProductBrandsByCategory)
 
     def test_product_variation_detail(self):
-        url = reverse("products:product_variation_detail", kwargs={"uuid": "69792a43-c471-48c1-a247-c7a9ee193531", "pid": "MBLTPZJQAFHUVMGCLS", "product__slug": "samsung-galaxy-s20-fe-5g"})
+        url = reverse(
+            "products:product_variation_detail",
+            kwargs={
+                "uuid": "69792a43-c471-48c1-a247-c7a9ee193531",
+                "pid": "MBLTPZJQAFHUVMGCLS",
+                "product__slug": "samsung-galaxy-s20-fe-5g",
+            },
+        )
         resolver = resolve(url)
         self.assertEqual(resolver.func.view_class, ProductVariationDetail)

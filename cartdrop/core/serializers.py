@@ -1,8 +1,14 @@
 from rest_framework.fields import ImageField
 from rest_framework.serializers import ModelSerializer
 
-from .models import (Brand, CategoryImage, CouponCode, ProductCategory,
-                     ProductSubcategory, SubcategoryImage)
+from .models import (
+    Brand,
+    CategoryImage,
+    CouponCode,
+    ProductCategory,
+    ProductSubcategory,
+    SubcategoryImage,
+)
 
 
 class BrandSerializer(ModelSerializer):
