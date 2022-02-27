@@ -2,8 +2,7 @@ import pytest
 from django.contrib.auth import get_user_model
 
 from cartdrop.core.models import Brand, ProductCategory, ProductSubcategory
-from cartdrop.products.models import (Product, ProductSpecification,
-                                      ProductVariation)
+from cartdrop.products.models import Product, ProductSpecification, ProductVariation
 
 
 @pytest.fixture

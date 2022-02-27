@@ -2,20 +2,43 @@ from rest_framework.fields import ImageField, SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
 from cartdrop.accounts.serializers import SellerUserSerializer
-from cartdrop.core.serializers import (BrandSerializer, ProductSubcategoryBase,
-                                       ProductSubcategorySerializer)
+from cartdrop.core.serializers import (
+    BrandSerializer,
+    ProductSubcategoryBase,
+    ProductSubcategorySerializer,
+)
 
-from .models import (ACCapacityVariant, ACStarRatingVariant, ACType,
-                     BookVariant, DisplayType, FashionSize, LaptopVariant,
-                     MobileVariant, OperatingSystem, Product,
-                     ProductAirConditionerFeature, ProductColor, ProductImages,
-                     ProductLaptopFeatures, ProductMobileFeatures,
-                     ProductRefrigeratorFeature, ProductSeries,
-                     ProductSpeakersFeatures, ProductSpecification,
-                     ProductTelivisionFeatures, ProductVariation,
-                     ProductWarranty, ProductWashingMachineFeatures,
-                     RefrigeratorType, ScreenType, SimType, SpeakerType,
-                     TVVariant, WashingMethod)
+from .models import (
+    ACCapacityVariant,
+    ACStarRatingVariant,
+    ACType,
+    BookVariant,
+    DisplayType,
+    FashionSize,
+    LaptopVariant,
+    MobileVariant,
+    OperatingSystem,
+    Product,
+    ProductAirConditionerFeature,
+    ProductColor,
+    ProductImages,
+    ProductLaptopFeatures,
+    ProductMobileFeatures,
+    ProductRefrigeratorFeature,
+    ProductSeries,
+    ProductSpeakersFeatures,
+    ProductSpecification,
+    ProductTelivisionFeatures,
+    ProductVariation,
+    ProductWarranty,
+    ProductWashingMachineFeatures,
+    RefrigeratorType,
+    ScreenType,
+    SimType,
+    SpeakerType,
+    TVVariant,
+    WashingMethod,
+)
 
 
 class ProductColorSerializere(ModelSerializer):
