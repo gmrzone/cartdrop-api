@@ -62,7 +62,17 @@ $ pip install -r requirements/local.txt
 $ export DJANGO_SETTINGS_MODULE=config.settings.local
 ```
 
-6. Runserver:
+6. Make Migrations and Migrate
+```
+$ python manage.py makemigrations && python manage.py migrate
+```
+
+7. Load Data in Database:
+```
+$ python manage.py loaddata json_data/core_latest.json && python manage.py loaddata json_data/product_latest.json
+```
+
+8. Runserver:
 ```
 $ python manage.py runserver
 ```
