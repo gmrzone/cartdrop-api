@@ -1,5 +1,6 @@
 from django.db.models import F
-from rest_framework.generics import ListAPIView, RetrieveAPIView, get_object_or_404
+from rest_framework.generics import (ListAPIView, RetrieveAPIView,
+                                     get_object_or_404)
 
 from .models import ProductVariation
 from .pagination import ProductVariationPagination
