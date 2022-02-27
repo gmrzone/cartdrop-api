@@ -8,3 +8,4 @@ config/settings/secret.json
 afzal
 afzal.txt
 backup
+.pytest_cache
