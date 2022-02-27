@@ -12,12 +12,12 @@ def test_products_get_views_status(client, url_data):
     response = client.get(url)
     assert response.status_code == 200
 
+# Here we are using product_data fixture to create product data before testing this view
 @pytest.mark.django_db
-def test_product_detail_view_status(client):
-    url = reverse("products:product_variation_detail", kwargs={"product__slug": "apple-iphone-se", "uuid": "54b5423d-f00a-43c1-a605-584c932b9f92", "pid": "MBLOGTKIADMSGKIKZJ"})
+def test_product_detail_view_status(client, product_data):
+    url = reverse("products:product_variation_detail", kwargs=product_data)
     response = client.get(url)
-    # Currently the response status code should be 404 bcoz there is no data in test db
-    assert response.status_code == 404
+    assert response.status_code == 200
 
 
 @pytest.mark.django_db
