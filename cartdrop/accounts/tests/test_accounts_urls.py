@@ -1,4 +1,5 @@
-from django.urls import reverse, resolve
+from django.urls import resolve, reverse
+
 from ..views import *
 
 

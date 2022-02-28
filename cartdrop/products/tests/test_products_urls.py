@@ -1,4 +1,5 @@
-from django.urls import reverse, resolve
+from django.urls import resolve, reverse
+
 from ..views import *
 
 
@@ -18,8 +19,16 @@ def test_product_list_for_category():
     url = reverse("products:category_products", kwargs={"category": "mobiles"})
     resolver = resolve(url)
     assert resolver.func.view_class == ProductListForCategory
-    
+
+
 def test_product_variation_detail():
-    url = reverse("products:product_variation_detail", kwargs={"product__slug": "apple-iphone-se", "uuid": "54b5423d-f00a-43c1-a605-584c932b9f92", "pid": "MBLOGTKIADMSGKIKZJ"})
+    url = reverse(
+        "products:product_variation_detail",
+        kwargs={
+            "product__slug": "apple-iphone-se",
+            "uuid": "54b5423d-f00a-43c1-a605-584c932b9f92",
+            "pid": "MBLOGTKIADMSGKIKZJ",
+        },
+    )
     resolver = resolve(url)
     assert resolver.func.view_class == ProductVariationDetail
