@@ -49,7 +49,7 @@ $ cd cartdrop-api
 
 3. create a virtual environment and activate it:
 ```
-$ virtualenv venv && source venv/bin/activate
+$ python3 -m venv cartdrop-venv && source cartdrop-venv/bin/activate
 ```
 
 4. Install dependencies:
@@ -62,17 +62,12 @@ $ pip install -r requirements/local.txt
 $ export DJANGO_SETTINGS_MODULE=config.settings.local
 ```
 
-6. Make Migrations and Migrate
+6. Make Migrations, Migrate, load data in the database and create a super user with username=admin and password=cartdropadmin
 ```
-$ python manage.py makemigrations && python manage.py migrate
-```
-
-7. Load Data in Database:
-```
-$ python manage.py loaddata json_data/core_latest.json && python manage.py loaddata json_data/product_latest.json
+$ python manage.py generate-data --createadmin
 ```
 
-8. Runserver:
+7. Runserver:
 ```
 $ python manage.py runserver
 ```
