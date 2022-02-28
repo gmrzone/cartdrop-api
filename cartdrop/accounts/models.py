@@ -4,12 +4,12 @@ from django.core.mail import send_mail
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
-
+from .validators import number_validator
 from cartdrop.core.behaviours import Timestamps, UUIDField
 
 from .managers import CartDropUserManager
 from .utils import user_photo_location
-from .validators import pincode_validator
+from .validators import number_validator, pincode_validator
 
 # Create your models here.
 
@@ -20,7 +20,6 @@ class CartDropUser(AbstractBaseUser, PermissionsMixin):
         SELLER = "SELLER", "Seller"
 
     username_validators = UnicodeUsernameValidator()
-
     number = models.CharField(
         _("Mobile Number"),
         max_length=10,
@@ -28,6 +27,7 @@ class CartDropUser(AbstractBaseUser, PermissionsMixin):
         db_index=True,
         blank=True,
         null=True,
+        validators=[number_validator],
         error_messages={
             "unique": _(
                 "This number is already registered with us please try logging in"
@@ -38,11 +38,13 @@ class CartDropUser(AbstractBaseUser, PermissionsMixin):
         _("Email address"),
         max_length=50,
         unique=True,
+        db_index=True,
         error_messages={"unique": _("A user with this email already exist")},
     )
     username = models.CharField(
         _("Username"),
         max_length=50,
+        db_index=True,
         unique=True,
         validators=[username_validators],
         error_messages={"unique": _("A user with that username already exist")},
@@ -72,7 +74,7 @@ class CartDropUser(AbstractBaseUser, PermissionsMixin):
     )
     is_active = models.BooleanField(
         _("active"),
-        default=False,
+        default=True,
         help_text=_(
             "Designates whether this user should be treated as active. "
             "set this to false this instead of deleting accounts."
