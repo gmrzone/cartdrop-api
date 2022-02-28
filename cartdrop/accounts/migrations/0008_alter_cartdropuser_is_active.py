@@ -6,13 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0007_alter_useraddress_pincode'),
+        ("accounts", "0007_alter_useraddress_pincode"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='cartdropuser',
-            name='is_active',
-            field=models.BooleanField(default=True, help_text='Designates whether this user should be treated as active. set this to false this instead of deleting accounts.', verbose_name='active'),
+            model_name="cartdropuser",
+            name="is_active",
+            field=models.BooleanField(
+                default=True,
+                help_text="Designates whether this user should be treated as active. set this to false this instead of deleting accounts.",
+                verbose_name="active",
+            ),
         ),
     ]

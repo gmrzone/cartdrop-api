@@ -7,13 +7,24 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0009_alter_cartdropuser_email_alter_cartdropuser_username'),
+        ("accounts", "0009_alter_cartdropuser_email_alter_cartdropuser_username"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='cartdropuser',
-            name='number',
-            field=models.CharField(blank=True, db_index=True, error_messages={'unique': 'This number is already registered with us please try logging in'}, max_length=10, null=True, unique=True, validators=[cartdrop.accounts.validators.number_validator], verbose_name='Mobile Number'),
+            model_name="cartdropuser",
+            name="number",
+            field=models.CharField(
+                blank=True,
+                db_index=True,
+                error_messages={
+                    "unique": "This number is already registered with us please try logging in"
+                },
+                max_length=10,
+                null=True,
+                unique=True,
+                validators=[cartdrop.accounts.validators.number_validator],
+                verbose_name="Mobile Number",
+            ),
         ),
     ]

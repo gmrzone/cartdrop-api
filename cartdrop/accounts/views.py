@@ -27,20 +27,20 @@ class Signup(CreateAPIView):
     serializer_class = UserSerializer
 
     def create(self, request, *args, **kwargs):
-        username = request.data.get("username").lower()
+        username = request.data.get("username")
         response = Response()
         try:
-            user = CartDropUser.objects.get(username=username)
+            user = CartDropUser.objects.get(username__iexact=username)
             if user.is_disabled or not user.is_active:
                 response.data = {
                     "status": "error",
-                    "message": "Your account has been disabled or inactive. Please contact us to get more detail"
+                    "message": "Your account has been disabled or inactive. Please contact us to get more detail",
                 }
                 response.status_code = HTTP_403_FORBIDDEN
             else:
                 response.data = {
                     "status": "ok",
-                    "message": f"You already have a account with us. Please login using username {user.username}"
+                    "message": f"You already have a account with us. Please login using username {user.username}",
                 }
                 response.status_code = HTTP_200_OK
         except CartDropUser.DoesNotExist:
@@ -49,14 +49,11 @@ class Signup(CreateAPIView):
                 self.perform_create(serializer)
                 response.data = {
                     "status": "ok",
-                    "message": "Your Account has been successfully created. An email with verification link has been sent to your email. Please use that link to verify your account."
+                    "message": "Your Account has been successfully created. An email with verification link has been sent to your email. Please use that link to verify your account.",
                 }
                 response.status_code = HTTP_200_OK
             else:
-                response.data = {
-                "status": "error",
-                "message": serializer.errors
-                }
+                response.data = {"status": "error", "message": serializer.errors}
                 response.status_code = HTTP_403_FORBIDDEN
         finally:
             return response

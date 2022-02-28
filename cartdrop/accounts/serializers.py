@@ -19,12 +19,9 @@ class UserSerializer(ModelSerializer):
             "first_name",
             "last_name",
             "photo",
-
         )
 
-        extra_kwargs = {
-            "password": {"write_only": True}
-        }
+        extra_kwargs = {"password": {"write_only": True}}
 
     def create(self, validated_data):
         validated_data.pop("confirm_password")

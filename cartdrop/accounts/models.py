@@ -10,6 +10,7 @@ from cartdrop.core.behaviours import Timestamps, UUIDField
 from .managers import CartDropUserManager
 from .utils import user_photo_location
 from .validators import number_validator, pincode_validator
+from .fields import LowerCaseCharField, LowerCaseEmailField
 
 # Create your models here.
 
@@ -34,14 +35,14 @@ class CartDropUser(AbstractBaseUser, PermissionsMixin):
             )
         },
     )
-    email = models.EmailField(
+    email = LowerCaseEmailField(
         _("Email address"),
         max_length=50,
         unique=True,
         db_index=True,
         error_messages={"unique": _("A user with this email already exist")},
     )
-    username = models.CharField(
+    username = LowerCaseCharField(
         _("Username"),
         max_length=50,
         db_index=True,
