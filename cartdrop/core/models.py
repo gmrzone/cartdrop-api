@@ -109,12 +109,8 @@ class CouponCode(UUIDField, Timestamps):
         choices=CouponReusableTypeChoises.choices,
     )
     summary = models.CharField(max_length=200, null=True)
-    subcategory = models.ForeignKey(
-        ProductSubcategory,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="coupons",
+    subcategory = models.ManyToManyField(
+        ProductSubcategory
     )
     discount = models.PositiveIntegerField(
         default=0, validators=[MaxValueValidator(100), MinValueValidator(0)]

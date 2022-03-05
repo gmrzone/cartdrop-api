@@ -42,7 +42,7 @@ class BrandAdmin(admin.ModelAdmin):
 
 @admin.register(CouponCode)
 class CouponCodeAdmin(admin.ModelAdmin):
-    list_display = ("code", "discount", "subcategory", "valid_from", "valid_to")
+    list_display = ("code", "discount", "valid_from", "valid_to")
     list_filter = ("active",)
     list_editable = ("discount", "valid_from", "valid_to")
-    list_select_related = ("subcategory",)
+
