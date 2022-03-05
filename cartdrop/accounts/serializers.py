@@ -1,6 +1,7 @@
-from django.forms import ValidationError
-from rest_framework.serializers import ImageField, ModelSerializer, CharField
 from django.contrib.auth.hashers import make_password
+from django.forms import ValidationError
+from rest_framework.serializers import CharField, ImageField, ModelSerializer
+
 from .models import CartDropUser, SellerUser
 
 

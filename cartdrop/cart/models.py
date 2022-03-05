@@ -1,6 +1,7 @@
 import django
-from django.db import models
 from django.conf import settings
+from django.db import models
+
 from ..products.models import ProductVariation
 
 # Create your models here.

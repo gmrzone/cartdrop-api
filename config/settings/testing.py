@@ -1,5 +1,6 @@
-from .base import *
 from datetime import timedelta
+
+from .base import *
 
 DEBUG = True
 
@@ -19,7 +20,6 @@ DATABASES = {
         "PORT": "5432",
     }
 }
-
 
 
 CORS_ALLOW_ALL_ORIGINS = True

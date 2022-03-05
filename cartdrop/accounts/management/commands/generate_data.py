@@ -1,12 +1,13 @@
-from django.core.management.base import BaseCommand
 from django.core.management import call_command
-from ...utils import create_super_user, create_normal_user
+from django.core.management.base import BaseCommand
+
+from ...utils import create_normal_user, create_super_user
 
 
 class Command(BaseCommand):
     def add_arguments(self, parser) -> None:
         parser.add_argument(
-            "--createadmin",
+            "--create-admin",
             action="store_true",
             dest="createsuperuser",
             default=False,
@@ -31,7 +32,7 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS(message))
 
         # Load data for core and product app
-        call_command("loaddata", "json_data/core_latest.json")
+        call_command("loaddata", "json_data/core_updated_05-03-2022.json")
         self.stdout.write(self.style.SUCCESS("Sucessfully loaded data for core app"))
-        call_command("loaddata", "json_data/product_latest.json")
+        call_command("loaddata", "json_data/products_updated_05-03-2022.json")
         self.stdout.write(self.style.SUCCESS("Sucessfully loaded data for Product app"))

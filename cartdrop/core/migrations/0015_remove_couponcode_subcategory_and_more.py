@@ -6,17 +6,22 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0014_auto_20210912_1413'),
+        ("core", "0014_auto_20210912_1413"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='couponcode',
-            name='subcategory',
+            model_name="couponcode",
+            name="subcategory",
         ),
         migrations.AddField(
-            model_name='couponcode',
-            name='subcategories',
-            field=models.ManyToManyField(blank=True, null=True, related_name='coupon_codes', to='core.ProductSubcategory'),
+            model_name="couponcode",
+            name="subcategories",
+            field=models.ManyToManyField(
+                blank=True,
+                null=True,
+                related_name="coupon_codes",
+                to="core.ProductSubcategory",
+            ),
         ),
     ]

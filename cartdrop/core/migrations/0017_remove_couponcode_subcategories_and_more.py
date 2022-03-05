@@ -6,17 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0016_alter_couponcode_subcategories'),
+        ("core", "0016_alter_couponcode_subcategories"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='couponcode',
-            name='subcategories',
+            model_name="couponcode",
+            name="subcategories",
         ),
         migrations.AddField(
-            model_name='couponcode',
-            name='subcategory',
-            field=models.ManyToManyField(to='core.ProductSubcategory'),
+            model_name="couponcode",
+            name="subcategory",
+            field=models.ManyToManyField(to="core.ProductSubcategory"),
         ),
     ]
