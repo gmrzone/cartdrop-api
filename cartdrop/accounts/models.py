@@ -4,13 +4,13 @@ from django.core.mail import send_mail
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
-from .validators import number_validator
+
 from cartdrop.core.behaviours import Timestamps, UUIDField
 
+from .fields import LowerCaseCharField, LowerCaseEmailField
 from .managers import CartDropUserManager
 from .utils import user_photo_location
 from .validators import number_validator, pincode_validator
-from .fields import LowerCaseCharField, LowerCaseEmailField
 
 # Create your models here.
 

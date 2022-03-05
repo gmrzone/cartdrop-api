@@ -1,9 +1,10 @@
 import numbers
 from urllib import response
 from webbrowser import get
+
 import pytest
-from django.urls import reverse
 from django.contrib.auth import get_user_model
+from django.urls import reverse
 
 
 @pytest.mark.parametrize("url_name", [("accounts:get_current_user")])

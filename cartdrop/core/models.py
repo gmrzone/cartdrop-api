@@ -3,16 +3,10 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 from .behaviours import Slugable, Timestamps, UUIDField
-from .utils import (
-    brand_photo_location,
-    brand_photo_placeholder_location,
-    category_images,
-    category_images_placeholder,
-    review_image_location,
-    review_image_placeholder_location,
-    subcategory_images,
-    subcategory_images_placeholder,
-)
+from .utils import (brand_photo_location, brand_photo_placeholder_location,
+                    category_images, category_images_placeholder,
+                    review_image_location, review_image_placeholder_location,
+                    subcategory_images, subcategory_images_placeholder)
 
 # Create your models here.
 
@@ -109,13 +103,7 @@ class CouponCode(UUIDField, Timestamps):
         choices=CouponReusableTypeChoises.choices,
     )
     summary = models.CharField(max_length=200, null=True)
-    subcategory = models.ForeignKey(
-        ProductSubcategory,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="coupons",
-    )
+    subcategory = models.ManyToManyField(ProductSubcategory, related_name="coupons")
     discount = models.PositiveIntegerField(
         default=0, validators=[MaxValueValidator(100), MinValueValidator(0)]
     )

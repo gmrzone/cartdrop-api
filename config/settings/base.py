@@ -164,9 +164,7 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
-    "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.AllowAny"
-    ]
+    "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny"],
 }
 
 # Http Only Cookie for Session and Csrf
@@ -175,7 +173,6 @@ SESSION_COOKIE_HTTPONLY = True
 CSRF_COOKIE_SAMESITE = "Lax"
 CSRF_COOKIE_HTTPONLY = True
 CSRF_TRUSTED_ORIGINS = ["https://cartdrop.afzalsaiyed.info"]
-
 
 
 # EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"

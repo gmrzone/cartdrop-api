@@ -64,7 +64,7 @@ $ export DJANGO_SETTINGS_MODULE=config.settings.local
 
 6. Migrate Database load data in the database and create a super user with username=admin and password=cartdropadmin
 ```
-$ python manage.py generate-data --createadmin
+$ python manage.py generate-data --create-admin
 ```
 
 7. Runserver:

@@ -128,6 +128,14 @@
     }
 },
 {
+    "model": "products.productcolor",
+    "pk": 18,
+    "fields": {
+        "slug": "cloud-navy",
+        "name": "Cloud Navy"
+    }
+},
+{
     "model": "products.screentype",
     "pk": 1,
     "fields": {
@@ -813,6 +821,22 @@
     }
 },
 {
+    "model": "products.productmobilefeatures",
+    "pk": 3,
+    "fields": {
+        "display_size": "6.5 inches",
+        "display_type": 1,
+        "resolution": "1080 x 2400 (FHD+) Resolution.",
+        "sim_type": 1,
+        "touchscreen": true,
+        "smart_phone": true,
+        "battery_capicity": "4500 mAh",
+        "os": 6,
+        "ram": "12 GB",
+        "series": 1
+    }
+},
+{
     "model": "products.productlaptopfeatures",
     "pk": 1,
     "fields": {
@@ -1092,6 +1116,210 @@
         "launched_date": "2021-08-27",
         "model_no": null,
         "model_name": "JavaScript – The Definitive Guide",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 17,
+    "fields": {
+        "in_box": "‎Handset, Non-removable Battery Included, Travel Adapter, USB Cable, User Manual",
+        "launched_date": "2021-12-26",
+        "model_no": "S20FE5G",
+        "model_name": "Samsung Galaxy S20 FE 5G",
+        "mobile": 3,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 18,
+    "fields": {
+        "in_box": "Car Document Holder",
+        "launched_date": "2021-12-26",
+        "model_no": null,
+        "model_name": "SHAFIRE Multifunction Car Sun Visor Organizer",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 19,
+    "fields": {
+        "in_box": "pair of Steelbird gloves",
+        "launched_date": "2021-12-26",
+        "model_no": null,
+        "model_name": "Steelbird Full Finger Bike Riding Gloves with Touch Screen Sensitivity at Thumb",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 20,
+    "fields": {
+        "in_box": "1 Brake Lock",
+        "launched_date": "2021-12-26",
+        "model_no": "MHGQ3HN/ANEW",
+        "model_name": "Rangwell Heavy Duty Bike Brake Lock",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 21,
+    "fields": {
+        "in_box": "1 Wall Mount",
+        "launched_date": "2021-12-26",
+        "model_no": "MGJC3HN/AsaDWERF",
+        "model_name": "Plantex Stainless Steel Wall Mount Shelf 2 Tier Bathroom Shelf/Rack with Towel Holder/Towel Hooks/Ba",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 22,
+    "fields": {
+        "in_box": "1 Juice bottle",
+        "launched_date": "2021-12-26",
+        "model_no": "MHGQ3HN/Afgtyufghrw",
+        "model_name": "A deliciously refreshing orange fruit drink",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 23,
+    "fields": {
+        "in_box": "Get any 6 Cadbury chocolates from the following options -Silk Bubbly 50g, Silk Fruit & Nut 55g, Silk Roast Almond 58g, Silk Oreo 60g and Silk Plain 60g.",
+        "launched_date": "2021-12-26",
+        "model_no": "E14adad",
+        "model_name": "Cadbury Silk Potli Gift Pack",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 24,
+    "fields": {
+        "in_box": "1 Tropicana Orange",
+        "launched_date": "2021-12-26",
+        "model_no": "MGJC3HN/Aqwrwet",
+        "model_name": "Tropicana Orange Delight",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 25,
+    "fields": {
+        "in_box": "One Tropicana Litchi Delight Fruit Juice",
+        "launched_date": "2021-12-26",
+        "model_no": "MHGQ3HNSDafwdfc",
+        "model_name": "Tropicana Litchi Delight Fruit Juice",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 26,
+    "fields": {
+        "in_box": "One TypeScript: 62 book",
+        "launched_date": "2021-12-26",
+        "model_no": "MHGQ3HN/Adfdetyh",
+        "model_name": "TypeScript: 62",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 27,
+    "fields": {
+        "in_box": "Django 3 By Example:",
+        "launched_date": "2021-12-26",
+        "model_no": "MGJC3HN/Afgdyrtfyd",
+        "model_name": "Django 3 By Example:",
+        "mobile": null,
+        "laptop": null,
+        "tv": null,
+        "washing_machine": null,
+        "ac": null,
+        "refrigerator": null,
+        "speaker": null
+    }
+},
+{
+    "model": "products.productspecification",
+    "pk": 28,
+    "fields": {
+        "in_box": "One book",
+        "launched_date": "2021-12-26",
+        "model_no": "MHGQ3HN/Agcyfyju",
+        "model_name": "Learning React: Modern Patterns for Developing React Apps, Second Edition",
         "mobile": null,
         "laptop": null,
         "tv": null,
@@ -1441,6 +1669,282 @@
     }
 },
 {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+        "created": "2021-12-26T09:17:08.289Z",
+        "updated": "2021-12-26T09:17:08.289Z",
+        "uuid": "ef9073fd-dad0-4130-9169-3de66ba62dfc",
+        "brand": 1,
+        "product_code": "MBL",
+        "name": "Samsung Galaxy S20 FE 5G",
+        "slug": "samsung-galaxy-s20-fe-5g",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 1,
+        "description": "",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": 1,
+        "weight": "182",
+        "specification": 17
+    }
+},
+{
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+        "created": "2021-12-26T09:37:52.049Z",
+        "updated": "2021-12-26T09:37:52.049Z",
+        "uuid": "5f46acc8-21d0-4942-b233-a7226022c209",
+        "brand": 20,
+        "product_code": "ACC",
+        "name": "SHAFIRE Multifunction Car Sun Visor Organizer,Leather Car Document Holder",
+        "slug": "shafire-multifunction-car-sun-visor-organizerleather-car-document-holder",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 7,
+        "description": "",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": 1,
+        "weight": "90 g",
+        "specification": 18
+    }
+},
+{
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+        "created": "2021-12-26T09:46:04.648Z",
+        "updated": "2021-12-26T09:46:04.648Z",
+        "uuid": "dd0b210d-64a6-49a4-84cb-af21d3ecaf37",
+        "brand": 21,
+        "product_code": "ACC",
+        "name": "Steelbird Full Finger Bike Riding Gloves with Touch Screen Sensitivity at Thumb and Index Finger, Pr",
+        "slug": "steelbird-full-finger-bike-riding-gloves-with-touch-screen-sensitivity-at-thumb-and-index-finger-pr",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 7,
+        "description": "",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": null,
+        "weight": "80 g",
+        "specification": 19
+    }
+},
+{
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+        "created": "2021-12-26T09:58:14.447Z",
+        "updated": "2021-12-26T09:58:14.448Z",
+        "uuid": "bf16cdf6-2b51-41b7-b5a1-2a8f80407570",
+        "brand": 22,
+        "product_code": "NCD",
+        "name": "Rangwell Heavy Duty Bike Brake Lock - Locking System by Holding Handle Bar with Brake Lever",
+        "slug": "rangwell-heavy-duty-bike-brake-lock-locking-system-by-holding-handle-bar-with-brake-lever",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 7,
+        "description": "",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": 1,
+        "weight": "210 g",
+        "specification": 20
+    }
+},
+{
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+        "created": "2021-12-26T10:07:49.441Z",
+        "updated": "2021-12-26T10:07:49.441Z",
+        "uuid": "14314e6e-2390-41bb-b842-6f0f1bc643cd",
+        "brand": 23,
+        "product_code": "NCD",
+        "name": "Plantex Stainless Steel Wall Mount Shelf 2 Tier Bathroom Shelf/Rack",
+        "slug": "plantex-stainless-steel-wall-mount-shelf-2-tier-bathroom-shelfrack",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 7,
+        "description": "",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": 1,
+        "weight": "500 g",
+        "specification": 21
+    }
+},
+{
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+        "created": "2021-12-26T10:18:17.434Z",
+        "updated": "2021-12-26T10:18:17.434Z",
+        "uuid": "3a6d099f-b2ac-482b-9e43-a6fd1de5a53f",
+        "brand": 24,
+        "product_code": "NCD",
+        "name": "Minute Maid Pulpy Orange Fruit Drink",
+        "slug": "minute-maid-pulpy-orange-fruit-drink",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 17,
+        "description": "A deliciously refreshing orange fruit drink",
+        "overall_rating": "0.0",
+        "replacement_days": 0,
+        "warranty": null,
+        "weight": "900 g",
+        "specification": 22
+    }
+},
+{
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+        "created": "2021-12-26T10:25:03.101Z",
+        "updated": "2021-12-26T10:25:03.101Z",
+        "uuid": "8b7114e2-4114-4476-b1a5-b1dae3211bd3",
+        "brand": 17,
+        "product_code": "CHO",
+        "name": "Cadbury Silk Potli Gift Pack",
+        "slug": "cadbury-silk-potli-gift-pack",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 18,
+        "description": "Cadbury silk fruit and nut not only has the regular smooth and creamy milk chocolate, but also has a",
+        "overall_rating": "0.0",
+        "replacement_days": 0,
+        "warranty": null,
+        "weight": "486 g",
+        "specification": 23
+    }
+},
+{
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+        "created": "2021-12-26T11:32:46.299Z",
+        "updated": "2021-12-26T11:32:46.299Z",
+        "uuid": "37e611d5-0299-4216-89e8-532b3773c19d",
+        "brand": 16,
+        "product_code": "NCD",
+        "name": "Tropicana Orange Delight",
+        "slug": "tropicana-orange-delight",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 17,
+        "description": "Get 100% pure squeezed orange juice from Tropicana®. From our Pure Premium to our lower sugar Trop50",
+        "overall_rating": "0.0",
+        "replacement_days": 0,
+        "warranty": null,
+        "weight": "988 g",
+        "specification": 24
+    }
+},
+{
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+        "created": "2021-12-26T11:39:39.671Z",
+        "updated": "2021-12-26T11:39:39.671Z",
+        "uuid": "64c8ffa6-30cf-4556-a9b9-aa796b39da10",
+        "brand": 16,
+        "product_code": "JUE",
+        "name": "Tropicana Litchi Delight Fruit Juice",
+        "slug": "tropicana-litchi-delight-fruit-juice",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 17,
+        "description": "Get 100% pure squeezed orange juice from Tropicana®. From our Pure Premium to our lower sugar Trop50",
+        "overall_rating": "0.0",
+        "replacement_days": 0,
+        "warranty": null,
+        "weight": "988 g",
+        "specification": 25
+    }
+},
+{
+    "model": "products.product",
+    "pk": 22,
+    "fields": {
+        "created": "2021-12-26T11:50:49.669Z",
+        "updated": "2021-12-26T11:50:49.669Z",
+        "uuid": "09d6f4ca-bc57-4918-a5e6-2d43932b1909",
+        "brand": 18,
+        "product_code": "BKS",
+        "name": "Effective TypeScript: 62 Specific Ways to Improve Your TypeScript",
+        "slug": "effective-typescript-62-specific-ways-to-improve-your-typescript",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 16,
+        "description": "TypeScript is a typed superset of JavaScript with the potential to solve many of the headaches for w",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": null,
+        "weight": "600 g",
+        "specification": 26
+    }
+},
+{
+    "model": "products.product",
+    "pk": 23,
+    "fields": {
+        "created": "2021-12-26T11:55:59.360Z",
+        "updated": "2021-12-26T11:55:59.360Z",
+        "uuid": "bb313eda-469e-46bb-93f4-674b2aea8f5c",
+        "brand": 19,
+        "product_code": "BKS",
+        "name": "Django 3 By Example: Build powerful and reliable Python web applications from scratch, 3rd Edition",
+        "slug": "django-3-by-example-build-powerful-and-reliable-python-web-applications-from-scratch-3rd-edition",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 16,
+        "description": "Learn Django 3 with four end-to-end web projects",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": null,
+        "weight": "700 g",
+        "specification": 27
+    }
+},
+{
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+        "created": "2021-12-26T12:03:39.246Z",
+        "updated": "2021-12-26T12:03:39.246Z",
+        "uuid": "55db1a8e-0981-4d5b-8824-989f9c1d5143",
+        "brand": 18,
+        "product_code": "BKS",
+        "name": "Learning React: Modern Patterns for Developing React Apps, Second Edition",
+        "slug": "learning-react-modern-patterns-for-developing-react-apps-second-edition",
+        "seller": [
+            "admin"
+        ],
+        "subcategory": 16,
+        "description": "If you want to learn how to build efficient React applications, this is your book. Ideal for web dev",
+        "overall_rating": "0.0",
+        "replacement_days": 10,
+        "warranty": null,
+        "weight": "0",
+        "specification": 28
+    }
+},
+{
     "model": "products.fashionsize",
     "pk": 1,
     "fields": {
@@ -1510,10 +2014,10 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            4,
-            3,
+            1,
             2,
-            1
+            3,
+            4
         ]
     }
 },
@@ -1539,10 +2043,10 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            8,
-            7,
+            5,
             6,
-            5
+            7,
+            8
         ]
     }
 },
@@ -1568,10 +2072,10 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            12,
-            11,
+            9,
             10,
-            9
+            11,
+            12
         ]
     }
 },
@@ -1597,11 +2101,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            17,
-            15,
-            14,
             13,
-            16
+            14,
+            15,
+            16,
+            17
         ]
     }
 },
@@ -1627,11 +2131,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            17,
-            15,
-            14,
             13,
-            16
+            14,
+            15,
+            16,
+            17
         ]
     }
 },
@@ -1657,11 +2161,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            17,
-            15,
-            14,
             13,
-            16
+            14,
+            15,
+            16,
+            17
         ]
     }
 },
@@ -1687,11 +2191,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            21,
-            20,
-            19,
+            17,
             18,
-            17
+            19,
+            20,
+            21
         ]
     }
 },
@@ -1717,11 +2221,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            25,
-            24,
-            23,
+            17,
             22,
-            17
+            23,
+            24,
+            25
         ]
     }
 },
@@ -1747,11 +2251,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            21,
-            20,
-            19,
+            17,
             18,
-            17
+            19,
+            20,
+            21
         ]
     }
 },
@@ -1777,11 +2281,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            25,
-            24,
-            23,
+            17,
             22,
-            17
+            23,
+            24,
+            25
         ]
     }
 },
@@ -1807,11 +2311,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            34,
-            33,
-            32,
+            30,
             31,
-            30
+            32,
+            33,
+            34
         ]
     }
 },
@@ -1837,10 +2341,10 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            29,
-            28,
+            26,
             27,
-            26
+            28,
+            29
         ]
     }
 },
@@ -1866,14 +2370,14 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            43,
-            42,
-            41,
-            40,
-            39,
-            38,
+            35,
             36,
-            35
+            38,
+            39,
+            40,
+            41,
+            42,
+            43
         ]
     }
 },
@@ -1899,14 +2403,14 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            43,
-            42,
-            41,
-            40,
-            39,
-            38,
+            35,
             36,
-            35
+            38,
+            39,
+            40,
+            41,
+            42,
+            43
         ]
     }
 },
@@ -1932,14 +2436,14 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            43,
-            42,
-            41,
-            40,
-            39,
-            38,
+            35,
             36,
-            35
+            38,
+            39,
+            40,
+            41,
+            42,
+            43
         ]
     }
 },
@@ -1965,14 +2469,14 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            43,
-            42,
-            41,
-            40,
-            39,
-            38,
+            35,
             36,
-            35
+            38,
+            39,
+            40,
+            41,
+            42,
+            43
         ]
     }
 },
@@ -1998,10 +2502,10 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            53,
-            52,
+            50,
             51,
-            50
+            52,
+            53
         ]
     }
 },
@@ -2027,12 +2531,12 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            49,
-            48,
-            47,
-            46,
+            44,
             45,
-            44
+            46,
+            47,
+            48,
+            49
         ]
     }
 },
@@ -2058,12 +2562,12 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            59,
-            58,
-            57,
-            56,
+            54,
             55,
-            54
+            56,
+            57,
+            58,
+            59
         ]
     }
 },
@@ -2089,11 +2593,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            64,
-            63,
-            62,
+            60,
             61,
-            60
+            62,
+            63,
+            64
         ]
     }
 },
@@ -2119,11 +2623,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            64,
-            63,
-            62,
+            60,
             61,
-            60
+            62,
+            63,
+            64
         ]
     }
 },
@@ -2149,11 +2653,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            64,
-            63,
-            62,
+            60,
             61,
-            60
+            62,
+            63,
+            64
         ]
     }
 },
@@ -2179,11 +2683,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            64,
-            63,
-            62,
+            60,
             61,
-            60
+            62,
+            63,
+            64
         ]
     }
 },
@@ -2209,11 +2713,11 @@
         "juices_quantity": null,
         "size": null,
         "images": [
-            64,
             60,
             61,
             62,
-            63
+            63,
+            64
         ]
     }
 },
@@ -2270,7 +2774,13 @@
         "book_variation": null,
         "juices_quantity": null,
         "size": null,
-        "images": []
+        "images": [
+            91,
+            92,
+            93,
+            94,
+            95
+        ]
     }
 },
 {
@@ -2321,11 +2831,11 @@
         "juices_quantity": "3 x 250 ml",
         "size": null,
         "images": [
-            82,
-            81,
-            80,
+            78,
             79,
-            78
+            80,
+            81,
+            82
         ]
     }
 },
@@ -2382,11 +2892,350 @@
     }
 },
 {
+    "model": "products.productvariation",
+    "pk": 32,
+    "fields": {
+        "uuid": "69792a43-c471-48c1-a247-c7a9ee193531",
+        "pid": "MBLTPZJQAFHUVMGCLS",
+        "product": 13,
+        "retail_price": "84998.00",
+        "price": "46990.00",
+        "color": 18,
+        "active": true,
+        "available_stock": 10,
+        "mobile_variant": 13,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": null,
+        "juices_quantity": null,
+        "size": null,
+        "images": [
+            96,
+            97,
+            98,
+            99,
+            100
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 33,
+    "fields": {
+        "uuid": "cd8ac557-8f34-41ea-a1d2-a0b127111b12",
+        "pid": "ACCPJVLYSMAEBQTYUU",
+        "product": 14,
+        "retail_price": "1000.00",
+        "price": "849.00",
+        "color": 10,
+        "active": true,
+        "available_stock": 100,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": null,
+        "juices_quantity": null,
+        "size": null,
+        "images": [
+            101,
+            102,
+            103
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 34,
+    "fields": {
+        "uuid": "17dc9c10-abf4-4478-8089-e80443f80c31",
+        "pid": "ACCZBGKSMIGQFXRUYO",
+        "product": 15,
+        "retail_price": "600.00",
+        "price": "549.00",
+        "color": 7,
+        "active": true,
+        "available_stock": 20,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": null,
+        "juices_quantity": null,
+        "size": 5,
+        "images": [
+            104,
+            105,
+            106,
+            107
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 35,
+    "fields": {
+        "uuid": "5fef62f8-21a9-4976-a62d-108a67f4b70a",
+        "pid": "NCDSQPAANALNZMIFYG",
+        "product": 16,
+        "retail_price": "450.00",
+        "price": "400.00",
+        "color": 3,
+        "active": true,
+        "available_stock": 10,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": null,
+        "juices_quantity": null,
+        "size": null,
+        "images": [
+            108,
+            109,
+            110,
+            111
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 36,
+    "fields": {
+        "uuid": "03760db6-c7f2-4c5b-8cde-b29540b1bfa7",
+        "pid": "NCDXJLPEEHCUPJXVCV",
+        "product": 17,
+        "retail_price": "600.00",
+        "price": "480.00",
+        "color": null,
+        "active": true,
+        "available_stock": 5,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": null,
+        "juices_quantity": null,
+        "size": null,
+        "images": [
+            112,
+            113,
+            114
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 37,
+    "fields": {
+        "uuid": "2de3590d-27d7-4cca-b2b9-f9498a7a46d8",
+        "pid": "NCDNSMJZYAZMREKMVV",
+        "product": 18,
+        "retail_price": "69.00",
+        "price": "60.00",
+        "color": null,
+        "active": true,
+        "available_stock": 100,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": null,
+        "juices_quantity": "1 L",
+        "size": null,
+        "images": [
+            115,
+            116,
+            117
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 38,
+    "fields": {
+        "uuid": "dcb68363-0713-4d9d-8c5a-abe38f992638",
+        "pid": "CHORNCMOPCDCYMDODB",
+        "product": 19,
+        "retail_price": "650.00",
+        "price": "585.00",
+        "color": null,
+        "active": true,
+        "available_stock": 50,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": null,
+        "juices_quantity": "343g",
+        "size": null,
+        "images": [
+            118,
+            119,
+            120,
+            121,
+            122
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 39,
+    "fields": {
+        "uuid": "05d76de5-52a5-4773-8785-8e82e6674d37",
+        "pid": "NCDJNYBQCVZDTJVSGT",
+        "product": 20,
+        "retail_price": "115.00",
+        "price": "110.00",
+        "color": null,
+        "active": true,
+        "available_stock": 10,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": null,
+        "juices_quantity": "1 L",
+        "size": null,
+        "images": [
+            123,
+            124,
+            125,
+            126
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 40,
+    "fields": {
+        "uuid": "aba626bf-bd4e-404d-80a9-52bc9bd4f04f",
+        "pid": "JUEUANUHWMVSZGXLCP",
+        "product": 21,
+        "retail_price": "120.00",
+        "price": "115.00",
+        "color": null,
+        "active": true,
+        "available_stock": 10,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": null,
+        "juices_quantity": "1 L",
+        "size": null,
+        "images": [
+            125,
+            126,
+            127,
+            128
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 42,
+    "fields": {
+        "uuid": "77dd7269-82c9-458d-92f4-78afbe1904df",
+        "pid": "BKSOUQJNNTFFCLFDHC",
+        "product": 22,
+        "retail_price": "5000.00",
+        "price": "3596.00",
+        "color": null,
+        "active": true,
+        "available_stock": 0,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": 2,
+        "juices_quantity": null,
+        "size": null,
+        "images": [
+            129
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 43,
+    "fields": {
+        "uuid": "f92cefdd-5641-4717-84a5-279eec84f246",
+        "pid": "BKSEVHXUOCLJQZPYSQ",
+        "product": 23,
+        "retail_price": "3200.00",
+        "price": "2999.00",
+        "color": null,
+        "active": true,
+        "available_stock": 20,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": 2,
+        "juices_quantity": null,
+        "size": null,
+        "images": [
+            130
+        ]
+    }
+},
+{
+    "model": "products.productvariation",
+    "pk": 44,
+    "fields": {
+        "uuid": "3e7521a8-1402-40e2-9fc9-c9e3f1354591",
+        "pid": "BKSADPJCPTUZVXIJCP",
+        "product": 24,
+        "retail_price": "3999.00",
+        "price": "2896.00",
+        "color": null,
+        "active": true,
+        "available_stock": 10,
+        "mobile_variant": null,
+        "laptop_variant": null,
+        "tv_variant": null,
+        "ac_capacity_variant": null,
+        "refrigerator_capacity": null,
+        "ac_star_variant": null,
+        "book_variation": 2,
+        "juices_quantity": null,
+        "size": null,
+        "images": [
+            131
+        ]
+    }
+},
+{
     "model": "products.productimages",
     "pk": 1,
     "fields": {
         "image_summary": "Iphone se black main",
         "image": "Product_Image/Iphone/iphone-se-black-main/front.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2396,6 +3245,7 @@
     "fields": {
         "image_summary": "Iphone se black camera",
         "image": "Product_Image/Iphone/iphone-se-black-camera/camera.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2405,6 +3255,7 @@
     "fields": {
         "image_summary": "Iphone se black back",
         "image": "Product_Image/Iphone/iphone-se-black-back/back.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2414,6 +3265,7 @@
     "fields": {
         "image_summary": "Iphone se black side",
         "image": "Product_Image/Iphone/iphone-se-black-side/side.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2423,6 +3275,7 @@
     "fields": {
         "image_summary": "Iphone se red main",
         "image": "Product_Image/Iphone/iphone-se-red-main/front.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2432,6 +3285,7 @@
     "fields": {
         "image_summary": "Iphone se red back",
         "image": "Product_Image/Iphone/iphone-se-red-back/back.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2441,6 +3295,7 @@
     "fields": {
         "image_summary": "Iphone se red side",
         "image": "Product_Image/Iphone/iphone-se-red-side/side.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2450,6 +3305,7 @@
     "fields": {
         "image_summary": "Iphone se red camera",
         "image": "Product_Image/Iphone/iphone-se-red-camera/camera.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2459,6 +3315,7 @@
     "fields": {
         "image_summary": "Iphone se White main",
         "image": "Product_Image/Iphone/iphone-se-white-main/front.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2468,6 +3325,7 @@
     "fields": {
         "image_summary": "Iphone se white side",
         "image": "Product_Image/Iphone/iphone-se-white-side/side.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2477,6 +3335,7 @@
     "fields": {
         "image_summary": "Iphone se white camera",
         "image": "Product_Image/Iphone/iphone-se-white-camera/camera.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2486,6 +3345,7 @@
     "fields": {
         "image_summary": "Iphone se white back",
         "image": "Product_Image/Iphone/iphone-se-white-back/back.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2495,6 +3355,7 @@
     "fields": {
         "image_summary": "Iphone 12 black main",
         "image": "Product_Image/Iphone/iphone-12-black-main/front_main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2504,6 +3365,7 @@
     "fields": {
         "image_summary": "Iphone 12 black front",
         "image": "Product_Image/Iphone/iphone-12-black-front/front_black.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2513,6 +3375,7 @@
     "fields": {
         "image_summary": "Iphone 12 black camera",
         "image": "Product_Image/Iphone/iphone-12-black-camera/front_camera.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2522,6 +3385,7 @@
     "fields": {
         "image_summary": "Iphone 12 black camera 2",
         "image": "Product_Image/Iphone/iphone-12-black-camera-2/front_camera2.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2531,6 +3395,7 @@
     "fields": {
         "image_summary": "Iphone 12 detail",
         "image": "Product_Image/Iphone/iphone-12-detail/iphone_12_detail.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2540,6 +3405,7 @@
     "fields": {
         "image_summary": "Iphone 12 red main",
         "image": "Product_Image/Iphone/iphone-12-red-main/red_main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2549,6 +3415,7 @@
     "fields": {
         "image_summary": "Iphone 12 red front",
         "image": "Product_Image/Iphone/iphone-12-red-front/red_front.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2558,6 +3425,7 @@
     "fields": {
         "image_summary": "Iphone 12 red camera",
         "image": "Product_Image/Iphone/iphone-12-red-camera/red_camera.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2567,6 +3435,7 @@
     "fields": {
         "image_summary": "Iphone 12 red camera 2",
         "image": "Product_Image/Iphone/iphone-12-red-camera-2/red_camera2.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2576,6 +3445,7 @@
     "fields": {
         "image_summary": "Iphone 12 white main",
         "image": "Product_Image/Iphone/iphone-12-white-main/white_main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2585,6 +3455,7 @@
     "fields": {
         "image_summary": "Iphone 12 white front",
         "image": "Product_Image/Iphone/iphone-12-white-front/white_front.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2594,6 +3465,7 @@
     "fields": {
         "image_summary": "Iphone 12 white camera",
         "image": "Product_Image/Iphone/iphone-12-white-camera/white_camera.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2603,6 +3475,7 @@
     "fields": {
         "image_summary": "Iphone 12 white camera 2",
         "image": "Product_Image/Iphone/iphone-12-white-camera-2/white_camera2.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2612,6 +3485,7 @@
     "fields": {
         "image_summary": "HP 15s main",
         "image": "Product_Image/HP/hp-15s-main/main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2621,6 +3495,7 @@
     "fields": {
         "image_summary": "HP 15s side",
         "image": "Product_Image/HP/hp-15s-side/side.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2630,6 +3505,7 @@
     "fields": {
         "image_summary": "HP 15s back",
         "image": "Product_Image/HP/hp-15s-back/back.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2639,6 +3515,7 @@
     "fields": {
         "image_summary": "HP 15s closed",
         "image": "Product_Image/HP/hp-15s-closed/closed.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2648,6 +3525,7 @@
     "fields": {
         "image_summary": "Lenovo ThinkPad E14 main",
         "image": "Product_Image/Lenovo/lenovo-thinkpad-e14-main/main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2657,6 +3535,7 @@
     "fields": {
         "image_summary": "Lenovo ThinkPad E14 touchID",
         "image": "Product_Image/Lenovo/lenovo-thinkpad-e14-touchid/touch_id.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2666,6 +3545,7 @@
     "fields": {
         "image_summary": "Lenovo ThinkPad E14 feature_one",
         "image": "Product_Image/Lenovo/lenovo-thinkpad-e14-feature_one/features_one.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2675,6 +3555,7 @@
     "fields": {
         "image_summary": "Lenovo ThinkPad E14 feature_two",
         "image": "Product_Image/Lenovo/lenovo-thinkpad-e14-feature_two/features_two.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2684,6 +3565,7 @@
     "fields": {
         "image_summary": "Lenovo ThinkPad E14 feature_three",
         "image": "Product_Image/Lenovo/lenovo-thinkpad-e14-feature_three/features_three.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2693,6 +3575,7 @@
     "fields": {
         "image_summary": "SAMSUNG The Frame main",
         "image": "Product_Image/SAMSUNG/samsung-the-frame-main/main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2702,6 +3585,7 @@
     "fields": {
         "image_summary": "SAMSUNG The Frame edge",
         "image": "Product_Image/SAMSUNG/samsung-the-frame-edge/edge.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2711,6 +3595,7 @@
     "fields": {
         "image_summary": "SAMSUNG The Frame feature_one",
         "image": "Product_Image/SAMSUNG/samsung-the-frame-feature_one/feature_one.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2720,6 +3605,7 @@
     "fields": {
         "image_summary": "SAMSUNG The Frame feature_two",
         "image": "Product_Image/SAMSUNG/samsung-the-frame-feature_two/feature_two.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2729,6 +3615,7 @@
     "fields": {
         "image_summary": "SAMSUNG The Frame front",
         "image": "Product_Image/SAMSUNG/samsung-the-frame-front/front.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2738,6 +3625,7 @@
     "fields": {
         "image_summary": "SAMSUNG The Frame back",
         "image": "Product_Image/SAMSUNG/samsung-the-frame-back/back.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2747,6 +3635,7 @@
     "fields": {
         "image_summary": "SAMSUNG The Frame remote",
         "image": "Product_Image/SAMSUNG/samsung-the-frame-remote/remote.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2756,6 +3645,7 @@
     "fields": {
         "image_summary": "SAMSUNG The Frame side",
         "image": "Product_Image/SAMSUNG/samsung-the-frame-side/side.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2765,6 +3655,7 @@
     "fields": {
         "image_summary": "Bose 500 Silver main",
         "image": "Product_Image/Bose/bose-500-silver-main/main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2774,6 +3665,7 @@
     "fields": {
         "image_summary": "Bose 500 Silver feature one",
         "image": "Product_Image/Bose/bose-500-silver-feature-one/feature_one.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2783,6 +3675,7 @@
     "fields": {
         "image_summary": "Bose 500 Silver feature two",
         "image": "Product_Image/Bose/bose-500-silver-feature-two/feature_two.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2792,6 +3685,7 @@
     "fields": {
         "image_summary": "Bose 500 Silver detail",
         "image": "Product_Image/Bose/bose-500-silver-detail/detail.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2801,6 +3695,7 @@
     "fields": {
         "image_summary": "Bose 500 Silver top",
         "image": "Product_Image/Bose/bose-500-silver-top/top_two.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2810,6 +3705,7 @@
     "fields": {
         "image_summary": "Bose 500 Silver top one",
         "image": "Product_Image/Bose/bose-500-silver-top-one/top.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2819,6 +3715,7 @@
     "fields": {
         "image_summary": "Bose 500 Black main",
         "image": "Product_Image/Bose/bose-500-black-main/main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2828,6 +3725,7 @@
     "fields": {
         "image_summary": "Bose 500 Black side",
         "image": "Product_Image/Bose/bose-500-black-side/side.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2837,6 +3735,7 @@
     "fields": {
         "image_summary": "Bose 500 Black feature one",
         "image": "Product_Image/Bose/bose-500-black-feature-one/feature_one.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2846,6 +3745,7 @@
     "fields": {
         "image_summary": "Bose 500 Black top",
         "image": "Product_Image/Bose/bose-500-black-top/top_one.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2855,6 +3755,7 @@
     "fields": {
         "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL main",
         "image": "Product_Image/BOSCH/bosch-8-kg-inverter-touch-control-main/main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2864,6 +3765,7 @@
     "fields": {
         "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL secondary",
         "image": "Product_Image/BOSCH/bosch-8-kg-inverter-touch-control-secondary/secondary.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2873,6 +3775,7 @@
     "fields": {
         "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL features",
         "image": "Product_Image/BOSCH/bosch-8-kg-inverter-touch-control-features/features.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2882,6 +3785,7 @@
     "fields": {
         "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL inside",
         "image": "Product_Image/BOSCH/bosch-8-kg-inverter-touch-control-inside/inside.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2891,6 +3795,7 @@
     "fields": {
         "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL back",
         "image": "Product_Image/BOSCH/bosch-8-kg-inverter-touch-control-back/back.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2900,6 +3805,7 @@
     "fields": {
         "image_summary": "BOSCH 8 kg INVERTER TOUCH CONTROL size",
         "image": "Product_Image/BOSCH/bosch-8-kg-inverter-touch-control-size/size.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2909,6 +3815,7 @@
     "fields": {
         "image_summary": "SAMSUNG Star Split Inverter AC main",
         "image": "Product_Image/SAMSUNG/samsung-star-split-inverter-ac-main/main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2918,6 +3825,7 @@
     "fields": {
         "image_summary": "SAMSUNG Star Split Inverter AC open",
         "image": "Product_Image/SAMSUNG/samsung-star-split-inverter-ac-open/main_open.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2927,6 +3835,7 @@
     "fields": {
         "image_summary": "SAMSUNG Star Split Inverter AC side",
         "image": "Product_Image/SAMSUNG/samsung-star-split-inverter-ac-side/side_one.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2936,6 +3845,7 @@
     "fields": {
         "image_summary": "SAMSUNG Star Split Inverter AC side open",
         "image": "Product_Image/SAMSUNG/samsung-star-split-inverter-ac-side-open/side_open.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2945,6 +3855,7 @@
     "fields": {
         "image_summary": "SAMSUNG Star Split Inverter AC back",
         "image": "Product_Image/SAMSUNG/samsung-star-split-inverter-ac-back/back.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2954,6 +3865,7 @@
     "fields": {
         "image_summary": "ASIAN PAINTS TE-3 white main",
         "image": "Product_Image/ASIAN/asian-paints-te-3-white-main/main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2963,6 +3875,7 @@
     "fields": {
         "image_summary": "Auric Mens Energy  main",
         "image": "Product_Image/Auric/auric-mens-energy-main/main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -2972,6 +3885,7 @@
     "fields": {
         "image_summary": "Auric Mens Energy back",
         "image": "Product_Image/Auric/auric-mens-energy-back/back.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2981,6 +3895,7 @@
     "fields": {
         "image_summary": "Auric Mens Energy secondary",
         "image": "Product_Image/Auric/auric-mens-energy-secondary/secondary.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2990,6 +3905,7 @@
     "fields": {
         "image_summary": "Auric Mens Energy detail",
         "image": "Product_Image/Auric/auric-mens-energy-detail/detail.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -2999,6 +3915,7 @@
     "fields": {
         "image_summary": "Auric Mens Energy detail_one",
         "image": "Product_Image/Auric/auric-mens-energy-detail_one/detail_one.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -3008,6 +3925,7 @@
     "fields": {
         "image_summary": "Javascript the definative guide",
         "image": "Product_Image/Javascript/javascript-the-definative-guide/main.jpg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -3017,6 +3935,7 @@
     "fields": {
         "image_summary": "LG 215 L Direct Cool Single Door Purple Glow main",
         "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-main/main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -3026,6 +3945,7 @@
     "fields": {
         "image_summary": "LG 215 L Direct Cool Single Door Purple Glow back",
         "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-back/back.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -3035,6 +3955,7 @@
     "fields": {
         "image_summary": "LG 215 L Direct Cool Single Door Purple Glow details",
         "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-details/details.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -3044,6 +3965,7 @@
     "fields": {
         "image_summary": "LG 215 L Direct Cool Single Door Purple Glow opened",
         "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-opened/opened.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -3053,6 +3975,7 @@
     "fields": {
         "image_summary": "LG 215 L Direct Cool Single Door Purple Glow feature one",
         "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-feature-one/features_one.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -3062,6 +3985,7 @@
     "fields": {
         "image_summary": "LG 215 L Direct Cool Single Door Purple Glow feature two",
         "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-feature-two/features_two.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -3071,6 +3995,7 @@
     "fields": {
         "image_summary": "LG 215 L Direct Cool Single Door Purple Glow feature three",
         "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-purple-glow-feature-three/features_three.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -3080,6 +4005,7 @@
     "fields": {
         "image_summary": "LG 215 L Direct Cool Single Door Blue Charm main",
         "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-blue-charm-main/main.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": true
     }
 },
@@ -3089,6 +4015,7 @@
     "fields": {
         "image_summary": "LG 215 L Direct Cool Single Door Blue back",
         "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-blue-back/back.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -3098,6 +4025,7 @@
     "fields": {
         "image_summary": "LG 215 L Direct Cool Single Door Blue opened",
         "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-blue-opened/opened.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -3107,6 +4035,7 @@
     "fields": {
         "image_summary": "LG 215 L Direct Cool Single Door Blue bottom",
         "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-blue-bottom/section_bottom.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
     }
 },
@@ -3116,7 +4045,368 @@
     "fields": {
         "image_summary": "LG 215 L Direct Cool Single Door Blue top",
         "image": "Product_Image/LG/lg-215-l-direct-cool-single-door-blue-top/section_top.jpeg",
+        "placeholder": "default_placeholder.jpg",
         "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 96,
+    "fields": {
+        "image_summary": "Samsung Galaxy S20 FE 5G_main",
+        "image": "Product_Image/main/main/main.jpeg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 97,
+    "fields": {
+        "image_summary": "Samsung Galaxy S20 FE 5G battery",
+        "image": "Product_Image/Samsung/samsung-galaxy-s20-fe-5g-battery/battery.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 98,
+    "fields": {
+        "image_summary": "Samsung Galaxy S20 FE 5G colors",
+        "image": "Product_Image/Samsung/samsung-galaxy-s20-fe-5g-colors/colors.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 99,
+    "fields": {
+        "image_summary": "Samsung Galaxy S20 FE 5G info",
+        "image": "Product_Image/info/info/info_black.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 100,
+    "fields": {
+        "image_summary": "Samsung Galaxy S20 FE 5G isp",
+        "image": "Product_Image/Samsung/samsung-galaxy-s20-fe-5g-isp/water_pr.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 101,
+    "fields": {
+        "image_summary": "SHAFIRE Main",
+        "image": "Product_Image/SHAFIRE/shafire-main/main.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 102,
+    "fields": {
+        "image_summary": "SHAFIRE secondary",
+        "image": "Product_Image/SHAFIRE/shafire-secondary/secondary.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 103,
+    "fields": {
+        "image_summary": "SHAFIRE color",
+        "image": "Product_Image/SHAFIRE/shafire-color/colors.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 104,
+    "fields": {
+        "image_summary": "Steelbird Full Finger Bike Riding Gloves main",
+        "image": "Product_Image/Steelbird/steelbird-full-finger-bike-riding-gloves-main/main.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 105,
+    "fields": {
+        "image_summary": "Steelbird Full Finger Bike Riding Gloves secondary",
+        "image": "Product_Image/Steelbird/steelbird-full-finger-bike-riding-gloves-secondary/secondary.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 106,
+    "fields": {
+        "image_summary": "Steelbird Full Finger Bike Riding Gloves sizes",
+        "image": "Product_Image/Steelbird/steelbird-full-finger-bike-riding-gloves-sizes/sizes.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 107,
+    "fields": {
+        "image_summary": "Steelbird Full Finger Bike Riding Gloves features",
+        "image": "Product_Image/Steelbird/steelbird-full-finger-bike-riding-gloves-features/features.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 108,
+    "fields": {
+        "image_summary": "Rangwell Heavy Duty Bike Brake Lock main",
+        "image": "Product_Image/Rangwell/rangwell-heavy-duty-bike-brake-lock-main/main.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 109,
+    "fields": {
+        "image_summary": "Rangwell Heavy Duty Bike Brake Lock colors",
+        "image": "Product_Image/Rangwell/rangwell-heavy-duty-bike-brake-lock-colors/color.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 110,
+    "fields": {
+        "image_summary": "Rangwell Heavy Duty Bike Brake Lock sec",
+        "image": "Product_Image/Rangwell/rangwell-heavy-duty-bike-brake-lock-sec/opened.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 111,
+    "fields": {
+        "image_summary": "Rangwell Heavy Duty Bike Brake Lock size",
+        "image": "Product_Image/Rangwell/rangwell-heavy-duty-bike-brake-lock-size/size.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 112,
+    "fields": {
+        "image_summary": "Plantex Stainless Steel Wall Mount main",
+        "image": "Product_Image/Plantex/plantex-stainless-steel-wall-mount-main/main.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 113,
+    "fields": {
+        "image_summary": "Plantex Stainless Steel Wall Mount sec",
+        "image": "Product_Image/Plantex/plantex-stainless-steel-wall-mount-sec/features.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 114,
+    "fields": {
+        "image_summary": "Plantex Stainless Steel Wall Mount  size",
+        "image": "Product_Image/Plantex/plantex-stainless-steel-wall-mount-size/size.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 115,
+    "fields": {
+        "image_summary": "Minute Maid Pulpy Orange main",
+        "image": "Product_Image/Minute/minute-maid-pulpy-orange-main/main.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 116,
+    "fields": {
+        "image_summary": "Minute Maid Pulpy Orange nutrition",
+        "image": "Product_Image/Minute/minute-maid-pulpy-orange-nutrition/nutrition_facts.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 117,
+    "fields": {
+        "image_summary": "Minute Maid Pulpy Orange ingrediants",
+        "image": "Product_Image/Minute/minute-maid-pulpy-orange-ingrediants/ingrediants.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 118,
+    "fields": {
+        "image_summary": "Cadbury Silk Potli Gift main",
+        "image": "Product_Image/Cadbury/cadbury-silk-potli-gift-main/main.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 119,
+    "fields": {
+        "image_summary": "Cadbury Silk Potli Gift sec",
+        "image": "Product_Image/Cadbury/cadbury-silk-potli-gift-sec/sec.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 120,
+    "fields": {
+        "image_summary": "Cadbury Silk Potli Gift sec2",
+        "image": "Product_Image/Cadbury/cadbury-silk-potli-gift-sec2/sec2.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 121,
+    "fields": {
+        "image_summary": "Cadbury Silk Potli Gift  nut1",
+        "image": "Product_Image/Cadbury/cadbury-silk-potli-gift-nut1/nutrition1.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 122,
+    "fields": {
+        "image_summary": "Cadbury Silk Potli Gift  nut2",
+        "image": "Product_Image/Cadbury/cadbury-silk-potli-gift-nut2/nutrition2.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 123,
+    "fields": {
+        "image_summary": "Tropicana Orange Delight main",
+        "image": "Product_Image/Tropicana/tropicana-orange-delight-main/main.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 124,
+    "fields": {
+        "image_summary": "Tropicana Orange Delight sec",
+        "image": "Product_Image/Tropicana/tropicana-orange-delight-sec/secondary.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 125,
+    "fields": {
+        "image_summary": "Tropicana Orange Delight nutrition",
+        "image": "Product_Image/Tropicana/tropicana-orange-delight-nutrition/nutrition.jpeg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 126,
+    "fields": {
+        "image_summary": "Tropicana Orange Delight ingrediants",
+        "image": "Product_Image/Tropicana/tropicana-orange-delight-ingrediants/ingrediant.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 127,
+    "fields": {
+        "image_summary": "Tropicana Litchi Delight Fruit Juice main",
+        "image": "Product_Image/Tropicana/tropicana-litchi-delight-fruit-juice/main_1.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 128,
+    "fields": {
+        "image_summary": "Tropicana Litchi Delight Fruit Juice sec",
+        "image": "Product_Image/Tropicana/tropicana-litchi-delight-fruit-juice-sec/secondary_2.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": false
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 129,
+    "fields": {
+        "image_summary": "efffective typescript main",
+        "image": "Product_Image/efffective/efffective-typescript-main/main.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 130,
+    "fields": {
+        "image_summary": "Django 3 by example main",
+        "image": "Product_Image/Django/django-3-by-example-main/51hUJQm8byL._SX404_BO1204203200_.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 131,
+    "fields": {
+        "image_summary": "react book main",
+        "image": "Product_Image/react/react-book-main/main.jpg",
+        "placeholder": "default_placeholder.jpg",
+        "primary": true
     }
 }
 ]
