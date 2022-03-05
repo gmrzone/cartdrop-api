@@ -19,7 +19,7 @@ def test_accounts_get_views_status(client, url_name):
 def test_signup_view_with_proper_data(client):
     url = reverse("accounts:signup")
     User = get_user_model()
-    # With proper data response status should be 200
+    # With proper data response status should be 200 and usercount should increment by 1
     data = {
         "username": "AfzalSaiyed",
         "number": "9220976696",
