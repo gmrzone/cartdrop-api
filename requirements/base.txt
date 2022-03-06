@@ -12,6 +12,7 @@ regex==2022.1.18
 sqlparse==0.4.2
 tomli==2.0.1
 djangorestframework-simplejwt==5.0.0
+python-dateutil==2.8.2
 
 # Documentations
 

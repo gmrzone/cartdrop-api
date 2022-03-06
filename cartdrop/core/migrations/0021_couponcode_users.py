@@ -7,15 +7,19 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0011_alter_cartdropuser_email_alter_cartdropuser_username'),
+        ("accounts", "0011_alter_cartdropuser_email_alter_cartdropuser_username"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('core', '0020_remove_couponcode_users'),
+        ("core", "0020_remove_couponcode_users"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='couponcode',
-            name='users',
-            field=models.ManyToManyField(related_name='coupon_codes', through='core.UserCouponIntermidiary', to=settings.AUTH_USER_MODEL),
+            model_name="couponcode",
+            name="users",
+            field=models.ManyToManyField(
+                related_name="coupon_codes",
+                through="core.UserCouponIntermidiary",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]

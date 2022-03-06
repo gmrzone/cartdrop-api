@@ -1,7 +1,8 @@
 from django.contrib import admin
 
 from .models import (Brand, CategoryImage, CouponCode, ProductCategory,
-                     ProductSubcategory, SubcategoryImage, UserCouponIntermidiary)
+                     ProductSubcategory, SubcategoryImage,
+                     UserCouponIntermidiary)
 
 # Register your models here.
 
@@ -45,4 +46,3 @@ class CouponCodeAdmin(admin.ModelAdmin):
 class UserCouponIntermidiaryTable(admin.ModelAdmin):
     list_display = ("user", "coupon", "created", "updated")
     list_filter = ("created",)
-    
