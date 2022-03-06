@@ -90,6 +90,12 @@ class ReviewImages(models.Model):
     )
 
 
+# Intermediary model between Coupon and user to track when the user applier co
+class UserCouponIntermidiary(Timestamps):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="user_rel")
+    coupon = models.ForeignKey("CouponCode", on_delete=models.CASCADE, related_name="coupon_rel")
+
+    
 class CouponCode(UUIDField, Timestamps):
     class CouponReusableTypeChoises(models.TextChoices):
         SINGLE = "SINGLE", "Single"
@@ -109,7 +115,7 @@ class CouponCode(UUIDField, Timestamps):
     )
     valid_from = models.DateTimeField()
     valid_to = models.DateTimeField()
-    users = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True)
+    users = models.ManyToManyField(settings.AUTH_USER_MODEL, through=UserCouponIntermidiary, symmetrical=False, related_name="coupon_codes")
     active = models.BooleanField(default=True)
 
     def __str__(self):

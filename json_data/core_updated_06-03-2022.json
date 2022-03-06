@@ -1050,8 +1050,7 @@
         "valid_from": "2021-09-01T05:04:57Z",
         "valid_to": "2022-09-01T05:04:59Z",
         "active": true,
-        "subcategory": [],
-        "users": []
+        "subcategory": []
     }
 },
 {
@@ -1068,8 +1067,7 @@
         "valid_from": "2021-09-01T05:06:00Z",
         "valid_to": "2022-09-01T05:06:01Z",
         "active": true,
-        "subcategory": [],
-        "users": []
+        "subcategory": []
     }
 },
 {
@@ -1086,8 +1084,7 @@
         "valid_from": "2021-09-01T05:06:31Z",
         "valid_to": "2022-09-01T05:06:33Z",
         "active": true,
-        "subcategory": [],
-        "users": []
+        "subcategory": []
     }
 },
 {
@@ -1104,8 +1101,7 @@
         "valid_from": "2021-09-01T05:07:10Z",
         "valid_to": "2022-09-01T05:07:14Z",
         "active": true,
-        "subcategory": [],
-        "users": []
+        "subcategory": []
     }
 },
 {
@@ -1122,8 +1118,7 @@
         "valid_from": "2021-09-01T05:28:11Z",
         "valid_to": "2022-09-01T05:28:12Z",
         "active": true,
-        "subcategory": [],
-        "users": []
+        "subcategory": []
     }
 },
 {
@@ -1140,8 +1135,7 @@
         "valid_from": "2021-09-01T05:50:50Z",
         "valid_to": "2022-09-01T05:50:55Z",
         "active": true,
-        "subcategory": [],
-        "users": []
+        "subcategory": []
     }
 },
 {
@@ -1158,8 +1152,7 @@
         "valid_from": "2021-09-01T05:52:13Z",
         "valid_to": "2022-09-01T05:52:14Z",
         "active": true,
-        "subcategory": [],
-        "users": []
+        "subcategory": []
     }
 },
 {
@@ -1176,8 +1169,7 @@
         "valid_from": "2021-09-01T05:57:35Z",
         "valid_to": "2022-09-01T05:57:36Z",
         "active": true,
-        "subcategory": [],
-        "users": []
+        "subcategory": []
     }
 },
 {
@@ -1194,8 +1186,7 @@
         "valid_from": "2021-09-01T05:58:45Z",
         "valid_to": "2022-09-01T05:58:46Z",
         "active": true,
-        "subcategory": [],
-        "users": []
+        "subcategory": []
     }
 },
 {
@@ -1212,8 +1203,7 @@
         "valid_from": "2021-09-01T05:59:56Z",
         "valid_to": "2022-09-01T06:00:01Z",
         "active": true,
-        "subcategory": [],
-        "users": []
+        "subcategory": []
     }
 },
 {
@@ -1230,8 +1220,7 @@
         "valid_from": "2021-09-01T06:01:15Z",
         "valid_to": "2022-09-01T06:01:16Z",
         "active": true,
-        "subcategory": [],
-        "users": []
+        "subcategory": []
     }
 }
 ]

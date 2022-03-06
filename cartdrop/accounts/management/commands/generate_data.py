@@ -32,7 +32,7 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS(message))
 
         # Load data for core and product app
-        call_command("loaddata", "json_data/core_updated_05-03-2022.json")
+        call_command("loaddata", "json_data/core_updated_06-03-2022.json")
         self.stdout.write(self.style.SUCCESS("Sucessfully loaded data for core app"))
         call_command("loaddata", "json_data/products_updated_05-03-2022.json")
         self.stdout.write(self.style.SUCCESS("Sucessfully loaded data for Product app"))
