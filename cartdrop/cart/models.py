@@ -164,15 +164,15 @@ class Cart:
         try:
             # Check if the coupon exist and is active
             coupon = CouponCode.objects.get(
-                code_iexact=coupon_code,
+                code__iexact=coupon_code,
                 active=True,
-                valid_from__gte=date_now,
-                valid_to__lte=date_now,
+                valid_from__lte=date_now,
+                valid_to__gte=date_now,
             )
         except CouponCode.DoesNotExist:
             response = {
                 "status": "error",
-                "message": f"The Coupon code {coupon_code} is not valid or has ben expired.",
+                "message": f"The Coupon code {coupon_code} is not valid or has been expired.",
             }
         except MultipleObjectsReturned:
             response = {
@@ -197,8 +197,15 @@ class Cart:
                 else:
                     response = self.apply_reusable_coupon(coupon, user_coupon, date_now)
             else:
+                # If there is no product in the cart then we cannot apply coupon
+                if self.cart["products"] == {}:
+                    response = {
+                        "status": "error",
+                        "message": "Cannot apply coupon on empty cart.",
+                    }
                 # If the user has not applied this coupon then go ahead and save it in session and when
                 # The user finishes the order then create relation between that user and coupon so that
                 # Next time we can find if the user has applied this coupon
-                response = self.apply_coupon_to_session(coupon)
+                else:
+                    response = self.apply_coupon_to_session(coupon)
         return response

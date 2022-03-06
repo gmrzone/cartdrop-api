@@ -1,7 +1,9 @@
 import pytest
 from django.contrib.auth import get_user_model
+from django.http import HttpRequest
 
-from cartdrop.core.models import Brand, ProductCategory, ProductSubcategory
+from cartdrop.core.models import (Brand, CouponCode, ProductCategory,
+                                  ProductSubcategory)
 from cartdrop.products.models import (Product, ProductSpecification,
                                       ProductVariation)
 
@@ -66,3 +68,47 @@ def product_data(get_new_user):
         "uuid": product_variation.uuid,
         "pid": product_variation.pid,
     }
+
+
+@pytest.fixture
+def get_coupon():
+    def wrapper(code, discount, valid_from, valid_to, reusable_type, subcategory=None):
+        coupon = CouponCode.objects.create(
+            code=code,
+            discount=discount,
+            valid_from=valid_from,
+            valid_to=valid_to,
+            reusable_type=reusable_type,
+            active=True,
+        )
+        coupon.subcategory.set([subcategory])
+        return coupon
+
+    return wrapper
+
+
+@pytest.fixture
+def get_session():
+    class Session(dict):
+        modified = False
+
+    return Session
+
+
+@pytest.fixture
+def get_request(get_new_user, get_session):
+    user = get_new_user(
+        number="9220976696",
+        email="requesttest@test.com",
+        username="testrequestuser",
+        password="password123",
+    )
+    session = get_session()
+
+    def wrapper():
+        request = HttpRequest()
+        request.user = user
+        request.session = session
+        return request
+
+    return wrapper
