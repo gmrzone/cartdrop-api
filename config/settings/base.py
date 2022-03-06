@@ -174,6 +174,7 @@ CSRF_COOKIE_SAMESITE = "Lax"
 CSRF_COOKIE_HTTPONLY = True
 CSRF_TRUSTED_ORIGINS = ["https://cartdrop.afzalsaiyed.info"]
 
+CART_SESSION_ID = "cartdrop_cart"
 
 # EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 # EMAIL_USE_TLS = True

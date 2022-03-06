@@ -1,5 +1,4 @@
 from datetime import timedelta
-from email.utils import parsedate_to_datetime
 
 from dateutil.relativedelta import relativedelta
 from django.conf import settings
@@ -41,7 +40,7 @@ class Cart:
                 product_variation = ProductVariation.objects.get(
                     uuid=uuid, pid=pid, active=True
                 )
-            except:
+            except ProductVariation.DoesNotExist:
                 response = {
                     "status": "error",
                     "message": "The product you are trying to buy is currently not available.",
@@ -71,14 +70,10 @@ class Cart:
                     "message": f"Product quantity decreased by {quantity}",
                 }
             else:
-                del self.cart["products"][product_key]
-                response = {
-                    "status": "ok",
-                    "message": "Sucessfully removed product from the cart",
-                }
+                self.delete(uuid, pid)
             cart_updated = True
         else:
-            response = {"status": "error", "message": "Product not available"}
+            response = {"status": "error", "message": "Product is not in your cart."}
         if cart_updated:
             self.save()
         return response
@@ -96,7 +91,7 @@ class Cart:
         else:
             response = {
                 "status": "error",
-                "message": "Product Not found",
+                "message": "Product Not found.",
             }
         if cart_updated:
             self.save()
