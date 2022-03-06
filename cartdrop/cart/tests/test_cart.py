@@ -76,13 +76,13 @@ def test_apply_coupon(product_data, get_request, get_coupon):
         50,
         valid_from,
         valid_to,
-        CouponCode.CouponReusableTypeChoises.SINGLE,
+        CouponCode.CouponReusableTypeChoises.MONTHLY,
     )
 
     # First Apply coupon without adding product to session
     # It should return error
 
-    response = cart.apply_coupon("TEST_COUPON")
+    response = cart.apply_coupon("TEST_COUPON", request.user)
     assert response["status"] == "error"
     assert response["message"] == "Cannot apply coupon on empty cart."
 
@@ -98,7 +98,7 @@ def test_apply_coupon(product_data, get_request, get_coupon):
     assert cart.cart["products"][product_key]["quantity"] == 3
 
     # Now we apply wrong coupon
-    response = cart.apply_coupon("WRONG_COUPON")
+    response = cart.apply_coupon("WRONG_COUPON", request.user)
     assert response["status"] == "error"
     assert (
         response["message"]
@@ -106,7 +106,7 @@ def test_apply_coupon(product_data, get_request, get_coupon):
     )
 
     # Now we apply the right coupon and it should apply and save it in session
-    response = cart.apply_coupon("TEST_COUPON")
+    response = cart.apply_coupon("TEST_COUPON", request.user)
     assert response["status"] == "ok"
     assert (
         response["message"]
@@ -118,5 +118,6 @@ def test_apply_coupon(product_data, get_request, get_coupon):
     UserCouponIntermidiary.objects.create(user=request.user, coupon=coupon)
     # Now we try to apply the same coupon and it should return error because it was not
     # a Reusable coupon code
-    response = cart.apply_coupon("TEST_COUPON")
+    response = cart.apply_coupon("TEST_COUPON", request.user)
     assert response["status"] == "error"
+    print(response)

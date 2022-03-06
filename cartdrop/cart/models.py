@@ -13,7 +13,6 @@ from ..products.models import ProductVariation
 #  TODO: This Cart class has not been tested Please test it before implementing it
 class Cart:
     def __init__(self, request):
-        self.user = request.user
         self.session = request.session
         cart = self.session.get(settings.CART_SESSION_ID)
 
@@ -110,20 +109,22 @@ class Cart:
     @staticmethod
     def get_remaning_time(current_time, target_time):
         remaning_datetime = target_time - current_time
-        parsed_remaning_time = ""
-        if remaning_datetime.year:
-            parsed_remaning_time += f"{remaning_datetime.year} year{'s' if remaning_datetime.year > 1 else ''}, "
-        if remaning_datetime.month:
-            parsed_remaning_time += f"{remaning_datetime.month} month{'s' if remaning_datetime.month > 1 else ''}, "
-        if remaning_datetime.day:
-            parsed_remaning_time += f"{remaning_datetime.day} day{'s' if remaning_datetime.day > 1 else ''}, "
-        if remaning_datetime.hour:
-            parsed_remaning_time += f"{remaning_datetime.hour} day{'s' if remaning_datetime.hour > 1 else ''}, "
-        if remaning_datetime.minute:
-            parsed_remaning_time += f"{remaning_datetime.minute} day{'s' if remaning_datetime.minute > 1 else ''}, "
-        if remaning_datetime.second:
-            parsed_remaning_time += f"{remaning_datetime.second} day{'s' if remaning_datetime.second > 1 else ''}, "
-        return parsed_remaning_time
+        days = remaning_datetime.days
+        # parsed_remaning_time = ""
+        # if remaning_datetime.year:
+        #     parsed_remaning_time += f"{remaning_datetime.year} year{'s' if remaning_datetime.year > 1 else ''}, "
+        # if remaning_datetime.month:
+        #     parsed_remaning_time += f"{remaning_datetime.month} month{'s' if remaning_datetime.month > 1 else ''}, "
+        # if remaning_datetime.day:
+        #     parsed_remaning_time += f"{remaning_datetime.day} day{'s' if remaning_datetime.day > 1 else ''}, "
+        # if remaning_datetime.hour:
+        #     parsed_remaning_time += f"{remaning_datetime.hour} day{'s' if remaning_datetime.hour > 1 else ''}, "
+        # if remaning_datetime.minute:
+        #     parsed_remaning_time += f"{remaning_datetime.minute} day{'s' if remaning_datetime.minute > 1 else ''}, "
+        # if remaning_datetime.second:
+        #     parsed_remaning_time += f"{remaning_datetime.second} day{'s' if remaning_datetime.second > 1 else ''}, "
+        # return parsed_remaning_time
+        return f"{days} Day{'s' if days > 1 else ''}"
 
     def apply_reusable_coupon(self, coupon, user_coupons, date_now):
         if user_coupons.reusable_type == CouponCode.CouponReusableTypeChoises.MONTHLY:
@@ -159,7 +160,7 @@ class Cart:
 
     # Note: User can only apply coupon when he is authenticated so we can check if the user has already
     # Applied a coupon or not
-    def apply_coupon(self, coupon_code):
+    def apply_coupon(self, coupon_code, user):
         date_now = timezone.now()
         try:
             # Check if the coupon exist and is active
@@ -181,7 +182,7 @@ class Cart:
             }
         else:
             # If the user has already applied this coupon
-            user_coupon = self.user.coupon_codes.filter(
+            user_coupon = user.coupon_codes.filter(
                 code__iexact=coupon_code
             ).first()
             if user_coupon:
