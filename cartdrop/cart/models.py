@@ -5,8 +5,9 @@ from django.conf import settings
 from django.core.exceptions import MultipleObjectsReturned
 from django.utils import timezone
 
-from ..core.models import CouponCode, UserCouponIntermidiary
+from ..core.models import CouponCode
 from ..products.models import ProductVariation
+from ..products.serializers import ProductVariationDetailSerializer
 
 # Create your models here.
 
@@ -98,7 +99,7 @@ class Cart:
 
     def apply_coupon_to_session(self, coupon):
         self.cart["cart_detail"]["coupon"] = coupon.code
-        self.cart["cart_detail"]["discount"] = f"{coupon.discount}%"
+        self.cart["cart_detail"]["discount"] = f"{coupon.discount}"
         response = {
             "status": "ok",
             "message": f"sucessfully applied coupon {coupon.code} with discount {coupon.discount}%",
@@ -182,9 +183,7 @@ class Cart:
             }
         else:
             # If the user has already applied this coupon
-            user_coupon = user.coupon_codes.filter(
-                code__iexact=coupon_code
-            ).first()
+            user_coupon = user.coupon_codes.filter(code__iexact=coupon_code).first()
             if user_coupon:
                 # If coupon is only for single use then return error response
                 if (
@@ -210,3 +209,32 @@ class Cart:
                 else:
                     response = self.apply_coupon_to_session(coupon)
         return response
+
+    def __iter__(self):
+        for key in self.cart["products"].keys():
+            yield key
+
+    # TODO: Need to improve this method whenever we can test this
+    def get_cart_detail(self):
+        cart = self.cart["products"].copy()
+        cart_detail = self.cart["cart_details"].copy()
+
+        uuids = []
+        pids = []
+        for key in self:
+            uuid, pid = key.split("_")
+            uuids.append(uuid)
+            pids.append(pid)
+
+        product_variations = ProductVariation.objects.filter(
+            uuid__in=uuids, pid__in=pids
+        )
+
+        for product in product_variations:
+            product_key = f"{product.uuid}_{product.pid}"
+            cart[product_key]["product"] = ProductVariationDetailSerializer(
+                product, many=False
+            ).data
+            cart[product_key]["total"] = product.price * cart[product_key]["quantity"]
+
+        return {"cart": cart, "cart_detail": cart_detail}
