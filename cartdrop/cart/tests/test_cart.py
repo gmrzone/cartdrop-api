@@ -1,9 +1,10 @@
 from urllib import request
 
 import pytest
-from django.contrib.auth import get_user_model
-from django.http import HttpRequest
+from dateutil.relativedelta import relativedelta
+from django.utils import timezone
 
+from ...core.models import CouponCode, UserCouponIntermidiary
 from ..models import Cart
 
 
@@ -13,17 +14,9 @@ class Session(dict):
 
 
 @pytest.mark.django_db
-def test_cart(client, product_data):
-    # Get user model and attach user and session to request object
-    user_model = get_user_model()
-    user = user_model.objects.get(username="testuser")
-    request = HttpRequest()
-    request.user = user
-    session = Session()
-    request.session = session
+def test_cart(product_data, get_request):
+    request = get_request()
     cart = Cart(request)
-    print(cart.session)
-
     #  Add Product to cart
     ## First Add wrong product that is not in the db to assert its response
     response = cart.add(uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid")
@@ -50,7 +43,7 @@ def test_cart(client, product_data):
     assert response["status"] == "ok"
     assert cart.cart["products"][product_key]["quantity"] == 2
 
-    # Noe remove a product that does not exist in the cart should return error
+    # Now remove a product that does not exist in the cart should return error
     response = cart.remove(uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid")
     assert response["status"] == "error"
     assert response["message"] == "Product is not in your cart."
@@ -69,3 +62,62 @@ def test_cart(client, product_data):
     response = cart.delete(uuid=product_uuid, pid=product_pid)
     assert response["status"] == "ok"
     assert cart.cart["products"] == {}
+
+
+@pytest.mark.django_db
+def test_apply_coupon(product_data, get_request, get_coupon):
+
+    request = get_request()
+    cart = Cart(request)
+    valid_from = timezone.now() - relativedelta(days=1)
+    valid_to = timezone.now() + relativedelta(days=2)
+    coupon = get_coupon(
+        "TEST_COUPON",
+        50,
+        valid_from,
+        valid_to,
+        CouponCode.CouponReusableTypeChoises.MONTHLY,
+    )
+
+    # First Apply coupon without adding product to session
+    # It should return error
+
+    response = cart.apply_coupon("TEST_COUPON", request.user)
+    assert response["status"] == "error"
+    assert response["message"] == "Cannot apply coupon on empty cart."
+
+    # Now we add product to cart to quantity = 3
+    product_uuid = product_data["uuid"]
+    product_pid = product_data["pid"]
+    product_key = f"{product_uuid}_{product_pid}"
+    cart.add(uuid=product_uuid, pid=product_pid)
+    cart.add(uuid=product_uuid, pid=product_pid)
+    cart.add(uuid=product_uuid, pid=product_pid)
+
+    # Quantity should be 3
+    assert cart.cart["products"][product_key]["quantity"] == 3
+
+    # Now we apply wrong coupon
+    response = cart.apply_coupon("WRONG_COUPON", request.user)
+    assert response["status"] == "error"
+    assert (
+        response["message"]
+        == "The Coupon code WRONG_COUPON is not valid or has been expired."
+    )
+
+    # Now we apply the right coupon and it should apply and save it in session
+    response = cart.apply_coupon("TEST_COUPON", request.user)
+    assert response["status"] == "ok"
+    assert (
+        response["message"]
+        == "sucessfully applied coupon TEST_COUPON with discount 50%"
+    )
+
+    # Now we create a relationship bitween user and coupon so we know that the user has used
+    # this coupon atleast once (using custom intermidiary).
+    UserCouponIntermidiary.objects.create(user=request.user, coupon=coupon)
+    # Now we try to apply the same coupon and it should return error because it was not
+    # a Reusable coupon code
+    response = cart.apply_coupon("TEST_COUPON", request.user)
+    assert response["status"] == "error"
+    print(response)

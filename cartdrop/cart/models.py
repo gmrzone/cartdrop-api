@@ -5,15 +5,15 @@ from django.conf import settings
 from django.core.exceptions import MultipleObjectsReturned
 from django.utils import timezone
 
-from ..core.models import CouponCode, UserCouponIntermidiary
+from ..core.models import CouponCode
 from ..products.models import ProductVariation
+from ..products.serializers import ProductVariationDetailSerializer
 
 # Create your models here.
 
 #  TODO: This Cart class has not been tested Please test it before implementing it
 class Cart:
     def __init__(self, request):
-        self.user = request.user
         self.session = request.session
         cart = self.session.get(settings.CART_SESSION_ID)
 
@@ -99,7 +99,7 @@ class Cart:
 
     def apply_coupon_to_session(self, coupon):
         self.cart["cart_detail"]["coupon"] = coupon.code
-        self.cart["cart_detail"]["discount"] = f"{coupon.discount}%"
+        self.cart["cart_detail"]["discount"] = f"{coupon.discount}"
         response = {
             "status": "ok",
             "message": f"sucessfully applied coupon {coupon.code} with discount {coupon.discount}%",
@@ -110,20 +110,22 @@ class Cart:
     @staticmethod
     def get_remaning_time(current_time, target_time):
         remaning_datetime = target_time - current_time
-        parsed_remaning_time = ""
-        if remaning_datetime.year:
-            parsed_remaning_time += f"{remaning_datetime.year} year{'s' if remaning_datetime.year > 1 else ''}, "
-        if remaning_datetime.month:
-            parsed_remaning_time += f"{remaning_datetime.month} month{'s' if remaning_datetime.month > 1 else ''}, "
-        if remaning_datetime.day:
-            parsed_remaning_time += f"{remaning_datetime.day} day{'s' if remaning_datetime.day > 1 else ''}, "
-        if remaning_datetime.hour:
-            parsed_remaning_time += f"{remaning_datetime.hour} day{'s' if remaning_datetime.hour > 1 else ''}, "
-        if remaning_datetime.minute:
-            parsed_remaning_time += f"{remaning_datetime.minute} day{'s' if remaning_datetime.minute > 1 else ''}, "
-        if remaning_datetime.second:
-            parsed_remaning_time += f"{remaning_datetime.second} day{'s' if remaning_datetime.second > 1 else ''}, "
-        return parsed_remaning_time
+        days = remaning_datetime.days
+        # parsed_remaning_time = ""
+        # if remaning_datetime.year:
+        #     parsed_remaning_time += f"{remaning_datetime.year} year{'s' if remaning_datetime.year > 1 else ''}, "
+        # if remaning_datetime.month:
+        #     parsed_remaning_time += f"{remaning_datetime.month} month{'s' if remaning_datetime.month > 1 else ''}, "
+        # if remaning_datetime.day:
+        #     parsed_remaning_time += f"{remaning_datetime.day} day{'s' if remaning_datetime.day > 1 else ''}, "
+        # if remaning_datetime.hour:
+        #     parsed_remaning_time += f"{remaning_datetime.hour} day{'s' if remaning_datetime.hour > 1 else ''}, "
+        # if remaning_datetime.minute:
+        #     parsed_remaning_time += f"{remaning_datetime.minute} day{'s' if remaning_datetime.minute > 1 else ''}, "
+        # if remaning_datetime.second:
+        #     parsed_remaning_time += f"{remaning_datetime.second} day{'s' if remaning_datetime.second > 1 else ''}, "
+        # return parsed_remaning_time
+        return f"{days} Day{'s' if days > 1 else ''}"
 
     def apply_reusable_coupon(self, coupon, user_coupons, date_now):
         if user_coupons.reusable_type == CouponCode.CouponReusableTypeChoises.MONTHLY:
@@ -159,20 +161,20 @@ class Cart:
 
     # Note: User can only apply coupon when he is authenticated so we can check if the user has already
     # Applied a coupon or not
-    def apply_coupon(self, coupon_code):
+    def apply_coupon(self, coupon_code, user):
         date_now = timezone.now()
         try:
             # Check if the coupon exist and is active
             coupon = CouponCode.objects.get(
-                code_iexact=coupon_code,
+                code__iexact=coupon_code,
                 active=True,
-                valid_from__gte=date_now,
-                valid_to__lte=date_now,
+                valid_from__lte=date_now,
+                valid_to__gte=date_now,
             )
         except CouponCode.DoesNotExist:
             response = {
                 "status": "error",
-                "message": f"The Coupon code {coupon_code} is not valid or has ben expired.",
+                "message": f"The Coupon code {coupon_code} is not valid or has been expired.",
             }
         except MultipleObjectsReturned:
             response = {
@@ -181,9 +183,7 @@ class Cart:
             }
         else:
             # If the user has already applied this coupon
-            user_coupon = self.user.coupon_codes.filter(
-                code__iexact=coupon_code
-            ).first()
+            user_coupon = user.coupon_codes.filter(code__iexact=coupon_code).first()
             if user_coupon:
                 # If coupon is only for single use then return error response
                 if (
@@ -197,8 +197,44 @@ class Cart:
                 else:
                     response = self.apply_reusable_coupon(coupon, user_coupon, date_now)
             else:
+                # If there is no product in the cart then we cannot apply coupon
+                if self.cart["products"] == {}:
+                    response = {
+                        "status": "error",
+                        "message": "Cannot apply coupon on empty cart.",
+                    }
                 # If the user has not applied this coupon then go ahead and save it in session and when
                 # The user finishes the order then create relation between that user and coupon so that
                 # Next time we can find if the user has applied this coupon
-                response = self.apply_coupon_to_session(coupon)
+                else:
+                    response = self.apply_coupon_to_session(coupon)
         return response
+
+    def __iter__(self):
+        for key in self.cart["products"].keys():
+            yield key
+
+    # TODO: Need to improve this method whenever we can test this
+    def get_cart_detail(self):
+        cart = self.cart["products"].copy()
+        cart_detail = self.cart["cart_details"].copy()
+
+        uuids = []
+        pids = []
+        for key in self:
+            uuid, pid = key.split("_")
+            uuids.append(uuid)
+            pids.append(pid)
+
+        product_variations = ProductVariation.objects.filter(
+            uuid__in=uuids, pid__in=pids
+        )
+
+        for product in product_variations:
+            product_key = f"{product.uuid}_{product.pid}"
+            cart[product_key]["product"] = ProductVariationDetailSerializer(
+                product, many=False
+            ).data
+            cart[product_key]["total"] = product.price * cart[product_key]["quantity"]
+
+        return {"cart": cart, "cart_detail": cart_detail}
