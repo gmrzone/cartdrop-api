@@ -73,7 +73,7 @@ def test_apply_coupon(product_data, get_request, get_coupon):
     valid_to = timezone.now() + relativedelta(days=2)
     coupon = get_coupon(
         "TEST_COUPON",
-        50,
+        22,
         valid_from,
         valid_to,
         CouponCode.CouponReusableTypeChoises.MONTHLY,
@@ -110,7 +110,7 @@ def test_apply_coupon(product_data, get_request, get_coupon):
     assert response["status"] == "ok"
     assert (
         response["message"]
-        == "sucessfully applied coupon TEST_COUPON with discount 50%"
+        == "sucessfully applied coupon TEST_COUPON with discount 22%"
     )
 
     # Now we create a relationship bitween user and coupon so we know that the user has used
@@ -120,4 +120,9 @@ def test_apply_coupon(product_data, get_request, get_coupon):
     # a Reusable coupon code
     response = cart.apply_coupon("TEST_COUPON", request.user)
     assert response["status"] == "error"
-    print(response)
+
+    response = cart.get_cart_detail()
+    assert response["cart_detail"]["discount_amount"] == 330.00
+    assert response["cart_detail"]["total_without_discount"] == 1500.00
+    assert response["cart_detail"]["final_total"] == 1170.00
+

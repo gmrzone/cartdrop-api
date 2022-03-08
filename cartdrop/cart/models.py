@@ -99,7 +99,7 @@ class Cart:
 
     def apply_coupon_to_session(self, coupon):
         self.cart["cart_detail"]["coupon"] = coupon.code
-        self.cart["cart_detail"]["discount"] = f"{coupon.discount}"
+        self.cart["cart_detail"]["discount"] = coupon.discount
         response = {
             "status": "ok",
             "message": f"sucessfully applied coupon {coupon.code} with discount {coupon.discount}%",
@@ -217,7 +217,7 @@ class Cart:
     # TODO: Need to improve this method whenever we can test this
     def get_cart_detail(self):
         cart = self.cart["products"].copy()
-        cart_detail = self.cart["cart_details"].copy()
+        cart_detail = self.cart["cart_detail"].copy()
 
         uuids = []
         pids = []
@@ -229,12 +229,15 @@ class Cart:
         product_variations = ProductVariation.objects.filter(
             uuid__in=uuids, pid__in=pids
         )
-
+        cart_detail['total_without_discount'] = 0
         for product in product_variations:
             product_key = f"{product.uuid}_{product.pid}"
             cart[product_key]["product"] = ProductVariationDetailSerializer(
                 product, many=False
             ).data
             cart[product_key]["total"] = product.price * cart[product_key]["quantity"]
+            cart_detail['total_without_discount'] += product.price * cart[product_key]["quantity"]
 
+        cart_detail["discount_amount"] = cart_detail['total_without_discount'] * cart_detail['discount'] / 100
+        cart_detail["final_total"] = cart_detail['total_without_discount'] - cart_detail["discount_amount"]
         return {"cart": cart, "cart_detail": cart_detail}
