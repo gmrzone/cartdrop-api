@@ -8,11 +8,6 @@ from .models import Cart
 # Create your views here.
 
 
-def test_cart_view(request):
-    Cart(request)
-    return HttpResponse("Hello")
-
-
 class AddToCart(APIView):
     allowed_methods = ["post"]
 
@@ -54,4 +49,13 @@ class ApplyCouponCode(APIView):
         coupon_code = request.data.get("coupon_code")
         cart = Cart(request=request)
         response = cart.apply_coupon(coupon_code=coupon_code, user=request.user)
-        return response
+        return Response(response)
+
+
+class GetCart(APIView):
+    allowed_methods = ["post"]
+
+    def get(self, request):
+        cart = Cart(request=request)
+        response = cart.get_cart_detail()
+        return Response(response)
