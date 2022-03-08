@@ -29,6 +29,15 @@ class Cart:
         self.session.modified = True
 
     def add(self, uuid: str, pid: str, quantity: int = 1) -> dict:
+        if not uuid or not pid:
+            message = (
+                "Product " + "UUID "
+                if not uuid
+                else "PID "
+                if not pid
+                else "UUID & PID " + "Cannot be blank"
+            )
+            return {"status": "error", "message": message}
         cart_updated = False
         product_key = f"{uuid}_{pid}"
         if product_key in self.cart["products"]:
@@ -60,6 +69,15 @@ class Cart:
         return response
 
     def remove(self, uuid: str, pid: str, quantity: int = 1) -> dict:
+        if not uuid or not pid:
+            message = (
+                "Product " + "UUID "
+                if not uuid
+                else "PID "
+                if not pid
+                else "UUID & PID " + "Cannot be blank"
+            )
+            return {"status": "error", "message": message}
         product_key = f"{uuid}_{pid}"
         cart_updated = False
         if product_key in self.cart["products"]:
@@ -79,6 +97,15 @@ class Cart:
         return response
 
     def delete(self, uuid: str, pid: str) -> dict:
+        if not uuid or not pid:
+            message = (
+                "Product " + "UUID "
+                if not uuid
+                else "PID "
+                if not pid
+                else "UUID & PID " + "Cannot be blank"
+            )
+            return {"status": "error", "message": message}
         product_key = f"{uuid}_{pid}"
         cart_updated = False
         if product_key in self.cart["products"]:
@@ -162,6 +189,8 @@ class Cart:
     # Note: User can only apply coupon when he is authenticated so we can check if the user has already
     # Applied a coupon or not
     def apply_coupon(self, coupon_code, user):
+        if not coupon_code:
+            return {"status": "error", "message": "Coupon code cannot be blank."}
         date_now = timezone.now()
         try:
             # Check if the coupon exist and is active
@@ -229,15 +258,21 @@ class Cart:
         product_variations = ProductVariation.objects.filter(
             uuid__in=uuids, pid__in=pids
         )
-        cart_detail['total_without_discount'] = 0
+        cart_detail["total_without_discount"] = 0
         for product in product_variations:
             product_key = f"{product.uuid}_{product.pid}"
             cart[product_key]["product"] = ProductVariationDetailSerializer(
                 product, many=False
             ).data
             cart[product_key]["total"] = product.price * cart[product_key]["quantity"]
-            cart_detail['total_without_discount'] += product.price * cart[product_key]["quantity"]
+            cart_detail["total_without_discount"] += (
+                product.price * cart[product_key]["quantity"]
+            )
 
-        cart_detail["discount_amount"] = cart_detail['total_without_discount'] * cart_detail['discount'] / 100
-        cart_detail["final_total"] = cart_detail['total_without_discount'] - cart_detail["discount_amount"]
+        cart_detail["discount_amount"] = (
+            cart_detail["total_without_discount"] * cart_detail["discount"] / 100
+        )
+        cart_detail["final_total"] = (
+            cart_detail["total_without_discount"] - cart_detail["discount_amount"]
+        )
         return {"cart": cart, "cart_detail": cart_detail}

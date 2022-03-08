@@ -125,4 +125,3 @@ def test_apply_coupon(product_data, get_request, get_coupon):
     assert response["cart_detail"]["discount_amount"] == 330.00
     assert response["cart_detail"]["total_without_discount"] == 1500.00
     assert response["cart_detail"]["final_total"] == 1170.00
-
