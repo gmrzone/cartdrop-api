@@ -21,10 +21,16 @@ def test_delete_from_cart_url():
     assert resolver.func.view_class == DeleteFromCart
 
 
-def test_get_cart_url():
-    url = reverse("cart:get_cart")
+def test_get_cart_detail_url():
+    url = reverse("cart:get_cart_detail")
     resolver = resolve(url)
-    assert resolver.func.view_class == GetCart
+    assert resolver.func.view_class == GetDetailCart
+
+
+def test_get_cart_basic_url():
+    url = reverse("cart:get_cart_basic")
+    resolver = resolve(url)
+    assert resolver.func.view_class == GetBasicCart
 
 
 def test_apply_coupon_url():

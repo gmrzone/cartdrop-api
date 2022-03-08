@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.status import HTTP_200_OK
 from rest_framework.views import APIView
 
 from .models import Cart
@@ -15,8 +16,8 @@ class AddToCart(APIView):
         uuid = request.data.get("uuid")
         pid = request.data.get("pid")
         cart = Cart(request=request)
-        response = cart.add(uuid=uuid, pid=pid)
-        return Response(response)
+        data, status = cart.add(uuid=uuid, pid=pid)
+        return Response(data, status=status)
 
 
 class RemoveFromCart(APIView):
@@ -52,10 +53,18 @@ class ApplyCouponCode(APIView):
         return Response(response)
 
 
-class GetCart(APIView):
-    allowed_methods = ["post"]
+class GetDetailCart(APIView):
+    allowed_methods = ["get"]
 
     def get(self, request):
         cart = Cart(request=request)
         response = cart.get_cart_detail()
         return Response(response)
+
+
+class GetBasicCart(APIView):
+    allowed_methods = ["get"]
+
+    def get(self, request):
+        cart = Cart(request=request)
+        return Response(cart.get_basic_cart(), status=HTTP_200_OK)

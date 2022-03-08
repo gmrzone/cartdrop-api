@@ -19,7 +19,7 @@ def test_cart(product_data, get_request):
     cart = Cart(request)
     #  Add Product to cart
     ## First Add wrong product that is not in the db to assert its response
-    response = cart.add(uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid")
+    response, _ = cart.add(uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid")
     assert response["status"] == "error"
     assert (
         response["message"]
@@ -31,7 +31,7 @@ def test_cart(product_data, get_request):
     product_uuid = product_data["uuid"]
     product_pid = product_data["pid"]
     product_key = f"{product_uuid}_{product_pid}"
-    response = cart.add(uuid=product_uuid, pid=product_pid)
+    response, _ = cart.add(uuid=product_uuid, pid=product_pid)
     #  Check Status
     assert response["status"] == "ok"
     # Check if the product has been added to session with quantity and price
@@ -39,7 +39,7 @@ def test_cart(product_data, get_request):
     assert cart.cart["products"][product_key]["quantity"] == 1
 
     # Now add same product and quantity should be incremented by 1
-    response = cart.add(uuid=product_uuid, pid=product_pid)
+    response, _ = cart.add(uuid=product_uuid, pid=product_pid)
     assert response["status"] == "ok"
     assert cart.cart["products"][product_key]["quantity"] == 2
 

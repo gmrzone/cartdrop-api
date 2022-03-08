@@ -4,6 +4,8 @@ from dateutil.relativedelta import relativedelta
 from django.conf import settings
 from django.core.exceptions import MultipleObjectsReturned
 from django.utils import timezone
+from rest_framework.status import (HTTP_200_OK, HTTP_400_BAD_REQUEST,
+                                   HTTP_403_FORBIDDEN)
 
 from ..core.models import CouponCode
 from ..products.models import ProductVariation
@@ -30,43 +32,46 @@ class Cart:
 
     def add(self, uuid: str, pid: str, quantity: int = 1) -> dict:
         if not uuid or not pid:
-            message = (
-                "Product " + "UUID "
-                if not uuid
+            message = "Product "
+            message += (
+                "UUID & PID "
+                if not uuid and not pid
                 else "PID "
                 if not pid
-                else "UUID & PID " + "Cannot be blank"
+                else "UUID "
             )
-            return {"status": "error", "message": message}
+            message += "Cannot be blank"
+            data, status = {"status": "error", "message": message}, HTTP_400_BAD_REQUEST
+            return data, status
         cart_updated = False
         product_key = f"{uuid}_{pid}"
         if product_key in self.cart["products"]:
             self.cart["products"][product_key]["quantity"] += 1
             cart_updated = True
-            response = {"status": "ok", "message": "Sucessfuly added "}
+            data, status = {"status": "ok", "message": "Sucessfuly added "}, HTTP_200_OK
         else:
             try:
                 product_variation = ProductVariation.objects.get(
                     uuid=uuid, pid=pid, active=True
                 )
             except ProductVariation.DoesNotExist:
-                response = {
+                data, status = {
                     "status": "error",
                     "message": "The product you are trying to buy is currently not available.",
-                }
+                }, HTTP_403_FORBIDDEN
             else:
                 self.cart["products"][product_key] = {
                     "quantity": quantity,
-                    "price": product_variation.price,
+                    "price": str(product_variation.price),
                 }
                 cart_updated = True
-                response = {
+                data, status = {
                     "status": "ok",
                     "message": f"Sucessfully added {product_variation} to cart.",
-                }
+                }, HTTP_200_OK
         if cart_updated:
             self.save()
-        return response
+        return data, status
 
     def remove(self, uuid: str, pid: str, quantity: int = 1) -> dict:
         if not uuid or not pid:
@@ -276,3 +281,6 @@ class Cart:
             cart_detail["total_without_discount"] - cart_detail["discount_amount"]
         )
         return {"cart": cart, "cart_detail": cart_detail}
+
+    def get_basic_cart(self):
+        return self.cart
