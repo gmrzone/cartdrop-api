@@ -88,10 +88,47 @@ def test_remove_from_cart(client, product_data):
     response = client.post(remove_url, data={"uuid": product_uuid, "pid": product_pid})
     assert response.status_code == 200
     assert response.data["message"] == "Product quantity decreased by 1"
-    
 
     ## Now check the basic cart for quantity it should be decremented by 1
     basic_cart_url = reverse("cart:get_cart_basic")
     response = client.get(basic_cart_url)
     assert response.data["products"][product_key]["quantity"] == 2
 
+
+@pytest.mark.django_db
+def test_delete_from_cart(client, product_data):
+    product_uuid = product_data["uuid"]
+    product_pid = product_data["pid"]
+    product_key = f"{product_uuid}_{product_pid}"
+    headers = {"Content-type": "application/json", "Accept": "application/json"}
+    # First Add few products
+    add_url = reverse("cart:add")
+    client.post(
+        add_url, data={"uuid": product_uuid, "pid": product_pid}, headers=headers
+    )
+    client.post(
+        add_url, data={"uuid": product_uuid, "pid": product_pid}, headers=headers
+    )
+    client.post(
+        add_url, data={"uuid": product_uuid, "pid": product_pid}, headers=headers
+    )
+    client.post(
+        add_url, data={"uuid": product_uuid, "pid": product_pid}, headers=headers
+    )
+
+    # Now check and assert the cart to match the quantity
+    basic_cart_url = reverse("cart:get_cart_basic")
+    response = client.get(basic_cart_url, headers=headers)
+    assert response.data["products"][product_key]["quantity"] == 4
+
+    # Now check the delete view
+    delete_url = reverse(
+        "cart:delete", kwargs={"uuid": product_uuid, "pid": product_pid}
+    )
+    response = client.delete(delete_url)
+    assert response.status_code == 200
+    assert response.data["message"] == "Sucessfully removed product from the cart"
+
+    # Now check if the product is completely deleted from cart
+    response = client.get(basic_cart_url, headers=headers)
+    assert response.data["products"] == {}

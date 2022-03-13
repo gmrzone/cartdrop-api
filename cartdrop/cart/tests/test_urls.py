@@ -16,7 +16,13 @@ def test_remove_from_cart_url():
 
 
 def test_delete_from_cart_url():
-    url = reverse("cart:delete")
+    url = reverse(
+        "cart:delete",
+        kwargs={
+            "uuid": "0f959fb0-4227-4145-b738-05b34f4cdb38",
+            "pid": "MBLEWRGZAVMRISCPOF",
+        },
+    )
     resolver = resolve(url)
     assert resolver.func.view_class == DeleteFromCart
 

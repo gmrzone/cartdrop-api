@@ -99,7 +99,10 @@ class Cart:
                 self.delete(uuid, pid)
             cart_updated = True
         else:
-            data, status = {"status": "error", "message": "Product is not in your cart."}, HTTP_403_FORBIDDEN
+            data, status = {
+                "status": "error",
+                "message": "Product is not in your cart.",
+            }, HTTP_403_FORBIDDEN
         if cart_updated:
             self.save()
         return data, status
@@ -121,19 +124,19 @@ class Cart:
         cart_updated = False
         if product_key in self.cart["products"]:
             del self.cart["products"][product_key]
-            response = {
+            data, status = {
                 "status": "ok",
                 "message": "Sucessfully removed product from the cart",
-            }
+            }, HTTP_200_OK
             cart_updated = True
         else:
-            response = {
+            data, status = {
                 "status": "error",
                 "message": "Product Not found.",
-            }
+            }, HTTP_400_BAD_REQUEST
         if cart_updated:
             self.save()
-        return response
+        return data, status
 
     def apply_coupon_to_session(self, coupon):
         self.cart["cart_detail"]["coupon"] = coupon.code
