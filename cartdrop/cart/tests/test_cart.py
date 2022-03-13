@@ -44,12 +44,12 @@ def test_cart(product_data, get_request):
     assert cart.cart["products"][product_key]["quantity"] == 2
 
     # Now remove a product that does not exist in the cart should return error
-    response = cart.remove(uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid")
+    response, _ = cart.remove(uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid")
     assert response["status"] == "error"
     assert response["message"] == "Product is not in your cart."
 
     # Now remove the same product and quantity should be decremented by 1
-    response = cart.remove(uuid=product_uuid, pid=product_pid)
+    response, _ = cart.remove(uuid=product_uuid, pid=product_pid)
     assert response["status"] == "ok"
     assert cart.cart["products"][product_key]["quantity"] == 1
 

@@ -27,8 +27,8 @@ class RemoveFromCart(APIView):
         uuid = request.data.get("uuid")
         pid = request.data.get("pid")
         cart = Cart(request=request)
-        response = cart.remove(uuid=uuid, pid=pid)
-        return Response(response)
+        data, status = cart.remove(uuid=uuid, pid=pid)
+        return Response(data, status=status)
 
 
 class DeleteFromCart(APIView):

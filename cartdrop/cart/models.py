@@ -75,42 +75,48 @@ class Cart:
 
     def remove(self, uuid: str, pid: str, quantity: int = 1) -> dict:
         if not uuid or not pid:
-            message = (
-                "Product " + "UUID "
-                if not uuid
+            message = "Product "
+            message += (
+                "UUID & PID "
+                if not uuid and not pid
                 else "PID "
                 if not pid
-                else "UUID & PID " + "Cannot be blank"
+                else "UUID "
             )
-            return {"status": "error", "message": message}
+            message += "Cannot be blank"
+            data, status = {"status": "error", "message": message}, HTTP_400_BAD_REQUEST
+            return data, status
         product_key = f"{uuid}_{pid}"
         cart_updated = False
         if product_key in self.cart["products"]:
             if self.cart["products"][product_key]["quantity"] > quantity:
                 self.cart["products"][product_key]["quantity"] -= quantity
-                response = {
+                data, status = {
                     "status": "ok",
                     "message": f"Product quantity decreased by {quantity}",
-                }
+                }, HTTP_200_OK
             else:
                 self.delete(uuid, pid)
             cart_updated = True
         else:
-            response = {"status": "error", "message": "Product is not in your cart."}
+            data, status = {"status": "error", "message": "Product is not in your cart."}, HTTP_403_FORBIDDEN
         if cart_updated:
             self.save()
-        return response
+        return data, status
 
     def delete(self, uuid: str, pid: str) -> dict:
         if not uuid or not pid:
-            message = (
-                "Product " + "UUID "
-                if not uuid
+            message = "Product "
+            message += (
+                "UUID & PID "
+                if not uuid and not pid
                 else "PID "
                 if not pid
-                else "UUID & PID " + "Cannot be blank"
+                else "UUID "
             )
-            return {"status": "error", "message": message}
+            message += "Cannot be blank"
+            data, status = {"status": "error", "message": message}, HTTP_400_BAD_REQUEST
+            return data, status
         product_key = f"{uuid}_{pid}"
         cart_updated = False
         if product_key in self.cart["products"]:

@@ -117,7 +117,7 @@ def get_request(get_new_user, get_session):
 
 # @pytest.fixture
 # def get_cart_with_items(product_data, get_request):
-#     def wrapper(cart_item_count):
+#     def wrapper(cart_item_count, return_product_detail=False):
 #         request = get_request()
 #         cart = Cart(request=request)
 #         product_uuid = product_data["uuid"]
@@ -125,6 +125,6 @@ def get_request(get_new_user, get_session):
 #         for i in range(cart_item_count):
 #             cart.add(uuid=product_uuid, pid=product_pid)
 
-#         return cart
+#         return cart, product_data if return_product_detail else cart
 
 #     return wrapper
