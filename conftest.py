@@ -2,6 +2,7 @@ import pytest
 from django.contrib.auth import get_user_model
 from django.http import HttpRequest
 
+from cartdrop.cart.models import Cart
 from cartdrop.core.models import (Brand, CouponCode, ProductCategory,
                                   ProductSubcategory)
 from cartdrop.products.models import (Product, ProductSpecification,
@@ -112,3 +113,18 @@ def get_request(get_new_user, get_session):
         return request
 
     return wrapper
+
+
+# @pytest.fixture
+# def get_cart_with_items(product_data, get_request):
+#     def wrapper(cart_item_count, return_product_detail=False):
+#         request = get_request()
+#         cart = Cart(request=request)
+#         product_uuid = product_data["uuid"]
+#         product_pid = product_data["pid"]
+#         for i in range(cart_item_count):
+#             cart.add(uuid=product_uuid, pid=product_pid)
+
+#         return cart, product_data if return_product_detail else cart
+
+#     return wrapper

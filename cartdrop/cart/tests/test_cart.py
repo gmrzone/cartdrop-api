@@ -19,7 +19,7 @@ def test_cart(product_data, get_request):
     cart = Cart(request)
     #  Add Product to cart
     ## First Add wrong product that is not in the db to assert its response
-    response = cart.add(uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid")
+    response, _ = cart.add(uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid")
     assert response["status"] == "error"
     assert (
         response["message"]
@@ -31,7 +31,7 @@ def test_cart(product_data, get_request):
     product_uuid = product_data["uuid"]
     product_pid = product_data["pid"]
     product_key = f"{product_uuid}_{product_pid}"
-    response = cart.add(uuid=product_uuid, pid=product_pid)
+    response, _ = cart.add(uuid=product_uuid, pid=product_pid)
     #  Check Status
     assert response["status"] == "ok"
     # Check if the product has been added to session with quantity and price
@@ -39,17 +39,17 @@ def test_cart(product_data, get_request):
     assert cart.cart["products"][product_key]["quantity"] == 1
 
     # Now add same product and quantity should be incremented by 1
-    response = cart.add(uuid=product_uuid, pid=product_pid)
+    response, _ = cart.add(uuid=product_uuid, pid=product_pid)
     assert response["status"] == "ok"
     assert cart.cart["products"][product_key]["quantity"] == 2
 
     # Now remove a product that does not exist in the cart should return error
-    response = cart.remove(uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid")
+    response, _ = cart.remove(uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid")
     assert response["status"] == "error"
     assert response["message"] == "Product is not in your cart."
 
     # Now remove the same product and quantity should be decremented by 1
-    response = cart.remove(uuid=product_uuid, pid=product_pid)
+    response, _ = cart.remove(uuid=product_uuid, pid=product_pid)
     assert response["status"] == "ok"
     assert cart.cart["products"][product_key]["quantity"] == 1
 
@@ -73,7 +73,7 @@ def test_apply_coupon(product_data, get_request, get_coupon):
     valid_to = timezone.now() + relativedelta(days=2)
     coupon = get_coupon(
         "TEST_COUPON",
-        50,
+        22,
         valid_from,
         valid_to,
         CouponCode.CouponReusableTypeChoises.MONTHLY,
@@ -110,7 +110,7 @@ def test_apply_coupon(product_data, get_request, get_coupon):
     assert response["status"] == "ok"
     assert (
         response["message"]
-        == "sucessfully applied coupon TEST_COUPON with discount 50%"
+        == "sucessfully applied coupon TEST_COUPON with discount 22%"
     )
 
     # Now we create a relationship bitween user and coupon so we know that the user has used
@@ -120,4 +120,8 @@ def test_apply_coupon(product_data, get_request, get_coupon):
     # a Reusable coupon code
     response = cart.apply_coupon("TEST_COUPON", request.user)
     assert response["status"] == "error"
-    print(response)
+
+    response = cart.get_cart_detail()
+    assert response["cart_detail"]["discount_amount"] == 330.00
+    assert response["cart_detail"]["total_without_discount"] == 1500.00
+    assert response["cart_detail"]["final_total"] == 1170.00

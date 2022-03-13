@@ -4,6 +4,8 @@ from dateutil.relativedelta import relativedelta
 from django.conf import settings
 from django.core.exceptions import MultipleObjectsReturned
 from django.utils import timezone
+from rest_framework.status import (HTTP_200_OK, HTTP_400_BAD_REQUEST,
+                                   HTTP_403_FORBIDDEN)
 
 from ..core.models import CouponCode
 from ..products.models import ProductVariation
@@ -29,56 +31,92 @@ class Cart:
         self.session.modified = True
 
     def add(self, uuid: str, pid: str, quantity: int = 1) -> dict:
+        if not uuid or not pid:
+            message = "Product "
+            message += (
+                "UUID & PID "
+                if not uuid and not pid
+                else "PID "
+                if not pid
+                else "UUID "
+            )
+            message += "Cannot be blank"
+            data, status = {"status": "error", "message": message}, HTTP_400_BAD_REQUEST
+            return data, status
         cart_updated = False
         product_key = f"{uuid}_{pid}"
         if product_key in self.cart["products"]:
             self.cart["products"][product_key]["quantity"] += 1
             cart_updated = True
-            response = {"status": "ok", "message": "Sucessfuly added "}
+            data, status = {"status": "ok", "message": "Sucessfuly added "}, HTTP_200_OK
         else:
             try:
                 product_variation = ProductVariation.objects.get(
                     uuid=uuid, pid=pid, active=True
                 )
             except ProductVariation.DoesNotExist:
-                response = {
+                data, status = {
                     "status": "error",
                     "message": "The product you are trying to buy is currently not available.",
-                }
+                }, HTTP_403_FORBIDDEN
             else:
                 self.cart["products"][product_key] = {
                     "quantity": quantity,
-                    "price": product_variation.price,
+                    "price": str(product_variation.price),
                 }
                 cart_updated = True
-                response = {
+                data, status = {
                     "status": "ok",
                     "message": f"Sucessfully added {product_variation} to cart.",
-                }
+                }, HTTP_200_OK
         if cart_updated:
             self.save()
-        return response
+        return data, status
 
     def remove(self, uuid: str, pid: str, quantity: int = 1) -> dict:
+        if not uuid or not pid:
+            message = "Product "
+            message += (
+                "UUID & PID "
+                if not uuid and not pid
+                else "PID "
+                if not pid
+                else "UUID "
+            )
+            message += "Cannot be blank"
+            data, status = {"status": "error", "message": message}, HTTP_400_BAD_REQUEST
+            return data, status
         product_key = f"{uuid}_{pid}"
         cart_updated = False
         if product_key in self.cart["products"]:
             if self.cart["products"][product_key]["quantity"] > quantity:
                 self.cart["products"][product_key]["quantity"] -= quantity
-                response = {
+                data, status = {
                     "status": "ok",
                     "message": f"Product quantity decreased by {quantity}",
-                }
+                }, HTTP_200_OK
             else:
                 self.delete(uuid, pid)
             cart_updated = True
         else:
-            response = {"status": "error", "message": "Product is not in your cart."}
+            data, status = {"status": "error", "message": "Product is not in your cart."}, HTTP_403_FORBIDDEN
         if cart_updated:
             self.save()
-        return response
+        return data, status
 
     def delete(self, uuid: str, pid: str) -> dict:
+        if not uuid or not pid:
+            message = "Product "
+            message += (
+                "UUID & PID "
+                if not uuid and not pid
+                else "PID "
+                if not pid
+                else "UUID "
+            )
+            message += "Cannot be blank"
+            data, status = {"status": "error", "message": message}, HTTP_400_BAD_REQUEST
+            return data, status
         product_key = f"{uuid}_{pid}"
         cart_updated = False
         if product_key in self.cart["products"]:
@@ -99,7 +137,7 @@ class Cart:
 
     def apply_coupon_to_session(self, coupon):
         self.cart["cart_detail"]["coupon"] = coupon.code
-        self.cart["cart_detail"]["discount"] = f"{coupon.discount}"
+        self.cart["cart_detail"]["discount"] = coupon.discount
         response = {
             "status": "ok",
             "message": f"sucessfully applied coupon {coupon.code} with discount {coupon.discount}%",
@@ -162,6 +200,8 @@ class Cart:
     # Note: User can only apply coupon when he is authenticated so we can check if the user has already
     # Applied a coupon or not
     def apply_coupon(self, coupon_code, user):
+        if not coupon_code:
+            return {"status": "error", "message": "Coupon code cannot be blank."}
         date_now = timezone.now()
         try:
             # Check if the coupon exist and is active
@@ -217,7 +257,7 @@ class Cart:
     # TODO: Need to improve this method whenever we can test this
     def get_cart_detail(self):
         cart = self.cart["products"].copy()
-        cart_detail = self.cart["cart_details"].copy()
+        cart_detail = self.cart["cart_detail"].copy()
 
         uuids = []
         pids = []
@@ -229,12 +269,24 @@ class Cart:
         product_variations = ProductVariation.objects.filter(
             uuid__in=uuids, pid__in=pids
         )
-
+        cart_detail["total_without_discount"] = 0
         for product in product_variations:
             product_key = f"{product.uuid}_{product.pid}"
             cart[product_key]["product"] = ProductVariationDetailSerializer(
                 product, many=False
             ).data
             cart[product_key]["total"] = product.price * cart[product_key]["quantity"]
+            cart_detail["total_without_discount"] += (
+                product.price * cart[product_key]["quantity"]
+            )
 
+        cart_detail["discount_amount"] = (
+            cart_detail["total_without_discount"] * cart_detail["discount"] / 100
+        )
+        cart_detail["final_total"] = (
+            cart_detail["total_without_discount"] - cart_detail["discount_amount"]
+        )
         return {"cart": cart, "cart_detail": cart_detail}
+
+    def get_basic_cart(self):
+        return self.cart
