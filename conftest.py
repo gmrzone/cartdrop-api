@@ -82,7 +82,7 @@ def get_coupon():
             reusable_type=reusable_type,
             active=True,
         )
-        coupon.subcategory.set([subcategory])
+        coupon.subcategory.add(subcategory)
         return coupon
 
     return wrapper

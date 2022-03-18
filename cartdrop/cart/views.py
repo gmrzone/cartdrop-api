@@ -1,3 +1,5 @@
+from crypt import methods
+
 from django.http import HttpResponse
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -34,12 +36,12 @@ class RemoveFromCart(APIView):
 class DeleteFromCart(APIView):
     allowed_methods = ["delete"]
 
-    def delete(self, request):
-        uuid = request.data.get("uuid")
-        pid = request.data.get("pid")
+    def delete(self, request, uuid, pid):
+        # uuid = self.kwargs.get("uuid")
+        # pid = self.kwargs.get("pid")
         cart = Cart(request=request)
-        response = cart.delete(uuid=uuid, pid=pid)
-        return Response(response)
+        data, status = cart.delete(uuid=uuid, pid=pid)
+        return Response(data, status=status)
 
 
 class ApplyCouponCode(APIView):

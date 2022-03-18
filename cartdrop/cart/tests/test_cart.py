@@ -44,7 +44,9 @@ def test_cart(product_data, get_request):
     assert cart.cart["products"][product_key]["quantity"] == 2
 
     # Now remove a product that does not exist in the cart should return error
-    response, _ = cart.remove(uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid")
+    response, _ = cart.remove(
+        uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid"
+    )
     assert response["status"] == "error"
     assert response["message"] == "Product is not in your cart."
 
@@ -54,12 +56,14 @@ def test_cart(product_data, get_request):
     assert cart.cart["products"][product_key]["quantity"] == 1
 
     # Now test the delete method with wrong product should return error
-    response = cart.delete(uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid")
+    response, _ = cart.delete(
+        uuid="8dce590d-a02a-4d19-92f2-55fa94b8468c", pid="wrong-pid"
+    )
     assert response["status"] == "error"
     assert response["message"] == "Product Not found."
 
     # Now test the delete method with correct product and the should be deleted
-    response = cart.delete(uuid=product_uuid, pid=product_pid)
+    response, _ = cart.delete(uuid=product_uuid, pid=product_pid)
     assert response["status"] == "ok"
     assert cart.cart["products"] == {}
 
