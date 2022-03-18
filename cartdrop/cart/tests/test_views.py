@@ -1,7 +1,9 @@
 import json
 
 import pytest
+from dateutil.relativedelta import relativedelta
 from django.urls import reverse
+from django.utils import timezone
 
 
 @pytest.mark.django_db
@@ -132,3 +134,25 @@ def test_delete_from_cart(client, product_data):
     # Now check if the product is completely deleted from cart
     response = client.get(basic_cart_url, headers=headers)
     assert response.data["products"] == {}
+
+
+@pytest.mark.django_db
+def test_apply_coupon_code_view(client, get_coupon):
+    apply_coupon_url = reverse("cart:apply_coupon")
+    now = timezone.now()
+    valid_from = now - relativedelta(days=1)
+    valid_to = now + relativedelta(months=1)
+    get_coupon(
+        code="TEST_COUPON",
+        valid_from=valid_from,
+        valid_to=valid_to,
+        discount=25,
+        reusable_type=False,
+    )
+
+    # Apply Coupon endpoint is for authenticated user only so we should get error
+    # If we hit that endpoint without authentication
+
+    response = client.post(apply_coupon_url, data={"coupon_code": "TEST_COUPON"})
+    assert response.status_code == 401
+    assert response.data["detail"] == "Authentication credentials were not provided."
