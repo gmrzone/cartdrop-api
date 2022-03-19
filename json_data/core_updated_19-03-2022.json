@@ -1,0 +1,1226 @@
+[
+{
+    "model": "core.productcategory",
+    "pk": 2,
+    "fields": {
+        "created": "2021-08-07T14:49:13.580Z",
+        "updated": "2021-08-07T14:49:13.580Z",
+        "slug": "mobiles",
+        "uuid": "309cb533-5052-4153-8e0a-e98fecff7ea4",
+        "name": "Mobiles"
+    }
+},
+{
+    "model": "core.productcategory",
+    "pk": 3,
+    "fields": {
+        "created": "2021-08-07T14:53:17.854Z",
+        "updated": "2021-08-07T14:53:17.854Z",
+        "slug": "electronics",
+        "uuid": "5ca7c042-d999-456f-9db9-2f5cddb6b23f",
+        "name": "Electronics"
+    }
+},
+{
+    "model": "core.productcategory",
+    "pk": 4,
+    "fields": {
+        "created": "2021-08-07T14:54:52.367Z",
+        "updated": "2021-08-07T14:54:52.367Z",
+        "slug": "accessories",
+        "uuid": "1a456117-bcab-45c0-bd5d-6c79e2d2fb8e",
+        "name": "Accessories"
+    }
+},
+{
+    "model": "core.productcategory",
+    "pk": 5,
+    "fields": {
+        "created": "2021-08-07T14:55:07.173Z",
+        "updated": "2021-08-07T14:55:07.173Z",
+        "slug": "fashion",
+        "uuid": "de7c101c-dea9-4ef2-ac0c-9b81820754ed",
+        "name": "Fashion"
+    }
+},
+{
+    "model": "core.productcategory",
+    "pk": 6,
+    "fields": {
+        "created": "2021-08-07T14:55:19.761Z",
+        "updated": "2021-08-07T14:55:19.761Z",
+        "slug": "appliances",
+        "uuid": "742f31e7-a929-4988-912f-2772b950ca12",
+        "name": "Appliances"
+    }
+},
+{
+    "model": "core.productcategory",
+    "pk": 7,
+    "fields": {
+        "created": "2021-08-07T14:55:47.292Z",
+        "updated": "2021-08-07T14:55:47.292Z",
+        "slug": "groceries",
+        "uuid": "c2c8a48c-207a-4f25-834e-c13ed83cdb23",
+        "name": "Groceries"
+    }
+},
+{
+    "model": "core.productcategory",
+    "pk": 8,
+    "fields": {
+        "created": "2021-08-07T14:55:57.429Z",
+        "updated": "2021-08-07T14:55:57.429Z",
+        "slug": "books",
+        "uuid": "96e93704-8482-4d51-96d5-2a0ca884fe29",
+        "name": "Books"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 3,
+    "fields": {
+        "category": 2,
+        "image": "Category_Media/mobiles/mobile_2-nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 4,
+    "fields": {
+        "category": 2,
+        "image": "Category_Media/mobiles/mobile_1-bg_removed.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 5,
+    "fields": {
+        "category": 2,
+        "image": "Category_Media/mobiles/mobile_4-nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 6,
+    "fields": {
+        "category": 3,
+        "image": "Category_Media/electronics/laptop_1_nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 7,
+    "fields": {
+        "category": 3,
+        "image": "Category_Media/electronics/laptop_3-nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 8,
+    "fields": {
+        "category": 4,
+        "image": "Category_Media/accessories/accessories_1-nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 9,
+    "fields": {
+        "category": 5,
+        "image": "Category_Media/fashion/fashion_nobg.png.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 10,
+    "fields": {
+        "category": 6,
+        "image": "Category_Media/appliances/appliances_nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 11,
+    "fields": {
+        "category": 7,
+        "image": "Category_Media/groceries/groceries_nogb.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 12,
+    "fields": {
+        "category": 8,
+        "image": "Category_Media/books/books_2-nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.categoryimage",
+    "pk": 13,
+    "fields": {
+        "category": 2,
+        "image": "Category_Media/mobiles/mobile_3-nobg_adj.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 1,
+    "fields": {
+        "created": "2021-08-14T20:11:49.650Z",
+        "updated": "2021-08-14T20:11:49.650Z",
+        "slug": "mobiles",
+        "uuid": "79181781-1498-4a5a-b3a4-5f0fb0cf0e33",
+        "category": 2,
+        "name": "Mobiles"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 2,
+    "fields": {
+        "created": "2021-08-14T20:12:07.428Z",
+        "updated": "2021-08-14T20:12:07.428Z",
+        "slug": "mobile-accessories",
+        "uuid": "508e6fef-fd2b-45c2-824d-26ba8ec8c79a",
+        "category": 2,
+        "name": "Mobile Accessories"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 3,
+    "fields": {
+        "created": "2021-08-14T20:12:18.888Z",
+        "updated": "2021-08-14T20:13:19.545Z",
+        "slug": "laptop",
+        "uuid": "6523d858-3105-4fe0-8a61-fa53e72d3114",
+        "category": 3,
+        "name": "Laptops"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 4,
+    "fields": {
+        "created": "2021-08-14T20:12:40.859Z",
+        "updated": "2021-08-14T20:12:40.859Z",
+        "slug": "laptop-accessories",
+        "uuid": "62692fc9-6e6f-4742-b0a5-44c87646fa35",
+        "category": 3,
+        "name": "Laptop Accessories"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 5,
+    "fields": {
+        "created": "2021-08-14T20:13:11.544Z",
+        "updated": "2021-08-14T20:13:25.780Z",
+        "slug": "television",
+        "uuid": "79db8a81-94b7-4854-8316-5fed88028e68",
+        "category": 3,
+        "name": "Televisions"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 6,
+    "fields": {
+        "created": "2021-08-14T20:14:16.656Z",
+        "updated": "2021-08-14T20:14:16.656Z",
+        "slug": "paints",
+        "uuid": "b5bb3242-b33e-4019-b47c-0da64190412b",
+        "category": 4,
+        "name": "Paints"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 7,
+    "fields": {
+        "created": "2021-08-14T20:14:26.522Z",
+        "updated": "2021-08-14T20:14:26.522Z",
+        "slug": "accessories",
+        "uuid": "349ecf6d-ec91-4527-ac60-12ed8f5a4c2a",
+        "category": 4,
+        "name": "Accessories"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 9,
+    "fields": {
+        "created": "2021-08-14T20:16:32.371Z",
+        "updated": "2021-08-14T20:16:49.394Z",
+        "slug": "backpack",
+        "uuid": "b97bf0f9-adec-46df-8906-cce8afa00f79",
+        "category": 5,
+        "name": "Backpacks"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 10,
+    "fields": {
+        "created": "2021-08-14T20:16:43.789Z",
+        "updated": "2021-08-14T20:16:43.789Z",
+        "slug": "hand-bags",
+        "uuid": "a3b609de-ad62-46f3-aa37-72085f9a2d37",
+        "category": 5,
+        "name": "Hand Bags"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 11,
+    "fields": {
+        "created": "2021-08-14T20:16:59.586Z",
+        "updated": "2021-08-14T20:16:59.586Z",
+        "slug": "shoes",
+        "uuid": "64039683-0ba2-431b-be7b-f87a5704be0b",
+        "category": 5,
+        "name": "Shoes"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 12,
+    "fields": {
+        "created": "2021-08-14T20:17:21.451Z",
+        "updated": "2021-08-14T20:17:54.232Z",
+        "slug": "air-conditioner",
+        "uuid": "bff344eb-c245-4c02-8dbc-310b16df7396",
+        "category": 6,
+        "name": "Air Conditioners"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 13,
+    "fields": {
+        "created": "2021-08-14T20:17:49.605Z",
+        "updated": "2021-08-14T20:17:49.605Z",
+        "slug": "refrigerators",
+        "uuid": "ae65e46c-34f2-471d-8e71-da54e7debc75",
+        "category": 6,
+        "name": "Refrigerators"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 14,
+    "fields": {
+        "created": "2021-08-14T20:18:09.858Z",
+        "updated": "2021-08-14T20:18:09.858Z",
+        "slug": "washing-machines",
+        "uuid": "be588d19-e9db-4777-bde8-7785229e4370",
+        "category": 6,
+        "name": "Washing Machines"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 15,
+    "fields": {
+        "created": "2021-08-14T20:18:32.386Z",
+        "updated": "2021-08-14T20:18:32.386Z",
+        "slug": "speakers",
+        "uuid": "c1028f9f-3200-47eb-a3d0-74400db1b0b7",
+        "category": 3,
+        "name": "Speakers"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 16,
+    "fields": {
+        "created": "2021-08-14T20:18:54.736Z",
+        "updated": "2021-08-14T20:18:54.736Z",
+        "slug": "programming",
+        "uuid": "ae58b283-2e01-49f5-8c38-46004745585f",
+        "category": 8,
+        "name": "Programming"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 17,
+    "fields": {
+        "created": "2021-08-14T20:20:12.777Z",
+        "updated": "2021-08-14T20:20:12.777Z",
+        "slug": "juices",
+        "uuid": "f1a7630d-e39e-4d5d-9a27-58971f2de985",
+        "category": 7,
+        "name": "Juices"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 18,
+    "fields": {
+        "created": "2021-08-14T20:20:24.602Z",
+        "updated": "2021-08-14T20:20:24.602Z",
+        "slug": "chocolates",
+        "uuid": "9380521f-9af2-4245-988c-82f122c6a8b4",
+        "category": 7,
+        "name": "Chocolates"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 20,
+    "fields": {
+        "created": "2021-08-15T19:05:16.613Z",
+        "updated": "2021-08-15T19:05:21.782Z",
+        "slug": "mens-t-shirts",
+        "uuid": "1db57d86-7656-482b-82f2-aaac495c42d4",
+        "category": 5,
+        "name": "Men's T-Shirts"
+    }
+},
+{
+    "model": "core.productsubcategory",
+    "pk": 21,
+    "fields": {
+        "created": "2021-08-15T19:05:36.907Z",
+        "updated": "2021-08-15T19:05:36.907Z",
+        "slug": "womens-t-shirts",
+        "uuid": "032feb59-0c55-44f7-9a4a-fd0d77889e53",
+        "category": 5,
+        "name": "Women's T-Shirts"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 1,
+    "fields": {
+        "subcategory": 1,
+        "image": "Subcategory_Media/mobiles/mobiles/mobile_4-nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 2,
+    "fields": {
+        "subcategory": 1,
+        "image": "Subcategory_Media/mobiles/mobiles/mobile_3-nobg_adj.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 3,
+    "fields": {
+        "subcategory": 1,
+        "image": "Subcategory_Media/mobiles/mobiles/mobile_2-nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 4,
+    "fields": {
+        "subcategory": 1,
+        "image": "Subcategory_Media/mobiles/mobiles/mobile_1-bg_removed.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 5,
+    "fields": {
+        "subcategory": 3,
+        "image": "Subcategory_Media/electronics/laptop/laptop_1_nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 6,
+    "fields": {
+        "subcategory": 3,
+        "image": "Subcategory_Media/electronics/laptop/laptop_3-nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 7,
+    "fields": {
+        "subcategory": 3,
+        "image": "Subcategory_Media/electronics/laptop/laptop_3_nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 8,
+    "fields": {
+        "subcategory": 3,
+        "image": "Subcategory_Media/electronics/laptop/laptop_4_nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 9,
+    "fields": {
+        "subcategory": 14,
+        "image": "Subcategory_Media/appliances/washing-machines/washing_machine1-nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 10,
+    "fields": {
+        "subcategory": 5,
+        "image": "Subcategory_Media/electronics/television/TV.jpg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 11,
+    "fields": {
+        "subcategory": 13,
+        "image": "Subcategory_Media/appliances/refrigerators/fridge.jpg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 12,
+    "fields": {
+        "subcategory": 9,
+        "image": "Subcategory_Media/fashion/backpack/bag_2-nobg.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 13,
+    "fields": {
+        "subcategory": 14,
+        "image": "Subcategory_Media/appliances/washing-machines/main.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 14,
+    "fields": {
+        "subcategory": 14,
+        "image": "Subcategory_Media/appliances/washing-machines/main_WWZqz5L.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 15,
+    "fields": {
+        "subcategory": 14,
+        "image": "Subcategory_Media/appliances/washing-machines/main_1FUHozI.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 16,
+    "fields": {
+        "subcategory": 5,
+        "image": "Subcategory_Media/electronics/television/main.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 17,
+    "fields": {
+        "subcategory": 5,
+        "image": "Subcategory_Media/electronics/television/main_iCz69Wc.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 18,
+    "fields": {
+        "subcategory": 5,
+        "image": "Subcategory_Media/electronics/television/main_4uooLYP.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 19,
+    "fields": {
+        "subcategory": 13,
+        "image": "Subcategory_Media/appliances/refrigerators/main.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 20,
+    "fields": {
+        "subcategory": 13,
+        "image": "Subcategory_Media/appliances/refrigerators/main_w14dAOO.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 21,
+    "fields": {
+        "subcategory": 13,
+        "image": "Subcategory_Media/appliances/refrigerators/main_j66Tagk.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 22,
+    "fields": {
+        "subcategory": 12,
+        "image": "Subcategory_Media/appliances/air-conditioner/main_open.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 23,
+    "fields": {
+        "subcategory": 12,
+        "image": "Subcategory_Media/appliances/air-conditioner/main.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 24,
+    "fields": {
+        "subcategory": 12,
+        "image": "Subcategory_Media/appliances/air-conditioner/main_lTtkDhs.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 25,
+    "fields": {
+        "subcategory": 12,
+        "image": "Subcategory_Media/appliances/air-conditioner/main_MBxNc78.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 26,
+    "fields": {
+        "subcategory": 16,
+        "image": "Subcategory_Media/books/programming/main.jpg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 27,
+    "fields": {
+        "subcategory": 16,
+        "image": "Subcategory_Media/books/programming/main_9RvKIhM.jpg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 28,
+    "fields": {
+        "subcategory": 16,
+        "image": "Subcategory_Media/books/programming/main_97NMPnY.jpg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 29,
+    "fields": {
+        "subcategory": 16,
+        "image": "Subcategory_Media/books/programming/main_EMMbb5o.jpg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 30,
+    "fields": {
+        "subcategory": 17,
+        "image": "Subcategory_Media/groceries/juices/main.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 31,
+    "fields": {
+        "subcategory": 17,
+        "image": "Subcategory_Media/groceries/juices/main_x25stzF.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 32,
+    "fields": {
+        "subcategory": 17,
+        "image": "Subcategory_Media/groceries/juices/main_FyRdVtU.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 33,
+    "fields": {
+        "subcategory": 17,
+        "image": "Subcategory_Media/groceries/juices/main_lCOlTXd.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 34,
+    "fields": {
+        "subcategory": 15,
+        "image": "Subcategory_Media/electronics/speakers/main.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 35,
+    "fields": {
+        "subcategory": 15,
+        "image": "Subcategory_Media/electronics/speakers/main_PSgG25d.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 36,
+    "fields": {
+        "subcategory": 15,
+        "image": "Subcategory_Media/electronics/speakers/main_Bcg4qrl.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 37,
+    "fields": {
+        "subcategory": 15,
+        "image": "Subcategory_Media/electronics/speakers/main_Cfbjp4U.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 38,
+    "fields": {
+        "subcategory": 6,
+        "image": "Subcategory_Media/accessories/paints/main.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 39,
+    "fields": {
+        "subcategory": 6,
+        "image": "Subcategory_Media/accessories/paints/main_04BnJYi.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 40,
+    "fields": {
+        "subcategory": 6,
+        "image": "Subcategory_Media/accessories/paints/main_IOdkAIG.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.subcategoryimage",
+    "pk": 41,
+    "fields": {
+        "subcategory": 6,
+        "image": "Subcategory_Media/accessories/paints/main_S5OBGzJ.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 1,
+    "fields": {
+        "slug": "samsung",
+        "uuid": "6a034235-14ed-4ebb-90b8-1abd85974371",
+        "name": "Samsung",
+        "photo": "Brand_images/samsung/samsung.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 2,
+    "fields": {
+        "slug": "apple",
+        "uuid": "fb086bad-03d6-4f0d-a3a1-aab95a174cd6",
+        "name": "Apple",
+        "photo": "Brand_images/apple/apple.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 3,
+    "fields": {
+        "slug": "lg",
+        "uuid": "3299fe2c-3ffe-4ac5-866d-493675b1af33",
+        "name": "LG",
+        "photo": "Brand_images/lg/LG.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 4,
+    "fields": {
+        "slug": "huawei",
+        "uuid": "020e95bc-2411-4118-9a46-6b17fefa7cd2",
+        "name": "Huawei",
+        "photo": "Brand_images/huawei/Huawei.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 5,
+    "fields": {
+        "slug": "lenovo",
+        "uuid": "ea391d7a-3bc9-41e9-8a0a-515c6ea72bab",
+        "name": "Lenovo",
+        "photo": "Brand_images/lenovo/lenovo.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 6,
+    "fields": {
+        "slug": "hp",
+        "uuid": "7dcee671-35bf-47fb-ad2a-c19ecab38826",
+        "name": "HP",
+        "photo": "Brand_images/hp/HP.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 7,
+    "fields": {
+        "slug": "msi",
+        "uuid": "8b5e7770-0882-459d-9b21-6ecf6c56460a",
+        "name": "MSI",
+        "photo": "Brand_images/msi/MSI.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 8,
+    "fields": {
+        "slug": "bose",
+        "uuid": "22cf02f5-d77f-46e0-acf1-6a5bb131474b",
+        "name": "Bose",
+        "photo": "Brand_images/bose/Bose.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 9,
+    "fields": {
+        "slug": "jbl",
+        "uuid": "c3e5c8ee-afef-48ad-8495-2fc5316c24d0",
+        "name": "JBL",
+        "photo": "Brand_images/jbl/JBL.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 10,
+    "fields": {
+        "slug": "bosch",
+        "uuid": "b802aa12-0bac-4752-9345-a9b08fa17975",
+        "name": "BOSCH",
+        "photo": "Brand_images/bosch/Bosch.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 11,
+    "fields": {
+        "slug": "whirlpool",
+        "uuid": "0ba0628c-020c-44b6-bbbe-22188ca9c0ab",
+        "name": "Whirlpool",
+        "photo": "Brand_images/whirlpool/whirlpool.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 12,
+    "fields": {
+        "slug": "carrier",
+        "uuid": "3e7eac1c-d176-4eb3-aae2-3cf31d365b55",
+        "name": "Carrier",
+        "photo": "Brand_images/carrier/carrier.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 13,
+    "fields": {
+        "slug": "asian-paint",
+        "uuid": "58dbddc9-e72f-4974-b309-367a0c75de32",
+        "name": "Asian Paint",
+        "photo": "Brand_images/asian-paint/asian-paints.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 14,
+    "fields": {
+        "slug": "auric",
+        "uuid": "629078f5-d0c3-4c81-a9d9-b665162bab09",
+        "name": "Auric",
+        "photo": "Brand_images/auric/auric.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 15,
+    "fields": {
+        "slug": "real-active",
+        "uuid": "385a8aef-14cb-4f97-b222-73171ed04162",
+        "name": "Real Active",
+        "photo": "Brand_images/real-active/real_active.jpeg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 16,
+    "fields": {
+        "slug": "tropicana",
+        "uuid": "71d62203-e43a-4f03-b293-75bf7d6cb3c7",
+        "name": "Tropicana",
+        "photo": "Brand_images/tropicana/Tropicana.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 17,
+    "fields": {
+        "slug": "cadbury",
+        "uuid": "53416714-6ab5-4b48-b18e-19753d8b9bdb",
+        "name": "Cadbury",
+        "photo": "Brand_images/cadbury/cadbury.jpg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 18,
+    "fields": {
+        "slug": "oreally",
+        "uuid": "a320e63c-9ae7-43ed-a6ff-4ca970255caf",
+        "name": "O'really",
+        "photo": "Brand_images/oreally/oreally.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 19,
+    "fields": {
+        "slug": "packt",
+        "uuid": "94c76260-32c9-4d73-bda4-27dfeac6b95f",
+        "name": "Packt",
+        "photo": "Brand_images/packt/packt.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 20,
+    "fields": {
+        "slug": "shafire",
+        "uuid": "de651019-2083-461a-ace1-1f7e14b4b387",
+        "name": "SHAFIRE",
+        "photo": "Brand_images/shafire/apple.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 21,
+    "fields": {
+        "slug": "steelbird",
+        "uuid": "d3d04871-56b0-49c9-94b3-d326abc1dda4",
+        "name": "Steelbird",
+        "photo": "Brand_images/steelbird/auric.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 22,
+    "fields": {
+        "slug": "rangwell",
+        "uuid": "cc9aa570-8966-478f-92b7-858f60fb8e5b",
+        "name": "Rangwell",
+        "photo": "Brand_images/rangwell/oreally.png",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 23,
+    "fields": {
+        "slug": "plantex",
+        "uuid": "8e1a79d4-f599-4970-8bfa-fb9f2e180a15",
+        "name": "Plantex",
+        "photo": "Brand_images/plantex/color.jpg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.brand",
+    "pk": 24,
+    "fields": {
+        "slug": "minute-maid",
+        "uuid": "ac3f83bb-5363-425c-86d0-6ce119b618ca",
+        "name": "Minute Maid",
+        "photo": "Brand_images/minute-maid/color.jpg",
+        "placeholder": "default_placeholder.jpg"
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 1,
+    "fields": {
+        "created": "2021-09-01T05:05:05.459Z",
+        "updated": "2022-03-05T13:07:57.412Z",
+        "uuid": "f4e75450-3d5f-47c8-b4db-fbb891dd1a4c",
+        "code": "FIRST_ORDER",
+        "reusable_type": "SINGLE",
+        "summary": "Get 20% off on all products. This coupon can only be used on your first order.",
+        "discount": 20,
+        "valid_from": "2021-09-01T05:04:57Z",
+        "valid_to": "2022-09-01T05:04:59Z",
+        "active": true,
+        "subcategory": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 2,
+    "fields": {
+        "created": "2021-09-01T05:06:08.647Z",
+        "updated": "2022-03-05T13:07:57.413Z",
+        "uuid": "641f6626-ecf3-403a-b896-fb52c2f0a1c1",
+        "code": "MOBILE_10",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 10% off on all mobiles. This coupon can only be used once per month",
+        "discount": 10,
+        "valid_from": "2021-09-01T05:06:00Z",
+        "valid_to": "2022-09-01T05:06:01Z",
+        "active": true,
+        "subcategory": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 3,
+    "fields": {
+        "created": "2021-09-01T05:06:38.753Z",
+        "updated": "2022-03-05T13:07:57.414Z",
+        "uuid": "9fd10c73-d215-419a-a957-b9651fcdc764",
+        "code": "LAPPY_12",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 12% off on all Laptops. This Coupon can only be used once per month.",
+        "discount": 12,
+        "valid_from": "2021-09-01T05:06:31Z",
+        "valid_to": "2022-09-01T05:06:33Z",
+        "active": true,
+        "subcategory": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 4,
+    "fields": {
+        "created": "2021-09-01T05:07:19.146Z",
+        "updated": "2022-03-05T13:07:57.402Z",
+        "uuid": "abd1908c-8b5c-40b5-8db7-d6a20b3293e4",
+        "code": "TV_13",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 13% off on all Television. This Coupon can only be used once per month.",
+        "discount": 13,
+        "valid_from": "2021-09-01T05:07:10Z",
+        "valid_to": "2022-09-01T05:07:14Z",
+        "active": true,
+        "subcategory": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 5,
+    "fields": {
+        "created": "2021-09-01T05:28:26.933Z",
+        "updated": "2022-03-05T13:07:57.405Z",
+        "uuid": "b7be15ee-72c6-4e63-b17c-f30f09fdef22",
+        "code": "PAINT-5",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 5% off on all paints. This coupon can only be used once per month.",
+        "discount": 5,
+        "valid_from": "2021-09-01T05:28:11Z",
+        "valid_to": "2022-09-01T05:28:12Z",
+        "active": true,
+        "subcategory": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 6,
+    "fields": {
+        "created": "2021-09-01T05:51:02.969Z",
+        "updated": "2022-03-05T13:07:57.406Z",
+        "uuid": "3641aada-476c-4589-807e-803f52c52526",
+        "code": "AC_NINE",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 9% off on Air Conditioners. This coupon can only be used once per month",
+        "discount": 9,
+        "valid_from": "2021-09-01T05:50:50Z",
+        "valid_to": "2022-09-01T05:50:55Z",
+        "active": true,
+        "subcategory": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 7,
+    "fields": {
+        "created": "2021-09-01T05:52:19.405Z",
+        "updated": "2022-03-05T13:07:57.407Z",
+        "uuid": "5e0ed434-344e-4cf1-b52a-d347e41c59c8",
+        "code": "FREEZER_10",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 10% discount on Refrigerators. This coupon can only be used once per month.",
+        "discount": 10,
+        "valid_from": "2021-09-01T05:52:13Z",
+        "valid_to": "2022-09-01T05:52:14Z",
+        "active": true,
+        "subcategory": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 8,
+    "fields": {
+        "created": "2021-09-01T05:57:42.161Z",
+        "updated": "2022-03-05T13:07:57.408Z",
+        "uuid": "440b79b5-5ee9-4240-9a4c-699bd1463bce",
+        "code": "WASH_12",
+        "reusable_type": "MONTHLY",
+        "summary": "Get 12% off on all Washing Machines. This Coupon can only be used once per month.",
+        "discount": 12,
+        "valid_from": "2021-09-01T05:57:35Z",
+        "valid_to": "2022-09-01T05:57:36Z",
+        "active": true,
+        "subcategory": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 9,
+    "fields": {
+        "created": "2021-09-01T05:58:51.574Z",
+        "updated": "2022-03-05T13:07:57.411Z",
+        "uuid": "fb01af27-3a5d-4cdd-8a7c-425be5ab9f81",
+        "code": "SPEAKER_11",
+        "reusable_type": "SINGLE",
+        "summary": "Get 11% off on all speakers. This coupon can only ny used once per month",
+        "discount": 11,
+        "valid_from": "2021-09-01T05:58:45Z",
+        "valid_to": "2022-09-01T05:58:46Z",
+        "active": true,
+        "subcategory": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 10,
+    "fields": {
+        "created": "2021-09-01T06:00:09.410Z",
+        "updated": "2022-03-05T13:07:57.410Z",
+        "uuid": "3d2dd307-47b4-4c92-a4a0-ecbc4b79b2b2",
+        "code": "PROGRAMMER_5",
+        "reusable_type": "SINGLE",
+        "summary": "Get 5% off on all Programming books. This coupon can only be used once per month",
+        "discount": 0,
+        "valid_from": "2021-09-01T05:59:56Z",
+        "valid_to": "2022-09-01T06:00:01Z",
+        "active": true,
+        "subcategory": []
+    }
+},
+{
+    "model": "core.couponcode",
+    "pk": 11,
+    "fields": {
+        "created": "2021-09-01T06:01:21.440Z",
+        "updated": "2022-03-05T13:07:57.409Z",
+        "uuid": "b209fb83-d00e-472c-8966-8056337fe2b3",
+        "code": "JUICE_5",
+        "reusable_type": "SINGLE",
+        "summary": "Get 5% off on all Juices. This Coupon can only be used once per month",
+        "discount": 5,
+        "valid_from": "2021-09-01T06:01:15Z",
+        "valid_to": "2022-09-01T06:01:16Z",
+        "active": true,
+        "subcategory": []
+    }
+}
+]
