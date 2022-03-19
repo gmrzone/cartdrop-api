@@ -1,3 +1,6 @@
 /venv
+venv
 /db.sqlite3
 .git
+backup
+.pytest_cache

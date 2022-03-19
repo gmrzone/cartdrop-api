@@ -1,7 +1,8 @@
 from django.contrib import admin
 
 from .models import (Brand, CategoryImage, CouponCode, ProductCategory,
-                     ProductSubcategory, SubcategoryImage)
+                     ProductSubcategory, SubcategoryImage,
+                     UserCouponIntermidiary)
 
 # Register your models here.
 
@@ -36,7 +37,12 @@ class BrandAdmin(admin.ModelAdmin):
 
 @admin.register(CouponCode)
 class CouponCodeAdmin(admin.ModelAdmin):
-    list_display = ("code", "discount", "subcategory", "valid_from", "valid_to")
+    list_display = ("code", "discount", "valid_from", "valid_to")
     list_filter = ("active",)
     list_editable = ("discount", "valid_from", "valid_to")
-    list_select_related = ("subcategory",)
+
+
+@admin.register(UserCouponIntermidiary)
+class UserCouponIntermidiaryTable(admin.ModelAdmin):
+    list_display = ("user", "coupon", "created", "updated")
+    list_filter = ("created",)

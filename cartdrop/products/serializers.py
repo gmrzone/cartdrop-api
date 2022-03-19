@@ -340,7 +340,6 @@ class ProductVariationDetailSerializer(ModelSerializer):
 
         return round((100 - (obj.price * 100 / obj.retail_price)), 2)
 
-
     def get_full_name(self, obj):
         return str(obj)
 
