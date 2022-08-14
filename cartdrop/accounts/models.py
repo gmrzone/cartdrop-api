@@ -25,7 +25,6 @@ class CartDropUser(AbstractBaseUser, PermissionsMixin):
         _("Mobile Number"),
         max_length=10,
         unique=True,
-        db_index=True,
         blank=True,
         null=True,
         validators=[number_validator],
@@ -39,13 +38,11 @@ class CartDropUser(AbstractBaseUser, PermissionsMixin):
         _("Email address"),
         max_length=50,
         unique=True,
-        db_index=True,
         error_messages={"unique": _("A user with this email already exist")},
     )
     username = LowerCaseCharField(
         _("Username"),
         max_length=50,
-        db_index=True,
         unique=True,
         validators=[username_validators],
         error_messages={"unique": _("A user with that username already exist")},
@@ -60,7 +57,7 @@ class CartDropUser(AbstractBaseUser, PermissionsMixin):
         default=UserTypes.CUSTOMER,
         choices=UserTypes.choices,
     )
-    first_name = models.CharField(_("first name"), max_length=25, blank=True)
+    first_name = models.CharField(_("first name"), max_length=25, blank=True, db_index=True)
     last_name = models.CharField(_("last name"), max_length=25, blank=True)
     date_joined = models.DateTimeField(_("date_joined"), default=timezone.now)
     photo = models.ImageField(
