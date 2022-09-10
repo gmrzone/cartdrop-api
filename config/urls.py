@@ -26,10 +26,10 @@ from rest_framework_simplejwt.views import (TokenObtainPairView,
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("accounts", include("cartdrop.accounts.urls", namespace="accounts")),
-    path("core/", include("cartdrop.core.urls", namespace="core")),
-    path("cart/", include("cartdrop.cart.urls", namespace="cart")),
-    path("products/", include("cartdrop.products.urls", namespace="products")),
+    path("api/accounts", include("cartdrop.accounts.urls", namespace="accounts")),
+    path("api/core/", include("cartdrop.core.urls", namespace="core")),
+    path("api/cart/", include("cartdrop.cart.urls", namespace="cart")),
+    path("api/products/", include("cartdrop.products.urls", namespace="products")),
     path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     # Documentations
