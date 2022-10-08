@@ -11,7 +11,7 @@ class BrandSerializer(ModelSerializer):
 
     class Meta:
         model = Brand
-        fields = ("name", "photo", "placeholder")
+        fields = ("name", "uuid", "photo", "placeholder")
 
 
 class CategoryImageSerializer(ModelSerializer):

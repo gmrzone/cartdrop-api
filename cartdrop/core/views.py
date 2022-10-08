@@ -3,11 +3,13 @@ from rest_framework.generics import ListAPIView
 from .models import Brand, ProductCategory, ProductSubcategory
 from .serializers import (BrandSerializer, ProductCategorySerializer,
                           ProductSubcategorySerializer)
+from .pagination import DefaultPageNoPagination
 
 
 class CategoryList(ListAPIView):
     serializer_class = ProductCategorySerializer
     http_method_names = ["get"]
+    pagination_class = DefaultPageNoPagination
 
     def get_queryset(self):
         queryset = ProductCategory.objects.all().prefetch_related("category_images")
@@ -16,6 +18,7 @@ class CategoryList(ListAPIView):
 
 class SubcategoryList(ListAPIView):
     serializer_class = ProductSubcategorySerializer
+    pagination_class = DefaultPageNoPagination
 
     def get_queryset(self):
         category = self.kwargs["category"]
