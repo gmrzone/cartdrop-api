@@ -1,7 +1,15 @@
-from rest_framework.pagination import PageNumberPagination
+from rest_framework.pagination import CursorPagination
 
-class DefaultPageNoPagination(PageNumberPagination):
-    page_size_query_param='pageSize'
-    max_page_size = 15
-    page_query_param = 'pageNo'
+
+class SubcategoryPagination(CursorPagination):
+
+    page_size = 8
+    ordering = 'id'
+    max_page_size = 12
+
+class BrandPagination(CursorPagination):
+
+    page_size = 10
+    ordering = 'id'
+    max_page_size = 12
 
